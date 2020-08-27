@@ -153,6 +153,7 @@ MonoBehaviour:
   walkingSpeed: 10
   EnemyHealth: 1
   EnemyDmg: 5
+  moneyDropAmount: 20
   distTravel: 0
   timeAlive: 0
   locationsParentObj: {fileID: 0}

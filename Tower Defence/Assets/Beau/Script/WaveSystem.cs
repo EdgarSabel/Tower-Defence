@@ -13,16 +13,25 @@ public class WaveSystem : MonoBehaviour
 
     int roundNumber, randomMaxEnemyLevel;
 
+    float spawnTimer;
+    public GameObject spawnpoint;
+    bool canSetTimer = false;
+
     private void Start()
     {
-        timer = addTimeToTimer;
-        timerObj.SetActive(true);
+        SetBetweenRoundTimer();
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
             SkipWaitForNewRound();
+        }
+
+        if(spawnpoint.transform.childCount == 0 && canSetTimer == true)
+        {
+            canSetTimer = false;
+            SetBetweenRoundTimer();
         }
 
         if(timer >= 1.00001f)
@@ -46,11 +55,17 @@ public class WaveSystem : MonoBehaviour
     }
     public void SkipWaitForNewRound()
     {
-        timer = -1;
+        if(timerObj.activeSelf == true)
+        {
+            timer = -1;
+        }
     }
 
-    float spawnTimer;
-    public GameObject spawnpoint;
+    void SetBetweenRoundTimer()
+    {
+        timer = addTimeToTimer;
+        timerObj.SetActive(true);
+    }
 
     IEnumerator DoWave()
     {
@@ -62,6 +77,7 @@ public class WaveSystem : MonoBehaviour
                 Instantiate(enemies[0], spawnpoint.transform);
                 yield return new WaitForSeconds(spawnTimer);
             }
+
         }
         else if(roundNumber == 2)
         {
@@ -235,6 +251,7 @@ public class WaveSystem : MonoBehaviour
                 yield return new WaitForSeconds(spawnTimer);
             }
         }
+        canSetTimer = true;
     }
     void SpawnRandomEnemy()
     {

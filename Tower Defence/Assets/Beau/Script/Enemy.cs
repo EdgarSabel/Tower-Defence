@@ -3,12 +3,13 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public float walkingSpeed, EnemyHealth, EnemyDmg;
+    public int walkingSpeed, EnemyHealth, EnemyDmg, moneyDropAmount;
     [HideInInspector] public float distTravel;
     [HideInInspector] public float timeAlive;
     public GameObject locationsParentObj;
     int nextLocNum = 0;
     NavMeshAgent agent;
+    GameObject playerManager;
 
     private void Start()
     {
@@ -30,14 +31,16 @@ public class Enemy : MonoBehaviour
         agent.speed = walkingSpeed;
 
         locationsParentObj = GameObject.Find("Locations");
+        playerManager = GameObject.Find("PlayerManager");
 
         agent.SetDestination(locationsParentObj.transform.GetChild(0).transform.position);
     }
-    public void GetDamage(float dmg)
+    public void GetDamage(int dmg)
     {
         EnemyHealth -= dmg;
         if(EnemyHealth <= 0)
         {
+            playerManager.GetComponent<MoneyManager>().GetMoney(moneyDropAmount);
             //play death anim
             Destroy(gameObject);
         }
@@ -51,8 +54,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            print("Do " + EnemyDmg + " to player base");
             Destroy(gameObject);
+            playerManager.GetComponent<HealthManager>().GetDamagedByEnemy(EnemyDmg);
         }
     }
 }
