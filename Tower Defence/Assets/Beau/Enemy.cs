@@ -4,6 +4,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float walkingSpeed, EnemyHealth, EnemyDmg;
+    public float distTravel;
+    public float timeAlive;
     public GameObject locationsParentObj;
     int nextLocNum = 0;
     NavMeshAgent agent;
@@ -14,6 +16,8 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
+        timeAlive += Time.deltaTime;
+        distTravel = walkingSpeed * timeAlive;
         if (Input.GetKeyDown(KeyCode.D))
         {
             print("do damge to enemy");
