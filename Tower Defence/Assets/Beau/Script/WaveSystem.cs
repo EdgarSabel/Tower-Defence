@@ -96,11 +96,9 @@ public class WaveSystem : MonoBehaviour
         else if (roundNumber == 5)
         {
             spawnTimer = 1;
-            Instantiate(enemies[1], spawnpoint.transform);
-            yield return new WaitForSeconds(spawnTimer);
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Instantiate(enemies[0], spawnpoint.transform);
+                Instantiate(enemies[1], spawnpoint.transform);
                 yield return new WaitForSeconds(spawnTimer);
             }
         }
@@ -115,12 +113,130 @@ public class WaveSystem : MonoBehaviour
             }
             for (int i = 0; i < 5; i++)
             {
-                RandomEnemy();
+                SpawnRandomEnemy();
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 7)
+        {
+            spawnTimer = 1;
+            randomMaxEnemyLevel = 3;
+            for (int i = 0; i < 10; i++)
+            {
+                SpawnRandomEnemy();
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 8)
+        {
+            spawnTimer = 1;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(enemies[2], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 9)
+        {
+            spawnTimer = 1f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+            spawnTimer = 0.2f;
+            for (int i = 0; i < 7; i++)
+            {
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 10)
+        {
+            spawnTimer = 1f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 10; i++)
+            {
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 11)
+        {
+            spawnTimer = .5f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 10; i++)
+            {
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Instantiate(enemies[2], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 12)
+        {
+            spawnTimer = .5f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 3; i++)
+            {
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[2], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 13)
+        {
+            spawnTimer = .7f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 2; i++)
+            {
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+                Instantiate(enemies[1], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+        else if(roundNumber == 14)
+        {
+            spawnTimer = .7f;
+            randomMaxEnemyLevel = 4;
+            for (int i = 0; i < 10; i++)
+            {
+                Instantiate(enemies[2], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+            for (int i = 0; i < 15; i++)
+            {
+                SpawnRandomEnemy();
                 yield return new WaitForSeconds(spawnTimer);
             }
         }
     }
-    void RandomEnemy()
+    void SpawnRandomEnemy()
     {
         int RandomNumber = Random.Range(0, randomMaxEnemyLevel);
         if(RandomNumber == 1)
