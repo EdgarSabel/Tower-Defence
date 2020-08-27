@@ -62,6 +62,8 @@ public class WaveSystem : MonoBehaviour
                 Instantiate(enemies[0], spawnpoint.transform);
                 yield return new WaitForSeconds(spawnTimer);
             }
+            Instantiate(enemies[1], spawnpoint.transform);
+            Instantiate(enemies[2], spawnpoint.transform);
         }
         else if(roundNumber == 2)
         {

@@ -961,7 +961,8 @@ MonoBehaviour:
   timerObj: {fileID: 591674686}
   enemies:
   - {fileID: 4747299518286741600, guid: 6393c9824e6eb954f9660a90d765119f, type: 3}
-  - {fileID: 2192795867897679302, guid: 10456eadb5ece674e9e6fb08f7b5eeab, type: 3}
+  - {fileID: 8932169020268373661, guid: 64ae11dce13af33419f33273e125da04, type: 3}
+  - {fileID: 763331327479282357, guid: e71ef98242651fa4781f4d7cf8e6bffc, type: 3}
   spawnpoint: {fileID: 1375246359}
 --- !u!4 &2119677664
 Transform:
@@ -1145,7 +1146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145182750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.62, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}

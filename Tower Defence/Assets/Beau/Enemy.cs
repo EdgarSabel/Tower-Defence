@@ -4,8 +4,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float walkingSpeed, EnemyHealth, EnemyDmg;
-    public float distTravel;
-    public float timeAlive;
+    [HideInInspector] public float distTravel;
+    [HideInInspector] public float timeAlive;
     public GameObject locationsParentObj;
     int nextLocNum = 0;
     NavMeshAgent agent;
