@@ -11,7 +11,7 @@ public class WaveSystem : MonoBehaviour
 
     public GameObject[] enemies;
 
-    int roundNumber;
+    int roundNumber, randomMaxEnemyLevel;
 
     private void Start()
     {
@@ -62,8 +62,6 @@ public class WaveSystem : MonoBehaviour
                 Instantiate(enemies[0], spawnpoint.transform);
                 yield return new WaitForSeconds(spawnTimer);
             }
-            Instantiate(enemies[1], spawnpoint.transform);
-            Instantiate(enemies[2], spawnpoint.transform);
         }
         else if(roundNumber == 2)
         {
@@ -105,6 +103,37 @@ public class WaveSystem : MonoBehaviour
                 Instantiate(enemies[0], spawnpoint.transform);
                 yield return new WaitForSeconds(spawnTimer);
             }
+        }
+        else if (roundNumber == 6)
+        {
+            spawnTimer = 1;
+            randomMaxEnemyLevel = 3;
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(enemies[0], spawnpoint.transform);
+                yield return new WaitForSeconds(spawnTimer);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                RandomEnemy();
+                yield return new WaitForSeconds(spawnTimer);
+            }
+        }
+    }
+    void RandomEnemy()
+    {
+        int RandomNumber = Random.Range(0, randomMaxEnemyLevel);
+        if(RandomNumber == 1)
+        {
+            Instantiate(enemies[0], spawnpoint.transform);
+        }
+        else if(RandomNumber == 2)
+        {
+            Instantiate(enemies[1], spawnpoint.transform);
+        }
+        else if(RandomNumber == 3)
+        {
+            Instantiate(enemies[2], spawnpoint.transform);
         }
     }
 }
