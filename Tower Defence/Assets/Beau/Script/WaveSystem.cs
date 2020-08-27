@@ -48,7 +48,6 @@ public class WaveSystem : MonoBehaviour
     }
     public void StartNextRound()
     {
-        print("start round");
         roundNumber++;
         roundNumberText.text = "Round " + roundNumber.ToString();
         StartCoroutine(DoWave());

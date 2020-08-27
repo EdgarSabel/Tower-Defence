@@ -19,11 +19,6 @@ public class Enemy : MonoBehaviour
     {
         timeAlive += Time.deltaTime;
         distTravel = walkingSpeed * timeAlive;
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            print("do damge to enemy");
-            GetDamage(1);
-        }
     }
     public void SetUpEnemy()
     {
@@ -35,12 +30,15 @@ public class Enemy : MonoBehaviour
 
         agent.SetDestination(locationsParentObj.transform.GetChild(0).transform.position);
     }
-    public void GetDamage(int dmg)
+    public void GetDamage(int dmg, bool doGiveMoney)
     {
         EnemyHealth -= dmg;
         if(EnemyHealth <= 0)
         {
-            playerManager.GetComponent<MoneyManager>().GetMoney(moneyDropAmount);
+            if(doGiveMoney == true)
+            {
+                playerManager.GetComponent<MoneyManager>().GetMoney(moneyDropAmount);
+            }
             //play death anim
             Destroy(gameObject);
         }

@@ -11,10 +11,13 @@ public class Turret : MonoBehaviour
     public GameObject target;
     public new SphereCollider collider;
     private float lastShotTime = float.MinValue;
+
+    [HideInInspector]public float standardFireRate;
     // Start is called before the first frame update
     void Start()
     {
         collider.radius = radius;
+        standardFireRate = fireRate;
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class Turret : MonoBehaviour
     }
     public void Fire()
     {
-        target.GetComponent<Enemy>().GetDamage(damage);
+        target.GetComponent<Enemy>().GetDamage(damage, true);
         target = null;
         longestDist = 0;
     }
