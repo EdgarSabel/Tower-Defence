@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 
 public class ParticleSystemScripts : MonoBehaviour
 {
-    public GameObject player;
+    [HideInInspector] public GameObject player;
     private void Start()
     {
         player = GameObject.Find("Player");

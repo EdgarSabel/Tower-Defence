@@ -30,7 +30,6 @@ public class PlayerWeapon : MonoBehaviour
                 Instantiate(hitMapParticles, hit.point, Quaternion.RotateTowards(Quaternion.identity, this.gameObject.transform.rotation, 1));
                 if (hit.transform.tag == "Enemy")
                 {
-                    print(hit.transform.name);
                     hit.transform.GetComponent<Enemy>().GetDamage(playerDmg, true);
                 }
             }
@@ -40,7 +39,6 @@ public class PlayerWeapon : MonoBehaviour
     IEnumerator PlayerWeaponDelay()
     {
         yield return new WaitForSeconds(playerWeaponDelay);
-        print("can hit again");
         canHit = true;
     }
 }

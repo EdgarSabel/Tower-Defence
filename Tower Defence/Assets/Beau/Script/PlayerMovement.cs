@@ -6,45 +6,28 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float walkingSpeed;
+    public float walkingSpeed, jumpHight;
     float moveFb, moveLr;
 
-    public GameObject playerCam, topViewCam;
+    [HideInInspector] public bool isGrounded;
 
-    //mag later we ↓
-    bool canMove = true;
-    //↑
+    public GameObject playerCam;
+    Rigidbody playerRg;
+
+    private void Start()
+    {
+        playerRg = this.GetComponent<Rigidbody>();
+    }
     private void Update()
     {
-        if(canMove == true)
-        {
         moveFb = Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
         moveLr = Input.GetAxis("Horizontal") * (walkingSpeed / 2) * Time.deltaTime;
 
         transform.Translate(moveLr, 0, moveFb);
-        }
-        //mag later we ↓
-        if (Input.GetKeyDown(KeyCode.C))
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            if(playerCam.activeSelf == true)
-            {
-                playerCam.SetActive(false);
-                topViewCam.SetActive(true);
-
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                canMove = false;
-            }
-            else if(topViewCam.activeSelf == true)
-            {
-                topViewCam.SetActive(false);
-                playerCam.SetActive(true);
-
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                canMove = true;
-            }
+            playerRg.velocity = new Vector3(0, jumpHight, 0);
         }
-        //↑
     }
 }
