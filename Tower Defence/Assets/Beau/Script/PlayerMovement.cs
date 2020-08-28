@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject playerCam, topViewCam;
 
-    bool canMove = false;
-
+    //mag later we ↓
+    bool canMove = true;
+    //↑
     private void Update()
     {
         if(canMove == true)
