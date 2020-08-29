@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1423611625027662955, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1423611625027662955, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -344,10 +344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
-      propertyPath: range
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5999022
@@ -564,7 +560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1555307192
 GameObject:
@@ -716,5 +712,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandardTurret
       objectReference: {fileID: 0}
+    - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
+      propertyPath: preview
+      value: 
+      objectReference: {fileID: 4807608379938458710, guid: 747c8a6b625b02840b61fcb36cd45d59, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}

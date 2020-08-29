@@ -369,6 +369,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  range: 8
+  isHovering: 0
+  cam: {fileID: 0}
   xp1: 0
   xp2: 0
   xp3: 0

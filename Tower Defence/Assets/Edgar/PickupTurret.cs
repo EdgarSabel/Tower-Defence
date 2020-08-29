@@ -17,7 +17,7 @@ public class PickupTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact"))
+        if (Input.GetButtonDown("Interact") && inventory.isHovering != true)
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, range, -5, QueryTriggerInteraction.Ignore))
