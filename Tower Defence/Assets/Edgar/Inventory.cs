@@ -51,12 +51,14 @@ public class Inventory : MonoBehaviour
                     turrets[currentSlot].gameObject.SetActive(true);
                     turrets[currentSlot].gameObject.GetComponent<BoxCollider>().enabled = !enabled;
                     turrets[currentSlot].gameObject.GetComponent<Turret>().enabled = !enabled;
+                    turrets[currentSlot].gameObject.GetComponent<TurretRepair>().enabled = !enabled;
                     turretSpawned = true;
                 }
             }
                 if (Input.GetButtonDown("Interact"))
                 {
                     turrets[currentSlot].gameObject.GetComponent<Turret>().enabled = enabled;
+                    turrets[currentSlot].gameObject.GetComponent<TurretRepair>().enabled = enabled;           
                     turrets[currentSlot].gameObject.GetComponent<BoxCollider>().enabled = enabled;
                     turrets[currentSlot] = null;
                     turretSpawned = false;

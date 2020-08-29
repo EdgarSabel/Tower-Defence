@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net.Http;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.RenderGraphModule;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    public int playerDmg;
+    public int playerDmg, repairNumber;
     public float playerWeaponRange, playerWeaponDelay;
     public GameObject cam;
 
@@ -31,6 +32,10 @@ public class PlayerWeapon : MonoBehaviour
                 if (hit.transform.tag == "Enemy")
                 {
                     hit.transform.GetComponent<Enemy>().GetDamage(playerDmg, true);
+                }
+                else if(hit.transform.tag == "Turret")
+                {
+                    hit.transform.GetComponent<TurretRepair>().healthTurret += repairNumber;
                 }
             }
             StartCoroutine(PlayerWeaponDelay());

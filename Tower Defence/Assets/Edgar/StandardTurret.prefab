@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1423611625027662952}
   - component: {fileID: 1423611625027662932}
   - component: {fileID: 9106568801918034062}
+  - component: {fileID: 5136755898524893001}
   m_Layer: 0
   m_Name: StandardTurret
   m_TagString: Turret
@@ -128,5 +129,20 @@ MonoBehaviour:
   radius: 8
   collider: {fileID: 1423611625027662932}
   target: {fileID: 0}
-  preview: {fileID: 0}
   standardFireRate: 0
+--- !u!114 &5136755898524893001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423611625027662958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decreaseNumber: 5
+  healthTurret: 100
+  normal: {fileID: 2100000, guid: 95898f7b6af13484c978ad6bc12b99b7, type: 2}
+  kapoet: {fileID: 2100000, guid: 5788691da96f985429eb7cbb934747fa, type: 2}

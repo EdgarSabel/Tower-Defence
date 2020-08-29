@@ -532,10 +532,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3893954982205618636}
   - component: {fileID: 3570938246362957354}
-  - component: {fileID: 4604269912114842942}
   - component: {fileID: 8430663401668448337}
   - component: {fileID: 3430148572130286339}
   - component: {fileID: 7604484713378372854}
+  - component: {fileID: 1608106060645660150}
   m_Layer: 0
   m_Name: MechanicSpider Variant
   m_TagString: Enemy
@@ -551,8 +551,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4766444127832908240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.947439, y: -0.38, z: 2.3784447}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 4.947439, y: -0.42, z: 2.3784447}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 6111471220198445361}
   - {fileID: 5086270304849772285}
@@ -576,20 +576,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
---- !u!64 &4604269912114842942
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4766444127832908240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!95 &8430663401668448337
 Animator:
   serializedVersion: 3
@@ -650,6 +636,19 @@ NavMeshAgent:
   m_BaseOffset: 0.14
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1608106060645660150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766444127832908240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1454706, y: 1.3060536, z: 4.1676583}
+  m_Center: {x: 0.06774664, y: 0.52029157, z: -0.98702407}
 --- !u!1 &4975665363245511442
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +690,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5615808012323702102}
   - component: {fileID: 4465104810016940747}
-  - component: {fileID: 8113347636327307616}
   m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
@@ -791,20 +789,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00018834136, y: 0.011135784, z: -0.003934101}
     m_Extent: {x: 0.029437257, y: 0.029672902, z: 0.006381505}
   m_DirtyAABB: 0
---- !u!64 &8113347636327307616
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038309296601142554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5298356351169131968
 GameObject:
   m_ObjectHideFlags: 0

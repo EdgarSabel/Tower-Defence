@@ -12,14 +12,12 @@ public class Turret : MonoBehaviour
     public GameObject target;
 
     [HideInInspector]public float standardFireRate;
-    // Start is called before the first frame update
     void Start()
     {
         collider.radius = radius;
         standardFireRate = fireRate;
     }
 
-    // Update is called once per frame
     void Update()
     {
         FindTarget();
