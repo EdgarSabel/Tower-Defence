@@ -11,12 +11,14 @@ public class ParticleSystemScripts : MonoBehaviour
         player = GameObject.Find("Player");
         this.transform.LookAt(player.transform);
     }
-    /*
     private void Update()
     {
-        if(this.GetComponent<ParticleSystem>().isStopped == true)
+        foreach(Transform child in this.gameObject.transform)
         {
-            Destroy(gameObject);
+            if (child.GetComponent<ParticleSystem>().isStopped)
+            {
+                Destroy(this.gameObject);
+            }
         }
-    }*/
+    }
 }

@@ -21,9 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         moveFb = Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
-        moveLr = Input.GetAxis("Horizontal") * (walkingSpeed / 2) * Time.deltaTime;
+        moveLr = Input.GetAxis("Horizontal") * (walkingSpeed /2) * Time.deltaTime;
 
         transform.Translate(moveLr, 0, moveFb);
+
+        //Vector3 movement = new Vector3(moveLr, 0, moveFb);
+        //playerRg.velocity = transform.TransformDirection(movement * walkingSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
