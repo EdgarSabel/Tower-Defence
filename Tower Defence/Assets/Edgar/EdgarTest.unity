@@ -344,6 +344,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5999022
@@ -576,7 +580,7 @@ GameObject:
   - component: {fileID: 1555307193}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
