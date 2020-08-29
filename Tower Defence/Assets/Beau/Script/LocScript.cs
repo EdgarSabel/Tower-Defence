@@ -8,5 +8,9 @@ public class LocScript : MonoBehaviour
         {
             other.GetComponent<Enemy>().SetNextLoc();
         }
+        else if(other.gameObject.transform.parent.tag == "Enemy")
+        {
+            other.transform.parent.GetComponent<Enemy>().SetNextLoc();
+        }
     }
 }

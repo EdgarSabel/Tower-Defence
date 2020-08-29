@@ -299,6 +299,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   range: 0
+  isHovering: 0
   cam: {fileID: 0}
   xp1: 0
   xp2: 0
@@ -734,6 +735,7 @@ GameObject:
   - component: {fileID: 748581406}
   - component: {fileID: 748581407}
   - component: {fileID: 748581408}
+  - component: {fileID: 748581409}
   m_Layer: 0
   m_Name: Loc (0)
   m_TagString: Untagged
@@ -793,6 +795,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 2.48, z: 0}
+--- !u!65 &748581409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748581404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 6.343589, z: 0.5}
+  m_Center: {x: 0, y: 1.6115437, z: 0}
 --- !u!1 &1086213330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4561107985669078871, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
