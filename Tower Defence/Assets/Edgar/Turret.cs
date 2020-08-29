@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public int damage;
-    public float fireRate;
-    public float radius;
+    public int damage, slot;
     private float longestDist;
-    public GameObject target;
-    public new SphereCollider collider;
+    public float fireRate, radius;
     private float lastShotTime = float.MinValue;
+    public new SphereCollider collider;
+    public GameObject target;
 
     [HideInInspector]public float standardFireRate;
     // Start is called before the first frame update
@@ -22,6 +21,10 @@ public class Turret : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        FindTarget();
+    }
+    public virtual void FindTarget()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var hitCollider in hitColliders)
@@ -37,7 +40,7 @@ public class Turret : MonoBehaviour
         }
         if (target != null)
         {
-        transform.LookAt(target.transform.position);
+            transform.LookAt(target.transform.position);
         }
 
         if (target != null && Time.time > lastShotTime + (3.0f / fireRate))
@@ -46,7 +49,7 @@ public class Turret : MonoBehaviour
             Fire();
         }
     }
-    public void Fire()
+    public virtual void Fire()
     {
         target.GetComponent<Enemy>().GetDamage(damage, true);
         target = null;

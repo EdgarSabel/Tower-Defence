@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 1423611625027662954}
   - component: {fileID: 1423611625027662953}
   - component: {fileID: 1423611625027662952}
-  - component: {fileID: 1423611625027662959}
   - component: {fileID: 1423611625027662932}
+  - component: {fileID: 9106568801918034062}
   m_Layer: 0
   m_Name: StandardTurret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,23 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1423611625027662959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423611625027662958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a16268c22f6e948b1ab92d6981cc66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  fireRate: 5
-  radius: 8
-  target: {fileID: 0}
-  collider: {fileID: 1423611625027662932}
 --- !u!135 &1423611625027662932
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -127,3 +110,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 6.3136697
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9106568801918034062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423611625027662958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9f61542ce994447949c15586859495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  slot: 0
+  fireRate: 5
+  radius: 8
+  collider: {fileID: 1423611625027662932}
+  target: {fileID: 0}
+  standardFireRate: 0
