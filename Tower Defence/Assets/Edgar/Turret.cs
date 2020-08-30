@@ -5,13 +5,13 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public int damage, slot;
-    private float longestDist;
     public float fireRate, radius;
-    private float lastShotTime = float.MinValue;
     public new SphereCollider collider;
-    public GameObject target;
-
+    [HideInInspector] public GameObject target;
+    [HideInInspector] public float longestDist;
     [HideInInspector]public float standardFireRate;
+    [HideInInspector] public float lastShotTime = float.MinValue;
+
     void Start()
     {
         collider.radius = radius;
