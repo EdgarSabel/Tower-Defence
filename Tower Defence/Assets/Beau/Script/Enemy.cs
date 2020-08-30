@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     int nextLocNum = 0;
     NavMeshAgent agent;
     GameObject playerManager;
+    public bool isFlying;
 
     private void Start()
     {

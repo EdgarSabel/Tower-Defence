@@ -14,6 +14,16 @@ public class Ability : MonoBehaviour
     public GameObject locationsObj, towersObj;
     GameObject[] enemies;
 
+    public GameObject boomSpider;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Instantiate(boomSpider, transform.position + transform.forward + new Vector3(0.346f, 0.213f, 0.902f), Quaternion.identity);
+        }
+    }
+
     public void UseAbility()
     {
         if(damage == true)
