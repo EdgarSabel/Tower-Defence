@@ -8,7 +8,7 @@ public class Turret : MonoBehaviour
     public float fireRate, radius;
     public new SphereCollider collider;
     [HideInInspector] public GameObject target;
-    [HideInInspector] public float longestDist;
+public float longestDist;
     [HideInInspector]public float standardFireRate;
     [HideInInspector] public float lastShotTime = float.MinValue;
 
@@ -45,17 +45,20 @@ public class Turret : MonoBehaviour
         {
             lastShotTime = Time.time;
             Fire();
+            WipeTarget();
         }
+    }
+    public void WipeTarget()
+    {
+        target = null;
+        longestDist = 0;
     }
     public virtual void Fire()
     {
         target.GetComponent<Enemy>().GetDamage(damage, true);
-        target = null;
-        longestDist = 0;
     }
     private void OnTriggerExit(Collider other)
     {
-        target = null;
-        longestDist = 0;
+        WipeTarget();
     }
 }
