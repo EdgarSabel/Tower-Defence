@@ -135,7 +135,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 7
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4747299518286741607
 MonoBehaviour:
@@ -156,3 +156,4 @@ MonoBehaviour:
   distTravel: 0
   timeAlive: 0
   locationsParentObj: {fileID: 0}
+  isFlying: 0

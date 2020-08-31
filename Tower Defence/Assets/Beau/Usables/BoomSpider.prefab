@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3269346980363691615}
   - component: {fileID: 3269346980363691616}
   - component: {fileID: 3269346980363691613}
+  - component: {fileID: -7669857438812401078}
   - component: {fileID: 3269346980363691618}
   - component: {fileID: 4553514067462269621}
   m_Layer: 0
@@ -98,8 +99,30 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!195 &-7669857438812401078
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269346980363691619}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &3269346980363691618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,12 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577c5665daa611f49829cde6222d7b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  waitTimeBeforeWalking: 3
-  waitTimeBeforeExplosion: 2
-  explosionDelay: 3
-  implodingNumber: 8
-  enlargementNumber: 1
+  speed: 10
+  dmg: 0
+  waitToWalk: 2
+  target: {fileID: 0}
 --- !u!65 &4553514067462269621
 BoxCollider:
   m_ObjectHideFlags: 0

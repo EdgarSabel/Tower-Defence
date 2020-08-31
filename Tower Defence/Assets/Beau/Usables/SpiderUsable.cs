@@ -1,98 +1,97 @@
 ﻿using System;
 using System.Collections;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SocialPlatforms;
 
 public class SpiderUsable : MonoBehaviour
 {
-    public int speed, waitTimeBeforeWalking, waitTimeBeforeExplosion, explosionDelay, implodingNumber;
-    public float enlargementNumber;
+    public int speed, dmg;
+    public int waitToWalk;
 
-    bool move, expanding, imploding;
-    GameObject target;
-    GameObject spawnPoint;
-    float desiredTargetRange, rangeWithTargetNew;
+    public GameObject target;
+
+    bool settingTarget;
+    GameObject spawnPointEnemy;
+    NavMeshAgent agent;
+
+    float targetDist, newDist;
 
     private void Start()
     {
-        spawnPoint = GameObject.Find("SpawnPoint");
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = 0;
+        spawnPointEnemy = GameObject.Find("SpawnPoint");
+
+        chooseTarget();
         StartCoroutine(WaitBeforeWalking());
     }
     private void Update()
     {
-        if(move == true)
+        if(settingTarget == true)
         {
-            transform.LookAt(new Vector3(target.transform.position.x, 0, target.transform.position.z));
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        }
-        if(expanding == true)
-        {
-            transform.localScale += new Vector3(transform.localScale.x * enlargementNumber * Time.deltaTime, transform.localScale.y * enlargementNumber * Time.deltaTime, transform.localScale.z * enlargementNumber * Time.deltaTime);
-            transform.Translate(0, transform.localScale.y * enlargementNumber * Time.deltaTime, 0);
-        }
-        if(imploding == true)
-        {
-            transform.localScale -= new Vector3(transform.localScale.x * implodingNumber * Time.deltaTime, transform.localScale.y * implodingNumber * Time.deltaTime, transform.localScale.z * implodingNumber * Time.deltaTime);
-            transform.Translate(0, transform.localScale.y * -implodingNumber * Time.deltaTime, 0);
+            if(target != null)
+            {
+            agent.SetDestination(target.transform.position);
+            }
+            else
+            {
+                settingTarget = false;
+                chooseTarget();
+            }
         }
     }
-    void GetTarget()
+    void chooseTarget()
     {
-        foreach(Transform child in spawnPoint.transform)
+        foreach(Transform child in spawnPointEnemy.transform)
         {
-            rangeWithTargetNew = Vector3.Distance(transform.position, child.transform.position);
-
-            if(desiredTargetRange != 0)
+            if(spawnPointEnemy.transform.childCount != 0)
             {
-                if(rangeWithTargetNew <= desiredTargetRange)
+                newDist = Vector3.Distance(transform.position, child.transform.position);
+                if (targetDist == 0)
                 {
-                    desiredTargetRange = rangeWithTargetNew;
+                    targetDist = newDist;
                     if(child.GetComponent<Enemy>().isFlying != true)
                     {
-                        target = child.gameObject;
+                    target = child.gameObject;
+                    }
+                }
+                else
+                {
+                    if(newDist <= targetDist)
+                    {
+                        targetDist = Vector3.Distance(transform.position, child.transform.position);
+                        if (child.GetComponent<Enemy>().isFlying != true)
+                        {
+                            target = child.gameObject;
+                        }
                     }
                 }
             }
             else
             {
-                desiredTargetRange = rangeWithTargetNew;
-                if (child.GetComponent<Enemy>().isFlying != true)
-                {
-                    target = child.gameObject;
-                }
+                Destroy(gameObject);
             }
         }
-        move = true;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            move = false;
-            GetComponent<Collider>().enabled = !enabled;
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-            StartCoroutine(WaitToExpand());
-        }
+        settingTarget = true;
     }
     IEnumerator WaitBeforeWalking()
     {
-        yield return new WaitForSeconds(waitTimeBeforeWalking);
-        GetTarget();
+        yield return new WaitForSeconds(waitToWalk);
+        agent.speed = speed;
     }
-    IEnumerator WaitToExpand()
+    private void OnCollisionEnter(Collision collision)
     {
-        expanding = true;
-        yield return new WaitForSeconds(explosionDelay);
-        expanding = false;
-        imploding = true;
-        StartCoroutine(WaitToExplode());
-    }
-    IEnumerator WaitToExplode()
-    {
-        yield return new WaitForSeconds(waitTimeBeforeExplosion);
-        print("Explode");
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }
