@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Threading;
 
 public class WaveSystem : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class WaveSystem : MonoBehaviour
     public class Wave
     {
         public Enemies[] enemies;
+        public int moneyToGet;
     }
     [System.Serializable]
     public class Enemies
@@ -17,50 +19,80 @@ public class WaveSystem : MonoBehaviour
         public float rate;
     }
     public GameObject[] enemyPrefabs;
-    public Text roundNumberText;
+    public Text roundNumberText, nextRoundInText;
+    public GameObject timerObj;
     public GameObject enemyObj;
     public GameObject[] spawnPoints;
     public int waitTimeForNextRound;
+    public GameObject playerManager;
     public Wave[] waves;
 
+    float timer;
     Vector3 wantedSpawnPoint;
-    int roundNumber = -1;
+    int roundNumber = -1, moneyNumber;
     bool allEnemiesAreSpawned, canSkip;
 
     IEnumerator coroutine;
 
     private void Start()
     {
-        coroutine = WaitForRound();
-        StartCoroutine(coroutine);
+        WaitForNextRound();
         canSkip = true;
     }
     private void Update()
     {
         if(enemyObj.transform.childCount == 0 && allEnemiesAreSpawned == true)
         {
-            allEnemiesAreSpawned = false;
-            coroutine = WaitForRound();
-            StartCoroutine(coroutine);
-            canSkip = true;
+            EndRound();
         }
         if (Input.GetKeyDown(KeyCode.P) && canSkip == true) 
         {
             canSkip = false;
-            StopCoroutine(coroutine);
+            timer = 1;
             StartCoroutine(StartNewRound());
         }
+        if(timer >= 1.00001)
+        {
+            timer -= Time.deltaTime;
+            nextRoundInText.text = "Next round in " + timer.ToString("F0");
+        }
+        else if(timer <= 0.99999)
+        {
+            timer = 1;
+            canSkip = false;
+            StartCoroutine(StartNewRound());
+        }
+    }
+    void UpdateRoundNumber()
+    {
+        roundNumberText.text = "Round " + (roundNumber + 1).ToString();
     }
     void RandomSpawnPoint()
     {
         int randomNumber = Random.Range(0, spawnPoints.Length);
         wantedSpawnPoint = spawnPoints[randomNumber].transform.position;
     }
+    void WaitForNextRound()
+    {
+        timer = waitTimeForNextRound;
+        timerObj.SetActive(true);
+        canSkip = true;
+    }
+    void EndRound()
+    {
+        playerManager.GetComponent<MoneyManager>().GetMoney(moneyNumber);
+        allEnemiesAreSpawned = false;
+        WaitForNextRound();
+        canSkip = true;
+    }
     IEnumerator StartNewRound()
     {
+        timerObj.SetActive(false);
         roundNumber++;
+        UpdateRoundNumber();
         for (int i = 0; i < waves[roundNumber].enemies.Length; i++)
         {
+            moneyNumber = waves[roundNumber].moneyToGet;
             for (int o = 0; o < waves[roundNumber].enemies[i].amount; o++)
             {
                 RandomSpawnPoint();
@@ -69,11 +101,5 @@ public class WaveSystem : MonoBehaviour
             }
         }
         allEnemiesAreSpawned = true;
-    }
-    IEnumerator WaitForRound()
-    {
-        yield return new WaitForSeconds(waitTimeForNextRound);
-        StartCoroutine(StartNewRound());
-        canSkip = false;
     }
 }
