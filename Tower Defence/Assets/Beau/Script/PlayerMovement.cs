@@ -25,9 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(moveLr, 0, moveFb);
 
-        //Vector3 movement = new Vector3(moveLr, 0, moveFb);
-        //playerRg.velocity = transform.TransformDirection(movement * walkingSpeed * Time.deltaTime);
-
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             playerRg.velocity = new Vector3(0, jumpHight, 0);
