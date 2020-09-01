@@ -8,7 +8,7 @@ public class Turret : MonoBehaviour
     public float fireRate, radius;
     public new SphereCollider collider;
     [HideInInspector] public GameObject target;
-    public float longestDist;
+    [HideInInspector] public float longestDist;
     [HideInInspector]public float standardFireRate;
     [HideInInspector] public float lastShotTime = float.MinValue;
 
