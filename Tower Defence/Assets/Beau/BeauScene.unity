@@ -991,7 +991,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375246359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.7, y: 0, z: 17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 4747299518286741600, guid: 6393c9824e6eb954f9660a90d765119f, type: 3}
-  - {fileID: 8932169020268373661, guid: 64ae11dce13af33419f33273e125da04, type: 3}
+  - {fileID: 4112854245957402576, guid: 9369556c6dc13ed48b3addbed3088305, type: 3}
   - {fileID: 1973087063899914595, guid: e71ef98242651fa4781f4d7cf8e6bffc, type: 3}
   roundNumberText: {fileID: 1488419144}
   nextRoundInText: {fileID: 1789945937}
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   playerManager: {fileID: 148163699}
   waves:
   - enemies:
-    - enemyType: 0
+    - enemyType: 1
       amount: 5
       rate: 1
     moneyToGet: 20

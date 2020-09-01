@@ -23,7 +23,7 @@ public class PlayerWeapon : MonoBehaviour
 
         Debug.DrawRay(cam.transform.position, cam.transform.forward * playerWeaponRange, Color.green);
 
-        if (Input.GetMouseButtonDown(0) && canHit == true)
+        if (Input.GetButtonDown("Hit") && canHit == true)
         {
             canHit = false;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, playerWeaponRange, -5, QueryTriggerInteraction.Ignore))

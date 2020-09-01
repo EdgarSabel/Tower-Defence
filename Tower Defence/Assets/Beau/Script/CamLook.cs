@@ -27,7 +27,7 @@ public class CamLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerObj.transform.Rotate(Vector3.up * mouseX);
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel")) 
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

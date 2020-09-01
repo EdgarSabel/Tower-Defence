@@ -45,7 +45,7 @@ public class WaveSystem : MonoBehaviour
         {
             EndRound();
         }
-        if (Input.GetKeyDown(KeyCode.P) && canSkip == true) 
+        if (Input.GetButtonDown("SkipWave") && canSkip == true) 
         {
             canSkip = false;
             timer = 1;
@@ -96,7 +96,7 @@ public class WaveSystem : MonoBehaviour
             for (int o = 0; o < waves[roundNumber].enemies[i].amount; o++)
             {
                 RandomSpawnPoint();
-                Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint, Quaternion.identity, enemyObj.transform);
+                Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint, Quaternion.Euler(0, 0, 0), enemyObj.transform);
                 yield return new WaitForSeconds(waves[roundNumber].enemies[i].rate);
             }
         }

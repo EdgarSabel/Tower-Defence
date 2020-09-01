@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(moveLr, 0, moveFb);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             playerRg.velocity = new Vector3(0, jumpHight, 0);
         }
