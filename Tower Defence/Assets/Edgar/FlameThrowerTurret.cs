@@ -19,11 +19,9 @@ public class FlameThrowerTurret : Turret
             isFiring = true;
         }
     }
-
-    public override void WipeTarget()
+    private void OnTriggerExit(Collider other)
     {
-        base.WipeTarget();
-        isFiring = false;
         vfx.Stop();
+        isFiring = false;
     }
 }

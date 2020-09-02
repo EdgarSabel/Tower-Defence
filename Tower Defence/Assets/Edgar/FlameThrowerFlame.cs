@@ -21,8 +21,8 @@ public class FlameThrowerFlame : MonoBehaviour
     {        
         if (other.gameObject.tag == "Enemy")
         {
-            other.GetComponent<Enemy>().GetDamage(turret.damage, true);
             print("DAMAGE");
+            other.GetComponent<Enemy>().GetDamage(turret.damage, true);
         }
     }
 }
