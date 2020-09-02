@@ -9,23 +9,28 @@ public class CamLook : MonoBehaviour
 
     float mouseX, MouseY;
     float xRotation;
+    [HideInInspector] public bool canMove;
 
     private void Start()
     {
+        canMove = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     private void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * sensetivity * Time.deltaTime;
-        MouseY = Input.GetAxis("Mouse Y") * sensetivity * Time.deltaTime;
+        if(canMove == true)
+        {
+            mouseX = Input.GetAxis("Mouse X") * sensetivity * Time.deltaTime;
+            MouseY = Input.GetAxis("Mouse Y") * sensetivity * Time.deltaTime;
 
-        xRotation -= MouseY;
-        xRotation = Mathf.Clamp(xRotation, -80, 80);
+            xRotation -= MouseY;
+            xRotation = Mathf.Clamp(xRotation, -80, 80);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        playerObj.transform.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+            playerObj.transform.Rotate(Vector3.up * mouseX);
+        }
 
         if (Input.GetButtonDown("Cancel")) 
         {

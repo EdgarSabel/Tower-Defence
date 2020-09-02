@@ -13,9 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject playerCam;
     Rigidbody playerRg;
+    [HideInInspector] public bool canMove = true;
 
     private void Start()
     {
+        canMove = true;
         playerRg = this.GetComponent<Rigidbody>();
     }
     private void Update()
@@ -23,11 +25,14 @@ public class PlayerMovement : MonoBehaviour
         moveFb = Input.GetAxis("Vertical") * walkingSpeed * Time.deltaTime;
         moveLr = Input.GetAxis("Horizontal") * (walkingSpeed /2) * Time.deltaTime;
 
-        transform.Translate(moveLr, 0, moveFb);
+        if(canMove == true) 
+            { 
+            transform.Translate(moveLr, 0, moveFb);
 
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-            playerRg.velocity = new Vector3(0, jumpHight, 0);
+            if (Input.GetButtonDown("Jump") && isGrounded == true)
+            {
+                playerRg.velocity = new Vector3(0, jumpHight, 0);
+            }
         }
     }
 }
