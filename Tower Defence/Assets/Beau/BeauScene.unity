@@ -933,11 +933,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
---- !u!4 &1355698179 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
-  m_PrefabInstance: {fileID: 1815957494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375246359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,59 +1703,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129275925}
   m_CullTransparentMesh: 0
---- !u!1 &2134603195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2134603196}
-  - component: {fileID: 2134603197}
-  m_Layer: 0
-  m_Name: Ability
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2134603196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134603195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 0.213, z: 0.902}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1355698179}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2134603197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134603195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b48a45ad681557d4888d247003225df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  freeze: 0
-  fireRate: 0
-  dmgNumber: 0
-  freezeTime: 0
-  fireRateTimesNumber: 0
-  fireRateIncreaseTime: 0
-  locationsObj: {fileID: 1898467021}
-  towersObj: {fileID: 207582396}
-  boomSpider: {fileID: 3269346980363691619, guid: c5421a0c1998bb34eb9c53191cc426c0, type: 3}
 --- !u!1 &2145182750
 GameObject:
   m_ObjectHideFlags: 0
