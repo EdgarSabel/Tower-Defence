@@ -53,7 +53,7 @@ public class Turret : MonoBehaviour
     {
         target.GetComponent<Enemy>().GetDamage(damage, true);
     }
-    public void WipeTarget()
+    public virtual void WipeTarget()
     {
         target = null;
         longestDist = 0;
