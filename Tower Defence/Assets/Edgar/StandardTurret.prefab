@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1423611625027662932}
   - component: {fileID: 9106568801918034062}
   - component: {fileID: 5136755898524893001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StandardTurret
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -129,7 +129,9 @@ MonoBehaviour:
   radius: 8
   collider: {fileID: 1423611625027662932}
   target: {fileID: 0}
+  longestDist: 0
   standardFireRate: 0
+  lastShotTime: -3.4028235e+38
 --- !u!114 &5136755898524893001
 MonoBehaviour:
   m_ObjectHideFlags: 0

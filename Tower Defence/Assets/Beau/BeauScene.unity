@@ -1694,6 +1694,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1086213330}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4561107985726773304, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -1757,6 +1761,10 @@ PrefabInstance:
     - target: {fileID: 4561107986965756476, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561107986965756476, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756479, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Constraints
@@ -1831,7 +1839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 4747299518286741600, guid: 6393c9824e6eb954f9660a90d765119f, type: 3}
-  - {fileID: 3806178314492244190, guid: 8cc88b5546c9443439d5c65f4e932dde, type: 3}
+  - {fileID: 8932169020268373661, guid: 64ae11dce13af33419f33273e125da04, type: 3}
   - {fileID: 1973087063899914595, guid: e71ef98242651fa4781f4d7cf8e6bffc, type: 3}
   roundNumberText: {fileID: 1488419144}
   nextRoundInText: {fileID: 1789945937}
@@ -1844,8 +1852,8 @@ MonoBehaviour:
   playerManager: {fileID: 148163699}
   waves:
   - enemies:
-    - enemyType: 1
-      amount: 20
+    - enemyType: 0
+      amount: 5
       rate: 1
     moneyToGet: 20
   - enemies:
@@ -1861,6 +1869,62 @@ MonoBehaviour:
       amount: 1
       rate: 1
     moneyToGet: 40
+  - enemies:
+    - enemyType: 0
+      amount: 3
+      rate: 0.6
+    - enemyType: 1
+      amount: 1
+      rate: 1
+    moneyToGet: 40
+  - enemies:
+    - enemyType: 0
+      amount: 5
+      rate: 0.6
+    - enemyType: 1
+      amount: 2
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 0
+      amount: 15
+      rate: 0.6
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 0
+      amount: 8
+      rate: 0.6
+    - enemyType: 2
+      amount: 4
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 0
+      amount: 10
+      rate: 0.6
+    - enemyType: 1
+      amount: 5
+      rate: 1
+    - enemyType: 2
+      amount: 1
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 1
+      amount: 10
+      rate: 0.6
+    - enemyType: 2
+      amount: 4
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 1
+      amount: 20
+      rate: 0.6
+    - enemyType: 2
+      amount: 8
+      rate: 1
+    moneyToGet: 60
 --- !u!4 &2119677664
 Transform:
   m_ObjectHideFlags: 0

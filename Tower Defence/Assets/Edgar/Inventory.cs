@@ -41,10 +41,9 @@ public class Inventory : MonoBehaviour
     public void Hover()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+        LayerMask mask =~ LayerMask.GetMask("Turret");
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range, mask))
         {
-            if (hit.transform.gameObject.tag == "Ground")
-            {
                 turrets[currentSlot].transform.position = hit.point + offset;
                 if (turretSpawned == false)
                 {
@@ -54,7 +53,6 @@ public class Inventory : MonoBehaviour
                     turrets[currentSlot].gameObject.GetComponent<TurretRepair>().enabled = !enabled;
                     turretSpawned = true;
                 }
-            }
                 if (Input.GetButtonDown("Interact"))
                 {
                     turrets[currentSlot].gameObject.GetComponent<Turret>().enabled = enabled;

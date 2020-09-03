@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5389133207115980246}
   - component: {fileID: 2180533204647990987}
   - component: {fileID: 5389133207115980269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShotgunTurret
   m_TagString: Turret
   m_Icon: {fileID: 0}
