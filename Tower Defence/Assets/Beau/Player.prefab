@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4561107985669078871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4561107986965756451}
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensetivity: 300
   playerObj: {fileID: 4561107986965756476}
+  canMove: 0
 --- !u!114 &4561107985669078877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +337,7 @@ MonoBehaviour:
   jumpHight: 4
   isGrounded: 0
   playerCam: {fileID: 4561107985669078871}
+  canMove: 1
 --- !u!114 &4561107986965756453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDmg: 10
+  repairNumber: 0
   playerWeaponRange: 5
   playerWeaponDelay: 0.5
   cam: {fileID: 4561107985669078871}
@@ -372,6 +375,7 @@ MonoBehaviour:
   range: 8
   isHovering: 0
   cam: {fileID: 0}
+  guide: {fileID: 0}
   xp1: 0
   xp2: 0
   xp3: 0

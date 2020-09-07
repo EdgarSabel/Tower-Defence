@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public bool isHovering;
     private bool turretSpawned;
     public GameObject cam;
+    private GameObject currentTurret;
     public float xp1, xp2, xp3;
     private Vector3 offset = new Vector3(0, (float)0.5, 0);
     private void Start()
@@ -40,28 +41,32 @@ public class Inventory : MonoBehaviour
 
     public void Hover()
     {
+        currentTurret = turrets[currentSlot];
         RaycastHit hit;
-        LayerMask mask =~ LayerMask.GetMask("Turret");
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range, mask))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range))
         {
-                turrets[currentSlot].transform.position = hit.point + offset;
-                if (turretSpawned == false)
-                {
-                    turrets[currentSlot].gameObject.SetActive(true);
-                    turrets[currentSlot].gameObject.GetComponent<BoxCollider>().enabled = !enabled;
-                    turrets[currentSlot].gameObject.GetComponent<Turret>().enabled = !enabled;
-                    turrets[currentSlot].gameObject.GetComponent<TurretRepair>().enabled = !enabled;
-                    turretSpawned = true;
-                }
-                if (Input.GetButtonDown("Interact"))
-                {
-                    turrets[currentSlot].gameObject.GetComponent<Turret>().enabled = enabled;
-                    turrets[currentSlot].gameObject.GetComponent<TurretRepair>().enabled = enabled;           
-                    turrets[currentSlot].gameObject.GetComponent<BoxCollider>().enabled = enabled;
-                    turrets[currentSlot] = null;
-                    turretSpawned = false;
-                    isHovering = false;
-                }
+            if (hit.transform.gameObject.tag == "Ground")
+            {
+                currentTurret.transform.position = hit.point + offset;
+            }
+
+            if (turretSpawned == false)
+            {
+                currentTurret.SetActive(true);
+                currentTurret.GetComponent<BoxCollider>().enabled = !enabled;
+                currentTurret.GetComponent<Turret>().enabled = !enabled;
+                currentTurret.GetComponent<TurretRepair>().enabled = !enabled;
+                turretSpawned = true;
+            }
+            if (Input.GetButtonDown("Interact"))
+            {
+                currentTurret.GetComponent<Turret>().enabled = enabled;
+                currentTurret.GetComponent<TurretRepair>().enabled = enabled;
+                currentTurret.GetComponent<BoxCollider>().enabled = enabled;
+                currentTurret = null;
+                turretSpawned = false;
+                isHovering = false;
+            }
         }
     }
 }

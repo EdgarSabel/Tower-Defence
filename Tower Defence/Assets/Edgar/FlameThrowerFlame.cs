@@ -18,11 +18,18 @@ public class FlameThrowerFlame : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other)
-    {        
+    {
         if (other.gameObject.tag == "Enemy")
         {
             print("DAMAGE");
-            other.GetComponent<Enemy>().GetDamage(turret.damage, true);
+            other.GetComponent<Enemy>().isBurning = true;
+            other.GetComponent<Enemy>().burnDmg = turret.damage;
+            other.GetComponent<Enemy>().fireRate = turret.fireRate;
+            if (turret.target = null)
+            {
+                turret.vfx.Stop();
+                turret.isFiring = false;
+            }
         }
     }
 }

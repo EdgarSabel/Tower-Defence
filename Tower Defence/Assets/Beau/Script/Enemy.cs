@@ -3,14 +3,16 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public int walkingSpeed, EnemyHealth, EnemyDmg, moneyDropAmount;
+    public int walkingSpeed, EnemyHealth, EnemyDmg, moneyDropAmount, burnDmg;
     [HideInInspector] public float distTravel;
     [HideInInspector] public float timeAlive;
     public GameObject locationsParentObj;
     int nextLocNum = 0;
+    float lastShotTime;
+    public float fireRate;
     NavMeshAgent agent;
     GameObject playerManager;
-    public bool isFlying;
+    public bool isFlying, isBurning;
 
     private void Start()
     {
@@ -20,6 +22,13 @@ public class Enemy : MonoBehaviour
     {
         timeAlive += Time.deltaTime;
         distTravel = walkingSpeed * timeAlive;
+        if (isBurning == true)
+        {
+            if (Time.time > lastShotTime + (6.0f / fireRate))
+            {
+                GetDamage(burnDmg, false);
+            }
+        }
     }
     public void SetUpEnemy()
     {
