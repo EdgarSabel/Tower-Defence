@@ -153,7 +153,14 @@ MonoBehaviour:
   EnemyHealth: 100
   EnemyDmg: 5
   moneyDropAmount: 40
+  burnDmg: 0
   distTravel: 0
   timeAlive: 0
   locationsParentObj: {fileID: 0}
+  mesh: {fileID: 4747299518286741600}
+  burnRate: 0
   isFlying: 0
+  isBurning: 0
+  isFalling: 0
+  anim: {fileID: 0}
+  collider: {fileID: 4747299518286741604}

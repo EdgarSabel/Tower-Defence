@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
@@ -6,13 +7,15 @@ public class Enemy : MonoBehaviour
     public int walkingSpeed, EnemyHealth, EnemyDmg, moneyDropAmount, burnDmg;
     [HideInInspector] public float distTravel;
     [HideInInspector] public float timeAlive;
-    public GameObject locationsParentObj;
+    public GameObject locationsParentObj, mesh;
     int nextLocNum = 0;
     float lastShotTime;
-    public float fireRate;
+    public float burnRate;
     NavMeshAgent agent;
     GameObject playerManager;
-    public bool isFlying, isBurning;
+    public bool isFlying, isBurning, isFalling;
+    public Animator anim;
+    public Collider collider;
 
     private void Start()
     {
@@ -24,9 +27,21 @@ public class Enemy : MonoBehaviour
         distTravel = walkingSpeed * timeAlive;
         if (isBurning == true)
         {
-            if (Time.time > lastShotTime + (6.0f / fireRate))
+            if (Time.time > lastShotTime + (6.0f / burnRate))
             {
                 GetDamage(burnDmg, false);
+            }
+        }
+        if(isFlying == true)
+        {
+            if (isFalling == true && agent.baseOffset > 0.21f)
+            {
+                agent.baseOffset = Mathf.Clamp(agent.baseOffset, 0.21f, Mathf.Infinity);
+                agent.baseOffset -= Time.deltaTime * 16f;
+            }
+            if(agent.baseOffset <= 0.21f)
+            {
+                StartCoroutine(Delete());
             }
         }
     }
@@ -49,8 +64,7 @@ public class Enemy : MonoBehaviour
             {
                 playerManager.GetComponent<MoneyManager>().GetMoney(moneyDropAmount);
             }
-            //play death anim
-            Destroy(gameObject);
+            Death();
         }
     }
     public void SetNextLoc()
@@ -65,5 +79,25 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             playerManager.GetComponent<HealthManager>().GetDamagedByEnemy(EnemyDmg);
         }
+    }
+    void Death()
+    {
+        collider.enabled = !enabled;
+        agent.speed = 0;
+        agent.velocity = new Vector3(0, 0, 0);
+        anim.SetTrigger("Dead");
+        if (isFlying == true)
+        {
+            isFalling = true;
+        }
+        else
+        {
+            StartCoroutine(Delete());
+        }
+    }
+    IEnumerator Delete()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

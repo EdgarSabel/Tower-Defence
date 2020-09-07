@@ -24,7 +24,7 @@ public class FlameThrowerFlame : MonoBehaviour
             print("DAMAGE");
             other.GetComponent<Enemy>().isBurning = true;
             other.GetComponent<Enemy>().burnDmg = turret.damage;
-            other.GetComponent<Enemy>().fireRate = turret.fireRate;
+            other.GetComponent<Enemy>().burnRate = turret.fireRate;
             if (turret.target = null)
             {
                 turret.vfx.Stop();
