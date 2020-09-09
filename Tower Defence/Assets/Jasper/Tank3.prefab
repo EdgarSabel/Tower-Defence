@@ -6756,7 +6756,7 @@ GameObject:
   - component: {fileID: 7166112590779963533}
   - component: {fileID: 7166112590779963539}
   m_Layer: 0
-  m_Name: RoboTankV2.2
+  m_Name: Tank3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6770,7 +6770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8048579865226252510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.452919, y: 9.112926, z: -7.0775113}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1750010473349618426}
@@ -6868,13 +6868,13 @@ MonoBehaviour:
   distTravel: 0
   timeAlive: 0
   locationsParentObj: {fileID: 0}
-  mesh: {fileID: 7435239481159412296, guid: 8cc88b5546c9443439d5c65f4e932dde, type: 3}
+  mesh: {fileID: 8048579865226252510}
   burnRate: 0
   isFlying: 0
   isBurning: 0
   isFalling: 0
-  anim: {fileID: 2035407048096215378, guid: 8cc88b5546c9443439d5c65f4e932dde, type: 3}
-  collider: {fileID: 5393475890020800122, guid: 8cc88b5546c9443439d5c65f4e932dde, type: 3}
+  anim: {fileID: 7166112590779963538}
+  collider: {fileID: 7166112590779963532}
 --- !u!1 &8318551316590300913
 GameObject:
   m_ObjectHideFlags: 0

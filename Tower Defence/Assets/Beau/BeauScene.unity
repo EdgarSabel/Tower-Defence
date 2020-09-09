@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 4747299518286741600, guid: 6393c9824e6eb954f9660a90d765119f, type: 3}
-  - {fileID: 3806178314492244190, guid: 8cc88b5546c9443439d5c65f4e932dde, type: 3}
+  - {fileID: 8048579865226252510, guid: 807e95e1da4f4dc44802045429c46be7, type: 3}
   - {fileID: 977684963852204110, guid: 036b92d679402574dbf8edeed694031b, type: 3}
   roundNumberText: {fileID: 1488419144}
   nextRoundInText: {fileID: 1789945937}
