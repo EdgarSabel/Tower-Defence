@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject turret;
+    public int damage;
     public float speed;
     private float timer;
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Enemy>().GetDamage(turret.GetComponent<Turret>().damage, true);
+            collision.gameObject.GetComponent<Enemy>().GetDamage(damage, true);
             Destroy(gameObject);
         }
         else
