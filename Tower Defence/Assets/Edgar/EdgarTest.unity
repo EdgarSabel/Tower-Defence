@@ -981,9 +981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427917fe48a1b494d97d85b41bfdd912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 1
   slot: 0
-  fireRate: 1
+  fireRate: 4
   radius: 5
   collider: {fileID: 1423611623480350565}
   target: {fileID: 0}
@@ -992,6 +992,7 @@ MonoBehaviour:
   lastShotTime: -3.4028235e+38
   isFiring: 0
   vfx: {fileID: 1830319022}
+  burnDuration: 5
 --- !u!135 &1423611623480350565
 SphereCollider:
   m_ObjectHideFlags: 0

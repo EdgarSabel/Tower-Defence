@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlameThrowerFlame : MonoBehaviour
 {
     public FlameThrowerTurret turret;
+    private Enemy target;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,19 @@ public class FlameThrowerFlame : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            print("DAMAGE");
-            other.GetComponent<Enemy>().isBurning = true;
-            other.GetComponent<Enemy>().burnDmg = turret.damage;
-            other.GetComponent<Enemy>().burnRate = turret.fireRate;
+            target = other.gameObject.GetComponent<Enemy>();
+            if (target.isBurning == false)
+            {
+            target.burnDmg = turret.damage;
+            target.burnRate = turret.fireRate;
+            target.isBurning = true;
+            target.duration = turret.burnDuration;
+            }
+            else
+            {
+                target.burnTimer = 0;
+            }
+
             if (turret.target = null)
             {
                 turret.vfx.Stop();

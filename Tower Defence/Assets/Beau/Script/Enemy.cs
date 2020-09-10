@@ -10,10 +10,11 @@ public class Enemy : MonoBehaviour
     public GameObject locationsParentObj, mesh;
     int nextLocNum = 0;
     float lastShotTime;
-    public float burnRate;
+    [HideInInspector] public float burnRate, burnTimer, duration;
     NavMeshAgent agent;
     GameObject playerManager;
-    public bool isFlying, isBurning, isFalling;
+    [HideInInspector]public bool isBurning;
+    public bool isFlying, isFalling;
     public Animator anim;
     public Collider collider;
 
@@ -25,13 +26,6 @@ public class Enemy : MonoBehaviour
     {
         timeAlive += Time.deltaTime;
         distTravel = walkingSpeed * timeAlive;
-        if (isBurning == true)
-        {
-            if (Time.time > lastShotTime + (6.0f / burnRate))
-            {
-                GetDamage(burnDmg, false);
-            }
-        }
         if(isFlying == true)
         {
             if (isFalling == true && agent.baseOffset > 0.21f)
@@ -42,6 +36,19 @@ public class Enemy : MonoBehaviour
             if(agent.baseOffset <= 0.21f)
             {
                 StartCoroutine(Delete());
+            }
+        }
+
+        if (isBurning == true)
+        {
+            burnTimer += Time.deltaTime;
+            if (burnTimer < duration)
+            {
+                if (Time.time > lastShotTime + (6.0f / burnRate))
+                {
+                    GetDamage(burnDmg, false);
+                    lastShotTime = Time.time;
+                }
             }
         }
     }
