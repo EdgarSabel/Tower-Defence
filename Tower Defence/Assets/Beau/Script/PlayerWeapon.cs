@@ -21,7 +21,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         Ray ray = new Ray(cam.transform.localPosition, Vector3.forward);
 
-        Debug.DrawRay(cam.transform.position, cam.transform.forward * playerWeaponRange, Color.green);
+        //Debug.DrawRay(cam.transform.position, cam.transform.forward * playerWeaponRange, Color.green);
 
         if (Input.GetButtonDown("Hit") && canHit == true)
         {

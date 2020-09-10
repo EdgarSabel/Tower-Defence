@@ -43,13 +43,13 @@ public class Inventory : MonoBehaviour
     {
         currentTurret = turrets[currentSlot];
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range))
+        Debug.DrawRay(cam.transform.position, cam.transform.forward * range, Color.red);
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range, -5, QueryTriggerInteraction.Ignore))
         {
             if (hit.transform.gameObject.tag == "Ground")
             {
                 currentTurret.transform.position = hit.point + offset;
             }
-
             if (turretSpawned == false)
             {
                 currentTurret.SetActive(true);

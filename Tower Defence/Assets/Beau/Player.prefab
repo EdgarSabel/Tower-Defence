@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929873127aeefd5408238d0dc7daf878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensetivity: 300
+  sensetivity: 200
   playerObj: {fileID: 4561107986965756476}
   canMove: 0
 --- !u!114 &4561107985669078877
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe04f194804acf48955b9cd41fd2a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 7
   inventory: {fileID: 725255761734339701}
 --- !u!1 &4561107985726773304
 GameObject:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDmg: 10
-  repairNumber: 0
+  repairNumber: 20
   playerWeaponRange: 5
   playerWeaponDelay: 0.5
   cam: {fileID: 4561107985669078871}
@@ -372,10 +372,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  range: 8
+  range: 7
   isHovering: 0
   cam: {fileID: 0}
-  guide: {fileID: 0}
   xp1: 0
   xp2: 0
   xp3: 0
