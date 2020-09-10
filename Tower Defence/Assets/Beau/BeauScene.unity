@@ -1636,6 +1636,18 @@ PrefabInstance:
       propertyPath: guide
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4561107985669078872, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_RendererIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561107985669078872, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561107985669078874, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4561107985726773304, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_TagString
       value: Untagged
