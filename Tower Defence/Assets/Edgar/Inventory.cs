@@ -63,7 +63,7 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponent<Turret>().enabled = enabled;
                 currentTurret.GetComponent<TurretRepair>().enabled = enabled;
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
-                currentTurret = null;
+                turrets[currentSlot] = null;
                 turretSpawned = false;
                 isHovering = false;
             }
