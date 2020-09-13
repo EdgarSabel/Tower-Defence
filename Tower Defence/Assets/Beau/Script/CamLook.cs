@@ -22,8 +22,8 @@ public class CamLook : MonoBehaviour
     {
         if(canMove == true)
         {
-            mouseX = Input.GetAxis("Mouse X") * sensetivity * Time.deltaTime;
-            MouseY = Input.GetAxis("Mouse Y") * sensetivity * Time.deltaTime;
+            mouseX = Input.GetAxis("Mouse X") * sensetivity;
+            MouseY = Input.GetAxis("Mouse Y") * sensetivity;
 
             xRotation -= MouseY;
             xRotation = Mathf.Clamp(xRotation, -80, 80);

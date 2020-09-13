@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929873127aeefd5408238d0dc7daf878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensetivity: 200
+  sensetivity: 10
   playerObj: {fileID: 4561107986965756476}
   canMove: 0
 --- !u!114 &4561107985669078877
