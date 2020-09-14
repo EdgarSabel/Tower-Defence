@@ -92,6 +92,7 @@ public class Enemy : MonoBehaviour
         collider.enabled = !enabled;
         agent.speed = 0;
         agent.velocity = new Vector3(0, 0, 0);
+        agent.enabled = !enabled;
         anim.SetTrigger("Dead");
         if (isFlying == true)
         {

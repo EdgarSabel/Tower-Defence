@@ -1744,10 +1744,7 @@ MonoBehaviour:
   playerManager: {fileID: 148163699}
   waves:
   - enemies:
-    - enemyType: 1
-      amount: 2
-      rate: 1
-    - enemyType: 2
+    - enemyType: 0
       amount: 2
       rate: 1
     moneyToGet: 20
