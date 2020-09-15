@@ -955,6 +955,10 @@ MonoBehaviour:
   isFalling: 0
   anim: {fileID: 6676868217319158927}
   collider: {fileID: 3495267949674463230}
+  sounds:
+    walkingSound: {fileID: 0}
+    getHitSound: {fileID: 0}
+    deathSound: {fileID: 0}
 --- !u!65 &3495267949674463230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1285,7 +1289,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: cae4425febda7d546b5e812bd71cd814, type: 3}
+  - {fileID: 2100000, guid: 5353f3eaf95de7d41a7b7dd03c8b43ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
