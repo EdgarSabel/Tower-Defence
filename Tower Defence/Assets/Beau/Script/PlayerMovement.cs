@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody playerRg;
     [HideInInspector] public bool canMove = true;
 
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource walkingSound, jumpSound, landingSound;
+    }
+    public Sounds sounds;
     private void Start()
     {
         canMove = true;

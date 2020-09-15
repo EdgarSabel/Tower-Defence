@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,7 +18,12 @@ public class Enemy : MonoBehaviour
     public bool isFlying, isFalling;
     public Animator anim;
     public Collider collider;
-
+    [System.Serializable]
+        public class Sounds
+        {
+            public AudioSource walkingSound, getHitSound, deathSound;
+        }
+    public Sounds sounds;
     private void Start()
     {
         SetUpEnemy();

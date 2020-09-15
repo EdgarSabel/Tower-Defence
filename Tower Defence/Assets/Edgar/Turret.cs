@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource shootSound;
+    }
     public int damage, slot;
     public float fireRate, radius;
     public new SphereCollider collider;
@@ -11,7 +16,7 @@ public class Turret : MonoBehaviour
     [HideInInspector] public float longestDist;
     [HideInInspector]public float standardFireRate;
     [HideInInspector] public float lastShotTime = float.MinValue;
-
+    public Sounds sounds;
     void Start()
     {
         longestDist = 0;

@@ -18,6 +18,11 @@ public class WaveSystem : MonoBehaviour
         public int amount;
         public float rate;
     }
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource shopOpenedSound, startRoundSound;
+    }
     public GameObject[] enemyPrefabs;
     public Text roundNumberText, nextRoundInText;
     public GameObject timerObj;
@@ -26,6 +31,7 @@ public class WaveSystem : MonoBehaviour
     public int waitTimeForNextRound;
     public GameObject playerManager;
     public Wave[] waves;
+    public Sounds sounds;
 
     float timer;
     Vector3 wantedSpawnPoint;

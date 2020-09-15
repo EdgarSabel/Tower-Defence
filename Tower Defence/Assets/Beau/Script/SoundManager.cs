@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public class Enemy
+    [System.Serializable]
+    public class AmbientSounds
     {
-
+        public AudioSource backGroundMusic, ambientWind, ambientVogels;
     }
-    public class Player
+    [System.Serializable]
+    public class PlayerVoiceLines
     {
-
+        public AudioSource baseUnderAttackVoiceLine1, baseUnderAttackVoiceLine2, baseUnderAttackVoiceLine3;
     }
+
+    public AmbientSounds ambientSounds;
+    public PlayerVoiceLines playerVoiceLines;
 }

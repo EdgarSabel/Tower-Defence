@@ -17,6 +17,12 @@ public class PlayerWeapon : MonoBehaviour
     bool canHit = true;
     RaycastHit hit;
 
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource hitMapSound, hitEnemySound, repairTurretSound;
+    }
+    public Sounds sounds;
     private void Update()
     {
         Ray ray = new Ray(cam.transform.localPosition, Vector3.forward);
