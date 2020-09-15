@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4561107985669078877}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,6 +338,10 @@ MonoBehaviour:
   isGrounded: 0
   playerCam: {fileID: 4561107985669078871}
   canMove: 1
+  sounds:
+    walkingSound: {fileID: 0}
+    jumpSound: {fileID: 0}
+    landingSound: {fileID: 0}
 --- !u!114 &4561107986965756453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +360,10 @@ MonoBehaviour:
   playerWeaponDelay: 0.5
   cam: {fileID: 4561107985669078871}
   hitMapParticles: {fileID: 1466599599686219034, guid: 427f887c1baa61b4e9fd549595a52c3c, type: 3}
+  sounds:
+    hitMapSound: {fileID: 0}
+    hitEnemySound: {fileID: 0}
+    repairTurretSound: {fileID: 0}
 --- !u!114 &725255761734339701
 MonoBehaviour:
   m_ObjectHideFlags: 0
