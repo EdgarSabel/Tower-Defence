@@ -77,11 +77,12 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
                 turrets[currentSlot] = null;
                 turretSpawned = false;
+                currentTurret = null;
+                isHovering = false;
 
                 sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
                 sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
                 sounds.placeTurretSound.Play();
-                isHovering = false;
             }
         }
     }
