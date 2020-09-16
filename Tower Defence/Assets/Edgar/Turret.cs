@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour
     public class Sounds
     {
         public AudioSource shootSound;
+        [HideInInspector] public float shootSoundVolume, shootSoundPitch;
     }
     public int damage, slot;
     public float fireRate, radius;
@@ -22,6 +23,9 @@ public class Turret : MonoBehaviour
         longestDist = 0;
         collider.radius = radius;
         standardFireRate = fireRate;
+
+        sounds.shootSoundVolume = sounds.shootSound.volume;
+        sounds.shootSoundPitch = sounds.shootSound.pitch;
     }
 
     void Update()
@@ -51,12 +55,19 @@ public class Turret : MonoBehaviour
         {
             lastShotTime = Time.time;
             Fire();
+            ShootSound();
         }
         WipeTarget();
     }
     public virtual void Fire()
     {
         target.GetComponent<Enemy>().GetDamage(damage, true);
+    }
+    void ShootSound()
+    {
+        sounds.shootSound.volume = Random.Range(sounds.shootSoundVolume - .05f, sounds.shootSoundVolume + .05f);
+                sounds.shootSound.pitch = Random.Range(sounds.shootSoundPitch - .1f, sounds.shootSoundPitch + .1f);
+                sounds.shootSound.Play();
     }
     public virtual void WipeTarget()
     {
