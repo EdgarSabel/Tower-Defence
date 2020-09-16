@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerInterectScript : MonoBehaviour
 {
 
-    public GameObject upgradePanel;
+    public GameObject upgradePanel, shopPanel, hudPanel, cam, player;
     public RaycastHit hit;
+    public GameObject menuPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,33 @@ public class PlayerInterectScript : MonoBehaviour
         {
             if (hit.transform.tag == ("Turret"))
             {
-                if (Input.GetButtonDown("Interact"))
+                if (Input.GetButtonDown("Fire2"))
                 {
                     upgradePanel.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                 }
             }
+
+            else if (hit.transform.tag == ("Shop"))
+            {
+                if (Input.GetButtonDown("Fire2"))
+                {
+                    shopPanel.SetActive(true);
+                    hudPanel.SetActive(false);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    cam.GetComponent<CamLook>().canMove = false;
+                    player.GetComponent<CamLook>().canMove = false;
+                }
+            }
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            menuPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

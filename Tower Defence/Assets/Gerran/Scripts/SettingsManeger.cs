@@ -16,7 +16,7 @@ public class SettingsManeger : MonoBehaviour
     public Slider volumeSliderMaster;
     public Slider sensetivetySlider;
 
-    public GameObject menuPanel,cam;
+    public GameObject menuPanel, upgradePanel, shopPanel, hudPanel, cam, player;
 
 
     // Start is called before the first frame update
@@ -31,13 +31,7 @@ public class SettingsManeger : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetButtonDown("Cancel"))
-        {
-            menuPanel.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            cam.GetComponent<CamLook>().canMove = false;
-        }
+
     }
 
     public void Resume()
@@ -45,6 +39,22 @@ public class SettingsManeger : MonoBehaviour
         menuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void Back()
+    {
+        upgradePanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    public void ShopBack()
+    {
+        shopPanel.SetActive(false);
+        hudPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        cam.GetComponent<CamLook>().canMove = true;
+        player.GetComponent<CamLook>().canMove = true;
     }
 
 

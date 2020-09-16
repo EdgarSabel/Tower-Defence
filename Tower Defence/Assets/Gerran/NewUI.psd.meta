@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 740acd2bcb250d64b9948b2169c1e6cb
+guid: 82d2b385b59607d428acb41a62dbfe00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2744458000424600455
-    second: istockphoto-1185659802-1024x1024_0
+      213: 2025482963431443278
+    second: NewUI_0
   - first:
-      213: 6837935872761386615
-    second: istockphoto-1185659802-1024x1024_1
+      213: -6400289074952942741
+    second: NewUI_1
   - first:
-      213: 5583533585126478217
-    second: istockphoto-1185659802-1024x1024_2
+      213: 3862668917374064188
+    second: NewUI_2
+  - first:
+      213: -6018758375207055607
+    second: NewUI_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,64 +137,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: istockphoto-1185659802-1024x1024_0
+      name: NewUI_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 57
-        width: 565
-        height: 187
+        x: 23
+        y: 697
+        width: 151
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 28, y: 44, z: 30, w: 76}
+      border: {x: 12, y: 8, z: 13, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7838948b206461620800000000000000
-      internalID: 2744458000424600455
+      spriteID: e4bcfe51606fb1c10800000000000000
+      internalID: 2025482963431443278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: istockphoto-1185659802-1024x1024_1
+      name: NewUI_1
       rect:
         serializedVersion: 2
-        x: 59
-        y: 236
-        width: 431
-        height: 248
+        x: 21
+        y: 465
+        width: 300
+        height: 199
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 60, y: 56, z: 62, w: 82}
+      border: {x: 11, y: 13, z: 6, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 776d7d4827a35ee50800000000000000
-      internalID: 6837935872761386615
+      spriteID: b6bcd9b1ffa9d27a0800000000000000
+      internalID: -6400289074952942741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: istockphoto-1185659802-1024x1024_2
+      name: NewUI_2
       rect:
         serializedVersion: 2
-        x: 62
-        y: 525
-        width: 427
-        height: 262
+        x: 332
+        y: 467
+        width: 149
+        height: 197
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 78, y: 83, z: 79, w: 78}
+      border: {x: 13, y: 22, z: 15, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9815dec7632bc7d40800000000000000
-      internalID: 5583533585126478217
+      spriteID: c3616014ae4fa9530800000000000000
+      internalID: 3862668917374064188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewUI_3
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 463
+        width: 153
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 23, z: 13, w: 19}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f40e08523197ca0800000000000000
+      internalID: -6018758375207055607
       vertices: []
       indices: 
       edges: []
@@ -199,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ef550d26615b5ab41a2bb063ec0898ce
+    spriteID: f275cd6c547c5294d87524b043bd2ca3
     internalID: 0
     vertices: []
     indices: 

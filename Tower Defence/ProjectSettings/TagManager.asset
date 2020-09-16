@@ -9,6 +9,7 @@ TagManager:
   - EnemyPathFinder
   - Turret
   - Ground
+  - Shop
   layers:
   - Default
   - TransparentFX
