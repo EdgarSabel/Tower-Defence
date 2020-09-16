@@ -143,19 +143,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571c04a59e0dc4c44888e21f44347d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretType: CannonTurret
   damage: 100
   slot: 1
   fireRate: 2
   radius: 5
+  levelSpeed: 0
+  nextLvlXp: 0
   collider: {fileID: 4287026443707447258}
   target: {fileID: 0}
   longestDist: 0
+  xp: 0
   standardFireRate: 0
   lastShotTime: -3.4028235e+38
+  turretLevel: 0
   sounds:
     shootSound: {fileID: 4886232800251760357}
     shootSoundVolume: 0
     shootSoundPitch: 0
+  levelStats:
+    stats: []
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   projectileSpeed: 0.1

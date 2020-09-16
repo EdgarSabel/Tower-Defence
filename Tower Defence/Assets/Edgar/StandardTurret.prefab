@@ -124,19 +124,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9f61542ce994447949c15586859495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretType: StandardTurret
   damage: 50
   slot: 0
   fireRate: 5
   radius: 8
+  levelSpeed: 0
+  nextLvlXp: 0
   collider: {fileID: 1423611625027662932}
   target: {fileID: 0}
   longestDist: 0
+  xp: 0
   standardFireRate: 0
   lastShotTime: -3.4028235e+38
+  turretLevel: 0
   sounds:
     shootSound: {fileID: 8787604826659230243}
     shootSoundVolume: 0
     shootSoundPitch: 0
+  levelStats:
+    stats: []
 --- !u!114 &5136755898524893001
 MonoBehaviour:
   m_ObjectHideFlags: 0
