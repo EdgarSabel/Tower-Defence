@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Inventory : MonoBehaviour
 {
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource placeTurretSound, pickupTurretSound;
+        [HideInInspector] public float placeTurretVolume, placeTurretPitch;
+    }
+
     public GameObject[] turrets;
     public float range;
     private int currentSlot;
@@ -12,9 +19,12 @@ public class Inventory : MonoBehaviour
     private GameObject currentTurret;
     public float xp1, xp2, xp3;
     private Vector3 offset = new Vector3(0, (float)0.5, 0);
+    public Sounds sounds;
     private void Start()
     {
         cam = GameObject.Find("Camera");
+        sounds.placeTurretVolume = sounds.placeTurretSound.volume;
+        sounds.placeTurretPitch = sounds.placeTurretSound.pitch;
     }
     private void Update()
     {
@@ -66,6 +76,10 @@ public class Inventory : MonoBehaviour
                 turrets[currentSlot] = null;
                 turretSpawned = false;
                 isHovering = false;
+
+                sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
+                sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
+                sounds.placeTurretSound.Play();
             }
         }
     }
