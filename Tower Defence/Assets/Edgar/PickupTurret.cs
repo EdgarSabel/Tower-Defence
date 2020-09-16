@@ -25,20 +25,23 @@ public class PickupTurret : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && inventory.isHovering != true)
+        if (Input.GetButtonDown("Interact"))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, range, -5, QueryTriggerInteraction.Ignore))
+            if (inventory.isHovering != true)
             {
-                if (hit.transform.gameObject.tag == "Turret")
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.forward, out hit, range, -5, QueryTriggerInteraction.Ignore))
                 {
-                    turret = hit.transform.gameObject.GetComponent<Turret>();
-                    inventory.turrets[turret.slot] = turret.gameObject;
-                    turret.gameObject.SetActive(false);
+                    if (hit.transform.gameObject.tag == "Turret")
+                    {
+                        turret = hit.transform.gameObject.GetComponent<Turret>();
+                        inventory.turrets[turret.slot] = turret.gameObject;
+                        turret.gameObject.SetActive(false);
 
-                    sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
-                    sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
-                    sounds.pickUpTurret.Play();
+                        sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
+                        sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
+                        sounds.pickUpTurret.Play();
+                    }
                 }
             }
         }

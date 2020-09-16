@@ -51,9 +51,11 @@ public class Inventory : MonoBehaviour
 
     public void Hover()
     {
-        currentTurret = turrets[currentSlot];
+        if (currentTurret == null)
+        {
+            currentTurret = turrets[currentSlot];
+        }
         RaycastHit hit;
-        Debug.DrawRay(cam.transform.position, cam.transform.forward * range, Color.red);
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range, -5, QueryTriggerInteraction.Ignore))
         {
             if (hit.transform.gameObject.tag == "Ground")
@@ -68,18 +70,18 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponent<TurretRepair>().enabled = !enabled;
                 turretSpawned = true;
             }
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Fire1"))
             {
                 currentTurret.GetComponent<Turret>().enabled = enabled;
                 currentTurret.GetComponent<TurretRepair>().enabled = enabled;
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
                 turrets[currentSlot] = null;
                 turretSpawned = false;
-                isHovering = false;
 
                 sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
                 sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
                 sounds.placeTurretSound.Play();
+                isHovering = false;
             }
         }
     }

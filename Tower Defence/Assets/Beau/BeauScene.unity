@@ -1206,6 +1206,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
+      propertyPath: levelStats.stats.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
       propertyPath: slot
       value: 0
       objectReference: {fileID: 0}
