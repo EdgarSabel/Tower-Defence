@@ -21,6 +21,7 @@ public class Turret : MonoBehaviour
         public AudioSource shootSound;
         [HideInInspector] public float shootSoundVolume, shootSoundPitch;
     }
+    public string turretType;
     public int damage, slot;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public new SphereCollider collider;
@@ -29,9 +30,9 @@ public class Turret : MonoBehaviour
     [HideInInspector]public float standardFireRate;
     [HideInInspector] public float lastShotTime = float.MinValue;
     [HideInInspector] public int turretLevel;
+    private GameObject turretSpawned;
     public Sounds sounds;
     public LevelOptions levelStats;
-    private GameObject turretSpawned;
     void Start()
     {
         longestDist = 0;
@@ -111,19 +112,17 @@ public class Turret : MonoBehaviour
         radius = levelStats.stats[turretLevel].radius;
         nextLvlXp = levelStats.stats[turretLevel].nextLvlXp;
     }
-
-    public void LevelUp()
-    {
-        turretLevel += 1;
-        damage = levelStats.stats[turretLevel].damage;
-        fireRate = levelStats.stats[turretLevel].fireRate;
-        radius = levelStats.stats[turretLevel].radius;
-        nextLvlXp = levelStats.stats[turretLevel].nextLvlXp;
-    }
-
     //function for shop purchase :O
-    public void switchType(GameObject newTurret, int level)
+    public void LevelUp(GameObject newTurret, int level)
     {
+        if (newTurret.GetComponent<Turret>().turretType == turretType)
+        {
+            turretLevel += 1;
+            damage = levelStats.stats[turretLevel].damage;
+            fireRate = levelStats.stats[turretLevel].fireRate;
+            radius = levelStats.stats[turretLevel].radius;
+            nextLvlXp = levelStats.stats[turretLevel].nextLvlXp;
+        }
         turretSpawned = Instantiate(newTurret, transform.position, transform.rotation);
         turretSpawned.GetComponent<Turret>().slot = slot;
         turretSpawned.GetComponent<Turret>().turretLevel = level;
