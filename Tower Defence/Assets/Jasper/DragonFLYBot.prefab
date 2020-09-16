@@ -263,11 +263,17 @@ MonoBehaviour:
   locationsParentObj: {fileID: 0}
   mesh: {fileID: 8608431985928954924}
   burnRate: 0
-  isFlying: 1
+  burnTimer: 0
+  duration: 0
   isBurning: 0
+  isFlying: 1
   isFalling: 0
   anim: {fileID: 94582853777110969}
   collider: {fileID: 267655117215071375}
+  sounds:
+    walkingSound: {fileID: 0}
+    getHitSound: {fileID: 0}
+    deathSound: {fileID: 0}
 --- !u!195 &596945905326417020
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -304,7 +310,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 94
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &267655117215071375
 BoxCollider:
