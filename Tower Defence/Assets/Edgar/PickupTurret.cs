@@ -5,16 +5,24 @@ using UnityEngine;
 
 public class PickupTurret : MonoBehaviour
 {
+    [System.Serializable]
+    public class Sounds
+    {
+        public AudioSource pickUpTurret;
+        [HideInInspector] public float pickUpTurretVolume, pickUpTurretPitch;
+    }
+
     public float range;
     public Inventory inventory;
     private Turret turret;
-    // Start is called before the first frame update
-    void Start()
+    public Sounds sounds;
+
+    private void Start()
     {
-        
+        sounds.pickUpTurretVolume = sounds.pickUpTurret.volume;
+        sounds.pickUpTurretPitch = sounds.pickUpTurret.pitch;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Interact") && inventory.isHovering != true)
@@ -27,6 +35,10 @@ public class PickupTurret : MonoBehaviour
                     turret = hit.transform.gameObject.GetComponent<Turret>();
                     inventory.turrets[turret.slot] = turret.gameObject;
                     turret.gameObject.SetActive(false);
+
+                    sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
+                    sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
+                    sounds.pickUpTurret.Play();
                 }
             }
         }

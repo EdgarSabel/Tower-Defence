@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
     [System.Serializable]
     public class Sounds
     {
-        public AudioSource placeTurretSound, pickupTurretSound;
+        public AudioSource placeTurretSound;
         [HideInInspector] public float placeTurretVolume, placeTurretPitch;
     }
 
