@@ -34,12 +34,14 @@ public class Enemy : MonoBehaviour
         distTravel = walkingSpeed * timeAlive;
         if(isFlying == true)
         {
-            if (isFalling == true && agent.baseOffset > 0.21f)
+            if (isFalling == true && transform.position.y > -0.34f)
             {
-                agent.baseOffset = Mathf.Clamp(agent.baseOffset, 0.21f, Mathf.Infinity);
-                agent.baseOffset -= Time.deltaTime * 16f;
+                Vector3 pos = transform.position;
+                pos.y = Mathf.Clamp(pos.y, -0.34f, Mathf.Infinity);
+                pos.y -= Time.deltaTime * 16f;
+                transform.position = pos;
             }
-            if(agent.baseOffset <= 0.21f)
+            if(transform.position.y <= -0.34f)
             {
                 StartCoroutine(Delete());
             }
