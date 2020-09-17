@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Skybox
-  m_Shader: {fileID: -6465566751694194690, guid: d31cc2c9e5d8cbf4a944bada49accec8, type: 3}
+  m_Name: Test
+  m_Shader: {fileID: -6465566751694194690, guid: ab8a73949a8fb1a40a7f5193b5705be2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,15 +19,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture2DAsset_A97B00E2_Out_0:
-        m_Texture: {fileID: 2800000, guid: da2956a22f6ad3d4789610d1e1a724db, type: 3}
+    - _Texture2DAsset_D5AAB987_Out_0:
+        m_Texture: {fileID: 2800000, guid: 540bf69ec28f11b4cb2faf0eabd1b7a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_4031C2DC: 0
-    - Vector1_C3722920: 10
-    - Vector1_D1819244: 1
+    - Vector1_5006A6DB: 0
+    - Vector1_6E1A052F: 10
+    - Vector1_9A47BD85: 0.421
+    - Vector1_D530AAF: 28.4
+    - Vector1_D956D67B: 0.374
+    - _CloudHeight: 0.144
+    - _WindSpeed: 1
     m_Colors:
-    - Color_20437ECC: {r: 0, g: 0.35832214, b: 1, a: 0}
-    - Color_DCD08BBC: {r: 0, g: 0.9192662, b: 1, a: 0}
+    - _HorizonColor: {r: 0.32549018, g: 0.7262995, b: 0.74509805, a: 0}
+    - _SkyColor: {r: 0.5709585, g: 0.33374867, b: 0.9433962, a: 0}
   m_BuildTextureStacks: []
