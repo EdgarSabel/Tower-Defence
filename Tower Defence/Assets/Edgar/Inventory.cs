@@ -66,14 +66,14 @@ public class Inventory : MonoBehaviour
             {
                 currentTurret.SetActive(true);
                 currentTurret.GetComponent<BoxCollider>().enabled = !enabled;
-                currentTurret.GetComponent<Turret>().enabled = !enabled;
-                currentTurret.GetComponent<TurretRepair>().enabled = !enabled;
+                currentTurret.GetComponentInChildren<Turret>().enabled = !enabled;
+                currentTurret.GetComponentInChildren<TurretRepair>().enabled = !enabled;
                 turretSpawned = true;
             }
             if (Input.GetButtonDown("Fire1"))
             {
-                currentTurret.GetComponent<Turret>().enabled = enabled;
-                currentTurret.GetComponent<TurretRepair>().enabled = enabled;
+                currentTurret.GetComponentInChildren<Turret>().enabled = enabled;
+                currentTurret.GetComponentInChildren<TurretRepair>().enabled = enabled;
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
                 turrets[currentSlot] = null;
                 turretSpawned = false;
@@ -85,5 +85,10 @@ public class Inventory : MonoBehaviour
                 sounds.placeTurretSound.Play();
             }
         }
+    }
+
+    public void Upgrade()
+    {
+
     }
 }

@@ -14,7 +14,7 @@ public class PickupTurret : MonoBehaviour
 
     public float range;
     public Inventory inventory;
-    private Turret turret;
+    private GameObject turret;
     public Sounds sounds;
 
     private void Start()
@@ -34,8 +34,8 @@ public class PickupTurret : MonoBehaviour
                 {
                     if (hit.transform.gameObject.tag == "Turret")
                     {
-                        turret = hit.transform.gameObject.GetComponent<Turret>();
-                        inventory.turrets[turret.slot] = turret.gameObject;
+                        turret = hit.transform.gameObject;
+                        inventory.turrets[turret.GetComponentInChildren<Turret>().slot] = turret;
                         turret.gameObject.SetActive(false);
 
                         sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
