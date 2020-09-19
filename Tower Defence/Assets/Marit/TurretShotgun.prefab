@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1352366991715984098}
   - component: {fileID: 4056106218876717470}
   m_Layer: 0
-  m_Name: TurretBase
-  m_TagString: Untagged
+  m_Name: TurretShotgun
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7251628281108572741}
   - {fileID: 7769964167230387050}
+  - {fileID: 3752160464743716382}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,8 +79,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7899759, y: 1.6925483, z: 0.8188653}
-  m_Center: {x: 0, y: 0.84, z: 0}
+  m_Size: {x: 0.8394846, y: 1.6925483, z: 0.7918632}
+  m_Center: {x: 0.0032694787, y: 0.8399999, z: 0.013501048}
 --- !u!1 &2042456745319874905
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +111,133 @@ Transform:
   m_Father: {fileID: 2883109224101238093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3213443525963258214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3543471526180280951}
+  - component: {fileID: 2511241679201155073}
+  m_Layer: 0
+  m_Name: ShootSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3543471526180280951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213443525963258214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3752160464743716382}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2511241679201155073
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213443525963258214}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8066429664047169758, guid: 2560623996ca6494eaa72a0cff8f94e0, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 779ffef022cb58543b8818c93428e4aa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 30
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3359159592655788537
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +481,37 @@ Transform:
   m_Father: {fileID: 4551198842592482640}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7557613418033123222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3752160464743716382}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3752160464743716382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557613418033123222}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13257658, y: 0.35629684, z: 0.09395951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3543471526180280951}
+  m_Father: {fileID: 1734484896229685979}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2089800060497473957
 Animator:
   serializedVersion: 3
@@ -384,14 +543,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbee7874ecad6c4db9e67dddd1c34aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: 
+  turretType: Shotgun
   damage: 20
   slot: 2
   fireRate: 5
   radius: 5
   levelSpeed: 0
   nextLvlXp: 0
-  collider: {fileID: 5389133207115980246, guid: afc3e5179b4df7e45ba063f86dbe0fbd, type: 3}
+  collider: {fileID: 1352366991715984098}
   target: {fileID: 0}
   longestDist: 0
   xp: 0
@@ -399,11 +558,12 @@ MonoBehaviour:
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
-    shootSound: {fileID: 3164088871801438133, guid: afc3e5179b4df7e45ba063f86dbe0fbd, type: 3}
+    shootSound: {fileID: 2511241679201155073}
     shootSoundVolume: 0
     shootSoundPitch: 0
   levelStats:
     stats: []
+  anim: {fileID: 2089800060497473957}
   projectile: {fileID: 950766135350540815, guid: 1b97dca945f16bb48b96d68d175108a5, type: 3}
   currentProjectile: {fileID: 0}
   projectileSpeed: 0.05
@@ -422,8 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  normal: {fileID: 2100000, guid: 95898f7b6af13484c978ad6bc12b99b7, type: 2}
-  kapoet: {fileID: 2100000, guid: 5788691da96f985429eb7cbb934747fa, type: 2}
+  anim: {fileID: 2089800060497473957}
   sounds:
     turretKapoetSound: {fileID: 0}
     turretMaxRepairedSound: {fileID: 0}
@@ -562,13 +721,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
---- !u!1 &7935476139797840832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
-  m_PrefabInstance: {fileID: 7124994024216215185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7308120834542754170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
+  m_PrefabInstance: {fileID: 7124994024216215185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7935476139797840832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
   m_PrefabInstance: {fileID: 7124994024216215185}
   m_PrefabAsset: {fileID: 0}

@@ -18,7 +18,6 @@ public class Inventory : MonoBehaviour
     public GameObject cam;
     private GameObject currentTurret;
     public float xp1, xp2, xp3;
-    private Vector3 offset = new Vector3(0, (float)0.5, 0);
     public Sounds sounds;
     private void Start()
     {
@@ -60,7 +59,7 @@ public class Inventory : MonoBehaviour
         {
             if (hit.transform.gameObject.tag == "Ground")
             {
-                currentTurret.transform.position = hit.point + offset;
+                currentTurret.transform.position = hit.point;
             }
             if (turretSpawned == false)
             {
