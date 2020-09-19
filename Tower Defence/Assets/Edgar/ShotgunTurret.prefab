@@ -74,8 +74,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -8066429664047169758, guid: 2560623996ca6494eaa72a0cff8f94e0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 779ffef022cb58543b8818c93428e4aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1926443
-  m_Pitch: 1.0674804
+  m_Volume: 0.19760668
+  m_Pitch: 0.97544014
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -284,8 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  normal: {fileID: 2100000, guid: 95898f7b6af13484c978ad6bc12b99b7, type: 2}
-  kapoet: {fileID: 2100000, guid: 5788691da96f985429eb7cbb934747fa, type: 2}
+  anim: {fileID: 0}
   sounds:
     turretKapoetSound: {fileID: 0}
     turretMaxRepairedSound: {fileID: 0}

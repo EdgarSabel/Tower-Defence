@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class TurretRepair : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TurretRepair : MonoBehaviour
     }
     public float decreaseNumber;
     [Range(0,100)] public float healthTurret = 100;
-    public Material normal, kapoet;
+    public Animator anim;
     public Sounds sounds;
     private void Update()
     {
@@ -18,19 +19,17 @@ public class TurretRepair : MonoBehaviour
         {
             healthTurret = Mathf.Clamp(healthTurret, 0, 100);
             healthTurret -= decreaseNumber * Time.deltaTime;
-            if (GetComponent<Turret>().enabled != enabled || GetComponent<MeshRenderer>().material != normal)
+            if (GetComponent<Turret>().enabled != enabled)
             {
+                anim.SetTrigger("Repair");
                 this.GetComponent<Turret>().enabled = enabled;
-                GetComponent<MeshRenderer>().material = normal;
             }
-
-
         }
         else if(healthTurret <= 0)
         {
             //turret kapoet
             healthTurret = 0;
-            GetComponent<MeshRenderer>().material = kapoet;
+            anim.SetTrigger("Break");
             this.GetComponent<Turret>().enabled = !enabled;
         }
     }

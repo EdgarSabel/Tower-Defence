@@ -33,6 +33,7 @@ public class Turret : MonoBehaviour
     private GameObject turretSpawned;
     public Sounds sounds;
     public LevelOptions levelStats;
+    public Animator anim;
     void Start()
     {
         longestDist = 0;
@@ -43,7 +44,7 @@ public class Turret : MonoBehaviour
         sounds.shootSoundPitch = sounds.shootSound.pitch;
     }
 
-    void Update()
+    public virtual void Update()
     {
         FindTarget();
     }
@@ -79,7 +80,7 @@ public class Turret : MonoBehaviour
     {
         target.GetComponent<Enemy>().GetDamage(damage, true);
     }
-    void ShootSound()
+    public void ShootSound()
     {
         sounds.shootSound.volume = Random.Range(sounds.shootSoundVolume - .05f, sounds.shootSoundVolume + .05f);
                 sounds.shootSound.pitch = Random.Range(sounds.shootSoundPitch - .1f, sounds.shootSoundPitch + .1f);
