@@ -11,6 +11,7 @@ public class TurretRepair : MonoBehaviour
     }
     public float decreaseNumber;
     [Range(0,100)] public float healthTurret = 100;
+    public Turret turretScript;
     public Animator anim;
     public Sounds sounds;
     private void Update()
@@ -19,7 +20,7 @@ public class TurretRepair : MonoBehaviour
         {
             healthTurret = Mathf.Clamp(healthTurret, 0, 100);
             healthTurret -= decreaseNumber * Time.deltaTime;
-            if (GetComponent<Turret>().enabled != enabled)
+            if (turretScript.enabled != enabled)
             {
                 anim.SetTrigger("Repair");
                 this.GetComponent<Turret>().enabled = enabled;
@@ -30,7 +31,7 @@ public class TurretRepair : MonoBehaviour
             //turret kapoet
             healthTurret = 0;
             anim.SetTrigger("Break");
-            this.GetComponent<Turret>().enabled = !enabled;
+            turretScript.enabled = !enabled;
         }
     }
 }

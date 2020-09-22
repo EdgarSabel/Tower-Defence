@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5920308475456224852}
   - component: {fileID: 1352366991715984098}
   - component: {fileID: 4056106218876717470}
+  - component: {fileID: 1339814719558094478}
   m_Layer: 0
   m_Name: TurretShotgun
   m_TagString: Turret
@@ -81,6 +82,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8394846, y: 1.6925483, z: 0.7918632}
   m_Center: {x: 0.0032694787, y: 0.8399999, z: 0.013501048}
+--- !u!114 &1339814719558094478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394409985059627105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decreaseNumber: 5
+  healthTurret: 100
+  anim: {fileID: 5920308475456224852}
+  sounds:
+    turretKapoetSound: {fileID: 2511241679201155073}
+    turretMaxRepairedSound: {fileID: 0}
 --- !u!1 &2042456745319874905
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,24 +587,6 @@ MonoBehaviour:
   currentProjectile: {fileID: 0}
   projectileSpeed: 0.05
   offset: 10
---- !u!114 &6867053284481251649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7935476139797840832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  decreaseNumber: 5
-  healthTurret: 100
-  anim: {fileID: 2089800060497473957}
-  sounds:
-    turretKapoetSound: {fileID: 0}
-    turretMaxRepairedSound: {fileID: 0}
 --- !u!1 &8844465072182759691
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,13 +722,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
---- !u!4 &7308120834542754170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
-  m_PrefabInstance: {fileID: 7124994024216215185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7935476139797840832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
+  m_PrefabInstance: {fileID: 7124994024216215185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7308120834542754170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: af3a41b12f44a5549aa54785a28f5cae, type: 3}
   m_PrefabInstance: {fileID: 7124994024216215185}
   m_PrefabAsset: {fileID: 0}
