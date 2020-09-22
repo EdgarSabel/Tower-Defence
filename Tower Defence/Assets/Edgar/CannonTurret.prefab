@@ -30,10 +30,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4287026443707447264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.421204, y: -3.35, z: 1.4087329}
+  m_LocalPosition: {x: -14.421204, y: -3.35, z: 1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1610974670477559479}
+  - {fileID: 5901261200654923768}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  normal: {fileID: 2100000, guid: 95898f7b6af13484c978ad6bc12b99b7, type: 2}
-  kapoet: {fileID: 2100000, guid: 5788691da96f985429eb7cbb934747fa, type: 2}
+  turretScript: {fileID: 0}
+  anim: {fileID: 0}
   sounds:
     turretKapoetSound: {fileID: 0}
     turretMaxRepairedSound: {fileID: 0}
@@ -163,6 +164,7 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats: []
+  anim: {fileID: 0}
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   projectileSpeed: 0.1
@@ -324,3 +326,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &9222586084199811457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5901261200654923768}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5901261200654923768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222586084199811457}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4287026443707447269}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
