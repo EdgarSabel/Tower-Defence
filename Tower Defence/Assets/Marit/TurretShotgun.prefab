@@ -96,7 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  turretScript: {fileID: 0}
   anim: {fileID: 5920308475456224852}
   sounds:
     turretKapoetSound: {fileID: 2511241679201155073}
@@ -130,36 +129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2883109224101238093}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2950837058586022572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 319146757186395189}
-  m_Layer: 0
-  m_Name: SpawnPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &319146757186395189
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2950837058586022572}
-  m_LocalRotation: {x: -0, y: -0, z: -8.149073e-10, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8169998, z: 0.95959985}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7308120834542754170}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3213443525963258214
 GameObject:
@@ -616,7 +585,6 @@ MonoBehaviour:
   anim: {fileID: 2089800060497473957}
   projectile: {fileID: 950766135350540815, guid: 1b97dca945f16bb48b96d68d175108a5, type: 3}
   currentProjectile: {fileID: 0}
-  spawnPos: {fileID: 2950837058586022572}
   projectileSpeed: 0.05
   offset: 10
 --- !u!1 &8844465072182759691
