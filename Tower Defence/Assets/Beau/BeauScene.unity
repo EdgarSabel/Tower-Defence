@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.62460625, g: 0.68756646, b: 0.8338376, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1907,6 +1907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545811496}
   - component: {fileID: 1545811495}
+  - component: {fileID: 1545811497}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1936,8 +1937,8 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Bias: 3.1
+    m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -1989,6 +1990,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 46.11, y: -0.722, z: 22.001}
+--- !u!114 &1545811497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545811494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
 --- !u!1 &1565218649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2498,10 @@ PrefabInstance:
       propertyPath: turrets.Array.data[0]
       value: 
       objectReference: {fileID: 1273177661}
+    - target: {fileID: 2765897088934392305, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4561107985669078877, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: sounds.pickUpTurret
       value: 
