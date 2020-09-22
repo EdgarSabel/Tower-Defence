@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerCam;
     Rigidbody playerRg;
     [HideInInspector] public bool canMove = true;
+    public Animator anim;
 
     public float footstepTimer = .5f;
     public bool isWalkingFb, isWalkingLr, isStraving;
@@ -72,6 +73,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if(isStraving || isWalkingFb || isWalkingLr)
+        {
+            anim.SetBool("Walking", true);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
+        }
         if(footstepTimer >= -0.0000001 && (isWalkingFb == true || isWalkingLr == true || isStraving == true))
         {
             footstepTimer -= Time.deltaTime;

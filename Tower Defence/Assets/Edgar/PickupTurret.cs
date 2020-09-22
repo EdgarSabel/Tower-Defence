@@ -15,6 +15,7 @@ public class PickupTurret : MonoBehaviour
     public float range;
     public Inventory inventory;
     private GameObject turret;
+    public Animator anim;
     public Sounds sounds;
 
     private void Start()
@@ -34,6 +35,7 @@ public class PickupTurret : MonoBehaviour
                 {
                     if (hit.transform.gameObject.tag == "Turret")
                     {
+                        anim.SetTrigger("PickUp");
                         turret = hit.transform.gameObject;
                         inventory.turrets[turret.GetComponentInChildren<Turret>().slot] = turret;
                         turret.gameObject.SetActive(false);

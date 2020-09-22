@@ -34,7 +34,7 @@ public class PlayerWeapon : MonoBehaviour
             canHit = false;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, playerWeaponRange, -5, QueryTriggerInteraction.Ignore))
             {
-                
+                anim.SetTrigger("Hit");
                 Instantiate(hitMapParticles, hit.point, Quaternion.RotateTowards(Quaternion.identity, this.gameObject.transform.rotation, 1));
                 if (hit.transform.tag == "Enemy")
                 {
