@@ -22,15 +22,16 @@ public class TurretRepair : MonoBehaviour
             healthTurret -= decreaseNumber * Time.deltaTime;
             if (turretScript.enabled != enabled)
             {
+                anim.SetBool("IsBroken", false);
                 anim.SetTrigger("Repair");
-                this.GetComponent<Turret>().enabled = enabled;
+                turretScript.enabled = enabled;
             }
         }
         else if(healthTurret <= 0)
         {
             //turret kapoet
             healthTurret = 0;
-            anim.SetTrigger("Break");
+            anim.SetBool("IsBroken", true);
             turretScript.enabled = !enabled;
         }
     }
