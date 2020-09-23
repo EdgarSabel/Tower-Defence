@@ -7075,6 +7075,7 @@ GameObject:
   - component: {fileID: 7166112590779963532}
   - component: {fileID: 7166112590779963533}
   - component: {fileID: 7166112590779963539}
+  - component: {fileID: 3718053169376253434}
   m_Layer: 0
   m_Name: Tank3
   m_TagString: Enemy
@@ -7202,6 +7203,21 @@ MonoBehaviour:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
     deathSound: {fileID: 0}
+--- !u!114 &3718053169376253434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048579865226252510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbe26c88c995314c85d855ccdba7d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyOBJ: {fileID: 5906333139435854049}
+  slider: {fileID: 8542947272170075226}
+  enemyHPBar: {fileID: 516023338930161893}
 --- !u!1 &8318551316590300913
 GameObject:
   m_ObjectHideFlags: 0
