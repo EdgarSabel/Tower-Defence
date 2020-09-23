@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInterectScript : MonoBehaviour
 {
 
-    public GameObject upgradePanel, shopPanel, hudPanel, cam, player;
+    public GameObject upgradePanel, shopPanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
     public GameObject menuPanel;
 

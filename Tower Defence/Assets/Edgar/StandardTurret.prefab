@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1423611625027662932}
   - component: {fileID: 9106568801918034062}
   - component: {fileID: 5136755898524893001}
+  - component: {fileID: 4831723767723129799}
   m_Layer: 8
   m_Name: StandardTurret
   m_TagString: Turret
@@ -144,6 +145,7 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats: []
+  anim: {fileID: 0}
 --- !u!114 &5136755898524893001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,11 +160,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  normal: {fileID: 2100000, guid: 95898f7b6af13484c978ad6bc12b99b7, type: 2}
-  kapoet: {fileID: 2100000, guid: 5788691da96f985429eb7cbb934747fa, type: 2}
+  turretScript: {fileID: 0}
+  anim: {fileID: 0}
   sounds:
     turretKapoetSound: {fileID: 0}
     turretMaxRepairedSound: {fileID: 0}
+--- !u!114 &4831723767723129799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423611625027662958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282e1f8311d833d479f16c67739fa3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGameMenuPanel: {fileID: 0}
+  turretNeedsRepair: {fileID: 0}
+  turret: {fileID: 1423611625027662958}
 --- !u!1 &1797727979381336487
 GameObject:
   m_ObjectHideFlags: 0
