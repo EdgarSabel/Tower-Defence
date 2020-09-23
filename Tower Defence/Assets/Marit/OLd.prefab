@@ -96,10 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  turretScript: {fileID: 0}
+  turretScript: {fileID: 6399969451489548915}
   anim: {fileID: 5920308475456224852}
   sounds:
-    turretKapoetSound: {fileID: 2511241679201155073}
+    turretKapoetSound: {fileID: 0}
     turretMaxRepairedSound: {fileID: 0}
 --- !u!1 &2042456745319874905
 GameObject:

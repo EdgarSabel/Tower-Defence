@@ -10,7 +10,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public GameObject hitMapParticles;
 
-    bool canHit = true;
+    [HideInInspector] public bool canHit = true;
     RaycastHit hit;
 
     [System.Serializable]
