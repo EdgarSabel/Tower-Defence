@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoneyManager : MonoBehaviour
 {
     public int moneyNumber;
-    public Text moneyText,shopMoneyText;
+    public Text moneyText;
 
     private void Start()
     {
@@ -20,7 +20,5 @@ public class MoneyManager : MonoBehaviour
     void UpdateMoneyNumber()
     {
         moneyText.text = moneyNumber.ToString() + " (Money)";
-        shopMoneyText.text = moneyNumber.ToString() + " (Money)";
-
     }
 }

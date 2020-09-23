@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.62460625, g: 0.68756646, b: 0.8338376, a: 1}
+  m_IndirectSpecularColor: {r: 0.6247438, g: 0.68755174, b: 0.8338249, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,7 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyNumber: 0
   moneyText: {fileID: 425068864}
-  shopMoneyText: {fileID: 0}
 --- !u!114 &148163703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +352,10 @@ PrefabInstance:
       propertyPath: playerWeaponScript
       value: 
       objectReference: {fileID: 2109974678}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: animPlayer
+      value: 
+      objectReference: {fileID: 934486628}
     - target: {fileID: 1013873214870482220, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1079,6 +1082,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805097970}
   m_CullTransparentMesh: 0
+--- !u!95 &934486628 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3601420137552011995, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+  m_PrefabInstance: {fileID: 220567643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1081414026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1444,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488419142}
   m_CullTransparentMesh: 0
+--- !u!114 &1505482127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3455508636236121724, guid: e9d74cebff32db840ae579fefc6da620, type: 3}
+  m_PrefabInstance: {fileID: 3455508635206252530}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbee7874ecad6c4db9e67dddd1c34aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1545811494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'ShotgunTurret '
       objectReference: {fileID: 0}
+    - target: {fileID: 3455508635474265300, guid: e9d74cebff32db840ae579fefc6da620, type: 3}
+      propertyPath: turretScript
+      value: 
+      objectReference: {fileID: 1505482127}
     - target: {fileID: 3455508635474265301, guid: e9d74cebff32db840ae579fefc6da620, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9679184

@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     private GameObject currentTurret;
     public float xp1, xp2, xp3;
     public PlayerWeapon playerWeaponScript;
-    public Animator anim;
+    public Animator animPlayer, animTurret;
     public Sounds sounds;
     private void Start()
     {
@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            anim.SetBool("Holding", false);
+            animPlayer.SetBool("Holding", false);
             playerWeaponScript.canHit = true;
         }
         if (Input.GetButtonDown("Slot2") && turrets[0] != null && isHovering == false)
@@ -58,7 +58,7 @@ public class Inventory : MonoBehaviour
 
     public void Hover()
     {
-        anim.SetBool("Holding", true);
+        animPlayer.SetBool("Holding", true);
         playerWeaponScript.canHit = false;
         if (currentTurret == null)
         {
@@ -81,10 +81,10 @@ public class Inventory : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
-                anim.SetTrigger("Place");
                 currentTurret.GetComponentInChildren<Turret>().enabled = enabled;
                 currentTurret.GetComponentInChildren<TurretRepair>().enabled = enabled;
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
+                currentTurret.GetComponent<Animator>().SetTrigger("Place");
                 turrets[currentSlot] = null;
                 turretSpawned = false;
                 currentTurret = null;
