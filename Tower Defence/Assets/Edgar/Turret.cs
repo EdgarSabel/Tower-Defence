@@ -32,7 +32,7 @@ public class Turret : MonoBehaviour
     private GameObject turretSpawned;
     public Sounds sounds;
     public LevelOptions levelStats;
-    public Animator anim;
+    public Animator animTop,animBot;
     void Start()
     {
         StatRefresh();
