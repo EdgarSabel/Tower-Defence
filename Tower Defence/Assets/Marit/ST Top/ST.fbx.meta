@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: c6b50941056ac0b42a12b236d0d20c0a
+guid: a0e8290b5abe7a04f843584e40e427b8
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 490292760813584317
-    second: Armature.002|Idle F
-  - first:
       74: -2675907908481239506
     second: Armature.002|Idle gun
   - first:
-      74: -5493991821236084143
-    second: Armature.002|Shoot.001
+      74: -7717422457530737181
+    second: Armature.002|Shoot
+  - first:
+      74: 3770335229440109672
+    second: Armature.002|Shoot ST
   externalObjects: {}
   materials:
     materialImportMode: 1
