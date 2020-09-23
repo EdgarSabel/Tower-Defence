@@ -126,17 +126,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: StandardTurret
+  levelUpReady: 0
   damage: 50
   slot: 0
   fireRate: 5
   radius: 8
-  levelSpeed: 0
-  nextLvlXp: 0
+  levelSpeed: 5
+  nextLvlXp: 50
   collider: {fileID: 1423611625027662932}
   target: {fileID: 0}
+  standardFireRate: 0
   longestDist: 0
   xp: 0
-  standardFireRate: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -144,7 +145,17 @@ MonoBehaviour:
     shootSoundVolume: 0
     shootSoundPitch: 0
   levelStats:
-    stats: []
+    stats:
+    - damage: 50
+      fireRate: 5
+      radius: 8
+      xp: 0
+      nextLvlXp: 50
+    - damage: 60
+      fireRate: 6
+      radius: 8
+      xp: 0
+      nextLvlXp: 100
   anim: {fileID: 0}
 --- !u!114 &5136755898524893001
 MonoBehaviour:
@@ -180,6 +191,7 @@ MonoBehaviour:
   inGameMenuPanel: {fileID: 0}
   turretNeedsRepair: {fileID: 0}
   turret: {fileID: 1423611625027662958}
+  turretXP: {fileID: 0}
 --- !u!1 &1797727979381336487
 GameObject:
   m_ObjectHideFlags: 0

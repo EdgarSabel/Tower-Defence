@@ -2031,6 +2031,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4561107986965756476, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
   m_PrefabInstance: {fileID: 889747663}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &250457339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4561107986965756453, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+  m_PrefabInstance: {fileID: 889747663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250457336}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed34885f36efd2459ebee442b9fc7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &250457345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3617,7 +3628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571943531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180811134}
+        m_TargetAssemblyTypeName: DetectTurret, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7580900137409534684, guid: 8953826f6ab3958458b0d789ab34fbeb, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571943531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6397,6 +6420,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 624278034}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: playerWeaponScript
+      value: 
+      objectReference: {fileID: 250457339}
     - target: {fileID: 4561107985669078871, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_TagString
       value: MainCamera
@@ -6449,6 +6476,10 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 800191049}
+    - target: {fileID: 4561107986965756453, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756476, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8559,13 +8590,14 @@ GameObject:
   - component: {fileID: 1180811131}
   - component: {fileID: 1180811133}
   - component: {fileID: 1180811132}
+  - component: {fileID: 1180811134}
   m_Layer: 5
   m_Name: TurretUpgradePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1180811131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8637,6 +8669,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180811130}
   m_CullTransparentMesh: 0
+--- !u!114 &1180811134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180811130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608e4a6ab3592ee4d9d0016a2ecaa961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 0}
+  settingManager: {fileID: 624278035}
 --- !u!1 &1184462390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9334,7 +9380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1267033137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180811134}
+        m_TargetAssemblyTypeName: DetectTurret, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4287026443707447264, guid: 1367e8b3d2cf6a04b94f66e85ef5f60a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1267033137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9863,13 +9921,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1180811134}
+        m_TargetAssemblyTypeName: DetectTurret, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1423611625027662958, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13600,7 +13658,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.582, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13725,13 +13783,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1180811134}
+        m_TargetAssemblyTypeName: DetectTurret, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14214,20 +14272,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
-      propertyPath: slot
+      propertyPath: levelUpReady
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
-      propertyPath: nextLvlXp
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106568801918034062, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}
-      propertyPath: levelSpeed
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1289409b69f8f349934b2cddaf57e13, type: 3}

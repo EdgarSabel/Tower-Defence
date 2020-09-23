@@ -8,7 +8,6 @@ public class PlayerInterectScript : MonoBehaviour
     public GameObject upgradePanel, shopPanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
     public GameObject menuPanel;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +24,7 @@ public class PlayerInterectScript : MonoBehaviour
             {
                 if (Input.GetButtonDown("Fire2"))
                 {
+                    upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
                     upgradePanel.SetActive(true);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;

@@ -46,6 +46,7 @@ public class SettingsManeger : MonoBehaviour
         upgradePanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        upgradePanel.GetComponent<DetectTurret>().turret = null;
     }
     public void ShopBack()
     {

@@ -22,13 +22,12 @@ public class Turret : MonoBehaviour
         [HideInInspector] public float shootSoundVolume, shootSoundPitch;
     }
     public string turretType;
+    public bool levelUpReady;
     public int damage, slot;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public new SphereCollider collider;
     [HideInInspector] public GameObject target;
-    [HideInInspector] public float longestDist, xp;
-    [HideInInspector]public float standardFireRate;
-    [HideInInspector] public float lastShotTime = float.MinValue;
+    [HideInInspector]public float standardFireRate, longestDist, xp, lastShotTime = float.MinValue;
     [HideInInspector] public int turretLevel;
     private GameObject turretSpawned;
     public Sounds sounds;
@@ -36,6 +35,7 @@ public class Turret : MonoBehaviour
     public Animator anim;
     void Start()
     {
+        StatRefresh();
         longestDist = 0;
         collider.radius = radius;
         standardFireRate = fireRate;
@@ -102,6 +102,7 @@ public class Turret : MonoBehaviour
         //update xp bar here :)
         if (xp >= nextLvlXp)
         {
+            levelUpReady = true;
             //show level up available
         }
     }
@@ -114,19 +115,21 @@ public class Turret : MonoBehaviour
         nextLvlXp = levelStats.stats[turretLevel].nextLvlXp;
     }
     //function for shop purchase :O
-    public void LevelUp(GameObject newTurret, int level)
+    public void LevelUp(GameObject newTurret)
     {
         if (newTurret.GetComponent<Turret>().turretType == turretType)
         {
             turretLevel += 1;
-            damage = levelStats.stats[turretLevel].damage;
-            fireRate = levelStats.stats[turretLevel].fireRate;
-            radius = levelStats.stats[turretLevel].radius;
-            nextLvlXp = levelStats.stats[turretLevel].nextLvlXp;
+            levelUpReady = false;
+            StatRefresh();
         }
+        else
+        {
+        Destroy(this.gameObject);
         turretSpawned = Instantiate(newTurret, transform.position, transform.rotation);
         turretSpawned.GetComponent<Turret>().slot = slot;
-        turretSpawned.GetComponent<Turret>().turretLevel = level;
+        turretSpawned.GetComponent<Turret>().turretLevel = turretLevel;
         turretSpawned.GetComponent<Turret>().StatRefresh();
+        }
     }
 }

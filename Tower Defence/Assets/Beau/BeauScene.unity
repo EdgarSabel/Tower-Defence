@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6247438, g: 0.68755174, b: 0.8338249, a: 1}
+  m_IndirectSpecularColor: {r: 0.62548834, g: 0.6877004, b: 0.8338318, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyNumber: 0
   moneyText: {fileID: 425068864}
+  shopMoneyText: {fileID: 0}
 --- !u!114 &148163703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,6 +643,7 @@ GameObject:
   - component: {fileID: 401639210}
   - component: {fileID: 401639209}
   - component: {fileID: 401639208}
+  - component: {fileID: 401639212}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Ground
@@ -735,6 +737,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &401639212
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401639207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1dfa408719fabb4fbc6af3e421a4426, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &425068862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,6 +1442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Shotgun
+  levelUpReady: 0
   damage: 20
   slot: 2
   fireRate: 5
@@ -1528,7 +1550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426463582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 543450653281847519}
@@ -1591,12 +1613,12 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426463582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a1dfa408719fabb4fbc6af3e421a4426, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

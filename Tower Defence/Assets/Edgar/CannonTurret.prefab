@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: CannonTurret
+  levelUpReady: 0
   damage: 100
   slot: 1
   fireRate: 2
@@ -153,9 +154,9 @@ MonoBehaviour:
   nextLvlXp: 0
   collider: {fileID: 4287026443707447258}
   target: {fileID: 0}
+  standardFireRate: 0
   longestDist: 0
   xp: 0
-  standardFireRate: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -163,7 +164,17 @@ MonoBehaviour:
     shootSoundVolume: 0
     shootSoundPitch: 0
   levelStats:
-    stats: []
+    stats:
+    - damage: 100
+      fireRate: 2
+      radius: 5
+      xp: 0
+      nextLvlXp: 50
+    - damage: 120
+      fireRate: 3
+      radius: 6
+      xp: 0
+      nextLvlXp: 100
   anim: {fileID: 0}
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
