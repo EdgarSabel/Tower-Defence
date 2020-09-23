@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CannonTurret : Turret
 {
-    public GameObject projectile, currentProjectile;
+    public GameObject projectile, currentProjectile, spawnPos;
     public float projectileSpeed;
     public override void Fire()
     {
-        currentProjectile = Instantiate(projectile, transform.position, transform.rotation);
+        currentProjectile = Instantiate(projectile, spawnPos.transform.position, transform.rotation);
         currentProjectile.GetComponent<Projectile>().speed = projectileSpeed;
         currentProjectile.GetComponent<Projectile>().damage = damage;
     }
