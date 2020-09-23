@@ -10,13 +10,18 @@ public class FlameThrowerTurret : Turret
     bool isStarted;
     void Start()
     {
-
+        vfx.Stop();
     }
 
     public override void Update()
     {
         base.Update();
         PlaySounds();
+        if(target == null)
+        {
+            vfx.Stop();
+            isFiring = false;
+        }
     }
 
     public override void Fire()
@@ -26,6 +31,10 @@ public class FlameThrowerTurret : Turret
             vfx.Play();
             isFiring = true;
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        print("stop");
     }
     
     void PlaySounds()
@@ -44,9 +53,4 @@ public class FlameThrowerTurret : Turret
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        vfx.Stop();
-        isFiring = false;
-    }
 }

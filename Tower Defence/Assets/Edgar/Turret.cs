@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
     public int damage, slot;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public new SphereCollider collider;
-    [HideInInspector] public GameObject target;
+     public GameObject target;
     [HideInInspector]public float standardFireRate, longestDist, xp, lastShotTime = float.MinValue;
     [HideInInspector] public int turretLevel;
     private GameObject turretSpawned;
@@ -74,7 +74,7 @@ public class Turret : MonoBehaviour
             ShootSound();
             EarnXP();
         }
-        WipeTarget();
+        Invoke("WipeTarget", 0.0000001f);
     }
     public virtual void Fire()
     {
