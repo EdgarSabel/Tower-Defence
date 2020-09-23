@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class InfoBoxScript : MonoBehaviour
+
+public class InfoBoxScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-    public bool isHovering;
-    public GameObject infoBox;
+    public GameObject infoPanel;
+    private bool mouseover;
+    public GameObject[] otherPanels;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,24 +21,23 @@ public class InfoBoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isHovering == true)
+        if (mouseover == true)
         {
-            infoBox.SetActive(true);
-        }
-
-        else if(isHovering == false)
-        {
-            infoBox.SetActive(false);
+            infoPanel.SetActive(true);
+            otherPanels[0].SetActive(false);
+            otherPanels[1].SetActive(false);
+            otherPanels[2].SetActive(false);
+            otherPanels[3].SetActive(false);
         }
     }
 
-    private void OnMouseOver()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        isHovering = true;
+        mouseover = true;
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        isHovering = false;
+        mouseover = false;
     }
 }

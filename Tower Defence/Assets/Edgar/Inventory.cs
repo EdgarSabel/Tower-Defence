@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 public class Inventory : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
     public GameObject cam;
     private GameObject currentTurret;
     public float xp1, xp2, xp3;
+    public PlayerWeapon playerWeaponScript;
     public Animator anim;
     public Sounds sounds;
     private void Start()
@@ -35,6 +37,7 @@ public class Inventory : MonoBehaviour
         else
         {
             anim.SetBool("Holding", false);
+            playerWeaponScript.canHit = true;
         }
         if (Input.GetButtonDown("Slot2") && turrets[0] != null && isHovering == false)
         {
@@ -56,6 +59,7 @@ public class Inventory : MonoBehaviour
     public void Hover()
     {
         anim.SetBool("Holding", true);
+        playerWeaponScript.canHit = false;
         if (currentTurret == null)
         {
             currentTurret = turrets[currentSlot];
