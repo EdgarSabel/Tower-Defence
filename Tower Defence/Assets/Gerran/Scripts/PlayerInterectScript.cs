@@ -47,6 +47,8 @@ public class PlayerInterectScript : MonoBehaviour
 
         if (Input.GetButtonDown("Cancel"))
         {
+            cam.GetComponent<CamLook>().enabled = !enabled;
+            player.GetComponent<PlayerMovement>().enabled = !enabled;
             menuPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

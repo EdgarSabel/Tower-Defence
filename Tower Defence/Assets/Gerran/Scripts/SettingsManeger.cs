@@ -39,6 +39,8 @@ public class SettingsManeger : MonoBehaviour
         menuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        cam.GetComponent<CamLook>().enabled = enabled;
+        player.GetComponent<PlayerMovement>().enabled = enabled;
     }
 
     public void Back()
