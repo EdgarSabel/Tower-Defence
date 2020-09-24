@@ -13,9 +13,9 @@ public class DetectTurret : MonoBehaviour
 
     public void Upgrade(GameObject newTurret)
     {
-        if (turret != null && turret.GetComponent<Turret>().levelUpReady == true)
+        if (turret != null && turret.GetComponentInChildren<Turret>().levelUpReady == true)
         {
-            turret.GetComponent<Turret>().LevelUp(newTurret);
+            turret.GetComponentInChildren<Turret>().LevelUp(newTurret);
             settingManager.Back();
         }
     }

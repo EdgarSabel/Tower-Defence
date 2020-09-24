@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class InWorldMenu : MonoBehaviour
 {
     public GameObject inGameMenuPanel, turretNeedsRepair, turret;
-    public Slider turretXP;
 
     // Start is called before the first frame update
     void Start()
@@ -17,22 +16,19 @@ public class InWorldMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 namePos = Camera.main.WorldToScreenPoint(this.transform.position);
-        inGameMenuPanel.transform.position = namePos;
-        turretNeedsRepair.transform.position = namePos;
+        Vector3 namePos = Camera.main.WorldToScreenPoint(GetComponent<DetectTurret>().turret.transform.position);
+        transform.position = namePos;
+        //turretNeedsRepair.transform.position = namePos;
 
-        if (turret.GetComponent<TurretRepair>().healthTurret <= 0)
-        {
-            turretNeedsRepair.SetActive(true);
-        }
+        //if (turret.GetComponent<TurretRepair>().healthTurret <= 0)
+        //{
+        //    turretNeedsRepair.SetActive(true);
+        //}
 
-        else
-        {
-            turretNeedsRepair.SetActive(false);
-        }
-
-        turretXP.value = turret.GetComponent<Turret>().xp;
-        turretXP.maxValue = turret.GetComponent<Turret>().nextLvlXp;
+        //else
+        //{
+        //    turretNeedsRepair.SetActive(false);
+        //}
     }
 
     

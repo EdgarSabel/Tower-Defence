@@ -20,7 +20,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("BeauScene");
     }
     public void Level2()
     {

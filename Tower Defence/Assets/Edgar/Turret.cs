@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
     public int damage, slot;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public new SphereCollider collider;
-     public GameObject target;
+     public GameObject target, prefab;
     [HideInInspector]public float standardFireRate, longestDist, xp, lastShotTime = float.MinValue;
     [HideInInspector] public int turretLevel;
     private GameObject turretSpawned;
@@ -117,7 +117,7 @@ public class Turret : MonoBehaviour
     //function for shop purchase :O
     public void LevelUp(GameObject newTurret)
     {
-        if (newTurret.GetComponent<Turret>().turretType == turretType)
+        if (newTurret.GetComponentInChildren<Turret>().turretType == turretType)
         {
             turretLevel += 1;
             levelUpReady = false;
@@ -125,11 +125,10 @@ public class Turret : MonoBehaviour
         }
         else
         {
-        Destroy(this.gameObject);
-        turretSpawned = Instantiate(newTurret, transform.position, transform.rotation);
-        turretSpawned.GetComponent<Turret>().slot = slot;
-        turretSpawned.GetComponent<Turret>().turretLevel = turretLevel;
-        turretSpawned.GetComponent<Turret>().StatRefresh();
+        turretSpawned = Instantiate(newTurret, prefab.transform.position, Quaternion.identity);
+        turretSpawned.GetComponentInChildren<Turret>().slot = slot;
+        turretSpawned.GetComponentInChildren<Turret>().turretLevel = turretLevel;
+        Destroy(prefab);
         }
     }
 }

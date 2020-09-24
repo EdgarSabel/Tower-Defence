@@ -698,6 +698,7 @@ MonoBehaviour:
   nextLvlXp: 0
   collider: {fileID: 1352366991715984098}
   target: {fileID: 0}
+  prefab: {fileID: 0}
   standardFireRate: 0
   longestDist: 0
   xp: 0
