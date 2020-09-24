@@ -46,6 +46,9 @@ public class HealthManager : MonoBehaviour
         healthText.text = health.ToString() + " (Health)";
         if(health <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             Time.timeScale = 0;
             deathMenu.SetActive(true);
         }
