@@ -18,17 +18,7 @@ public class InWorldMenu : MonoBehaviour
     {
         Vector3 namePos = Camera.main.WorldToScreenPoint(GetComponent<DetectTurret>().turret.transform.position);
         transform.position = namePos;
-        //turretNeedsRepair.transform.position = namePos;
 
-        //if (turret.GetComponent<TurretRepair>().healthTurret <= 0)
-        //{
-        //    turretNeedsRepair.SetActive(true);
-        //}
-
-        //else
-        //{
-        //    turretNeedsRepair.SetActive(false);
-        //}
     }
 
     
