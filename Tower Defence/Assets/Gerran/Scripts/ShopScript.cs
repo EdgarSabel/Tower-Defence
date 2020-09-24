@@ -22,7 +22,7 @@ public class ShopScript : MonoBehaviour
 
     public void BuyHP()
     {
-        if(money.GetComponent<MoneyManager>().moneyNumber >= prizeHP)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeHP)
         {
             numHP += 1;
             money.GetComponent<MoneyManager>().GetMoney(-prizeHP);

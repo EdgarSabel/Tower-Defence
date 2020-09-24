@@ -57,7 +57,7 @@ public class SettingsManeger : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cam.GetComponent<CamLook>().canMove = true;
-        player.GetComponent<CamLook>().canMove = true;
+        //player.GetComponent<CamLook>().canMove = true;
     }
 
 

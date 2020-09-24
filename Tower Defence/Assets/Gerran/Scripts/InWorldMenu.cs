@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InWorldMenu : MonoBehaviour
 {
-    public GameObject inGameMenuPanel, turretNeedsRepair, turret;
+    public GameObject inGameMenuPanel;
 
     // Start is called before the first frame update
     void Start()

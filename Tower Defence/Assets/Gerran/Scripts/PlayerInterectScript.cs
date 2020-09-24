@@ -40,7 +40,7 @@ public class PlayerInterectScript : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     cam.GetComponent<CamLook>().canMove = false;
-                    player.GetComponent<CamLook>().canMove = false;
+                    //player.GetComponent<CamLook>().canMove = false;
                 }
             }
         }
