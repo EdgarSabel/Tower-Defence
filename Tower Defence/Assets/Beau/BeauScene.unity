@@ -1663,6 +1663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyNumber: 0
   moneyText: {fileID: 1952374116}
+  shopText: {fileID: 429378515}
 --- !u!114 &148163703
 MonoBehaviour:
   m_ObjectHideFlags: 0
