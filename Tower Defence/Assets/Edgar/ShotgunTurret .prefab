@@ -385,7 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseNumber: 5
   healthTurret: 100
-  turretScript: {fileID: 6399969451489548915, guid: edc893a634df8ea40bf5d28651473de5, type: 3}
+  turretScript: {fileID: 3455508636236121724}
   anim: {fileID: 3455508635474265297}
   sounds:
     turretKapoetSound: {fileID: 0}
@@ -846,6 +846,7 @@ MonoBehaviour:
   nextLvlXp: 50
   collider: {fileID: 3455508635474265303}
   target: {fileID: 0}
+  prefab: {fileID: 3455508635474265296}
   standardFireRate: 0
   longestDist: 0
   xp: 0

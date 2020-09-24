@@ -492,10 +492,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38f1a3147122a394f88987fabbf049f5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   nextLvlXp: 50
   collider: {fileID: 1930914037360754478}
   target: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 1930914037360754464}
   standardFireRate: 0
   longestDist: 0
   xp: 0
