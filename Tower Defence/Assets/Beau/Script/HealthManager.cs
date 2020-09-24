@@ -9,7 +9,7 @@ public class HealthManager : MonoBehaviour
     public int health, waitForTextDisapear;
     int decreaseHealthNumber;
     public Text healthText, decreaseHealthText;
-    public GameObject decreaseHealthObj;
+    public GameObject decreaseHealthObj, cam, player;
 
     public GameObject deathMenu;
 
@@ -47,6 +47,8 @@ public class HealthManager : MonoBehaviour
         if(health <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
+            cam.GetComponent<CamLook>().enabled = !enabled;
+            player.GetComponent<PlayerMovement>().enabled = !enabled;
             Cursor.visible = true;
 
             Time.timeScale = 0;

@@ -1632,6 +1632,8 @@ MonoBehaviour:
   healthText: {fileID: 800295494}
   decreaseHealthText: {fileID: 1331483652}
   decreaseHealthObj: {fileID: 1331483650}
+  cam: {fileID: 379489474}
+  player: {fileID: 1834545573}
   deathMenu: {fileID: 2077521039}
 --- !u!4 &148163701
 Transform:
