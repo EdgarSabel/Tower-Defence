@@ -22,10 +22,10 @@ public class SettingsManeger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        volumeSliderMaster.value = PlayerPrefs.GetFloat(MASTER_VOLUME_PREF, 1);
-        volumeSliderMusic.value = PlayerPrefs.GetFloat(MUSIC_VOLUME_PREF, 1);
-        volumeSliderSound.value = PlayerPrefs.GetFloat(SOUND_VOLUME_PREF, 1);
-        sensetivetySlider.value = PlayerPrefs.GetFloat(SENSETIVETY_PREF, 1);
+        //volumeSliderMaster.value = PlayerPrefs.GetFloat(MASTER_VOLUME_PREF, 1);
+        //volumeSliderMusic.value = PlayerPrefs.GetFloat(MUSIC_VOLUME_PREF, 1);
+        //volumeSliderSound.value = PlayerPrefs.GetFloat(SOUND_VOLUME_PREF, 1);
+        //sensetivetySlider.value = PlayerPrefs.GetFloat(SENSETIVETY_PREF, 1);
 
     }
 

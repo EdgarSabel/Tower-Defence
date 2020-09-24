@@ -11,12 +11,15 @@ public class HealthManager : MonoBehaviour
     public Text healthText, decreaseHealthText;
     public GameObject decreaseHealthObj;
 
+    public GameObject deathMenu;
+
     IEnumerator coroutine;
 
     private void Start()
     {
         UpdateHealthNumber();
     }
+
     public void GetDamagedByEnemy(int dmg)
     {
         health -= dmg;
@@ -43,7 +46,8 @@ public class HealthManager : MonoBehaviour
         healthText.text = health.ToString() + " (Health)";
         if(health <= 0)
         {
-            print("Death");
+            Time.timeScale = 0;
+            deathMenu.SetActive(true);
         }
     }
     void UpdateDecreaseNumber()
