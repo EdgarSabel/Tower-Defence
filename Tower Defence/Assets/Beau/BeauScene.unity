@@ -13621,6 +13621,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turret: {fileID: 0}
   settingManager: {fileID: 148163705}
+  moneyManager: {fileID: 148163702}
+  upgradePrice: 100
 --- !u!114 &1813661109
 MonoBehaviour:
   m_ObjectHideFlags: 0
