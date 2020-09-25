@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1545811495}
   m_IndirectSpecularColor: {r: 0.62647027, g: 0.68769604, b: 0.83352613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -4954,6 +4954,10 @@ PrefabInstance:
     - target: {fileID: 6417934246378167296, guid: d68442e272eccb643a32bb040aae17e1, type: 3}
       propertyPath: m_Name
       value: PortalShader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417934246378167296, guid: d68442e272eccb643a32bb040aae17e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6417934246378167420, guid: d68442e272eccb643a32bb040aae17e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11198,7 +11202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545811494}
   m_LocalRotation: {x: 0.38330486, y: -0.0804207, z: 0.17799892, w: 0.9027327}
-  m_LocalPosition: {x: -1.79, y: 3, z: -1.04}
+  m_LocalPosition: {x: -1.71, y: 9.63, z: -7.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15463,7 +15467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129723719
 GameObject:
@@ -15820,7 +15824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3387488039761741594, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3387488039761741594, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
