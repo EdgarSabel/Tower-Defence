@@ -4,8 +4,14 @@ ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
+      74: 885944232402757753
+    second: Armature|Action
+  - first:
       74: -7453387558714718212
     second: Armature|Shoot
+  - first:
+      74: 6560591198430667156
+    second: Armature|Shoot.001
   externalObjects: {}
   materials:
     materialImportMode: 1
