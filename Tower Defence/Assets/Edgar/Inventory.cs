@@ -12,18 +12,20 @@ public class Inventory : MonoBehaviour
     }
 
     public GameObject[] turrets;
-    public float range;
-    private int currentSlot;
-    public bool isHovering;
-    private bool turretSpawned;
-    public GameObject cam;
-    private GameObject currentTurret;
+    public GameObject cam;         
     public float xp1, xp2, xp3;
+    public float range;
+    private bool turretSpawned;
+    public bool isHovering;
+    private int currentSlot;
+    private GameObject currentTurret;
     public PlayerWeapon playerWeaponScript;
     public Animator animPlayer, animTurret;
     public Sounds sounds;
+    public ParticleSystem rangeIndicator;
     private void Start()
     {
+        rangeIndicator.transform.localScale = new Vector3(range, 0, range);
         cam = GameObject.Find("Camera");
         sounds.placeTurretVolume = sounds.placeTurretSound.volume;
         sounds.placeTurretPitch = sounds.placeTurretSound.pitch;
@@ -58,6 +60,11 @@ public class Inventory : MonoBehaviour
 
     public void Hover()
     {
+        if (rangeIndicator.isPlaying == false)
+        {
+            rangeIndicator.Play();
+            rangeIndicator.transform.gameObject.SetActive(true);
+        }
         animPlayer.SetBool("Holding", true);
         playerWeaponScript.canHit = false;
         if (currentTurret == null)
@@ -93,12 +100,9 @@ public class Inventory : MonoBehaviour
                 sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
                 sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
                 sounds.placeTurretSound.Play();
+                rangeIndicator.Stop();
+                rangeIndicator.transform.gameObject.SetActive(false);
             }
         }
-    }
-
-    public void Upgrade()
-    {
-
     }
 }

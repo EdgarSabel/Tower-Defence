@@ -33,6 +33,7 @@ public class Turret : MonoBehaviour
     public Sounds sounds;
     public LevelOptions levelStats;
     public Animator animTop,animBot;
+    public ParticleSystem lvlUpParticle;
     void Start()
     {
         StatRefresh();
@@ -119,6 +120,7 @@ public class Turret : MonoBehaviour
     {
         if (newTurret.GetComponentInChildren<Turret>().turretType == turretType)
         {
+            lvlUpParticle.Play();
             turretLevel += 1;
             levelUpReady = false;
             StatRefresh();

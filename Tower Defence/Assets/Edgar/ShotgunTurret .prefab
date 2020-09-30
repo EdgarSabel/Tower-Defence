@@ -868,6 +868,7 @@ MonoBehaviour:
       nextLvlXp: 50
   animTop: {fileID: 3455508636236121725}
   animBot: {fileID: 3455508635474265297}
+  lvlUpParticle: {fileID: 5545155889060119072}
   projectile: {fileID: 950766135350540815, guid: 1b97dca945f16bb48b96d68d175108a5, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 3455508635707232094}
@@ -1228,5 +1229,10 @@ PrefabInstance:
 --- !u!4 &5545155889178651081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 56361380654459048, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+  m_PrefabInstance: {fileID: 5493377273268339041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5545155889060119072 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
   m_PrefabInstance: {fileID: 5493377273268339041}
   m_PrefabAsset: {fileID: 0}
