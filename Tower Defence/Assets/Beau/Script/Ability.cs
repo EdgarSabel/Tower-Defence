@@ -5,69 +5,68 @@ using UnityEngine.AI;
 
 public class Ability : MonoBehaviour
 {
-    public bool damage, freeze, fireRate;
-
-    public int dmgNumber;
     public int freezeTime;
     public float fireRateTimesNumber, fireRateIncreaseTime;
 
-    public GameObject locationsObj, towersObj;
-    GameObject[] enemies;
+    public GameObject enemyHolder, towerHolder;
 
-    public GameObject boomSpider;
+    public ShopScript shopScript;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetButtonDown("Ability1"))
         {
-            Instantiate(boomSpider, transform.position + transform.forward + new Vector3(0.346f, 0.213f, 0.902f), Quaternion.identity);
-        }
-    }
-
-    public void UseAbility()
-    {
-        if(damage == true)
-        {
-            foreach (Transform child in locationsObj.transform)
+            if(shopScript.numFirerate > 0)
             {
-                child.GetComponent<Enemy>().GetDamage(dmgNumber, false);
+                shopScript.numFirerate--;
+                StartCoroutine(IncreaseFireRate());
             }
         }
-        else if(freeze == true)
+        if (Input.GetButtonDown("Ability2"))
         {
-            StartCoroutine(FreezeEnemies());
+            if (shopScript.numFreeze > 0)
+            {
+                shopScript.numFreeze--;
+                StartCoroutine(FreezeEnemies());
+            }
         }
-        else if(fireRate == true)
+        if (Input.GetButtonDown("Ability3"))
         {
-            StartCoroutine(IncreaseFireRate());
+            if (shopScript.numNuke > 0)
+            {
+
+            }
         }
-        else
+        if (Input.GetButtonDown("Ability4"))
         {
-            Debug.LogError("no ability selected");
-        }
-    }
-    IEnumerator FreezeEnemies()
-    {
-        foreach (Transform child in locationsObj.transform)
-        {
-            child.GetComponent<NavMeshAgent>().speed = 0;
-        }
-        yield return new WaitForSeconds(freezeTime);
-        foreach (Transform child in locationsObj.transform)
-        {
-            child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed;
+            if (shopScript.numSpike > 0)
+            {
+
+            }
         }
     }
     IEnumerator IncreaseFireRate()
     {
-        foreach (Transform child in towersObj.transform)
+        foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<Turret>().fireRate *= fireRateTimesNumber;
         }
         yield return new WaitForSeconds(fireRateIncreaseTime);
-        foreach (Transform child in towersObj.transform)
+        foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<Turret>().fireRate = child.GetComponent<Turret>().standardFireRate;
+        }
+    }
+    IEnumerator FreezeEnemies()
+    {
+        foreach (Transform child in enemyHolder.transform)
+        {
+            child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed /= 2;
+        }
+        yield return new WaitForSeconds(freezeTime);
+        foreach (Transform child in enemyHolder.transform)
+        {
+            child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed;
         }
     }
 }

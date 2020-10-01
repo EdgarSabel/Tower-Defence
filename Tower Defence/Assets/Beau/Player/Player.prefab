@@ -733,6 +733,7 @@ GameObject:
   - component: {fileID: 4561107986965756450}
   - component: {fileID: 4561107986965756453}
   - component: {fileID: 725255761734339701}
+  - component: {fileID: 4051323380791500736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -923,6 +924,24 @@ MonoBehaviour:
     placeTurretVolume: 0
     placeTurretPitch: 0
   rangeIndicator: {fileID: 6162178902360393946}
+--- !u!114 &4051323380791500736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561107986965756476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48a45ad681557d4888d247003225df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeTime: 0
+  fireRateTimesNumber: 0
+  fireRateIncreaseTime: 0
+  enemyHolder: {fileID: 0}
+  towerHolder: {fileID: 0}
+  shopScript: {fileID: 0}
 --- !u!95 &3601420137552011995
 Animator:
   serializedVersion: 3
@@ -1825,14 +1844,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b70df856b195f43983a8e03fb999b0, type: 3}
---- !u!4 &5415552671823818945 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2b70df856b195f43983a8e03fb999b0, type: 3}
-  m_PrefabInstance: {fileID: 5525161426291037994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7105675808334740214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3328511466375769564, guid: a2b70df856b195f43983a8e03fb999b0, type: 3}
+  m_PrefabInstance: {fileID: 5525161426291037994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5415552671823818945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2b70df856b195f43983a8e03fb999b0, type: 3}
   m_PrefabInstance: {fileID: 5525161426291037994}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4642147828234824315 stripped
