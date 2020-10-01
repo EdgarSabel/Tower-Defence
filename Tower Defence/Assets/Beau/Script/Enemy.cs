@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     NavMeshAgent agent;
     GameObject playerManager;
     [HideInInspector]public bool isBurning;
-    public bool isFlying, isFalling;
+    public bool isFlying, isFalling, isZapped;
     public Animator anim;
     public Collider collider;
     [System.Serializable]
@@ -45,6 +45,11 @@ public class Enemy : MonoBehaviour
             {
                 StartCoroutine(Delete());
             }
+        }
+
+        if (isZapped == true)
+        {
+            agent.speed = walkingSpeed / 2;
         }
 
         if (isBurning == true)
