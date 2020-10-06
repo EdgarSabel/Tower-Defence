@@ -488,6 +488,7 @@ MonoBehaviour:
   animTop: {fileID: 5503069284776173706}
   animBot: {fileID: 6022332976921973304}
   lvlUpParticle: {fileID: 8013191330049962954}
+  invSprite: {fileID: 0}
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}
   spawnPos: {fileID: 5155053574823899243}
@@ -739,15 +740,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.854859
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1113873
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.348046
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
       propertyPath: m_LocalRotation.x

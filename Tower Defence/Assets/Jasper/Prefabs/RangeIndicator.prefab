@@ -80,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1805179347802741321, guid: 80e9d578cdad34c468fb76e3faf5dd8d, type: 3}
       propertyPath: prewarm
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2929069892257239385, guid: 80e9d578cdad34c468fb76e3faf5dd8d, type: 3}
       propertyPath: m_LocalPosition.x
