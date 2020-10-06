@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class Ability : MonoBehaviour
 {
-    public int freezeTime;
     public float fireRateTimesNumber, fireRateIncreaseTime;
+    public int freezeTime;
+    public int explosionDmg;
 
     public GameObject enemyHolder, towerHolder;
 
@@ -34,7 +35,8 @@ public class Ability : MonoBehaviour
         {
             if (shopScript.numNuke > 0)
             {
-
+                shopScript.numNuke--;
+                NukeAllEnemies();
             }
         }
         if (Input.GetButtonDown("Ability4"))
@@ -67,6 +69,13 @@ public class Ability : MonoBehaviour
         foreach (Transform child in enemyHolder.transform)
         {
             child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed;
+        }
+    }
+    void NukeAllEnemies()
+    {
+        foreach(Transform child in enemyHolder.transform)
+        {
+            child.GetComponent<Enemy>().EnemyHealth -= explosionDmg;
         }
     }
 }
