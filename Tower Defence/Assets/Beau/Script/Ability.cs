@@ -49,12 +49,12 @@ public class Ability : MonoBehaviour
     {
         foreach (Transform child in towerHolder.transform)
         {
-            child.GetComponent<Turret>().fireRate *= fireRateTimesNumber;
+            child.GetComponent<TurretRepair>().turretScript.fireRate *= fireRateTimesNumber;
         }
         yield return new WaitForSeconds(fireRateIncreaseTime);
         foreach (Transform child in towerHolder.transform)
         {
-            child.GetComponent<Turret>().fireRate = child.GetComponent<Turret>().standardFireRate;
+            child.GetComponent<TurretRepair>().turretScript.fireRate = child.GetComponent<TurretRepair>().turretScript.standardFireRate;
         }
     }
     IEnumerator FreezeEnemies()
