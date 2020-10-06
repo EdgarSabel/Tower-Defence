@@ -802,7 +802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretType: FlameThrower
   levelUpReady: 0
-  damage: 1
+  damage: 25
   slot: 1
   fireRate: 4
   radius: 5
