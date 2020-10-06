@@ -1,26 +1,8 @@
 fileFormatVersion: 2
-guid: 56a82bf705702044aa55605852a04195
+guid: d7490882d01b76e4d9dca18be0321f9e
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable:
-  - first:
-      74: 4068432549243337424
-    second: Armature|HitHammer
-  - first:
-      74: 5008550278639888737
-    second: Armature|Holding
-  - first:
-      74: -8945691123924629249
-    second: Armature|Idle
-  - first:
-      74: -2742877081663275203
-    second: Armature|Pick-Up
-  - first:
-      74: -79433294102957452
-    second: Armature|PlaceTurret
-  - first:
-      74: -4274770991410265338
-    second: Armature|Walking
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
