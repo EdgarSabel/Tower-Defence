@@ -26,10 +26,10 @@ Material:
     m_Floats:
     - Vector1_5006A6DB: 1
     - Vector1_6E1A052F: 10
-    - Vector1_9A47BD85: 0.421
+    - Vector1_9A47BD85: 0.067
     - Vector1_D530AAF: 28.4
     - Vector1_D956D67B: 0.374
-    - _CloudHeight: 0.144
+    - _CloudHeight: 0.119
     - _WindSpeed: 1
     m_Colors:
     - _HorizonColor: {r: 0.32549018, g: 0.7262995, b: 0.74509805, a: 0}
