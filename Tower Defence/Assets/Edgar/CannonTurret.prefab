@@ -630,6 +630,7 @@ MonoBehaviour:
   animTop: {fileID: 1362120082229727766}
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
+  invSprite: {fileID: 21300000, guid: 8722e6defb9079d4296d7db473b9146e, type: 3}
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 3554099881648081176}

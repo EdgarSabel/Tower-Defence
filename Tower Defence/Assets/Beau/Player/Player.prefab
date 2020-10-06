@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 4561107985669078872}
   - component: {fileID: 4561107985669078873}
   - component: {fileID: 4561107985669078877}
+  - component: {fileID: 1467300926839348275}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -660,6 +661,25 @@ MonoBehaviour:
     pickUpTurret: {fileID: 5028643795666127362}
     pickUpTurretVolume: 0
     pickUpTurretPitch: 0
+--- !u!114 &1467300926839348275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561107985669078871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0263549e3377c5488d7c2813f9acb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isfull: 000000
+  pickupTurretScript: {fileID: 4561107986965756476}
+  turret: {fileID: 0}
 --- !u!1 &4561107985726773304
 GameObject:
   m_ObjectHideFlags: 0

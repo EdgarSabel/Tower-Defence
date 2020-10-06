@@ -34,6 +34,7 @@ public class Turret : MonoBehaviour
     public LevelOptions levelStats;
     public Animator animTop,animBot;
     public ParticleSystem lvlUpParticle;
+    public Sprite invSprite;
     void Start()
     {
         StatRefresh();

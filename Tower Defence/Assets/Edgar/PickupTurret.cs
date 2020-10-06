@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupTurret : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PickupTurret : MonoBehaviour
     private GameObject turret;
     public Animator anim;
     public Sounds sounds;
+    public bool[] isfull;
+    public Image[] slots;
+
 
     private void Start()
     {
@@ -43,6 +47,17 @@ public class PickupTurret : MonoBehaviour
                         sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
                         sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
                         sounds.pickUpTurret.Play();
+
+                        for (int i = 0; i < isfull.Length; i++)
+                        {
+                            if (isfull[i] == false)
+                            {
+                                turret = hit.transform.gameObject;
+                                slots[i].sprite = turret.GetComponentInChildren<Turret>().invSprite;
+                                isfull[i] = true;
+                                return;
+                            }
+                        }
                     }
                 }
             }
