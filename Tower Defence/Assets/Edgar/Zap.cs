@@ -23,8 +23,6 @@ public class Zap : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, speed * Time.deltaTime);
             if (transform.position == closestEnemy.transform.position)
             {
-                myLightning = Instantiate(lightningPrefab, origin, transform.rotation);
-                myLightning.transform.LookAt(closestEnemy.transform.position);
                 closestEnemy.GetComponent<Enemy>().GetDamage(damage, true);
                 if (closestEnemy.GetComponent<Enemy>().isZapped == false)
                 {
@@ -51,6 +49,14 @@ public class Zap : MonoBehaviour
 
     public void UpdateZap()
     {
+        if(lastEnemy != null)
+        {
+            myLightning = Instantiate(lightningPrefab, lastEnemy.transform.position,transform.rotation);
+        }
+        else 
+        {
+            myLightning = Instantiate(lightningPrefab, origin, transform.rotation);
+        }
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
         foreach (var hitCollider in hitColliders)
         {
@@ -60,6 +66,7 @@ public class Zap : MonoBehaviour
                 {
                     if (Vector3.Distance(hitCollider.transform.position, transform.position) < Vector3.Distance(closestEnemy.transform.position, transform.position))
                     {
+                        origin = hitCollider.transform.position;
                         closestEnemy = hitCollider.gameObject;
                     }
                 }
@@ -67,6 +74,7 @@ public class Zap : MonoBehaviour
                 {
                     closestEnemy = hitCollider.gameObject;
                 }
+                myLightning.transform.LookAt(closestEnemy.transform.position);
             }
         }
     }
