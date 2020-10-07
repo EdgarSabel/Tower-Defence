@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(canMove == true) 
             { 
-            transform.Translate(moveLr, 0, moveFb);
+            transform.Translate(moveLr, 0, moveFb); 
         }
 
         if(isStraving || isWalkingFb || isWalkingLr)
