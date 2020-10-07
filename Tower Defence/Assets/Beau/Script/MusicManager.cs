@@ -1,12 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using TMPro;
+using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
     public AudioSource mainAudioSource;
     public GameObject[] musics;
     public GameObject musicParent;
-    public int songNum;
+    public GameObject textHolder;
+    public TextMeshProUGUI text;
+    public float showTextTime;
+    int songNum;
     bool checkIfSongStopped;
+    IEnumerator coroutine;
 
     private void Start()
     {
@@ -27,12 +33,19 @@ public class MusicManager : MonoBehaviour
 
     void Setup()
     {
+        textHolder.SetActive(false);
         for (int i = 0; i < musics.Length; i++)
         {
             musics[i] = musicParent.transform.GetChild(i).gameObject;
         }
         mainAudioSource.clip = musics[songNum].GetComponent<AudioSource>().clip;
         mainAudioSource.Play();
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+        coroutine = ShowSongName();
+        StartCoroutine(coroutine);
         checkIfSongStopped = true;
     }
     void StartNewSong()
@@ -44,6 +57,19 @@ public class MusicManager : MonoBehaviour
         }
         mainAudioSource.clip = musics[songNum].GetComponent<AudioSource>().clip;
         mainAudioSource.Play();
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+        coroutine = ShowSongName();
+        StartCoroutine(coroutine);
         checkIfSongStopped = true;
+    }
+    IEnumerator ShowSongName()
+    {
+        text.text = musicParent.transform.GetChild(songNum).gameObject.name;
+        textHolder.SetActive(true);
+        yield return new WaitForSeconds(showTextTime);
+        textHolder.SetActive(false);
     }
 }
