@@ -435,12 +435,14 @@ MonoBehaviour:
   timeAlive: 0
   locationsParentObj: {fileID: 0}
   mesh: {fileID: 8608431985928954924}
+  freezeParticlesParent: {fileID: 2919165970060329967}
   burnRate: 0
   burnTimer: 0
   duration: 0
   isBurning: 0
   isFlying: 1
   isFalling: 0
+  isZapped: 0
   anim: {fileID: 94582853777110969}
   collider: {fileID: 267655117215071375}
   sounds:

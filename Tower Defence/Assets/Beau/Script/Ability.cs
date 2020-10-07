@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -28,7 +29,7 @@ public class Ability : MonoBehaviour
             if (shopScript.numFreeze > 0)
             {
                 shopScript.numFreeze--;
-                StartCoroutine(FreezeEnemies());
+                FreezeEnemies();
             }
         }
         if (Input.GetButtonDown("Ability3"))
@@ -53,24 +54,21 @@ public class Ability : MonoBehaviour
         foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<TurretRepair>().turretScript.fireRate *= fireRateTimesNumber;
+            child.GetComponent<TurretRepair>().boostParticles.Play();
         }
         yield return new WaitForSeconds(fireRateIncreaseTime);
         foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<TurretRepair>().turretScript.fireRate = child.GetComponent<TurretRepair>().turretScript.standardFireRate;
+            child.GetComponent<TurretRepair>().boostParticles.Stop();
         }
     }
-    IEnumerator FreezeEnemies()
+    void FreezeEnemies()
     {
         print("use freeze");
         foreach (Transform child in enemyHolder.transform)
         {
-            child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed /= 2;
-        }
-        yield return new WaitForSeconds(freezeTime);
-        foreach (Transform child in enemyHolder.transform)
-        {
-            child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed;
+            child.GetComponent<Enemy>().FreezeAbil(freezeTime);
         }
     }
     void NukeAllEnemies()

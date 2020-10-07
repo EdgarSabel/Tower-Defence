@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float walkingSpeed, jumpHight;
+    public float walkingSpeed;
     float moveFb, moveLr;
-
-    [HideInInspector] public bool isGrounded;
 
     public GameObject playerCam;
     Rigidbody playerRg;
@@ -22,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [System.Serializable]
     public class Sounds
     {
-        public AudioSource walkingSound, jumpSound, landingSound;
+        public AudioSource walkingSound, clothMovingSound;
     }
     public Sounds sounds;
     private void Start()
@@ -65,21 +63,17 @@ public class PlayerMovement : MonoBehaviour
         if(canMove == true) 
             { 
             transform.Translate(moveLr, 0, moveFb);
-
-            if (Input.GetButtonDown("Jump") && isGrounded == true)
-            {
-                //sounds.jumpSound.Play();
-                playerRg.velocity = new Vector3(0, jumpHight, 0);
-            }
         }
 
         if(isStraving || isWalkingFb || isWalkingLr)
         {
             anim.SetBool("Walking", true);
+            sounds.clothMovingSound.UnPause();
         }
         else
         {
             anim.SetBool("Walking", false);
+            sounds.clothMovingSound.Pause();
         }
         if(footstepTimer >= -0.0000001 && (isWalkingFb == true || isWalkingLr == true || isStraving == true))
         {

@@ -1085,12 +1085,14 @@ MonoBehaviour:
   timeAlive: 0
   locationsParentObj: {fileID: 0}
   mesh: {fileID: 5793997011081408699}
+  freezeParticlesParent: {fileID: 722087154135108768}
   burnRate: 0
   burnTimer: 0
   duration: 0
   isBurning: 0
   isFlying: 0
   isFalling: 0
+  isZapped: 0
   anim: {fileID: 6676868217319158927}
   collider: {fileID: 3495267949674463230}
   sounds:
@@ -2060,6 +2062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
+--- !u!1 &722087154135108768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742149978415007796, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
+  m_PrefabInstance: {fileID: 5461421826348745876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &953649702343683444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5113509091528878560, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}

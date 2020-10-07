@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public int walkingSpeed, EnemyHealth, EnemyDmg, moneyDropAmount, burnDmg;
     [HideInInspector] public float distTravel;
     [HideInInspector] public float timeAlive;
-    public GameObject locationsParentObj, mesh;
+    public GameObject locationsParentObj, mesh, freezeParticlesParent;
     int nextLocNum = 0;
     float lastShotTime;
     [HideInInspector] public float burnRate, burnTimer, duration;
@@ -114,6 +114,25 @@ public class Enemy : MonoBehaviour
         else
         {
             StartCoroutine(Delete());
+        }
+    }
+    public void FreezeAbil(int freezeTime)
+    {
+        StartCoroutine(Freeze(freezeTime));
+    }
+    IEnumerator Freeze(int timeFreezed)
+    {
+        foreach (Transform child in freezeParticlesParent.transform)
+        {
+            agent.speed = walkingSpeed;
+            agent.speed /= 2f;
+            child.GetComponent<ParticleSystem>().Play();
+        }
+        yield return new WaitForSeconds(timeFreezed);
+        foreach (Transform child in freezeParticlesParent.transform)
+        {
+            agent.speed = walkingSpeed;
+            child.GetComponent<ParticleSystem>().Stop();
         }
     }
     IEnumerator Delete()
