@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         else
         {
             animPlayer.SetBool("Holding", false);
-            playerWeaponScript.canHit = true;
+            playerWeaponScript.canHitByInv = true;
         }
         if (Input.GetButtonDown("Slot2") && turrets[0] != null && isHovering == false)
         {
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
             rangeIndicator.transform.gameObject.SetActive(true);
         }
         animPlayer.SetBool("Holding", true);
-        playerWeaponScript.canHit = false;
+        playerWeaponScript.canHitByInv = false;
         if (currentTurret == null)
         {
             currentTurret = turrets[currentSlot];

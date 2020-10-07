@@ -858,7 +858,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &4561107986965756450
 MonoBehaviour:
@@ -905,7 +905,7 @@ MonoBehaviour:
   cam: {fileID: 4561107985669078871}
   anim: {fileID: 3601420137552011995}
   hitMapParticles: {fileID: 1466599599686219034, guid: 427f887c1baa61b4e9fd549595a52c3c, type: 3}
-  canHit: 1
+  canHitByInv: 0
   sounds:
     hitMapSound: {fileID: 6642646812365705581}
     hitEnemySound: {fileID: 8484330211148254778}
@@ -958,10 +958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a45ad681557d4888d247003225df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRateTimesNumber: 0
-  fireRateIncreaseTime: 0
-  freezeTime: 0
-  explosionDmg: 0
+  fireRateTimesNumber: 1.5
+  fireRateIncreaseTime: 15
+  freezeTime: 10
+  explosionDmg: 100
   enemyHolder: {fileID: 0}
   towerHolder: {fileID: 0}
   shopScript: {fileID: 0}

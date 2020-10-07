@@ -49,6 +49,7 @@ public class Ability : MonoBehaviour
     }
     IEnumerator IncreaseFireRate()
     {
+        print("use fire rate increase");
         foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<TurretRepair>().turretScript.fireRate *= fireRateTimesNumber;
@@ -61,6 +62,7 @@ public class Ability : MonoBehaviour
     }
     IEnumerator FreezeEnemies()
     {
+        print("use freeze");
         foreach (Transform child in enemyHolder.transform)
         {
             child.GetComponent<NavMeshAgent>().speed = child.GetComponent<Enemy>().walkingSpeed /= 2;
@@ -73,7 +75,8 @@ public class Ability : MonoBehaviour
     }
     void NukeAllEnemies()
     {
-        foreach(Transform child in enemyHolder.transform)
+        print("use nuke");
+        foreach (Transform child in enemyHolder.transform)
         {
             child.GetComponent<Enemy>().EnemyHealth -= explosionDmg;
         }

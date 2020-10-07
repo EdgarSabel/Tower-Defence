@@ -32,12 +32,10 @@ public class ShopInfoBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         }
 
-        hpNumText.text = shop.GetComponent<ShopScript>().numHP.ToString();
         firerateNumText.text = shop.GetComponent<ShopScript>().numFirerate.ToString();
         freezeNumText.text = shop.GetComponent<ShopScript>().numFreeze.ToString();
         nukeNumText.text = shop.GetComponent<ShopScript>().numNuke.ToString();
         spikeNumText.text = shop.GetComponent<ShopScript>().numSpike.ToString();
-        iGHpNumText.text = shop.GetComponent<ShopScript>().numHP.ToString();
         iGFirerateNumText.text = shop.GetComponent<ShopScript>().numFirerate.ToString();
         iGFreezeNumText.text = shop.GetComponent<ShopScript>().numFreeze.ToString();
         iGNukeNumText.text = shop.GetComponent<ShopScript>().numNuke.ToString();

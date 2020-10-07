@@ -10,7 +10,8 @@ public class PlayerWeapon : MonoBehaviour
 
     public GameObject hitMapParticles;
 
-    [HideInInspector] public bool canHit = true;
+    public bool canHitByInv;
+    bool canHit;
     RaycastHit hit;
 
     [System.Serializable]
@@ -22,6 +23,7 @@ public class PlayerWeapon : MonoBehaviour
     public Sounds sounds;
     private void Start()
     {
+        canHit = true;
         SetUpSounds();
     }
 
@@ -29,7 +31,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         Ray ray = new Ray(cam.transform.localPosition, Vector3.forward);
 
-        if (Input.GetButtonDown("Hit") && canHit == true)
+        if (Input.GetButtonDown("Hit") && canHit == true && canHitByInv == true)
         {
             canHit = false;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, playerWeaponRange, -5, QueryTriggerInteraction.Ignore))
@@ -38,7 +40,6 @@ public class PlayerWeapon : MonoBehaviour
                 Instantiate(hitMapParticles, hit.point, Quaternion.RotateTowards(Quaternion.identity, this.gameObject.transform.rotation, 1));
                 if (hit.transform.tag == "Enemy")
                 {
-                    print("HitEnemy");
                     hit.transform.GetComponent<Enemy>().GetDamage(playerDmg, true);
                     sounds.hitEnemySound.volume = Random.Range(sounds.hitenemyVolume - .05f, sounds.hitenemyVolume + .05f);
                     sounds.hitEnemySound.pitch = Random.Range(sounds.hitenemyPitch - .1f, sounds.hitenemyPitch + .1f);
@@ -46,7 +47,6 @@ public class PlayerWeapon : MonoBehaviour
                 }
                 else if(hit.transform.tag == "Turret")
                 {
-                    print("HitTurret");
                     hit.transform.GetComponent<TurretRepair>().healthTurret += repairNumber;
                     sounds.repairTurretSound.volume = Random.Range(sounds.repairTurretVolume - .05f, sounds.repairTurretVolume + .05f);
                     sounds.repairTurretSound.pitch = Random.Range(sounds.repairTurretPitch - .1f, sounds.repairTurretPitch + .1f);
@@ -54,7 +54,6 @@ public class PlayerWeapon : MonoBehaviour
                 }
                 else
                 {
-                    print("HitMap");
                     sounds.hitMapSound.volume = Random.Range(sounds.hitmapVolume - .05f, sounds.hitmapVolume + .05f);
                     sounds.hitMapSound.pitch = Random.Range(sounds.hitmapPitch - .1f, sounds.hitmapPitch + .1f);
                     sounds.hitMapSound.Play();
