@@ -43,7 +43,7 @@ public class HealthManager : MonoBehaviour
     }
     void UpdateHealthNumber()
     {
-        healthText.text = health.ToString() + " (Health)";
+        healthText.text = health.ToString();
         if(health <= 0)
         {
             Cursor.lockState = CursorLockMode.None;

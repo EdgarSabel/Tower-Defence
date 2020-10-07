@@ -19,7 +19,7 @@ public class MoneyManager : MonoBehaviour
     }
     void UpdateMoneyNumber()
     {
-        moneyText.text = moneyNumber.ToString() + " (Money)";
-        shopText.text = moneyNumber.ToString() + " (Money)";
+        moneyText.text = moneyNumber.ToString();
+        shopText.text = moneyNumber.ToString();
     }
 }

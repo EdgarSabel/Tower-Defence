@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopScript : MonoBehaviour
 {
 
     public int numHP,numFirerate,numFreeze,numNuke,numSpike,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeSpike;
     public GameObject money;
+    public Text iGFirerateNumText, iGFreezeNumText, iGNukeNumText, iGSpikeNumText;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,10 @@ public class ShopScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        iGFirerateNumText.text = numFirerate.ToString();
+        iGFreezeNumText.text = numFreeze.ToString();
+        iGNukeNumText.text = numNuke.ToString();
+        iGSpikeNumText.text = numSpike.ToString();
     }
 
     public void BuyHP()
