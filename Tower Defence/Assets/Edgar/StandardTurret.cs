@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class StandardTurret : Turret
 {
-    //puur voor overzicht, pls frans sla me niet! T-T
+    public ParticleSystem muzzleFlash;
+
+    public override void Fire()
+    {
+        base.Fire();
+        muzzleFlash.Play();
+    }
 }
