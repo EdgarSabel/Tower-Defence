@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Zap : MonoBehaviour
 {
+    public Vector3 origin;
     public float speed, range;
     public int damage;
-    public GameObject closestEnemy, currentEnemy,lastEnemy, veryLastEnemy;
+    public GameObject closestEnemy, currentEnemy,lastEnemy, veryLastEnemy, lightningPrefab, myLightning;
     // Start is called before the first frame update
     void Start()
     {
+        origin = transform.position;
         UpdateZap();
     }
 
@@ -21,6 +23,8 @@ public class Zap : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, speed * Time.deltaTime);
             if (transform.position == closestEnemy.transform.position)
             {
+                myLightning = Instantiate(lightningPrefab, origin, transform.rotation);
+                myLightning.transform.LookAt(closestEnemy.transform.position);
                 closestEnemy.GetComponent<Enemy>().GetDamage(damage, true);
                 if (closestEnemy.GetComponent<Enemy>().isZapped == false)
                 {
@@ -28,7 +32,8 @@ public class Zap : MonoBehaviour
                 }
                 if (veryLastEnemy != null)
                 {
-                    Destroy(gameObject);   
+                    Destroy(gameObject);
+                    Destroy(myLightning.gameObject);
                 }
                 veryLastEnemy = lastEnemy;
                 lastEnemy = currentEnemy;
@@ -40,6 +45,7 @@ public class Zap : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            Destroy(myLightning.gameObject);
         }
     }
 
