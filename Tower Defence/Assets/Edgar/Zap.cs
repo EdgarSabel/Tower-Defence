@@ -11,7 +11,7 @@ public class Zap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        origin = transform.position;
+        //origin = transform.position;
         UpdateZap();
     }
 
@@ -21,6 +21,7 @@ public class Zap : MonoBehaviour
         if (closestEnemy != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.position, speed * Time.deltaTime);
+            transform.LookAt(closestEnemy.transform.position);
             if (transform.position == closestEnemy.transform.position)
             {
                 closestEnemy.GetComponent<Enemy>().GetDamage(damage, true);
@@ -31,7 +32,7 @@ public class Zap : MonoBehaviour
                 if (veryLastEnemy != null)
                 {
                     Destroy(gameObject);
-                    Destroy(myLightning.gameObject);
+                    //Destroy(myLightning.gameObject);
                 }
                 veryLastEnemy = lastEnemy;
                 lastEnemy = currentEnemy;
@@ -43,20 +44,13 @@ public class Zap : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            Destroy(myLightning.gameObject);
+
         }
     }
 
     public void UpdateZap()
     {
-        if(lastEnemy != null)
-        {
-            myLightning = Instantiate(lightningPrefab, lastEnemy.transform.position,transform.rotation);
-        }
-        else 
-        {
-            myLightning = Instantiate(lightningPrefab, origin, transform.rotation);
-        }
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
         foreach (var hitCollider in hitColliders)
         {
@@ -66,7 +60,6 @@ public class Zap : MonoBehaviour
                 {
                     if (Vector3.Distance(hitCollider.transform.position, transform.position) < Vector3.Distance(closestEnemy.transform.position, transform.position))
                     {
-                        origin = hitCollider.transform.position;
                         closestEnemy = hitCollider.gameObject;
                     }
                 }
@@ -74,7 +67,6 @@ public class Zap : MonoBehaviour
                 {
                     closestEnemy = hitCollider.gameObject;
                 }
-                myLightning.transform.LookAt(closestEnemy.transform.position);
             }
         }
     }
