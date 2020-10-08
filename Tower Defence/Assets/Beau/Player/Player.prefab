@@ -947,7 +947,7 @@ MonoBehaviour:
   playerDmg: 10
   repairNumber: 20
   playerWeaponRange: 5
-  playerWeaponDelay: 0.5
+  playerWeaponDelay: 0.6
   cam: {fileID: 4561107985669078871}
   anim: {fileID: 3601420137552011995}
   hitMapParticles: {fileID: 1466599599686219034, guid: 427f887c1baa61b4e9fd549595a52c3c, type: 3}
@@ -978,14 +978,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slotSprite: {fileID: 21300000, guid: 5e29392fdfbf37d4ca93d230e0bb8ced, type: 3}
   cam: {fileID: 4561107985669078871}
   xp1: 0
   xp2: 0
   xp3: 0
   range: 7
   isHovering: 0
-  playerWeaponScript: {fileID: 0}
-  animPlayer: {fileID: 0}
+  playerWeaponScript: {fileID: 4561107986965756453}
+  animPlayer: {fileID: 3601420137552011995}
   animTurret: {fileID: 0}
   sounds:
     placeTurretSound: {fileID: 4994718328037444628}

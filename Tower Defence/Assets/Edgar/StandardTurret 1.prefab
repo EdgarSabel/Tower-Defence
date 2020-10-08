@@ -576,7 +576,7 @@ MonoBehaviour:
   animTop: {fileID: 5716407875689998840}
   animBot: {fileID: 2614646073365519783}
   lvlUpParticle: {fileID: 1237736044556502501}
-  invSprite: {fileID: 21300000, guid: 8722e6defb9079d4296d7db473b9146e, type: 3}
+  invSprite: {fileID: 21300000, guid: 355478a10d1e3334fa0d497537bb8104, type: 3}
   muzzleFlash: {fileID: 7637744895829319760}
 --- !u!1 &5273109800446500302
 GameObject:

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     [System.Serializable]
@@ -12,6 +13,8 @@ public class Inventory : MonoBehaviour
     }
 
     public GameObject[] turrets;
+    public Image[] slots;
+    public Sprite slotSprite;
     public GameObject cam;         
     public float xp1, xp2, xp3;
     public float range;
@@ -25,6 +28,10 @@ public class Inventory : MonoBehaviour
     public ParticleSystem rangeIndicator;
     private void Start()
     {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].sprite = turrets[i].GetComponentInChildren<Turret>().invSprite;
+        }
         rangeIndicator.transform.localScale = new Vector3(range, 0, range);
         cam = GameObject.Find("Camera");
         sounds.placeTurretVolume = sounds.placeTurretSound.volume;
@@ -93,6 +100,7 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
                 currentTurret.GetComponent<Animator>().SetTrigger("Place");
                 turrets[currentSlot] = null;
+                slots[currentSlot].color = Color.gray;
                 turretSpawned = false;
                 currentTurret = null;
                 isHovering = false;

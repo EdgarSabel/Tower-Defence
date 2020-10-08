@@ -1123,7 +1123,7 @@ MonoBehaviour:
   animTop: {fileID: 6132494441583759337}
   animBot: {fileID: 1930914037360754477}
   lvlUpParticle: {fileID: 5018230229404787853}
-  invSprite: {fileID: 21300000, guid: 8722e6defb9079d4296d7db473b9146e, type: 3}
+  invSprite: {fileID: 21300000, guid: c2f274b0195f5214bb42f639604aee4c, type: 3}
   isFiring: 0
   vfx: {fileID: 6132494442209265320}
   burnDuration: 5

@@ -47,17 +47,7 @@ public class PickupTurret : MonoBehaviour
                         sounds.pickUpTurret.volume = Random.Range(sounds.pickUpTurretVolume - .05f, sounds.pickUpTurretVolume + .05f);
                         sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
                         sounds.pickUpTurret.Play();
-
-                        for (int i = 0; i < isfull.Length; i++)
-                        {
-                            if (isfull[i] == false)
-                            {
-                                turret = hit.transform.gameObject;
-                                slots[i].sprite = turret.GetComponentInChildren<Turret>().invSprite;
-                                isfull[i] = true;
-                                return;
-                            }
-                        }
+                        slots[turret.GetComponentInChildren<Turret>().slot].sprite = turret.GetComponentInChildren<Turret>().invSprite;
                     }
                 }
             }
