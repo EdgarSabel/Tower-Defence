@@ -6,9 +6,11 @@ public class FlameThrowerFlame : MonoBehaviour
 {
     public FlameThrowerTurret turret;
     private Enemy target;
+    [HideInInspector] public Inventory inventory;
     // Start is called before the first frame update
     void Start()
     {
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
         turret = GetComponentInParent<FlameThrowerTurret>();
     }
 
@@ -20,25 +22,29 @@ public class FlameThrowerFlame : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (inventory.isHovering == false)
         {
-            target = other.gameObject.GetComponent<Enemy>();
-            if (target.isBurning == false)
-            {
-            target.burnDmg = turret.damage;
-            target.burnRate = turret.fireRate;
-            target.isBurning = true;
-            target.duration = turret.burnDuration;
-            }
-            else
-            {
-                target.burnTimer = 0;
-            }
 
-            if (turret.target = null)
+            if (other.gameObject.tag == "Enemy")
             {
-                turret.vfx.Stop();
-                turret.isFiring = false;
+                target = other.gameObject.GetComponent<Enemy>();
+                if (target.isBurning == false)
+                {
+                    target.burnDmg = turret.damage;
+                    target.burnRate = turret.fireRate;
+                    target.isBurning = true;
+                    target.duration = turret.burnDuration;
+                }
+                else
+                {
+                    target.burnTimer = 0;
+                }
+
+                if (turret.target = null)
+                {
+                    turret.vfx.Stop();
+                    turret.isFiring = false;
+                }
             }
         }
     }
