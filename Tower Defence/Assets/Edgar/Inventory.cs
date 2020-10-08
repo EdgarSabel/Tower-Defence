@@ -14,8 +14,8 @@ public class Inventory : MonoBehaviour
 
     public GameObject[] turrets;
     public Image[] slots;
-    public Sprite slotSprite;
-    public GameObject cam;         
+    public GameObject cam;
+    public Color turretBlackout;
     public float xp1, xp2, xp3;
     public float range;
     private bool turretSpawned;
@@ -100,7 +100,7 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponent<BoxCollider>().enabled = enabled;
                 currentTurret.GetComponent<Animator>().SetTrigger("Place");
                 turrets[currentSlot] = null;
-                slots[currentSlot].color = Color.gray;
+                slots[currentSlot].color = turretBlackout;
                 turretSpawned = false;
                 currentTurret = null;
                 isHovering = false;

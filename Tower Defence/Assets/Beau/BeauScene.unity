@@ -3147,6 +3147,22 @@ PrefabInstance:
       propertyPath: slotSprite
       value: 
       objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretBlackout.r
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretBlackout.g
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretBlackout.b
+      value: 0.2830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 725255761734339701, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretBlackout.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1013873214870482220, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0
