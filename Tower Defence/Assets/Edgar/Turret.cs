@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
         }
         if (target != null)
         {
-            transform.LookAt(target.transform.position);
+            transform.LookAt(target.transform.Find("HitLoc").position);
         }
 
         if (target != null && Time.time > lastShotTime + (3.0f / fireRate))
