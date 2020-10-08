@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
-using UnityEngine.UI;
+using TMPro;
 
 public class HealthManager : MonoBehaviour
 {
     public int health, waitForTextDisapear;
     int decreaseHealthNumber;
-    public Text healthText, decreaseHealthText;
+    public TextMeshProUGUI healthText, decreaseHealthText;
     public GameObject decreaseHealthObj, cam, player;
 
     public GameObject deathMenu;

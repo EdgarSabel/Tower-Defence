@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class MoneyManager : MonoBehaviour
 {
     public int moneyNumber;
-    public Text moneyText, shopText;
+    public TextMeshProUGUI moneyText, shopText;
 
     private void Start()
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+using TMPro;
 using System.Threading;
 
 public class WaveSystem : MonoBehaviour
@@ -24,7 +24,7 @@ public class WaveSystem : MonoBehaviour
         public AudioSource shopOpenedSound, startRoundSound;
     }
     public GameObject[] enemyPrefabs;
-    public Text roundNumberText, nextRoundInText;
+    public TextMeshProUGUI roundNumberText, nextRoundInText;
     public GameObject timerObj;
     public GameObject enemyObj;
     public GameObject[] spawnPoints;
@@ -60,7 +60,7 @@ public class WaveSystem : MonoBehaviour
         if(timer >= 1.00001)
         {
             timer -= Time.deltaTime;
-            nextRoundInText.text = "Next round in " + timer.ToString("F0");
+            nextRoundInText.text = "Waiting " + timer.ToString("F0");
         }
         else if(timer <= 0.99999)
         {

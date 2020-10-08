@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ShopScript : MonoBehaviour
 {
 
     public int numHP,numFirerate,numFreeze,numNuke,numSpike,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeSpike;
     public GameObject money;
-    public Text iGFirerateNumText, iGFreezeNumText, iGNukeNumText, iGSpikeNumText;
+    public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText, iGSpikeNumText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class ShopScript : MonoBehaviour
         iGFirerateNumText.text = numFirerate.ToString();
         iGFreezeNumText.text = numFreeze.ToString();
         iGNukeNumText.text = numNuke.ToString();
-        iGSpikeNumText.text = numSpike.ToString();
+        //iGSpikeNumText.text = numSpike.ToString();
     }
 
     public void BuyHP()
