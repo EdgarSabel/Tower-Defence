@@ -7,7 +7,7 @@ public class PlayerInterectScript : MonoBehaviour
 
     public GameObject upgradePanel, shopPanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
-    public GameObject menuPanel, shopIntImage;
+    public GameObject menuPanel, shopIntText, turretPUText, turretUGText;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,11 @@ public class PlayerInterectScript : MonoBehaviour
         {
             if (hit.transform.tag == ("Turret"))
             {
+                if (player.GetComponent<Inventory>().isHovering == false)
+                {
+                    turretPUText.SetActive(true);
+                    turretUGText.SetActive(true);
+                }
                 if (Input.GetButtonDown("Fire2"))
                 {
                     upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
@@ -33,7 +38,7 @@ public class PlayerInterectScript : MonoBehaviour
 
             else if (hit.transform.tag == ("Shop"))
             {
-                shopIntImage.SetActive(true);
+                shopIntText.SetActive(true);
                 if (Input.GetButtonDown("Fire2"))
                 {
                     shopPanel.SetActive(true);
@@ -44,10 +49,11 @@ public class PlayerInterectScript : MonoBehaviour
                     //player.GetComponent<CamLook>().canMove = false;
                 }
             }
-
             else
             {
-                shopIntImage.SetActive(false);
+                shopIntText.SetActive(false);
+                turretPUText.SetActive(false);
+                turretUGText.SetActive(false);
             }
         }
 

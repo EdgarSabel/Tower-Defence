@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject[] turrets;
     public Image[] slots;
-    public GameObject cam;
+    public GameObject cam, turretPLText, turretPUText;
     public Color turretBlackout;
     public float xp1, xp2, xp3;
     public float range;
@@ -81,6 +81,8 @@ public class Inventory : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit ,range, -5, QueryTriggerInteraction.Ignore))
         {
+            turretPLText.SetActive(true);
+            turretPUText.SetActive(false);
             if (hit.transform.gameObject.tag == "Ground")
             {
                 currentTurret.transform.position = hit.point;
@@ -103,6 +105,7 @@ public class Inventory : MonoBehaviour
                 slots[currentSlot].color = turretBlackout;
                 turretSpawned = false;
                 currentTurret = null;
+                turretPLText.SetActive(false);
                 isHovering = false;
 
                 sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
