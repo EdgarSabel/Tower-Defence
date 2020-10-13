@@ -95,6 +95,7 @@ public class WaveSystem : MonoBehaviour
     {
         timerObj.SetActive(false);
         roundNumber++;
+        sounds.startRoundSound.Play();
         UpdateRoundNumber();
         for (int i = 0; i < waves[roundNumber].enemies.Length; i++)
         {

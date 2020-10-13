@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using TMPro;
+using System.Collections.Generic;
 
 public class HealthManager : MonoBehaviour
 {
@@ -11,6 +10,7 @@ public class HealthManager : MonoBehaviour
     public TextMeshProUGUI healthText, decreaseHealthText;
     public GameObject decreaseHealthObj, cam, player;
 
+    public GameObject[] bgImages;
     public GameObject deathMenu;
 
     IEnumerator coroutine;
@@ -19,7 +19,13 @@ public class HealthManager : MonoBehaviour
     {
         UpdateHealthNumber();
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            GetDamagedByEnemy(10000);
+        }
+    }
     public void GetDamagedByEnemy(int dmg)
     {
         health -= dmg;
@@ -52,6 +58,7 @@ public class HealthManager : MonoBehaviour
             Cursor.visible = true;
 
             Time.timeScale = 0;
+            bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
             deathMenu.SetActive(true);
         }
     }
