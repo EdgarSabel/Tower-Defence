@@ -48,6 +48,7 @@ public class PickupTurret : MonoBehaviour
                         sounds.pickUpTurret.pitch = Random.Range(sounds.pickUpTurretPitch - .1f, sounds.pickUpTurretPitch + .1f);
                         sounds.pickUpTurret.Play();
                         slots[turret.GetComponentInChildren<Turret>().slot].sprite = turret.GetComponentInChildren<Turret>().invSprite;
+                        slots[turret.GetComponentInChildren<Turret>().slot].color = Color.white;
                     }
                 }
             }
