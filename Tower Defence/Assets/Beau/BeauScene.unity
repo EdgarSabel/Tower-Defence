@@ -3011,10 +3011,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4eadbfd8f66cb44bb950dfcc6d612f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSliderSound: {fileID: 0}
-  volumeSliderMusic: {fileID: 0}
-  volumeSliderMaster: {fileID: 0}
-  sensetivetySlider: {fileID: 0}
+  volumeSliderSound: {fileID: 603391898}
+  volumeSliderMusic: {fileID: 451832279}
+  volumeSliderMaster: {fileID: 565945929}
+  sensetivetySlider: {fileID: 1017063608}
   menuPanel: {fileID: 813119920}
   upgradePanel: {fileID: 1813661106}
   shopPanel: {fileID: 1750240985}
@@ -17902,21 +17902,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d520ba3ea81d78478fab3c1f7434bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numHP: 0
   numFirerate: 5
   numFreeze: 10
   numNuke: 0
-  numSpike: 0
   prizeHP: 100
   prizeFirerate: 500
   prizeFreeze: 500
   prizeNuke: 1000
-  prizeSpike: 500
+  prizeTurretRepairSpeed: 500
   money: {fileID: 148163699}
   iGFirerateNumText: {fileID: 384216389}
   iGFreezeNumText: {fileID: 1975387476}
   iGNukeNumText: {fileID: 565854612}
-  iGSpikeNumText: {fileID: 0}
 --- !u!65 &1489391729
 BoxCollider:
   m_ObjectHideFlags: 0

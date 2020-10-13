@@ -6,9 +6,9 @@ using TMPro;
 public class ShopScript : MonoBehaviour
 {
 
-    public int numHP,numFirerate,numFreeze,numNuke,numSpike,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeSpike;
+    public int numFirerate,numFreeze,numNuke,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeTurretRepairSpeed;
     public GameObject money;
-    public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText, iGSpikeNumText;
+    public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class ShopScript : MonoBehaviour
     {
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeHP)
         {
-            numHP += 1;
+            //give health max health= 120
             money.GetComponent<MoneyManager>().GetMoney(-prizeHP);
         }
     }
@@ -63,10 +63,10 @@ public class ShopScript : MonoBehaviour
 
     public void BuySpike()
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeSpike)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeTurretRepairSpeed)
         {
-            numSpike += 1;
-            money.GetComponent<MoneyManager>().GetMoney(-prizeSpike);
+            //decrease turret repair speed
+            money.GetComponent<MoneyManager>().GetMoney(-prizeTurretRepairSpeed);
         }
     }
 }

@@ -55,13 +55,6 @@ public class Ability : MonoBehaviour
                 }
             }
         }
-        if (Input.GetButtonDown("Ability4"))
-        {
-            if (shopScript.numSpike > 0)
-            {
-
-            }
-        }
     }
     IEnumerator IncreaseFireRate()
     {
