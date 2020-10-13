@@ -34,7 +34,7 @@ public class WaveSystem : MonoBehaviour
     public Sounds sounds;
 
     float timer;
-    Vector3 wantedSpawnPoint;
+    GameObject wantedSpawnPoint;
     int roundNumber = -1, moneyNumber;
     bool allEnemiesAreSpawned, canSkip;
 
@@ -76,7 +76,7 @@ public class WaveSystem : MonoBehaviour
     void RandomSpawnPoint()
     {
         int randomNumber = Random.Range(0, spawnPoints.Length);
-        wantedSpawnPoint = spawnPoints[randomNumber].transform.position;
+        wantedSpawnPoint = spawnPoints[randomNumber];
     }
     void WaitForNextRound()
     {
@@ -102,7 +102,7 @@ public class WaveSystem : MonoBehaviour
             for (int o = 0; o < waves[roundNumber].enemies[i].amount; o++)
             {
                 RandomSpawnPoint();
-                Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint, Quaternion.identity, enemyObj.transform);
+                Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint.transform.position, wantedSpawnPoint.transform.rotation, enemyObj.transform);
                 yield return new WaitForSeconds(waves[roundNumber].enemies[i].rate);
             }
         }
