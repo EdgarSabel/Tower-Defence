@@ -7,7 +7,7 @@ public class PlayerInterectScript : MonoBehaviour
 
     public GameObject upgradePanel, shopPanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
-    public GameObject menuPanel;
+    public GameObject menuPanel, shopIntImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,7 @@ public class PlayerInterectScript : MonoBehaviour
 
             else if (hit.transform.tag == ("Shop"))
             {
+                shopIntImage.SetActive(true);
                 if (Input.GetButtonDown("Fire2"))
                 {
                     shopPanel.SetActive(true);
@@ -42,6 +43,11 @@ public class PlayerInterectScript : MonoBehaviour
                     cam.GetComponent<CamLook>().canMove = false;
                     //player.GetComponent<CamLook>().canMove = false;
                 }
+            }
+
+            else
+            {
+                shopIntImage.SetActive(false);
             }
         }
 

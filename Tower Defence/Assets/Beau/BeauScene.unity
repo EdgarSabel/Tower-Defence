@@ -2998,6 +2998,7 @@ MonoBehaviour:
   player: {fileID: 1834545573}
   turret: {fileID: 0}
   menuPanel: {fileID: 813119920}
+  shopIntImage: {fileID: 0}
 --- !u!114 &148163705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,6 +3734,18 @@ PrefabInstance:
       propertyPath: shopScript
       value: 
       objectReference: {fileID: 1489391728}
+    - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: cooldownRF
+      value: 
+      objectReference: {fileID: 163209279}
+    - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: cooldownFreeze
+      value: 
+      objectReference: {fileID: 126267272}
+    - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: cooldownNuke
+      value: 
+      objectReference: {fileID: 1408631397}
     - target: {fileID: 4179759966406330772, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0

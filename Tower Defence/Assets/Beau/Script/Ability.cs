@@ -10,7 +10,7 @@ public class Ability : MonoBehaviour
     public int freezeTime;
     public int explosionDmg;
 
-    public GameObject enemyHolder, towerHolder;
+    public GameObject enemyHolder, towerHolder, cooldownRF, cooldownNuke, cooldownFreeze;
 
     public ShopScript shopScript;
 
@@ -18,26 +18,41 @@ public class Ability : MonoBehaviour
     {
         if (Input.GetButtonDown("Ability1"))
         {
-            if(shopScript.numFirerate > 0)
+            if (cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
             {
-                shopScript.numFirerate--;
-                StartCoroutine(IncreaseFireRate());
+                if (shopScript.numFirerate > 0)
+                {
+                    shopScript.numFirerate--;
+                    StartCoroutine(IncreaseFireRate());
+                    cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+
+                }
             }
         }
         if (Input.GetButtonDown("Ability2"))
         {
-            if (shopScript.numFreeze > 0)
+            if (cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
             {
-                shopScript.numFreeze--;
-                FreezeEnemies();
+                if (shopScript.numFreeze > 0)
+                {
+                    shopScript.numFreeze--;
+                    FreezeEnemies();
+                    cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+
+                }
             }
         }
         if (Input.GetButtonDown("Ability3"))
         {
-            if (shopScript.numNuke > 0)
+            if (cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
             {
-                shopScript.numNuke--;
-                NukeAllEnemies();
+                if (shopScript.numNuke > 0)
+                {
+                    shopScript.numNuke--;
+                    NukeAllEnemies();
+                    cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+
+                }
             }
         }
         if (Input.GetButtonDown("Ability4"))
