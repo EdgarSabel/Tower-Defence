@@ -283,82 +283,6 @@ Transform:
   m_Father: {fileID: 1799286876113931366}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3993490123921880083
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2193592014286739062}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7191291880152690567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2193592014286739062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 571c04a59e0dc4c44888e21f44347d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretType: CannonTurret
-  levelUpReady: 0
-  damage: 0
-  slot: 0
-  fireRate: 0
-  radius: 0
-  levelSpeed: 0
-  nextLvlXp: 0
-  collider: {fileID: 1947981455517082441}
-  target: {fileID: 0}
-  prefab: {fileID: 3128347978045668607}
-  standardFireRate: 0
-  longestDist: 0
-  xp: 0
-  lastShotTime: -3.4028235e+38
-  turretLevel: 0
-  sounds:
-    shootSound: {fileID: 5079007010315969737}
-    shootSoundVolume: 0
-    shootSoundPitch: 0
-  levelStats:
-    stats:
-    - damage: 50
-      fireRate: 3
-      radius: 8
-      xp: 0
-      nextLvlXp: 50
-    - damage: 70
-      fireRate: 4
-      radius: 8
-      xp: 0
-      nextLvlXp: 100
-    - damage: 80
-      fireRate: 4
-      radius: 10
-      xp: 0
-      nextLvlXp: 150
-  animTop: {fileID: 3993490123921880083}
-  animBot: {fileID: 4288009047468951981}
-  lvlUpParticle: {fileID: 3412804779636673859}
-  invSprite: {fileID: 0}
-  projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
-  currentProjectile: {fileID: 0}
-  spawnPos: {fileID: 123358351246746964}
-  projectileSpeed: 0.2
 --- !u!82 &5079007010315969737
 AudioSource:
   m_ObjectHideFlags: 0
@@ -455,6 +379,83 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &3993490123921880083
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193592014286739062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7191291880152690567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193592014286739062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571c04a59e0dc4c44888e21f44347d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType: CannonTurret
+  levelUpReady: 0
+  damage: 0
+  slot: 0
+  fireRate: 0
+  radius: 0
+  levelSpeed: 0
+  nextLvlXp: 0
+  collider: {fileID: 1947981455517082441}
+  target: {fileID: 0}
+  prefab: {fileID: 3128347978045668607}
+  standardFireRate: 0
+  longestDist: 0
+  xp: 0
+  lastShotTime: -3.4028235e+38
+  turretLevel: 0
+  sounds:
+    shootSound: {fileID: 5079007010315969737}
+    shootSoundVolume: 0
+    shootSoundPitch: 0
+  levelStats:
+    stats:
+    - damage: 50
+      fireRate: 3
+      radius: 8
+      xp: 0
+      nextLvlXp: 50
+    - damage: 70
+      fireRate: 4
+      radius: 8
+      xp: 0
+      nextLvlXp: 100
+    - damage: 80
+      fireRate: 4
+      radius: 10
+      xp: 0
+      nextLvlXp: 150
+  animTop: {fileID: 3993490123921880083}
+  animBot: {fileID: 4288009047468951981}
+  lvlUpParticle: {fileID: 3412804779636673859}
+  invSprite: {fileID: 0}
+  cannonSmoke: {fileID: 8950217364272507878}
+  projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
+  currentProjectile: {fileID: 0}
+  spawnPos: {fileID: 123358351246746964}
+  projectileSpeed: 0.2
 --- !u!1 &3128347978045668607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,5 +1303,10 @@ PrefabInstance:
 --- !u!4 &8950217364272507876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5485949293274924508, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
+  m_PrefabInstance: {fileID: 3465395207855140408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8950217364272507878 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5485949293274924510, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
   m_PrefabInstance: {fileID: 3465395207855140408}
   m_PrefabAsset: {fileID: 0}
