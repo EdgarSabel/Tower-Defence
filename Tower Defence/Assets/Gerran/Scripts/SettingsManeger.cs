@@ -32,6 +32,13 @@ public class SettingsManeger : MonoBehaviour
         //volumeSliderSound.value = PlayerPrefs.GetFloat(SOUND_VOLUME_PREF, 1);
         //sensetivetySlider.value = PlayerPrefs.GetFloat(SENSETIVETY_PREF, 1);
 
+        cam.GetComponent<CamLook>().sensetivity = OptionsManeger.sensitivityStatic;
+        inputBoxText.text = OptionsManeger.sensitivityStatic.ToString();
+        sensetivetySlider.value = OptionsManeger.sensitivityStatic;
+
+        volumeSliderMaster.value = OptionsManeger.masterSliderValue;
+        volumeSliderMusic.value = OptionsManeger.musicSliderValue;
+        volumeSliderSound.value = OptionsManeger.soundSliderValue;
     }
 
     public void Update()
@@ -67,14 +74,17 @@ public class SettingsManeger : MonoBehaviour
 
     public void SetMasterVol(float sliderValue)
     {
+        OptionsManeger.masterSliderValue = sliderValue;
         mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetMusicVol(float sliderValue)
     {
+        OptionsManeger.musicSliderValue = sliderValue;
         mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetSoundVol(float sliderValue)
     {
+        OptionsManeger.soundSliderValue = sliderValue;
         mixer.SetFloat("SoundVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetSensitivityFromNumber(string boxValue)
@@ -84,7 +94,7 @@ public class SettingsManeger : MonoBehaviour
         {
             sensetivetySlider.value = usableValue;
             cam.GetComponent<CamLook>().sensetivity = usableValue;
-            print(cam.GetComponent<CamLook>().sensetivity);
+            OptionsManeger.sensitivityStatic = usableValue;
         }
         else if(usableValue < 1)
         {
@@ -103,7 +113,7 @@ public class SettingsManeger : MonoBehaviour
     {
         inputBoxText.text = sliderValue.ToString();
         cam.GetComponent<CamLook>().sensetivity = sliderValue;
-        print(cam.GetComponent<CamLook>().sensetivity);
+        OptionsManeger.sensitivityStatic = sliderValue;
     }
 
     #region Set Prefs

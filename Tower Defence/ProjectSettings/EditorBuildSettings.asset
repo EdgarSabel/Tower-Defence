@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Gerran/MainMenu.unity
+    path: Assets/Beau/MainMenu.unity
     guid: 30ec8e5b385be45499671c4f73dbd7a3
   - enabled: 1
     path: Assets/Beau/BeauScene.unity
