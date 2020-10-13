@@ -3,42 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 public class OptionsManeger : MonoBehaviour
 {
-    public Slider musicVolumeSlider, soundVolumeSlider, MasterVolumeSlider, SensitivitySlider;
+    public Slider musicVolumeSlider, soundVolumeSlider, masterVolumeSlider, sensitivitySlider;
+    public TMP_InputField inputBoxText;
     public AudioMixer mixer;
-    public GameObject playercam, graphicsDropdown;
+    public GameObject playercam;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetMasterVol(float sliderValue)
     {
-        
+        mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetMusicVol(float sliderValue)
     {
-        
+        mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
     }
-
-    public void SetMusicVolume()
+    public void SetSoundVol(float sliderValue)
     {
-        mixer.SetFloat("Music Volume", Mathf.Log10(musicVolumeSlider.value) * 20);
+        mixer.SetFloat("SoundVol", Mathf.Log10(sliderValue) * 20);
     }
-    public void SetSoundVolume()
+    public void SetSensitivityFromNumber(string boxValue)
     {
-        mixer.SetFloat("Sound Volume", Mathf.Log10(soundVolumeSlider.value) * 20);
+        float usableValue = float.Parse(boxValue);
+        if (usableValue >= 1 && usableValue <= 15)
+        {
+            sensitivitySlider.value = usableValue;
+            playercam.GetComponent<CamLook>().sensetivity = usableValue;
+            print(playercam.GetComponent<CamLook>().sensetivity);
+        }
+        else if (usableValue < 1)
+        {
+            SetSensitivityFromNumber("1");
+            print(usableValue);
+            inputBoxText.text = "1";
+        }
+        else if (usableValue > 16)
+        {
+            SetSensitivityFromNumber("15");
+            print(usableValue);
+            inputBoxText.text = "15";
+        }
     }
-    public void SetMasterVolume()
+    public void SetSensitivity(float sliderValue)
     {
-        mixer.SetFloat("Master Volume", Mathf.Log10(MasterVolumeSlider.value) * 20);
-    }
-
-    public void SensitivityChange()
-    {
-        playercam.GetComponent<CamLook>().sensetivity = SensitivitySlider.value * 100;
-        print(SensitivitySlider);
+        inputBoxText.text = sliderValue.ToString();
+        playercam.GetComponent<CamLook>().sensetivity = sliderValue;
+        print(playercam.GetComponent<CamLook>().sensetivity);
     }
 
     public void SetQuality(int qualityIndex)
