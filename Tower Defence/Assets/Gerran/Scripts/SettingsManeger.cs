@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsManeger : MonoBehaviour
@@ -11,9 +13,12 @@ public class SettingsManeger : MonoBehaviour
     private const string SOUND_VOLUME_PREF = "sound-volume";
     private const string SENSETIVETY_PREF = "Sensetivety";
 
+    public AudioMixer mixer;
     public Slider volumeSliderSound;
     public Slider volumeSliderMusic;
     public Slider volumeSliderMaster;
+
+    public TMP_InputField inputBoxText;
     public Slider sensetivetySlider;
 
     public GameObject menuPanel, upgradePanel, shopPanel, hudPanel, cam, player;
@@ -60,23 +65,45 @@ public class SettingsManeger : MonoBehaviour
         //player.GetComponent<CamLook>().canMove = true;
     }
 
-
-
-    public void OnChangeMasterVolume(float value)
+    public void SetMasterVol(float sliderValue)
     {
-        SetPrefs(MASTER_VOLUME_PREF, value);
+        mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
     }
-    public void OnChangeSoundVolume(float value)
+    public void SetMusicVol(float sliderValue)
     {
-        SetPrefs(SOUND_VOLUME_PREF, value);
+        mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
     }
-    public void OnChangeMusicVolume(float value)
+    public void SetSoundVol(float sliderValue)
     {
-        SetPrefs(MUSIC_VOLUME_PREF, value);
+        mixer.SetFloat("SoundVol", Mathf.Log10(sliderValue) * 20);
     }
-    public void OnChangeSensetivety(float value)
+    public void SetSensitivityFromNumber(string boxValue)
     {
-        SetPrefs (SENSETIVETY_PREF, value);
+        float usableValue = float.Parse(boxValue);
+        if(usableValue >= 1 && usableValue <= 15)
+        {
+            sensetivetySlider.value = usableValue;
+            cam.GetComponent<CamLook>().sensetivity = usableValue;
+            print(cam.GetComponent<CamLook>().sensetivity);
+        }
+        else if(usableValue < 1)
+        {
+            SetSensitivityFromNumber("1");
+            print(usableValue);
+            inputBoxText.text = "1";
+        }
+        else if(usableValue > 16)
+        {
+            SetSensitivityFromNumber("15");
+            print(usableValue);
+            inputBoxText.text = "15";
+        }
+    }
+    public void SetSensitivity(float sliderValue)
+    {
+        inputBoxText.text = sliderValue.ToString();
+        cam.GetComponent<CamLook>().sensetivity = sliderValue;
+        print(cam.GetComponent<CamLook>().sensetivity);
     }
 
     #region Set Prefs

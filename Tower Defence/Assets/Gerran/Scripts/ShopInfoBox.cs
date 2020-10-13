@@ -10,7 +10,7 @@ public class ShopInfoBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private bool mouseover;
     public GameObject infoBox,shop;
     public GameObject[] otherInfoBox;
-    public Text firerateNumText, freezeNumText, nukeNumText, spikeNumText;
+    public Text firerateNumText, freezeNumText, nukeNumText;
 
 
     // Start is called before the first frame update
