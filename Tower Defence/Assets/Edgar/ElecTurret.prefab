@@ -149,6 +149,7 @@ MonoBehaviour:
   animBot: {fileID: 6022332976921973304}
   lvlUpParticle: {fileID: 8013191330049962954}
   invSprite: {fileID: 0}
+  boostParticle: {fileID: 7095787463081426454}
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}
   spawnPos: {fileID: 9121436940922645424}
@@ -1050,6 +1051,30 @@ PrefabInstance:
     - target: {fileID: 56361380654459049, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
       propertyPath: m_Name
       value: LevelUpParticleParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.83180153
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 56361380802265923, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
       propertyPath: m_LocalScale.x
