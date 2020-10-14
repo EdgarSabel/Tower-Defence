@@ -9,7 +9,6 @@ public class InfoBoxScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public GameObject infoPanel;
     private bool mouseover;
-    public GameObject[] otherPanels;
 
 
     // Start is called before the first frame update
@@ -24,10 +23,6 @@ public class InfoBoxScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (mouseover == true)
         {
             infoPanel.SetActive(true);
-            otherPanels[0].SetActive(false);
-            otherPanels[1].SetActive(false);
-            otherPanels[2].SetActive(false);
-            otherPanels[3].SetActive(false);
         }
     }
 

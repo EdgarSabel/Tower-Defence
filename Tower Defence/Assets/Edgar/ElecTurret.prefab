@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bee3e54e94ebf649bbdfe6d8cbbc8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: ElecTurret
+  turretType: Electric
   levelUpReady: 0
   damage: 0
   slot: 0

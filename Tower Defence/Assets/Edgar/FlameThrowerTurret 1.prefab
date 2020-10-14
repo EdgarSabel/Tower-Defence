@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427917fe48a1b494d97d85b41bfdd912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretType: FlameThrower
+  turretType: Flame
   levelUpReady: 0
   damage: 25
   slot: 1

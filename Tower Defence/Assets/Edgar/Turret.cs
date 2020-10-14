@@ -29,7 +29,7 @@ public class Turret : MonoBehaviour
      public GameObject target, prefab;
     public float xp;
     [HideInInspector]public float standardFireRate, longestDist, lastShotTime = float.MinValue;
-    [HideInInspector] public int turretLevel;
+    public int turretLevel;
     private GameObject turretSpawned;
     public Sounds sounds;
     public LevelOptions levelStats;
