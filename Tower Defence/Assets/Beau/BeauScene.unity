@@ -22030,6 +22030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e22b48f87aade4bbfa10d86fa935fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  text: {fileID: 0}
 --- !u!4 &1678742142
 Transform:
   m_ObjectHideFlags: 0

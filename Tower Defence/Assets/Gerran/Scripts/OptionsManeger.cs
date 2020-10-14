@@ -11,6 +11,10 @@ public class OptionsManeger : MonoBehaviour
     public AudioMixer mixer;
     public GameObject playercam;
 
+    private void Awake()
+    {
+        this.gameObject.SetActive(false);
+    }
     void Start()
     {
         if(sensitivityStatic == 0)
