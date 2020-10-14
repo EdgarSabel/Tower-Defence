@@ -9,7 +9,6 @@ public class ElecTurret : Turret
     public float zapSpeed;
     public override void Fire()
     {
-        boostParticle.Play();
         currentZap = Instantiate(zap, spawnPos.transform.position, transform.rotation);
         currentZap.GetComponent<Zap>().speed = zapSpeed;
         currentZap.GetComponent<Zap>().damage = damage;
