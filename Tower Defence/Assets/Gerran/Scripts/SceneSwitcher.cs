@@ -29,7 +29,7 @@ public class SceneSwitcher : MonoBehaviour
     }
     public void Level2()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("MapScene");
     }
 
     public void QuitGame()
