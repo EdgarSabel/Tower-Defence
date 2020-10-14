@@ -119,9 +119,9 @@ MonoBehaviour:
   collider: {fileID: 6022332976921973306}
   target: {fileID: 0}
   prefab: {fileID: 6022332976921973287}
+  xp: 0
   standardFireRate: 0
   longestDist: 0
-  xp: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -148,7 +148,7 @@ MonoBehaviour:
   animTop: {fileID: 0}
   animBot: {fileID: 6022332976921973304}
   lvlUpParticle: {fileID: 8013191330049962954}
-  invSprite: {fileID: 0}
+  invSprite: {fileID: 21300000, guid: 838ddae382a235145990b18c846b2d46, type: 3}
   boostParticle: {fileID: 7095787463081426454}
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}

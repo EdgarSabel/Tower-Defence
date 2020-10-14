@@ -421,9 +421,9 @@ MonoBehaviour:
   collider: {fileID: 1947981455517082441}
   target: {fileID: 0}
   prefab: {fileID: 3128347978045668607}
+  xp: 0
   standardFireRate: 0
   longestDist: 0
-  xp: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -450,7 +450,7 @@ MonoBehaviour:
   animTop: {fileID: 3993490123921880083}
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
-  invSprite: {fileID: 0}
+  invSprite: {fileID: 21300000, guid: c559455744dc459419f682b06c3d34c4, type: 3}
   cannonSmoke: {fileID: 8950217364272507878}
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
