@@ -5266,7 +5266,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -8066429664047169758, guid: 2560623996ca6494eaa72a0cff8f94e0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 361ec88eab7323149b5f6ce76ce9855d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19838,9 +19838,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8066429664047169758, guid: 2560623996ca6494eaa72a0cff8f94e0, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 6154ec5bf062969468d65963ee4852e0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22298,6 +22298,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 80a94541a65dfd341ba0d20fbcf69314, type: 2}
+    - target: {fileID: 8416272007918961125, guid: d80928facc2044f4983eeae89325a741, type: 3}
+      propertyPath: m_TagString
+      value: Shop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80928facc2044f4983eeae89325a741, type: 3}
 --- !u!1 &1645363951
