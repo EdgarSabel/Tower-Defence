@@ -445,7 +445,7 @@ MonoBehaviour:
   isFalling: 0
   isZapped: 0
   anim: {fileID: 94582853777110969}
-  collider: {fileID: 267655117215071375}
+  enemyCollider: {fileID: 267655117215071375}
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}

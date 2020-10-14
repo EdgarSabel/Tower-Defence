@@ -7322,7 +7322,7 @@ MonoBehaviour:
   isFalling: 0
   isZapped: 0
   anim: {fileID: 7166112590779963538}
-  collider: {fileID: 7166112590779963532}
+  enemyCollider: {fileID: 7166112590779963532}
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}

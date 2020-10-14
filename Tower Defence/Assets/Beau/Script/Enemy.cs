@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]public bool isBurning;
     public bool isFlying, isFalling, isZapped;
     public Animator anim;
-    public Collider collider;
+    public Collider enemyCollider;
     [System.Serializable]
         public class Sounds
         {
@@ -102,7 +102,7 @@ public class Enemy : MonoBehaviour
     }
     void Death()
     {
-        collider.enabled = !enabled;
+        enemyCollider.enabled = !enabled;
         agent.speed = 0;
         agent.velocity = new Vector3(0, 0, 0);
         agent.enabled = !enabled;

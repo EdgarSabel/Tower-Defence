@@ -881,7 +881,7 @@ MonoBehaviour:
   radius: 5
   levelSpeed: 5
   nextLvlXp: 50
-  collider: {fileID: 3455508635474265303}
+  rangeCollider: {fileID: 3455508635474265303}
   target: {fileID: 0}
   prefab: {fileID: 3455508635474265296}
   xp: 0

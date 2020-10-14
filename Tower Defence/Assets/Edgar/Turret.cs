@@ -25,7 +25,7 @@ public class Turret : MonoBehaviour
     public bool levelUpReady;
     public int damage, slot;
     public float fireRate, radius, levelSpeed, nextLvlXp;
-    public new SphereCollider collider;
+    public SphereCollider rangeCollider;
      public GameObject target, prefab;
     public float xp;
     [HideInInspector]public float standardFireRate, longestDist, lastShotTime = float.MinValue;
@@ -40,7 +40,7 @@ public class Turret : MonoBehaviour
     {
         StatRefresh();
         longestDist = 0;
-        collider.radius = radius;
+        rangeCollider.radius = radius;
         standardFireRate = fireRate;
 
         sounds.shootSoundVolume = sounds.shootSound.volume;
