@@ -119,9 +119,9 @@ MonoBehaviour:
   collider: {fileID: 6022332976921973306}
   target: {fileID: 0}
   prefab: {fileID: 6022332976921973287}
+  xp: 0
   standardFireRate: 0
   longestDist: 0
-  xp: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -145,6 +145,16 @@ MonoBehaviour:
       radius: 10
       xp: 0
       nextLvlXp: 150
+    - damage: 15
+      fireRate: 9
+      radius: 10
+      xp: 0
+      nextLvlXp: 200
+    - damage: 22
+      fireRate: 10
+      radius: 15
+      xp: 0
+      nextLvlXp: 500
   animTop: {fileID: 0}
   animBot: {fileID: 6022332976921973304}
   lvlUpParticle: {fileID: 8013191330049962954}
@@ -153,7 +163,7 @@ MonoBehaviour:
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}
   spawnPos: {fileID: 9121436940922645424}
-  zapSpeed: 8
+  zapSpeed: 11
 --- !u!1 &4213035600099353421
 GameObject:
   m_ObjectHideFlags: 0

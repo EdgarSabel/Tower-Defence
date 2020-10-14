@@ -884,9 +884,9 @@ MonoBehaviour:
   collider: {fileID: 3455508635474265303}
   target: {fileID: 0}
   prefab: {fileID: 3455508635474265296}
+  xp: 0
   standardFireRate: 0
   longestDist: 0
-  xp: 0
   lastShotTime: -3.4028235e+38
   turretLevel: 0
   sounds:
@@ -895,11 +895,31 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 8
-      fireRate: 5
+    - damage: 5
+      fireRate: 3
       radius: 5
       xp: 0
       nextLvlXp: 50
+    - damage: 7
+      fireRate: 3.5
+      radius: 5
+      xp: 0
+      nextLvlXp: 100
+    - damage: 9
+      fireRate: 4
+      radius: 5
+      xp: 0
+      nextLvlXp: 150
+    - damage: 11
+      fireRate: 4.5
+      radius: 5
+      xp: 0
+      nextLvlXp: 200
+    - damage: 22
+      fireRate: 7
+      radius: 7
+      xp: 0
+      nextLvlXp: 500
   animTop: {fileID: 3455508636236121725}
   animBot: {fileID: 3455508635474265297}
   lvlUpParticle: {fileID: 5545155889060119072}
