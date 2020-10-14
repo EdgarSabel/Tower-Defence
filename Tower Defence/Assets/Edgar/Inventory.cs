@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     public float xp1, xp2, xp3;
     public float range;
     private bool turretSpawned;
-    public bool isHovering;
+    public bool isHovering, isOnPath;
     private int currentSlot;
     private GameObject currentTurret;
     public PlayerWeapon playerWeaponScript;
@@ -85,7 +85,18 @@ public class Inventory : MonoBehaviour
             turretPUText.SetActive(false);
             if (hit.transform.gameObject.tag == "Ground")
             {
-                currentTurret.transform.position = hit.point;
+                if (Physics.Raycast(cam.transform.position, cam.transform.forward, range, 1 << 9))
+                {
+                    isOnPath = true;
+                }
+                else
+                {
+                    isOnPath = false;
+                }
+                if (isOnPath == false)
+                {
+                    currentTurret.transform.position = hit.point;
+                }
             }
             if (turretSpawned == false)
             {
