@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShopInfoBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -10,7 +11,7 @@ public class ShopInfoBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private bool mouseover;
     public GameObject infoBox,shop;
     public GameObject[] otherInfoBox;
-    public Text firerateNumText, freezeNumText, nukeNumText;
+    public TextMeshProUGUI firerateNumText, freezeNumText, nukeNumText;
 
 
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class ShopInfoBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             otherInfoBox[0].SetActive(false);
             otherInfoBox[1].SetActive(false);
             otherInfoBox[2].SetActive(false);
+            otherInfoBox[3].SetActive(false);   
 
         }
 

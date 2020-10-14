@@ -6656,16 +6656,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d90c2a497a9e499caa64546fa754f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoBox: {fileID: 0}
+  infoBox: {fileID: 1542200815}
   shop: {fileID: 1489391727}
   otherInfoBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 500830115}
+  - {fileID: 675181400}
+  - {fileID: 1808266749}
   - {fileID: 607452688}
-  firerateNumText: {fileID: 0}
-  freezeNumText: {fileID: 0}
-  nukeNumText: {fileID: 0}
+  firerateNumText: {fileID: 384216389}
+  freezeNumText: {fileID: 1975387476}
+  nukeNumText: {fileID: 565854612}
 --- !u!114 &399499371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8807,13 +8807,13 @@ MonoBehaviour:
   infoBox: {fileID: 607452688}
   shop: {fileID: 1489391727}
   otherInfoBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  firerateNumText: {fileID: 0}
-  freezeNumText: {fileID: 0}
-  nukeNumText: {fileID: 0}
+  - {fileID: 500830115}
+  - {fileID: 675181400}
+  - {fileID: 1808266749}
+  - {fileID: 1542200815}
+  firerateNumText: {fileID: 384216389}
+  freezeNumText: {fileID: 1975387476}
+  nukeNumText: {fileID: 565854612}
 --- !u!114 &569755454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11583,16 +11583,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d90c2a497a9e499caa64546fa754f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoBox: {fileID: 0}
+  infoBox: {fileID: 675181400}
   shop: {fileID: 1489391727}
   otherInfoBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 607452688}
-  firerateNumText: {fileID: 0}
-  freezeNumText: {fileID: 0}
-  nukeNumText: {fileID: 0}
+  - {fileID: 500830115}
+  - {fileID: 1808266749}
+  - {fileID: 607452688}
+  firerateNumText: {fileID: 384216389}
+  freezeNumText: {fileID: 1975387476}
+  nukeNumText: {fileID: 565854612}
 --- !u!114 &899042647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16640,16 +16640,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d90c2a497a9e499caa64546fa754f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoBox: {fileID: 0}
+  infoBox: {fileID: 1808266749}
   shop: {fileID: 1489391727}
   otherInfoBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 500830115}
+  - {fileID: 675181400}
+  - {fileID: 1542200815}
   - {fileID: 607452688}
-  firerateNumText: {fileID: 0}
-  freezeNumText: {fileID: 0}
-  nukeNumText: {fileID: 0}
+  firerateNumText: {fileID: 384216389}
+  freezeNumText: {fileID: 1975387476}
+  nukeNumText: {fileID: 565854612}
 --- !u!114 &1345463269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20986,16 +20986,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d90c2a497a9e499caa64546fa754f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoBox: {fileID: 0}
+  infoBox: {fileID: 500830115}
   shop: {fileID: 1489391727}
   otherInfoBox:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 607452688}
-  firerateNumText: {fileID: 0}
-  freezeNumText: {fileID: 0}
-  nukeNumText: {fileID: 0}
+  - {fileID: 675181400}
+  - {fileID: 1808266749}
+  - {fileID: 1542200815}
+  firerateNumText: {fileID: 384216389}
+  freezeNumText: {fileID: 1975387476}
+  nukeNumText: {fileID: 565854612}
 --- !u!114 &1620283140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27319,7 +27319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost: 100'
+  m_text: 'Cost: 1000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}
   m_sharedMaterial: {fileID: 1891475500601897464, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}
