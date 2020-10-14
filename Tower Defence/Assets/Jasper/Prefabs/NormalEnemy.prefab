@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85ab7e68cade6743b4616f367a5212e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 5
+  walkingSpeed: 4
   EnemyHealth: 100
   EnemyDmg: 5
   moneyDropAmount: 40

@@ -1307,6 +1307,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonSmoke
       objectReference: {fileID: 0}
+    - target: {fileID: 5485949293274924510, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
+      propertyPath: lengthInSec
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485949293274924510, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485949293274924510, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5485949294892915082, guid: ed06002e82a30bf4d9595f8fafff08b2, type: 3}
       propertyPath: m_MaxParticleSize
       value: 3
