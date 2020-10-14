@@ -130,17 +130,17 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 10
+    - damage: 5
       fireRate: 5
       radius: 8
       xp: 0
       nextLvlXp: 50
-    - damage: 15
+    - damage: 9
       fireRate: 7
       radius: 8
       xp: 0
       nextLvlXp: 100
-    - damage: 18
+    - damage: 13
       fireRate: 8
       radius: 10
       xp: 0

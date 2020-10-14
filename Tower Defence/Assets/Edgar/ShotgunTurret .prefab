@@ -895,7 +895,7 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 20
+    - damage: 8
       fireRate: 5
       radius: 5
       xp: 0

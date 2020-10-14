@@ -1127,7 +1127,7 @@ MonoBehaviour:
   invSprite: {fileID: 21300000, guid: c2f274b0195f5214bb42f639604aee4c, type: 3}
   isFiring: 0
   vfx: {fileID: 6132494442209265320}
-  burnDuration: 5
+  burnDuration: 3
 --- !u!1 &6892645454979422237
 GameObject:
   m_ObjectHideFlags: 0
