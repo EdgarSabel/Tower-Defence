@@ -443,10 +443,20 @@ MonoBehaviour:
       xp: 0
       nextLvlXp: 100
     - damage: 80
-      fireRate: 2
+      fireRate: 1.5
       radius: 10
       xp: 0
       nextLvlXp: 150
+    - damage: 90
+      fireRate: 1.8
+      radius: 10
+      xp: 0
+      nextLvlXp: 200
+    - damage: 180
+      fireRate: 3
+      radius: 12
+      xp: 0
+      nextLvlXp: 500
   animTop: {fileID: 3993490123921880083}
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
@@ -455,7 +465,7 @@ MonoBehaviour:
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 123358351246746964}
-  projectileSpeed: 0.2
+  projectileSpeed: 0.1
 --- !u!1 &3128347978045668607
 GameObject:
   m_ObjectHideFlags: 0
