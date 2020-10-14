@@ -31,6 +31,8 @@ public class PlayerInterectScript : MonoBehaviour
                 {
                     upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
                     upgradePanel.SetActive(true);
+                    shopPanel.SetActive(false);
+                    menuPanel.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                 }
@@ -43,6 +45,8 @@ public class PlayerInterectScript : MonoBehaviour
                 {
                     shopPanel.SetActive(true);
                     hudPanel.SetActive(false);
+                    upgradePanel.SetActive(false);
+                    menuPanel.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     cam.GetComponent<CamLook>().canMove = false;
@@ -62,6 +66,9 @@ public class PlayerInterectScript : MonoBehaviour
             cam.GetComponent<CamLook>().enabled = !enabled;
             player.GetComponent<PlayerMovement>().enabled = !enabled;
             menuPanel.SetActive(true);
+            upgradePanel.SetActive(false);
+            shopPanel.SetActive(false);
+            hudPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }

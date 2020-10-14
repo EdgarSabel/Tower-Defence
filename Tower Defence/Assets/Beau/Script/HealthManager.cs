@@ -5,7 +5,8 @@ using System.Collections.Generic;
 
 public class HealthManager : MonoBehaviour
 {
-    public int health, waitForTextDisapear;
+    public int health;
+    public int waitForTextDisapear;
     int decreaseHealthNumber;
     public TextMeshProUGUI healthText, decreaseHealthText;
     public GameObject decreaseHealthObj, cam, player;
@@ -25,6 +26,7 @@ public class HealthManager : MonoBehaviour
         {
             GetDamagedByEnemy(10000);
         }
+        health = Mathf.Clamp(health, 0, 120);
     }
     public void GetDamagedByEnemy(int dmg)
     {
@@ -47,7 +49,7 @@ public class HealthManager : MonoBehaviour
 
         UpdateHealthNumber();
     }
-    void UpdateHealthNumber()
+    public void UpdateHealthNumber()
     {
         healthText.text = health.ToString();
         if(health <= 0)
