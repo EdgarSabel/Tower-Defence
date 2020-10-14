@@ -18,7 +18,7 @@ public class DetectTurret : MonoBehaviour
         {
             if (turret.GetComponent<TurretRepair>().turretScript.damage == turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage)
             {
-                xpSlider.value = turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].xp / turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].nextLvlXp;
+                xpSlider.value = turret.GetComponent<TurretRepair>().turretScript.xp / turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].nextLvlXp;
             }
         }
     }
@@ -32,6 +32,7 @@ public class DetectTurret : MonoBehaviour
             turret.GetComponentInChildren<Turret>().LevelUp(newTurret);
             settingManager.Back();
                 moneyManager.GetMoney(-upgradePrice);
+                xpSlider.value = 0;
             }
             else
             {
