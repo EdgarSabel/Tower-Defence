@@ -12008,14 +12008,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907700237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.69, y: -0.18, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1528326636}
   - {fileID: 305063438}
-  m_Father: {fileID: 1489391732}
-  m_RootOrder: 0
+  m_Father: {fileID: 2096953538}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912587671
 GameObject:
@@ -19659,8 +19659,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.7, y: 0.33, z: 31.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 907700238}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31942,6 +31941,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025802629}
   m_CullTransparentMesh: 0
+--- !u!1 &2026417443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: d80928facc2044f4983eeae89325a741, type: 3}
+  m_PrefabInstance: {fileID: 1644606999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2026417446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026417443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02400704, y: 0.039393134, z: 0.024358582}
+  m_Center: {x: 0.0015466666, y: 0.02042963, z: -2.8982175e-16}
+--- !u!114 &2026417447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026417443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d520ba3ea81d78478fab3c1f7434bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numFirerate: 5
+  numFreeze: 10
+  numNuke: 0
+  prizeHP: 100
+  prizeFirerate: 500
+  prizeFreeze: 500
+  prizeNuke: 1000
+  prizeTurretRepairSpeed: 10
+  healthPlus: 20
+  money: {fileID: 148163699}
+  turret: {fileID: 7718558902587799626}
+  iGFirerateNumText: {fileID: 384216389}
+  iGFreezeNumText: {fileID: 1975387476}
+  iGNukeNumText: {fileID: 565854612}
+  decreaseNum: 20
+  min: 0
 --- !u!1 &2030502209
 GameObject:
   m_ObjectHideFlags: 0
