@@ -42,9 +42,15 @@ public class FlameThrowerFlame : MonoBehaviour
 
                 if (turret.target = null)
                 {
-                    turret.vfx.Stop();
-                    turret.isFiring = false;
+                        turret.vfx.Stop();
+                        turret.isFiring = false;
                 }
+            }
+
+            if (GetComponentInParent<Turret>().enabled != true)
+            {
+                turret.vfx.Stop();
+                turret.isFiring = false;
             }
         }
     }

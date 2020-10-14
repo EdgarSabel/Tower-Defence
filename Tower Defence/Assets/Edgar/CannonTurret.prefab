@@ -416,7 +416,7 @@ MonoBehaviour:
   slot: 0
   fireRate: 0
   radius: 0
-  levelSpeed: 0
+  levelSpeed: 50
   nextLvlXp: 0
   collider: {fileID: 1947981455517082441}
   target: {fileID: 0}

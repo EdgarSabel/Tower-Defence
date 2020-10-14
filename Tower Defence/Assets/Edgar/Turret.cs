@@ -72,9 +72,9 @@ public class Turret : MonoBehaviour
         if (target != null && Time.time > lastShotTime + (3.0f / fireRate))
         {
             lastShotTime = Time.time;
-            Fire();
             ShootSound();
             EarnXP();
+            Fire();
         }
         Invoke("WipeTarget", 0.0000001f);
     }
