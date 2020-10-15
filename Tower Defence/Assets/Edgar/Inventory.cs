@@ -48,17 +48,17 @@ public class Inventory : MonoBehaviour
             animPlayer.SetBool("Holding", false);
             playerWeaponScript.canHitByInv = true;
         }
-        if (Input.GetButtonDown("Slot2") && turrets[0] != null && isHovering == false)
+        if (Input.GetButtonDown("Slot1") && turrets[0] != null && isHovering == false)
         {
             isHovering = true;
             currentSlot = 0;
         }
-        if (Input.GetButtonDown("Slot3") && turrets[1] != null && isHovering == false)
+        if (Input.GetButtonDown("Slot2") && turrets[1] != null && isHovering == false)
         {
             isHovering = true;
             currentSlot = 1;
         }
-        if (Input.GetButtonDown("Slot4") && turrets[2] != null && isHovering == false)
+        if (Input.GetButtonDown("Slot3") && turrets[2] != null && isHovering == false)
         {
             isHovering = true;
             currentSlot = 2;
