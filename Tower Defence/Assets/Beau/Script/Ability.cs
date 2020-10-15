@@ -82,6 +82,7 @@ public class Ability : MonoBehaviour
     }
     void FreezeEnemies()
     {
+        print("freeze");
         sounds.freezeSound.Play();
         foreach (Transform child in enemyHolder.transform)
         {
