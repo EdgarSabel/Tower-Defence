@@ -114,6 +114,7 @@ public class Turret : MonoBehaviour
 
     public void StatRefresh()
     {
+        xp = 0;
         cost = levelStats.stats[turretLevel].cost;
         damage = levelStats.stats[turretLevel].damage;
         fireRate = levelStats.stats[turretLevel].fireRate;
