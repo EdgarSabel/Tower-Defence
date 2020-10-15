@@ -39,7 +39,7 @@ public class DetectTurret : MonoBehaviour
         {
             infoText.text =
                 "Level up turret" +
-                "<br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
+                "<br><br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].damage.ToString() + 
                 "<br>Fire Rate: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].fireRate.ToString() +
@@ -52,7 +52,7 @@ public class DetectTurret : MonoBehaviour
         {
             infoText.text =
                 turret.GetComponent<TurretRepair>().turretScript.turretType + "<br>-><br>" + buttonTurret.GetComponent<TurretRepair>().turretScript.turretType +
-                "<br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
+                "<br><br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
                 "<br>Fire Rate: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
