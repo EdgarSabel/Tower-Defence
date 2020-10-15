@@ -23,24 +23,20 @@ public class DetectTurret : MonoBehaviour
             if (turret.GetComponent<TurretRepair>().turretScript.damage == turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage)
             {
                 xpSlider.value = turret.GetComponent<TurretRepair>().turretScript.xp / turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].nextLvlXp;
-
-                //infoText.text = turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage.ToString() + " -> " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i + 1].damage.ToString();
             }
         }
         lvText.text = "Lv: " + turret.GetComponent<TurretRepair>().turretScript.turretLevel + 1;
     }
-
-                //infoText.text = turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage.ToString() + " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i + 1].damage.ToString();
     public void OnHoverButton(GameObject buttonTurret)
     {
         infoPanel.SetActive(true);
         int levelNow = turret.GetComponent<TurretRepair>().turretScript.turretLevel;
-        if(turret.GetComponent<TurretRepair>().turretScript.turretType == buttonTurret.GetComponent<TurretRepair>().turretScript.turretType)
+        if (turret.GetComponent<TurretRepair>().turretScript.turretType == buttonTurret.GetComponent<TurretRepair>().turretScript.turretType)
         {
             infoText.text =
                 "Level up turret" +
                 "<br><br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
-                " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].damage.ToString() + 
+                " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].damage.ToString() +
                 "<br>Fire Rate: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].fireRate.ToString() +
                 "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
@@ -70,7 +66,7 @@ public class DetectTurret : MonoBehaviour
     public void Upgrade(GameObject newTurret)
     {
         upgradePrice = turret.GetComponentInChildren<Turret>().cost;
-        if (turret != null && turret.GetComponentInChildren<Turret>().levelUpReady == true)
+        if (turret != null && turret.GetComponentInChildren<Turret>().levelUpReady == true && turret.GetComponentInChildren<Turret>().turretLevel < turret.GetComponentInChildren<Turret>().levelStats.stats.Length - 1)
         {
             if (moneyManager.moneyNumber >= upgradePrice)
             {
@@ -84,9 +80,13 @@ public class DetectTurret : MonoBehaviour
                 //not enough money pop up
             }
         }
-        else
+        else if(turret.GetComponentInChildren<Turret>().turretLevel < turret.GetComponentInChildren<Turret>().levelStats.stats.Length - 1)
         {
             //not enough XP pop up
+        }
+        else
+        {
+            //max level pop up
         }
     }
 }

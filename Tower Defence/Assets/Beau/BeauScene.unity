@@ -33278,10 +33278,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2614646073365519782, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
-      propertyPath: healthTurret
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3387488039761741594, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -33297,10 +33293,6 @@ PrefabInstance:
     - target: {fileID: 3387488039761741594, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
-      propertyPath: levelSpeed
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: lv
