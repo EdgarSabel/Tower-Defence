@@ -27,7 +27,7 @@ public class DetectTurret : MonoBehaviour
                 //infoText.text = turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage.ToString() + " -> " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i + 1].damage.ToString();
             }
         }
-        lvText.text = "Lv: " + turret.GetComponent<TurretRepair>().turretScript.turretLevel;
+        lvText.text = "Lv: " + turret.GetComponent<TurretRepair>().turretScript.turretLevel + 1;
     }
 
                 //infoText.text = turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage.ToString() + " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i + 1].damage.ToString();
@@ -46,7 +46,7 @@ public class DetectTurret : MonoBehaviour
                 "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].radius.ToString();
 
-            //costText.text = buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].cost.ToString();
+            costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
         }
         else
         {
@@ -59,7 +59,7 @@ public class DetectTurret : MonoBehaviour
                 "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString();
 
-            //costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
+            costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
         }
     }
     public void OnHoverExitButton()
