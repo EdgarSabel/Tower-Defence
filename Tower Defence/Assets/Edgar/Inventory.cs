@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponentInChildren<TurretRepair>().enabled = !enabled;
                 turretSpawned = true;
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && lookAtPath == false && isOnPath == false)
             {
                 currentTurret.GetComponentInChildren<Turret>().enabled = enabled;
                 currentTurret.GetComponentInChildren<TurretRepair>().enabled = enabled;
