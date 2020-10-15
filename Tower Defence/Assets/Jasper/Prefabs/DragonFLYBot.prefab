@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 5
-  EnemyHealth: 80
+  EnemyHealth: 50
   EnemyDmg: 5
   moneyDropAmount: 50
   burnDmg: 0

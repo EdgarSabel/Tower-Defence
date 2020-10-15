@@ -7192,8 +7192,8 @@ GameObject:
   - component: {fileID: 7166112590779963538}
   - component: {fileID: 7166112590779963535}
   - component: {fileID: 7166112590779963532}
-  - component: {fileID: 7166112590779963533}
   - component: {fileID: 7166112590779963539}
+  - component: {fileID: 7166112590779963533}
   - component: {fileID: 3718053169376253434}
   m_Layer: 0
   m_Name: Tank3
@@ -7270,6 +7270,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.673357, y: 1.3354712, z: 1.5032082}
   m_Center: {x: 0.022070885, y: 0.67094326, z: 0.07503891}
+--- !u!114 &7166112590779963539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048579865226252510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85ab7e68cade6743b4616f367a5212e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSpeed: 1
+  EnemyHealth: 600
+  EnemyDmg: 10
+  moneyDropAmount: 150
+  burnDmg: 0
+  distTravel: 0
+  timeAlive: 0
+  locationsParentObj: {fileID: 0}
+  mesh: {fileID: 8048579865226252510}
+  freezeParticlesParent: {fileID: 7790602865434969234}
+  burnRate: 0
+  burnTimer: 0
+  duration: 0
+  isBurning: 0
+  isFlying: 0
+  isFalling: 0
+  isZapped: 0
+  anim: {fileID: 7166112590779963538}
+  enemyCollider: {fileID: 7166112590779963532}
+  sounds:
+    walkingSound: {fileID: 0}
+    getHitSound: {fileID: 0}
+    deathSound: {fileID: 0}
 --- !u!195 &7166112590779963533
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7292,41 +7327,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 7
   m_ObstacleAvoidanceType: 4
---- !u!114 &7166112590779963539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8048579865226252510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c85ab7e68cade6743b4616f367a5212e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkingSpeed: 2
-  EnemyHealth: 400
-  EnemyDmg: 5
-  moneyDropAmount: 70
-  burnDmg: 0
-  distTravel: 0
-  timeAlive: 0
-  locationsParentObj: {fileID: 0}
-  mesh: {fileID: 8048579865226252510}
-  freezeParticlesParent: {fileID: 7790602865434969234}
-  burnRate: 0
-  burnTimer: 0
-  duration: 0
-  isBurning: 0
-  isFlying: 0
-  isFalling: 0
-  isZapped: 0
-  anim: {fileID: 7166112590779963538}
-  enemyCollider: {fileID: 7166112590779963532}
-  sounds:
-    walkingSound: {fileID: 0}
-    getHitSound: {fileID: 0}
-    deathSound: {fileID: 0}
 --- !u!114 &3718053169376253434
 MonoBehaviour:
   m_ObjectHideFlags: 0

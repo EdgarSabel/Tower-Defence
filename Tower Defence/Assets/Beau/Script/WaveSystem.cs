@@ -30,6 +30,7 @@ public class WaveSystem : MonoBehaviour
     public GameObject[] spawnPoints;
     public int waitTimeForNextRound;
     public GameObject playerManager;
+    public int infEnemieIncrease;
     public Wave[] waves;
     public Sounds sounds;
 
@@ -97,14 +98,34 @@ public class WaveSystem : MonoBehaviour
         roundNumber++;
         sounds.startRoundSound.Play();
         UpdateRoundNumber();
-        for (int i = 0; i < waves[roundNumber].enemies.Length; i++)
+        if (roundNumber < waves.Length)
         {
-            moneyNumber = waves[roundNumber].moneyToGet;
-            for (int o = 0; o < waves[roundNumber].enemies[i].amount; o++)
+            for (int i = 0; i < waves[roundNumber].enemies.Length; i++)
             {
-                RandomSpawnPoint();
-                Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint.transform.position, wantedSpawnPoint.transform.rotation, enemyObj.transform);
-                yield return new WaitForSeconds(waves[roundNumber].enemies[i].rate);
+                moneyNumber = waves[roundNumber].moneyToGet;
+                for (int o = 0; o < waves[roundNumber].enemies[i].amount; o++)
+                {
+                    RandomSpawnPoint();
+                    Instantiate(enemyPrefabs[waves[roundNumber].enemies[i].enemyType], wantedSpawnPoint.transform.position, wantedSpawnPoint.transform.rotation, enemyObj.transform);
+                    yield return new WaitForSeconds(waves[roundNumber].enemies[i].rate);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < waves[waves.Length - 1].enemies.Length; i++)
+            {
+                waves[waves.Length - 1].enemies[i].amount += infEnemieIncrease;
+            }
+            for (int i = 0; i < waves[waves.Length - 1].enemies.Length; i++)
+            {
+                moneyNumber = waves[waves.Length - 1].moneyToGet;
+                for (int o = 0; o < waves[waves.Length - 1].enemies[i].amount; o++)
+                {
+                    RandomSpawnPoint();
+                    Instantiate(enemyPrefabs[waves[waves.Length - 1].enemies[i].enemyType], wantedSpawnPoint.transform.position, wantedSpawnPoint.transform.rotation, enemyObj.transform);
+                    yield return new WaitForSeconds(waves[waves.Length - 1].enemies[i].rate);
+                }
             }
         }
         allEnemiesAreSpawned = true;

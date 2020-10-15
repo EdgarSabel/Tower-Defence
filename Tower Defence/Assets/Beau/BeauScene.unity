@@ -32628,6 +32628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119677664}
   - component: {fileID: 2119677663}
+  - component: {fileID: 2119677665}
   m_Layer: 0
   m_Name: WaveManager
   m_TagString: Untagged
@@ -32636,6 +32637,235 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &2119677663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119677662}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22eb9638148498c45b10b7763e094b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 5793997011081408699, guid: 0bbf1ff07030cc54fade8d2292003150, type: 3}
+  - {fileID: 8048579865226252510, guid: 807e95e1da4f4dc44802045429c46be7, type: 3}
+  - {fileID: 977684963852204110, guid: 036b92d679402574dbf8edeed694031b, type: 3}
+  roundNumberText: {fileID: 875784774}
+  nextRoundInText: {fileID: 1010047231}
+  timerObj: {fileID: 525106923}
+  enemyObj: {fileID: 1375246359}
+  spawnPoints:
+  - {fileID: 1787427607}
+  - {fileID: 1442177581}
+  waitTimeForNextRound: 10
+  playerManager: {fileID: 148163699}
+  infEnemieIncrease: 0
+  waves:
+  - enemies:
+    - enemyType: 0
+      amount: 5
+      rate: 1.5
+    moneyToGet: 20
+  - enemies:
+    - enemyType: 0
+      amount: 7
+      rate: 1.2
+    moneyToGet: 20
+  - enemies:
+    - enemyType: 0
+      amount: 10
+      rate: 1
+    moneyToGet: 20
+  - enemies:
+    - enemyType: 0
+      amount: 15
+      rate: 1
+    moneyToGet: 20
+  - enemies:
+    - enemyType: 0
+      amount: 5
+      rate: 1
+    - enemyType: 1
+      amount: 1
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 0
+      amount: 15
+      rate: 0.5
+    moneyToGet: 50
+  - enemies:
+    - enemyType: 2
+      amount: 5
+      rate: 1
+    moneyToGet: 60
+  - enemies:
+    - enemyType: 1
+      amount: 2
+      rate: 1
+    - enemyType: 2
+      amount: 10
+      rate: 0.5
+    moneyToGet: 70
+  - enemies:
+    - enemyType: 0
+      amount: 10
+      rate: 0.5
+    - enemyType: 2
+      amount: 10
+      rate: 0.2
+    - enemyType: 0
+      amount: 10
+      rate: 0.5
+    moneyToGet: 50
+  - enemies:
+    - enemyType: 1
+      amount: 8
+      rate: 1
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 0
+      amount: 20
+      rate: 0.2
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 2
+      amount: 11
+      rate: 0.2
+    - enemyType: 1
+      amount: 3
+      rate: 0.5
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 0
+      amount: 5
+      rate: 1
+    - enemyType: 0
+      amount: 5
+      rate: 0.1
+    - enemyType: 1
+      amount: 4
+      rate: 0.2
+    - enemyType: 0
+      amount: 5
+      rate: 1
+    - enemyType: 0
+      amount: 5
+      rate: 0.1
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 1
+      amount: 10
+      rate: 1
+    - enemyType: 1
+      amount: 5
+      rate: 0.2
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 2
+      amount: 25
+      rate: 0.3
+    moneyToGet: 150
+  - enemies:
+    - enemyType: 0
+      amount: 10
+      rate: 0.5
+    - enemyType: 1
+      amount: 10
+      rate: 0.5
+    - enemyType: 2
+      amount: 10
+      rate: 0.5
+    moneyToGet: 150
+  - enemies:
+    - enemyType: 2
+      amount: 5
+      rate: 1
+    - enemyType: 1
+      amount: 5
+      rate: 1
+    - enemyType: 0
+      amount: 5
+      rate: 1
+    - enemyType: 1
+      amount: 5
+      rate: 1
+    - enemyType: 2
+      amount: 5
+      rate: 1
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 1
+      amount: 25
+      rate: 0.5
+    moneyToGet: 100
+  - enemies:
+    - enemyType: 1
+      amount: 10
+      rate: 0.5
+    - enemyType: 2
+      amount: 20
+      rate: 0.5
+    - enemyType: 1
+      amount: 10
+      rate: 0.5
+    - enemyType: 2
+      amount: 20
+      rate: 0.5
+    - enemyType: 1
+      amount: 15
+      rate: 0.5
+    moneyToGet: 150
+  - enemies:
+    - enemyType: 0
+      amount: 5
+      rate: 0.1
+    - enemyType: 1
+      amount: 5
+      rate: 0.1
+    - enemyType: 2
+      amount: 5
+      rate: 0.1
+    - enemyType: 0
+      amount: 5
+      rate: 0.1
+    - enemyType: 1
+      amount: 5
+      rate: 0.1
+    - enemyType: 2
+      amount: 5
+      rate: 0.1
+    - enemyType: 0
+      amount: 5
+      rate: 0.1
+    - enemyType: 1
+      amount: 5
+      rate: 0.1
+    - enemyType: 2
+      amount: 5
+      rate: 0.1
+    moneyToGet: 200
+  sounds:
+    shopOpenedSound: {fileID: 1004218884}
+    startRoundSound: {fileID: 1004218884}
+--- !u!4 &2119677664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119677662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1004218885}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119677665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32660,102 +32890,19 @@ MonoBehaviour:
   - {fileID: 1442177581}
   waitTimeForNextRound: 10
   playerManager: {fileID: 148163699}
+  infEnemieIncrease: 3
   waves:
   - enemies:
     - enemyType: 0
-      amount: 10
-      rate: 1
-    moneyToGet: 20
-  - enemies:
-    - enemyType: 0
-      amount: 15
-      rate: 1
-    moneyToGet: 20
-  - enemies:
-    - enemyType: 0
-      amount: 5
-      rate: 0.6
-    - enemyType: 1
-      amount: 5
-      rate: 1
-    moneyToGet: 40
-  - enemies:
-    - enemyType: 0
-      amount: 10
-      rate: 0.6
-    - enemyType: 1
-      amount: 10
-      rate: 1
-    moneyToGet: 40
-  - enemies:
-    - enemyType: 0
-      amount: 5
-      rate: 0.6
-    - enemyType: 1
-      amount: 5
-      rate: 1
-    - enemyType: 1
-      amount: 8
-      rate: 1
-    moneyToGet: 60
-  - enemies:
-    - enemyType: 0
-      amount: 15
-      rate: 0.6
-    moneyToGet: 60
-  - enemies:
-    - enemyType: 0
-      amount: 8
-      rate: 0.6
-    - enemyType: 2
-      amount: 4
-      rate: 1
-    moneyToGet: 60
-  - enemies:
-    - enemyType: 0
-      amount: 10
-      rate: 0.6
-    - enemyType: 1
-      amount: 5
-      rate: 1
-    - enemyType: 2
       amount: 1
-      rate: 1
-    moneyToGet: 60
-  - enemies:
-    - enemyType: 1
-      amount: 10
-      rate: 0.6
-    - enemyType: 2
-      amount: 4
-      rate: 1
-    moneyToGet: 60
-  - enemies:
-    - enemyType: 1
-      amount: 20
-      rate: 0.6
-    - enemyType: 2
-      amount: 8
-      rate: 1
-    moneyToGet: 60
+      rate: 0.1
+    - enemyType: 0
+      amount: 1
+      rate: 0.1
+    moneyToGet: 20
   sounds:
     shopOpenedSound: {fileID: 1004218884}
     startRoundSound: {fileID: 1004218884}
---- !u!4 &2119677664
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119677662}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1004218885}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123500920
 GameObject:
   m_ObjectHideFlags: 0
