@@ -5,6 +5,11 @@ using UnityEngine.AI;
 
 public class Ability : MonoBehaviour
 {
+    [System.Serializable]
+    public class Sound
+    {
+        public AudioSource fireRateIncreaseSound, freezeSound, nukeSound;
+    }
     public float fireRateTimesNumber, fireRateIncreaseTime;
     public int freezeTime;
     public int explosionDmg;
@@ -12,6 +17,7 @@ public class Ability : MonoBehaviour
     public GameObject enemyHolder, towerHolder, cooldownRF, cooldownNuke, cooldownFreeze;
 
     public ShopScript shopScript;
+    public Sound sounds;
 
     private void Update()
     {
@@ -57,7 +63,7 @@ public class Ability : MonoBehaviour
     }
     IEnumerator IncreaseFireRate()
     {
-        print("use fire rate increase");
+        sounds.fireRateIncreaseSound.Play();
         foreach (Transform child in towerHolder.transform)
         {
             child.GetComponent<TurretRepair>().turretScript.fireRate *= fireRateTimesNumber;
@@ -72,7 +78,7 @@ public class Ability : MonoBehaviour
     }
     void FreezeEnemies()
     {
-        print("use freeze");
+        sounds.freezeSound.Play();
         foreach (Transform child in enemyHolder.transform)
         {
             child.GetComponent<Enemy>().FreezeAbil(freezeTime);
@@ -80,7 +86,7 @@ public class Ability : MonoBehaviour
     }
     void NukeAllEnemies()
     {
-        print("use nuke");
+        sounds.freezeSound.Play();
         foreach (Transform child in enemyHolder.transform)
         {
             child.GetComponent<Enemy>().EnemyHealth -= explosionDmg;

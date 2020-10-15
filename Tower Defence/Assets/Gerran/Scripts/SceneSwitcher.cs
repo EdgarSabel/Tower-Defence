@@ -11,6 +11,8 @@ public class SceneSwitcher : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public TextMeshProUGUI text;
+
+    public AudioSource clickButton, hoverButton;
     public void Level1()
     {
         StartCoroutine(LoadSceneEnumerator());
@@ -40,5 +42,13 @@ public class SceneSwitcher : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void ClickButton()
+    {
+        clickButton.Play();
+    }
+    public void HoverButton()
+    {
+        hoverButton.Play();
     }
 }
