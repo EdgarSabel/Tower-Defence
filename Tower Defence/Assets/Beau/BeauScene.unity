@@ -3567,7 +3567,7 @@ PrefabInstance:
     - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: shopScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2026417447}
     - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: cooldownRF
       value: 
@@ -32628,7 +32628,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2119677664}
   - component: {fileID: 2119677663}
-  - component: {fileID: 2119677665}
   m_Layer: 0
   m_Name: WaveManager
   m_TagString: Untagged
@@ -32643,7 +32642,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119677662}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22eb9638148498c45b10b7763e094b98, type: 3}
   m_Name: 
@@ -32661,7 +32660,7 @@ MonoBehaviour:
   - {fileID: 1442177581}
   waitTimeForNextRound: 10
   playerManager: {fileID: 148163699}
-  infEnemieIncrease: 0
+  infEnemieIncrease: 3
   waves:
   - enemies:
     - enemyType: 0
@@ -32865,44 +32864,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2119677665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119677662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22eb9638148498c45b10b7763e094b98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 5793997011081408699, guid: 0bbf1ff07030cc54fade8d2292003150, type: 3}
-  - {fileID: 8048579865226252510, guid: 807e95e1da4f4dc44802045429c46be7, type: 3}
-  - {fileID: 977684963852204110, guid: 036b92d679402574dbf8edeed694031b, type: 3}
-  roundNumberText: {fileID: 875784774}
-  nextRoundInText: {fileID: 1010047231}
-  timerObj: {fileID: 525106923}
-  enemyObj: {fileID: 1375246359}
-  spawnPoints:
-  - {fileID: 1787427607}
-  - {fileID: 1442177581}
-  waitTimeForNextRound: 10
-  playerManager: {fileID: 148163699}
-  infEnemieIncrease: 3
-  waves:
-  - enemies:
-    - enemyType: 0
-      amount: 1
-      rate: 0.1
-    - enemyType: 0
-      amount: 1
-      rate: 0.1
-    moneyToGet: 20
-  sounds:
-    shopOpenedSound: {fileID: 1004218884}
-    startRoundSound: {fileID: 1004218884}
 --- !u!1 &2123500920
 GameObject:
   m_ObjectHideFlags: 0
