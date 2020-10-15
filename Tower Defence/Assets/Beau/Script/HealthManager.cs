@@ -59,7 +59,6 @@ public class HealthManager : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = !enabled;
             Cursor.visible = true;
 
-            Time.timeScale = 0;
             bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
             deathMenu.SetActive(true);
         }
