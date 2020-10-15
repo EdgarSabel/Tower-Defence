@@ -12,7 +12,7 @@ public class Turret : MonoBehaviour
     [System.Serializable]
     public class Stats
     {
-        public int damage;
+        public int damage, cost;
         public float fireRate, radius, xp, nextLvlXp;
     }
     [System.Serializable]
@@ -23,7 +23,7 @@ public class Turret : MonoBehaviour
     }
     public string turretType;
     public bool levelUpReady;
-    public int damage, slot;
+    public int damage, slot, cost;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public SphereCollider rangeCollider;
      public GameObject target, prefab;
@@ -112,6 +112,7 @@ public class Turret : MonoBehaviour
 
     public void StatRefresh()
     {
+        cost = levelStats.stats[turretLevel].cost;
         damage = levelStats.stats[turretLevel].damage;
         fireRate = levelStats.stats[turretLevel].fireRate;
         radius = levelStats.stats[turretLevel].radius;

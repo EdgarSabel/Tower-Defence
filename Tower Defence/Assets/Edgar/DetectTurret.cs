@@ -69,6 +69,7 @@ public class DetectTurret : MonoBehaviour
 
     public void Upgrade(GameObject newTurret)
     {
+        upgradePrice = turret.GetComponentInChildren<Turret>().cost;
         if (turret != null && turret.GetComponentInChildren<Turret>().levelUpReady == true)
         {
             if (moneyManager.moneyNumber >= upgradePrice)
