@@ -3212,7 +3212,7 @@ Transform:
   - {fileID: 1726231488}
   - {fileID: 1070965006}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207582396
 GameObject:
@@ -3584,6 +3584,10 @@ PrefabInstance:
       propertyPath: cooldownNuke
       value: 
       objectReference: {fileID: 1408631397}
+    - target: {fileID: 4051323380791500736, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: waveSystemScript
+      value: 
+      objectReference: {fileID: 2119677663}
     - target: {fileID: 4179759966406330772, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -9084,7 +9088,7 @@ Transform:
   - {fileID: 1932812911}
   - {fileID: 1470292839}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669282027
 GameObject:
@@ -14826,7 +14830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5505166725342139855, guid: a481568869def96408ac85cbe6f0bde4, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5505166725342139855, guid: a481568869def96408ac85cbe6f0bde4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

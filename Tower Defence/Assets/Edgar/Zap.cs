@@ -22,7 +22,7 @@ public class Zap : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, closestEnemy.transform.Find("HitLoc").transform.position, speed * Time.deltaTime);
             transform.LookAt(closestEnemy.transform.Find("HitLoc").transform.position);
-            if (transform.position == closestEnemy.transform.position)
+            if (transform.position == closestEnemy.transform.Find("HitLoc").transform.position)
             {
                 closestEnemy.GetComponent<Enemy>().GetDamage(damage, true);
                 if (closestEnemy.GetComponent<Enemy>().isZapped == false)
