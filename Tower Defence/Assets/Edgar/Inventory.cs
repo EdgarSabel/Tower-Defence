@@ -65,6 +65,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
+
     public void Hover()
     {
         if (rangeIndicator.isPlaying == false)
@@ -93,7 +94,7 @@ public class Inventory : MonoBehaviour
                 {
                     lookAtPath = false;
                 }
-                if (lookAtPath == false && isOnPath == false)
+                if (lookAtPath == false)
                 {
                     currentTurret.transform.position = hit.point;
                 }
@@ -106,25 +107,29 @@ public class Inventory : MonoBehaviour
                 currentTurret.GetComponentInChildren<TurretRepair>().enabled = !enabled;
                 turretSpawned = true;
             }
-            if (Input.GetButtonDown("Fire1") && lookAtPath == false && isOnPath == false)
+            if (Input.GetButtonDown("Fire1") && lookAtPath == false)
             {
-                currentTurret.GetComponentInChildren<Turret>().enabled = enabled;
-                currentTurret.GetComponentInChildren<TurretRepair>().enabled = enabled;
-                currentTurret.GetComponent<BoxCollider>().enabled = enabled;
-                currentTurret.GetComponent<Animator>().SetTrigger("Place");
-                turrets[currentSlot] = null;
-                slots[currentSlot].color = turretBlackout;
-                turretSpawned = false;
-                currentTurret = null;
-                turretPLText.SetActive(false);
-                isHovering = false;
-
-                sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
-                sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
-                sounds.placeTurretSound.Play();
-                rangeIndicator.Stop();
-                rangeIndicator.transform.gameObject.SetActive(false);
+                PlaceTurret();
             }
         }
+    }
+    public void PlaceTurret()
+    {
+        currentTurret.GetComponentInChildren<Turret>().enabled = enabled;
+        currentTurret.GetComponentInChildren<TurretRepair>().enabled = enabled;
+        currentTurret.GetComponent<BoxCollider>().enabled = enabled;
+        currentTurret.GetComponent<Animator>().SetTrigger("Place");
+        turrets[currentSlot] = null;
+        slots[currentSlot].color = turretBlackout;
+        turretSpawned = false;
+        currentTurret = null;
+        turretPLText.SetActive(false);
+        isHovering = false;
+
+        sounds.placeTurretSound.volume = Random.Range(sounds.placeTurretVolume - .05f, sounds.placeTurretVolume + .05f);
+        sounds.placeTurretSound.pitch = Random.Range(sounds.placeTurretPitch - .1f, sounds.placeTurretPitch + .1f);
+        sounds.placeTurretSound.Play();
+        rangeIndicator.Stop();
+        rangeIndicator.transform.gameObject.SetActive(false);
     }
 }
