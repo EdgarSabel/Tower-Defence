@@ -25,7 +25,7 @@ public class DetectTurret : MonoBehaviour
                 xpSlider.value = turret.GetComponent<TurretRepair>().turretScript.xp / turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].nextLvlXp;
             }
         }
-        lvText.text = "Lv: " + turret.GetComponent<TurretRepair>().turretScript.turretLevel + 1;
+        lvText.text = "Lv: " + (turret.GetComponent<TurretRepair>().turretScript.turretLevel + 1);
     }
     public void OnHoverButton(GameObject buttonTurret)
     {
@@ -33,16 +33,27 @@ public class DetectTurret : MonoBehaviour
         int levelNow = turret.GetComponent<TurretRepair>().turretScript.turretLevel;
         if (turret.GetComponent<TurretRepair>().turretScript.turretType == buttonTurret.GetComponent<TurretRepair>().turretScript.turretType)
         {
-            infoText.text =
-                "Level up turret" +
-                "<br><br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
-                " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].damage.ToString() +
-                "<br>Fire Rate: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
-                " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].fireRate.ToString() +
-                "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
-                " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].radius.ToString();
+            if(turret.GetComponent<TurretRepair>().turretScript.turretLevel < buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats.Length - 1)
+            {
+                infoText.text =
+                    "Level up turret" +
+                    "<br><br>Dmg: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].damage.ToString() +
+                    " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].damage.ToString() +
+                    "<br>Fire Rate: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
+                    " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].fireRate.ToString() +
+                    "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
+                    " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].radius.ToString();
 
-            costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
+                costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
+            }
+            else
+            {
+                infoText.text =
+                    "Level up turret" +
+                    "<br><br>Dmg: " + "Maxed" +
+                    "<br>Fire Rate: " + "Maxed" +
+                    "<br>Radius: " + "Maxed";
+            }
         }
         else
         {
