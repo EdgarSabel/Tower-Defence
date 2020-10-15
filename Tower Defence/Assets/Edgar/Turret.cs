@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
     public int damage, slot, cost;
     public float fireRate, radius, levelSpeed, nextLvlXp;
     public SphereCollider rangeCollider;
-     public GameObject target, prefab;
+     public GameObject target, prefab, turretHolder;
     public float xp;
     [HideInInspector]public float standardFireRate, longestDist, lastShotTime = float.MinValue;
     public int turretLevel;
@@ -45,6 +45,8 @@ public class Turret : MonoBehaviour
 
         sounds.shootSoundVolume = sounds.shootSound.volume;
         sounds.shootSoundPitch = sounds.shootSound.pitch;
+
+        turretHolder = GameObject.Find("Turrets");
     }
 
     public virtual void Update()
@@ -130,7 +132,7 @@ public class Turret : MonoBehaviour
         }
         else
         {
-        turretSpawned = Instantiate(newTurret, prefab.transform.position, Quaternion.identity);
+        turretSpawned = Instantiate(newTurret, prefab.transform.position, Quaternion.identity,turretHolder.transform);
         turretSpawned.GetComponentInChildren<Turret>().slot = slot;
         turretSpawned.GetComponentInChildren<Turret>().turretLevel = turretLevel;
         Destroy(prefab);
