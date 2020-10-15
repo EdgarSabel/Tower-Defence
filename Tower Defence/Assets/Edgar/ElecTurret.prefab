@@ -131,27 +131,27 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 5
-      fireRate: 5
+      fireRate: 1
       radius: 8
       xp: 0
       nextLvlXp: 50
     - damage: 9
-      fireRate: 7
+      fireRate: 1.5
       radius: 8
       xp: 0
       nextLvlXp: 100
     - damage: 13
-      fireRate: 8
+      fireRate: 2
       radius: 10
       xp: 0
       nextLvlXp: 150
     - damage: 15
-      fireRate: 9
+      fireRate: 3
       radius: 10
       xp: 0
       nextLvlXp: 200
     - damage: 22
-      fireRate: 10
+      fireRate: 5
       radius: 15
       xp: 0
       nextLvlXp: 500
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decreaseNumber: 5
+  decreaseNumber: 0.5
   healthTurret: 100
   turretScript: {fileID: 1172665221057785989}
   anim: {fileID: 6022332976921973304}

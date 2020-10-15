@@ -465,7 +465,7 @@ MonoBehaviour:
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 123358351246746964}
-  projectileSpeed: 0.1
+  projectileSpeed: 0.17
 --- !u!1 &3128347978045668607
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decreaseNumber: 5
+  decreaseNumber: 0.5
   healthTurret: 100
   turretScript: {fileID: 7191291880152690567}
   anim: {fileID: 4288009047468951981}
