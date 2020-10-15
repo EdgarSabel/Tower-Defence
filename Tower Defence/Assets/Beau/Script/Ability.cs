@@ -16,47 +16,51 @@ public class Ability : MonoBehaviour
 
     public GameObject enemyHolder, towerHolder, cooldownRF, cooldownNuke, cooldownFreeze;
 
+    public WaveSystem waveSystemScript;
     public ShopScript shopScript;
     public Sound sounds;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Ability1"))
+        if (waveSystemScript.timerObj.activeSelf == false)
         {
-            if (cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
+            if (Input.GetButtonDown("Ability1"))
             {
-                if (shopScript.numFirerate > 0)
+                if (cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
                 {
-                    shopScript.numFirerate--;
-                    StartCoroutine(IncreaseFireRate());
-                    cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                    if (shopScript.numFirerate > 0)
+                    {
+                        shopScript.numFirerate--;
+                        StartCoroutine(IncreaseFireRate());
+                        cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
 
+                    }
                 }
             }
-        }
-        if (Input.GetButtonDown("Ability2"))
-        {
-            if (cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
+            if (Input.GetButtonDown("Ability2"))
             {
-                if (shopScript.numFreeze > 0)
+                if (cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
                 {
-                    shopScript.numFreeze--;
-                    FreezeEnemies();
-                    cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                    if (shopScript.numFreeze > 0)
+                    {
+                        shopScript.numFreeze--;
+                        FreezeEnemies();
+                        cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
 
+                    }
                 }
             }
-        }
-        if (Input.GetButtonDown("Ability3"))
-        {
-            if (cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
+            if (Input.GetButtonDown("Ability3"))
             {
-                if (shopScript.numNuke > 0)
+                if (cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta.y == 0)
                 {
-                    shopScript.numNuke--;
-                    NukeAllEnemies();
-                    cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                    if (shopScript.numNuke > 0)
+                    {
+                        shopScript.numNuke--;
+                        NukeAllEnemies();
+                        cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
 
+                    }
                 }
             }
         }
