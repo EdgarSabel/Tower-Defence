@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decreaseNumber: 0.5
+  decreaseNumber: 1
   healthTurret: 100
   turretScript: {fileID: 3455508636236121724}
   anim: {fileID: 3455508635474265297}
@@ -877,6 +877,7 @@ MonoBehaviour:
   levelUpReady: 0
   damage: 20
   slot: 2
+  cost: 1000
   fireRate: 5
   radius: 5
   levelSpeed: 5
@@ -884,6 +885,7 @@ MonoBehaviour:
   rangeCollider: {fileID: 3455508635474265303}
   target: {fileID: 0}
   prefab: {fileID: 3455508635474265296}
+  turretHolder: {fileID: 0}
   xp: 0
   standardFireRate: 0
   longestDist: 0
@@ -895,28 +897,33 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 5
-      fireRate: 3
-      radius: 5
+    - damage: 12
+      cost: 1200
+      fireRate: 2
+      radius: 7
       xp: 0
       nextLvlXp: 50
-    - damage: 7
-      fireRate: 3.5
-      radius: 5
+    - damage: 14
+      cost: 1800
+      fireRate: 2.4
+      radius: 7
       xp: 0
       nextLvlXp: 100
-    - damage: 9
-      fireRate: 4
-      radius: 5
-      xp: 0
-      nextLvlXp: 150
-    - damage: 11
-      fireRate: 4.5
-      radius: 5
+    - damage: 17
+      cost: 2700
+      fireRate: 2.9
+      radius: 7
       xp: 0
       nextLvlXp: 200
     - damage: 22
-      fireRate: 7
+      cost: 5500
+      fireRate: 3.2
+      radius: 7
+      xp: 0
+      nextLvlXp: 500
+    - damage: 45
+      cost: 0
+      fireRate: 4.4
       radius: 7
       xp: 0
       nextLvlXp: 500

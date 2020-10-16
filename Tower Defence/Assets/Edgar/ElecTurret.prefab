@@ -112,13 +112,15 @@ MonoBehaviour:
   levelUpReady: 0
   damage: 0
   slot: 0
+  cost: 1000
   fireRate: 0
-  radius: 0
+  radius: 8
   levelSpeed: 50
   nextLvlXp: 0
   rangeCollider: {fileID: 6022332976921973306}
   target: {fileID: 0}
   prefab: {fileID: 6022332976921973287}
+  turretHolder: {fileID: 0}
   xp: 0
   standardFireRate: 0
   longestDist: 0
@@ -131,27 +133,32 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 5
-      fireRate: 1
+      cost: 1800
+      fireRate: 1.7
       radius: 8
       xp: 0
       nextLvlXp: 50
     - damage: 9
-      fireRate: 1.5
+      cost: 2300
+      fireRate: 2
       radius: 8
       xp: 0
       nextLvlXp: 100
     - damage: 13
-      fireRate: 2
+      cost: 3000
+      fireRate: 2.2
       radius: 10
       xp: 0
       nextLvlXp: 150
     - damage: 15
-      fireRate: 3
+      cost: 6500
+      fireRate: 2.7
       radius: 10
       xp: 0
       nextLvlXp: 200
     - damage: 22
-      fireRate: 5
+      cost: 0
+      fireRate: 4
       radius: 15
       xp: 0
       nextLvlXp: 500
@@ -509,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6022332976921973287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 36.63095, y: 0.0658139, z: 80.074715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2623516181764872195}
@@ -558,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decreaseNumber: 0.5
+  decreaseNumber: 1
   healthTurret: 100
   turretScript: {fileID: 1172665221057785989}
   anim: {fileID: 6022332976921973304}
