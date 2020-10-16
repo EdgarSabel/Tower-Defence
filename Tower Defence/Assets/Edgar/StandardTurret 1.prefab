@@ -562,25 +562,25 @@ MonoBehaviour:
     stats:
     - damage: 5
       cost: 1000
-      fireRate: 5.3
+      fireRate: 5.7
       radius: 10
       xp: 0
       nextLvlXp: 50
     - damage: 8
-      cost: 1500
-      fireRate: 5.3
+      cost: 1300
+      fireRate: 5.7
       radius: 10
       xp: 0
       nextLvlXp: 100
     - damage: 12
-      cost: 2000
-      fireRate: 5.3
+      cost: 1800
+      fireRate: 5.7
       radius: 10
       xp: 0
       nextLvlXp: 150
     - damage: 20
-      cost: 5000
-      fireRate: 5.3
+      cost: 3800
+      fireRate: 5.7
       radius: 10
       xp: 0
       nextLvlXp: 200

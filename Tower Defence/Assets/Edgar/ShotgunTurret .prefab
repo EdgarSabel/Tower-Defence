@@ -898,25 +898,25 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 10
-      cost: 1200
+      cost: 1050
       fireRate: 2.2
       radius: 7
       xp: 0
       nextLvlXp: 50
     - damage: 13
-      cost: 1800
+      cost: 1450
       fireRate: 2.4
       radius: 7
       xp: 0
       nextLvlXp: 100
     - damage: 17
-      cost: 2700
+      cost: 1900
       fireRate: 2.9
       radius: 7
       xp: 0
       nextLvlXp: 200
     - damage: 22
-      cost: 5500
+      cost: 3700
       fireRate: 3.2
       radius: 7
       xp: 0
@@ -934,8 +934,8 @@ MonoBehaviour:
   projectile: {fileID: 950766135350540815, guid: 1b97dca945f16bb48b96d68d175108a5, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 3455508635707232094}
-  projectileSpeed: 0.4
-  offset: 10
+  projectileSpeed: 0.45
+  offset: 9
 --- !u!1 &4875555924462349963
 GameObject:
   m_ObjectHideFlags: 0
