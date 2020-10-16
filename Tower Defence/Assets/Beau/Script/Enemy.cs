@@ -59,7 +59,10 @@ public class Enemy : MonoBehaviour
             {
                 if (Time.time > lastShotTime + (6.0f / burnRate))
                 {
+                    if (EnemyHealth > 0)
+                    {
                     GetDamage(burnDmg, true);
+                    }
                     lastShotTime = Time.time;
                 }
             }

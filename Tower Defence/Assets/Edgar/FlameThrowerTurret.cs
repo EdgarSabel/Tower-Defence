@@ -7,8 +7,10 @@ public class FlameThrowerTurret : Turret
     public bool isFiring;
     public VisualEffect vfx;
     public float burnDuration;
-    void Start()
+
+    public override void Start()
     {
+        base.Start();
         vfx.Stop();
     }
 

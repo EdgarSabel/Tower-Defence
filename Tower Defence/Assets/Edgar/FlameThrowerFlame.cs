@@ -24,9 +24,9 @@ public class FlameThrowerFlame : MonoBehaviour
     {
         if (inventory.isHovering == false)
         {
-
             if (other.gameObject.tag == "Enemy")
             {
+                turret.vfx.Play();
                 target = other.gameObject.GetComponent<Enemy>();
                 if (target.isBurning == false)
                 {
@@ -52,6 +52,10 @@ public class FlameThrowerFlame : MonoBehaviour
                 turret.vfx.Stop();
                 turret.isFiring = false;
             }
+        }
+        else
+        {
+            turret.vfx.Stop();
         }
     }
 }

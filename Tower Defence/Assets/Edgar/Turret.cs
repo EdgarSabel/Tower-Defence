@@ -36,7 +36,7 @@ public class Turret : MonoBehaviour
     public Animator animTop,animBot;
     public ParticleSystem lvlUpParticle;
     public Sprite invSprite;
-    void Start()
+    public virtual void Start()
     {
         StatRefresh();
         longestDist = 0;
@@ -83,6 +83,7 @@ public class Turret : MonoBehaviour
     }
     public virtual void Fire()
     {
+        animTop.SetTrigger("Shoot");
         target.GetComponent<Enemy>().GetDamage(damage, true);
     }
     public void ShootSound()
@@ -126,6 +127,7 @@ public class Turret : MonoBehaviour
     {
         if (newTurret.GetComponentInChildren<Turret>().turretType == turretType)
         {
+            animBot.SetTrigger("Upgrade");
             lvlUpParticle.Play();
             turretLevel += 1;
             levelUpReady = false;
@@ -133,10 +135,10 @@ public class Turret : MonoBehaviour
         }
         else
         {
-        turretSpawned = Instantiate(newTurret, prefab.transform.position, Quaternion.identity,turretHolder.transform);
-        turretSpawned.GetComponentInChildren<Turret>().slot = slot;
-        turretSpawned.GetComponentInChildren<Turret>().turretLevel = turretLevel;
-        Destroy(prefab);
+            turretSpawned = Instantiate(newTurret, prefab.transform.position, Quaternion.identity,turretHolder.transform);
+            turretSpawned.GetComponentInChildren<Turret>().slot = slot;
+            turretSpawned.GetComponentInChildren<Turret>().turretLevel = turretLevel;
+            Destroy(prefab);
         }
     }
 }
