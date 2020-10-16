@@ -875,7 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretType: Shotgun
   levelUpReady: 0
-  damage: 20
+  damage: 10
   slot: 2
   cost: 1000
   fireRate: 5
@@ -897,13 +897,13 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 12
+    - damage: 10
       cost: 1200
-      fireRate: 2
+      fireRate: 2.2
       radius: 7
       xp: 0
       nextLvlXp: 50
-    - damage: 14
+    - damage: 13
       cost: 1800
       fireRate: 2.4
       radius: 7

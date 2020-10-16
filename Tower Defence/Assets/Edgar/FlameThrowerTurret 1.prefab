@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretType: Flame
   levelUpReady: 0
-  damage: 10
+  damage: 6
   slot: 1
   cost: 1000
   fireRate: 8
