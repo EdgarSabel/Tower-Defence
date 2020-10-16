@@ -1,20 +1,11 @@
 fileFormatVersion: 2
-guid: 2ad53b6dca502ec4cb5a476468f43910
+guid: 2ec1f19ab3b820c4582a4cac19950367
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
-      74: -1422011007694221501
-    second: Armature|ArmatureAction.001
-  - first:
       74: 6093225430303232669
     second: Armature|ArmatureAction.002
-  - first:
-      74: -1978303741906493279
-    second: Armature|idle
   - first:
       74: -7453387558714718212
     second: Armature|Shoot
