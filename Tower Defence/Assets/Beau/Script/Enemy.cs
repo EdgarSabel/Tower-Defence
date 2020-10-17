@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public bool isFlying, isFalling, isZapped;
     public Animator anim;
     public Collider enemyCollider;
+    public ParticleSystem burn;
     [System.Serializable]
         public class Sounds
         {
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour
 
         if (isBurning == true)
         {
+            burn.Play();
             burnTimer += Time.deltaTime;
             if (burnTimer < duration)
             {
