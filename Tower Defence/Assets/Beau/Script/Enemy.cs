@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public Collider enemyCollider;
     public ParticleSystem burn;
+    public bool burnIsAlreadyOn;
     [System.Serializable]
         public class Sounds
         {
@@ -55,7 +56,11 @@ public class Enemy : MonoBehaviour
 
         if (isBurning == true)
         {
-            burn.Play();
+            if (burnIsAlreadyOn == false)
+            {
+                burnIsAlreadyOn = true;
+                burn.Play();
+            }
             burnTimer += Time.deltaTime;
             if (burnTimer < duration)
             {
@@ -68,6 +73,10 @@ public class Enemy : MonoBehaviour
                     lastShotTime = Time.time;
                 }
             }
+        }
+        else if(burnIsAlreadyOn == true)
+        {
+            burnIsAlreadyOn = false;
         }
     }
     public void SetUpEnemy()
