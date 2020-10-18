@@ -448,6 +448,7 @@ MonoBehaviour:
   anim: {fileID: 94582853777110969}
   enemyCollider: {fileID: 267655117215071375}
   burn: {fileID: 400410572289479528}
+  burnIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
@@ -6689,7 +6690,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 5793103974872200172}
   m_HandleRect: {fileID: 0}

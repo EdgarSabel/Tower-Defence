@@ -9,20 +9,17 @@ public class EnemyHPBarScript : MonoBehaviour
     public GameObject enemyOBJ, slider;
     public Slider enemyHPBar;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        enemyHPBar.maxValue = enemyOBJ.GetComponent<Enemy>().EnemyHealth;
+        slider.SetActive(false);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        enemyHPBar.value = enemyOBJ.GetComponent<Enemy>().EnemyHealth;
-
-        if(enemyOBJ.GetComponent<Enemy>().EnemyHealth <= 100)
+        if(enemyOBJ.GetComponent<Enemy>().EnemyHealth < enemyHPBar.maxValue)
         {
             slider.SetActive(true);
+            enemyHPBar.value = enemyOBJ.GetComponent<Enemy>().EnemyHealth;
         }
     }
 }
