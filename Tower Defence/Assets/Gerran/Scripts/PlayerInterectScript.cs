@@ -8,6 +8,7 @@ public class PlayerInterectScript : MonoBehaviour
     public GameObject upgradePanel, shopPanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
     public GameObject menuPanel, shopIntText, turretPUText, turretUGText;
+    public int range = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class PlayerInterectScript : MonoBehaviour
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 100.0f))
+        if (Physics.Raycast(ray, out hit, range))
         {
             if (hit.transform.tag == ("Turret"))
             {
@@ -37,7 +38,6 @@ public class PlayerInterectScript : MonoBehaviour
                     Cursor.visible = true;
                 }
             }
-
             else if (hit.transform.tag == ("Shop"))
             {
                 shopIntText.SetActive(true);
@@ -53,12 +53,12 @@ public class PlayerInterectScript : MonoBehaviour
                     //player.GetComponent<CamLook>().canMove = false;
                 }
             }
-            else
-            {
-                shopIntText.SetActive(false);
-                turretPUText.SetActive(false);
-                turretUGText.SetActive(false);
-            }
+        }
+        else if(shopIntText.activeSelf == true || turretPUText.activeSelf == true || turretUGText.activeSelf == true)
+        {
+            shopIntText.SetActive(false);
+            turretPUText.SetActive(false);
+            turretUGText.SetActive(false);
         }
 
         if (Input.GetButtonDown("Cancel"))

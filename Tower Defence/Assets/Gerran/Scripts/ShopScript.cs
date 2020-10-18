@@ -10,10 +10,16 @@ public class ShopScript : MonoBehaviour
     public GameObject money, turret;
     public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText;
     public float decreaseNum, min;
+    public TextMeshProUGUI costHealth, costFirerate, costFreeze, costNuke, costRepair;
+    public AudioSource buySound, notEnoughMoneySound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        costHealth.text = "Cost: " + prizeHP.ToString();
+        costFirerate.text = "Cost: " + prizeFirerate.ToString();
+        costFreeze.text = "Cost: " + prizeFreeze.ToString();
+        costNuke.text = "Cost: " + prizeNuke.ToString();
+        costRepair.text = "Cost: " + prizeTurretRepairSpeed.ToString();
     }
 
     // Update is called once per frame
@@ -29,9 +35,10 @@ public class ShopScript : MonoBehaviour
     {
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeHP)
         {
-            if (money.GetComponent<HealthManager>().health <= 119)
+            if (money.GetComponent<HealthManager>().health < 120)
             {
                 //give health max health= 120
+                buySound.Play();
                 money.GetComponent<HealthManager>().health += healthPlus;
                 if(money.GetComponent<HealthManager>().health >= 120)
                 {
@@ -41,6 +48,10 @@ public class ShopScript : MonoBehaviour
                 money.GetComponent<MoneyManager>().GetMoney(-prizeHP);
             }
         }
+        else
+        {
+            notEnoughMoneySound.Play();
+        }
     }
 
     public void BuyFirerate()
@@ -48,7 +59,12 @@ public class ShopScript : MonoBehaviour
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeFirerate)
         {
             numFirerate += 1;
+            buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prizeFirerate);
+        }
+        else
+        {
+            notEnoughMoneySound.Play();
         }
     }
 
@@ -57,7 +73,12 @@ public class ShopScript : MonoBehaviour
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeFreeze)
         {
             numFreeze += 1;
+            buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prizeFreeze);
+        }
+        else
+        {
+            notEnoughMoneySound.Play();
         }
     }
 
@@ -66,7 +87,12 @@ public class ShopScript : MonoBehaviour
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeNuke)
         {
             numNuke += 1;
+            buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prizeNuke);
+        }
+        else
+        {
+            notEnoughMoneySound.Play();
         }
     }
 
@@ -75,9 +101,14 @@ public class ShopScript : MonoBehaviour
         if (money.GetComponent<MoneyManager>().moneyNumber >= prizeTurretRepairSpeed)
         {
             //decrease turret repair speed
+            buySound.Play();
             min = 5 / decreaseNum;
             turret.GetComponent<TurretRepair>().decreaseNumber -= min;
             money.GetComponent<MoneyManager>().GetMoney(-prizeTurretRepairSpeed);
+        }
+        else
+        {
+            notEnoughMoneySound.Play();
         }
     }
 }
