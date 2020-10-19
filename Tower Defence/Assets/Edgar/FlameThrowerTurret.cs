@@ -6,7 +6,7 @@ public class FlameThrowerTurret : Turret
 {
     public bool isFiring;
     public VisualEffect vfx;
-    public float burnDuration;
+    public float[] burnDuration;
 
     public override void Start()
     {
@@ -24,7 +24,6 @@ public class FlameThrowerTurret : Turret
             isFiring = false;
         }
     }
-
     public override void Fire()
     {
         if (isFiring == false)

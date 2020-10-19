@@ -33,7 +33,7 @@ public class FlameThrowerFlame : MonoBehaviour
                     target.burnDmg = turret.damage;
                     target.burnRate = turret.fireRate;
                     target.isBurning = true;
-                    target.duration = turret.burnDuration;
+                    target.duration = turret.burnDuration[turret.turretLevel];
                 }
                 else
                 {

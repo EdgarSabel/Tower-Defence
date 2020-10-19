@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zap : MonoBehaviour
 {
     public Vector3 origin;
-    public float speed, range;
+    public float speed, range, zapDur;
     public int damage;
     public GameObject closestEnemy, currentEnemy,lastEnemy, veryLastEnemy, lightningPrefab, myLightning;
     // Start is called before the first frame update
@@ -28,6 +28,7 @@ public class Zap : MonoBehaviour
                 if (closestEnemy.GetComponent<Enemy>().isZapped == false)
                 {
                     closestEnemy.GetComponent<Enemy>().isZapped = true;
+                    closestEnemy.GetComponent<Enemy>().zapDur = zapDur;
                 }
                 if (veryLastEnemy != null)
                 {

@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public GameObject locationsParentObj, mesh, freezeParticlesParent;
     int nextLocNum = 0;
     float lastShotTime;
-    [HideInInspector] public float burnRate, burnTimer, duration;
+    [HideInInspector] public float burnRate,zapTimer, zapDur, burnTimer, duration;
     NavMeshAgent agent;
     GameObject playerManager;
     [HideInInspector]public bool isBurning;
@@ -51,7 +51,17 @@ public class Enemy : MonoBehaviour
 
         if (isZapped == true)
         {
-            agent.speed = walkingSpeed / 2;
+            zapTimer += Time.deltaTime;
+            if (zapTimer >= zapDur)
+            {
+                agent.speed = walkingSpeed;
+                zapTimer = 0;
+                isZapped = false;
+            }
+            else
+            {
+                agent.speed = walkingSpeed / 2;
+            }
         }
 
         if (isBurning == true)
@@ -72,6 +82,10 @@ public class Enemy : MonoBehaviour
                     }
                     lastShotTime = Time.time;
                 }
+            }
+            else
+            {
+                isBurning = false;
             }
         }
         else if(burnIsAlreadyOn == true)

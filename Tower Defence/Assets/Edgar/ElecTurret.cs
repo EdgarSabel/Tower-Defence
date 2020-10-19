@@ -7,6 +7,7 @@ public class ElecTurret : Turret
     public ParticleSystem boostParticle;
     public GameObject zap, currentZap, spawnPos;
     public float zapSpeed;
+    public float[] zapDur;
     public override void Fire()
     {
         animTop.SetTrigger("Shoot");
@@ -14,5 +15,6 @@ public class ElecTurret : Turret
         currentZap.GetComponent<Zap>().speed = zapSpeed;
         currentZap.GetComponent<Zap>().damage = damage;
         currentZap.GetComponent<Zap>().range = radius;
+        currentZap.GetComponent<Zap>().zapDur = zapDur[turretLevel];
     }
 }
