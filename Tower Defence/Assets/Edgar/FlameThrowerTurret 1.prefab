@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretType: Flame
   levelUpReady: 0
-  damage: 6
+  damage: 5
   slot: 1
   cost: 1000
   fireRate: 8
@@ -1113,7 +1113,7 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 3
+    - damage: 2
       cost: 1100
       fireRate: 8
       radius: 7
@@ -1130,19 +1130,19 @@ MonoBehaviour:
       fireRate: 8
       radius: 7
       xp: 0
-      nextLvlXp: 150
+      nextLvlXp: 200
     - damage: 10
       cost: 4000
       fireRate: 8
       radius: 7
       xp: 0
-      nextLvlXp: 200
+      nextLvlXp: 500
     - damage: 20
       cost: 0
       fireRate: 8
       radius: 8
       xp: 0
-      nextLvlXp: 500
+      nextLvlXp: 0
   animTop: {fileID: 6132494441583759337}
   animBot: {fileID: 1930914037360754477}
   lvlUpParticle: {fileID: 5018230229404787853}
@@ -1150,11 +1150,11 @@ MonoBehaviour:
   isFiring: 0
   vfx: {fileID: 6132494442209265320}
   burnDuration:
+  - 3
+  - 4
+  - 5
+  - 7
   - 10
-  - 12
-  - 14
-  - 16
-  - 20
 --- !u!1 &6892645454979422237
 GameObject:
   m_ObjectHideFlags: 0

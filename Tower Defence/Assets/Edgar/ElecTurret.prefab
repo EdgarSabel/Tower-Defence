@@ -819,7 +819,7 @@ MonoBehaviour:
     stats:
     - damage: 7
       cost: 1100
-      fireRate: 2
+      fireRate: 1.8
       radius: 8
       xp: 0
       nextLvlXp: 50
@@ -831,19 +831,19 @@ MonoBehaviour:
       nextLvlXp: 100
     - damage: 11
       cost: 2100
-      fireRate: 2
+      fireRate: 2.2
       radius: 0
       xp: 0
       nextLvlXp: 200
     - damage: 14
       cost: 4000
-      fireRate: 2
+      fireRate: 2.2
       radius: 8
       xp: 0
       nextLvlXp: 500
     - damage: 22
       cost: 0
-      fireRate: 2
+      fireRate: 2.5
       radius: 8
       xp: 0
       nextLvlXp: 0
@@ -855,12 +855,12 @@ MonoBehaviour:
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}
   spawnPos: {fileID: 9121436940922645424}
-  zapSpeed: 5
+  zapSpeed: 20
   zapDur:
+  - 2
+  - 3
+  - 4
   - 5
-  - 6
-  - 7
-  - 8
   - 10
 --- !u!1 &8723325519776202007
 GameObject:

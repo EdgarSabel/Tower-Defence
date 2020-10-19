@@ -7283,7 +7283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85ab7e68cade6743b4616f367a5212e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 1
+  walkingSpeed: 2
   EnemyHealth: 600
   EnemyDmg: 10
   moneyDropAmount: 150
@@ -7294,6 +7294,8 @@ MonoBehaviour:
   mesh: {fileID: 8048579865226252510}
   freezeParticlesParent: {fileID: 7790602865434969234}
   burnRate: 0
+  zapTimer: 0
+  zapDur: 0
   burnTimer: 0
   duration: 0
   isBurning: 0
@@ -7303,6 +7305,7 @@ MonoBehaviour:
   anim: {fileID: 7166112590779963538}
   enemyCollider: {fileID: 7166112590779963532}
   burn: {fileID: 3811716437497529918}
+  burnIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
