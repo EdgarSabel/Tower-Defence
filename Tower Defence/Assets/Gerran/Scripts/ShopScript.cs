@@ -7,7 +7,8 @@ public class ShopScript : MonoBehaviour
 {
 
     public int numFirerate,numFreeze,numNuke,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeTurretRepairSpeed, healthPlus;
-    public GameObject money, turret;
+    public GameObject money, turret, shopPanel, hudPanel, player, cam;
+    public int maxRange;
     public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText;
     public float decreaseNum, min;
     public TextMeshProUGUI costHealth, costFirerate, costFreeze, costNuke, costRepair;
@@ -28,7 +29,6 @@ public class ShopScript : MonoBehaviour
         iGFirerateNumText.text = numFirerate.ToString();
         iGFreezeNumText.text = numFreeze.ToString();
         iGNukeNumText.text = numNuke.ToString();
-        //iGSpikeNumText.text = numSpike.ToString();
     }
 
     public void BuyHP()

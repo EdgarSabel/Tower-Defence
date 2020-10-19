@@ -2035,6 +2035,11 @@ MonoBehaviour:
   healthPlus: 20
   money: {fileID: 586369075}
   turret: {fileID: 2048840997}
+  shopPanel: {fileID: 75339182}
+  hudPanel: {fileID: 493393908}
+  player: {fileID: 1612362071}
+  cam: {fileID: 783078707}
+  maxRange: 10
   iGFirerateNumText: {fileID: 2144321624}
   iGFreezeNumText: {fileID: 583961131}
   iGNukeNumText: {fileID: 1536057413}
@@ -5956,6 +5961,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: hudPanel
+      value: 
+      objectReference: {fileID: 493393908}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 783078707}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretPanel
+      value: 
+      objectReference: {fileID: 342921686}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: shopPanel
+      value: 
+      objectReference: {fileID: 75339182}
     - target: {fileID: 2503707064313422426, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0

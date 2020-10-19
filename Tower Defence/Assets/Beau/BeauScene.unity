@@ -3687,6 +3687,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1308737801141547162, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308737801141547162, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.216771
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308737801141547162, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.412708
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308737801141547162, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3285978
+      objectReference: {fileID: 0}
     - target: {fileID: 1608748842047053348, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -3727,6 +3743,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 379489474}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: hudPanel
+      value: 
+      objectReference: {fileID: 1726760948}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: turretPanel
+      value: 
+      objectReference: {fileID: 1813661106}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: shopPanel
+      value: 
+      objectReference: {fileID: 1750240985}
     - target: {fileID: 2503707064313422426, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -32267,6 +32299,11 @@ MonoBehaviour:
   healthPlus: 20
   money: {fileID: 148163699}
   turret: {fileID: 7718558902587799626}
+  shopPanel: {fileID: 1750240985}
+  hudPanel: {fileID: 1726760948}
+  player: {fileID: 1834545573}
+  cam: {fileID: 379489474}
+  maxRange: 10
   iGFirerateNumText: {fileID: 384216389}
   iGFreezeNumText: {fileID: 1975387476}
   iGNukeNumText: {fileID: 565854612}
