@@ -53,6 +53,12 @@ public class PlayerInterectScript : MonoBehaviour
                     //player.GetComponent<CamLook>().canMove = false;
                 }
             }
+            else if (shopIntText.activeSelf == true || turretPUText.activeSelf == true || turretUGText.activeSelf == true)
+            {
+                shopIntText.SetActive(false);
+                turretPUText.SetActive(false);
+                turretUGText.SetActive(false);
+            }
         }
         else if(shopIntText.activeSelf == true || turretPUText.activeSelf == true || turretUGText.activeSelf == true)
         {
