@@ -439,6 +439,8 @@ MonoBehaviour:
   mesh: {fileID: 8608431985928954924}
   freezeParticlesParent: {fileID: 2919165970060329967}
   burnRate: 0
+  zapTimer: 0
+  zapDur: 0
   burnTimer: 0
   duration: 0
   isBurning: 0
@@ -6771,6 +6773,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1948409049582438045, guid: d0bb047927e5a5743adbddd7c75ae84d, type: 3}
       propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948409049582438045, guid: d0bb047927e5a5743adbddd7c75ae84d, type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2259327908718890047, guid: d0bb047927e5a5743adbddd7c75ae84d, type: 3}

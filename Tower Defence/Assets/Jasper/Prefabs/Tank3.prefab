@@ -7682,6 +7682,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1948409049582438045, guid: d0bb047927e5a5743adbddd7c75ae84d, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2259327908718890047, guid: d0bb047927e5a5743adbddd7c75ae84d, type: 3}
       propertyPath: m_Name
       value: FlaminTank
