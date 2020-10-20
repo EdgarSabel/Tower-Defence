@@ -19,7 +19,7 @@ public class PlayerInterectScript : MonoBehaviour
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, range))
+        if (Physics.Raycast(ray, out hit, range, -5, QueryTriggerInteraction.Ignore))
         {
             if (hit.transform.tag == ("Turret"))
             {

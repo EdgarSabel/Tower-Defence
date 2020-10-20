@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Inventory : MonoBehaviour
 {
     [System.Serializable]
@@ -36,6 +37,7 @@ public class Inventory : MonoBehaviour
         cam = GameObject.Find("Camera");
         sounds.placeTurretVolume = sounds.placeTurretSound.volume;
         sounds.placeTurretPitch = sounds.placeTurretSound.pitch;
+        RefreshTurretLevel();
     }
     private void Update()
     {
@@ -131,5 +133,17 @@ public class Inventory : MonoBehaviour
         sounds.placeTurretSound.Play();
         rangeIndicator.Stop();
         rangeIndicator.transform.gameObject.SetActive(false);
+    }
+    public GameObject turretHolder;
+    public TextMeshProUGUI[] turretLevels;
+    public void RefreshTurretLevel()
+    {
+        int turretLevel;
+        for (int f = 0; f < turrets.Length; f++)
+        {
+            turretLevel = turretHolder.transform.GetChild(f).GetComponentInChildren<Turret>().turretLevel;
+            turretLevel += 1;
+            turretLevels[f].text = "Lv " + turretLevel.ToString();
+        }
     }
 }
