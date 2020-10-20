@@ -46,6 +46,10 @@ public class SceneSwitcher : MonoBehaviour
     }
     public void MainMenu()
     {
+        PlayerPrefs.SetFloat("Master", OptionsManeger.masterSliderValue);
+        PlayerPrefs.SetFloat("Music", OptionsManeger.musicSliderValue);
+        PlayerPrefs.SetFloat("Sound", OptionsManeger.soundSliderValue);
+        PlayerPrefs.SetFloat("Sens", OptionsManeger.sensitivityStatic);
         SceneManager.LoadScene("MainMenu");
     }
     public void ClickButton()
