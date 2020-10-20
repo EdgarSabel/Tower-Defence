@@ -3803,6 +3803,12 @@ MonoBehaviour:
   - {fileID: 5793997011081408699, guid: 0bbf1ff07030cc54fade8d2292003150, type: 3}
   - {fileID: 8048579865226252510, guid: 807e95e1da4f4dc44802045429c46be7, type: 3}
   - {fileID: 977684963852204110, guid: 036b92d679402574dbf8edeed694031b, type: 3}
+  - {fileID: 228713759818464373, guid: 5e96ae388a556b44aa8c5c82571e1e70, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 59032572242361446, guid: e2faf137f5865434785fbecc7b0e25b9, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   roundNumberText: {fileID: 1875327889}
   nextRoundInText: {fileID: 826232013}
   timerObj: {fileID: 365140802}
@@ -3815,6 +3821,15 @@ MonoBehaviour:
   infEnemieIncrease: 3
   waves:
   - enemies:
+    - enemyType: 0
+      amount: 2
+      rate: 0.5
+    - enemyType: 1
+      amount: 2
+      rate: 0.5
+    - enemyType: 2
+      amount: 2
+      rate: 0.5
     - enemyType: 0
       amount: 5
       rate: 1.5
@@ -3877,7 +3892,7 @@ MonoBehaviour:
       rate: 1
     moneyToGet: 100
   - enemies:
-    - enemyType: 0
+    - enemyType: 3
       amount: 20
       rate: 0.2
     moneyToGet: 100
@@ -3890,19 +3905,19 @@ MonoBehaviour:
       rate: 0.5
     moneyToGet: 100
   - enemies:
-    - enemyType: 0
+    - enemyType: 3
       amount: 5
       rate: 1
-    - enemyType: 0
+    - enemyType: 3
       amount: 5
       rate: 0.1
     - enemyType: 1
       amount: 4
       rate: 0.2
-    - enemyType: 0
+    - enemyType: 3
       amount: 5
       rate: 1
-    - enemyType: 0
+    - enemyType: 3
       amount: 5
       rate: 0.1
     moneyToGet: 100
@@ -3920,7 +3935,7 @@ MonoBehaviour:
       rate: 0.3
     moneyToGet: 150
   - enemies:
-    - enemyType: 0
+    - enemyType: 3
       amount: 10
       rate: 0.5
     - enemyType: 1
@@ -3937,7 +3952,7 @@ MonoBehaviour:
     - enemyType: 1
       amount: 5
       rate: 1
-    - enemyType: 0
+    - enemyType: 3
       amount: 5
       rate: 1
     - enemyType: 1
@@ -3970,7 +3985,7 @@ MonoBehaviour:
       rate: 0.5
     moneyToGet: 150
   - enemies:
-    - enemyType: 0
+    - enemyType: 6
       amount: 5
       rate: 0.1
     - enemyType: 1
@@ -3979,7 +3994,7 @@ MonoBehaviour:
     - enemyType: 2
       amount: 5
       rate: 0.1
-    - enemyType: 0
+    - enemyType: 6
       amount: 5
       rate: 0.1
     - enemyType: 1
@@ -3988,7 +4003,7 @@ MonoBehaviour:
     - enemyType: 2
       amount: 5
       rate: 0.1
-    - enemyType: 0
+    - enemyType: 6
       amount: 5
       rate: 0.1
     - enemyType: 1
@@ -3999,7 +4014,7 @@ MonoBehaviour:
       rate: 0.1
     moneyToGet: 200
   sounds:
-    shopOpenedSound: {fileID: 1566103777}
+    shopOpenedSound: {fileID: 0}
     startRoundSound: {fileID: 1566103777}
 --- !u!4 &320613219
 Transform:
