@@ -468,10 +468,10 @@ MonoBehaviour:
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
   invSprite: {fileID: 21300000, guid: c559455744dc459419f682b06c3d34c4, type: 3}
-  topMR: {fileID: 0}
-  botMR: {fileID: 0}
-  maxLvlBot: {fileID: 0}
-  maxLvlTop: {fileID: 0}
+  topMR: {fileID: 2558340983759909411}
+  botMR: {fileID: 4551278983725307880}
+  maxLvlBot: {fileID: 2100000, guid: e4c8c9034407d6548ad20228921d8f9d, type: 2}
+  maxLvlTop: {fileID: 2100000, guid: b78c299857af5ff4da9a43588ee249d6, type: 2}
   cannonSmoke: {fileID: 8950217364272507878}
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
@@ -1174,14 +1174,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 58c8d8b5c1d2e89478f5a4b3f40a0f4e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f21734b74f274345905fa2f116f020d, type: 3}
---- !u!4 &1529786794479029452 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f21734b74f274345905fa2f116f020d, type: 3}
-  m_PrefabInstance: {fileID: 1346679099325475623}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2193592014286739062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f21734b74f274345905fa2f116f020d, type: 3}
+  m_PrefabInstance: {fileID: 1346679099325475623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2558340983759909411 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3544702413831788804, guid: 1f21734b74f274345905fa2f116f020d, type: 3}
+  m_PrefabInstance: {fileID: 1346679099325475623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1529786794479029452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f21734b74f274345905fa2f116f020d, type: 3}
   m_PrefabInstance: {fileID: 1346679099325475623}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3428518860473159170

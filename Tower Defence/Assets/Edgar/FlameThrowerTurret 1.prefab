@@ -1147,6 +1147,11 @@ MonoBehaviour:
   animBot: {fileID: 1930914037360754477}
   lvlUpParticle: {fileID: 5018230229404787853}
   invSprite: {fileID: 21300000, guid: c2f274b0195f5214bb42f639604aee4c, type: 3}
+  topMR: {fileID: 0}
+  botMR: {fileID: 1112719257808671067}
+  maxLvlBot: {fileID: 2100000, guid: e4c8c9034407d6548ad20228921d8f9d, type: 2}
+  maxLvlTop: {fileID: 2100000, guid: e4995572b0cb89646a02bd44f4a6d58b, type: 2}
+  flameMR: {fileID: 4817561417931646717}
   isFiring: 0
   vfx: {fileID: 6132494442209265320}
   burnDuration:
@@ -1353,14 +1358,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
---- !u!198 &5018230229404787853 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
-  m_PrefabInstance: {fileID: 5002489485385639884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5018230229290454884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 56361380654459048, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
+  m_PrefabInstance: {fileID: 5002489485385639884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5018230229404787853 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 56361380802265921, guid: 10f7ae0d5bda90843b2ca7a80818f3db, type: 3}
   m_PrefabInstance: {fileID: 5002489485385639884}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5237117335508139200
@@ -1501,6 +1506,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 43d08b50906fe3646a14b05de5fd6992, type: 2}
+    - target: {fileID: -7511558181221131132, guid: b7dc9e0aad8c06641b41d511c0983591, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7dc9e0aad8c06641b41d511c0983591, type: 3}
       propertyPath: m_Name
       value: FT
@@ -1510,6 +1519,11 @@ PrefabInstance:
 --- !u!4 &5949332388905393554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7dc9e0aad8c06641b41d511c0983591, type: 3}
+  m_PrefabInstance: {fileID: 6132494441787947641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4817561417931646717 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: b7dc9e0aad8c06641b41d511c0983591, type: 3}
   m_PrefabInstance: {fileID: 6132494441787947641}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6474934803624806184 stripped

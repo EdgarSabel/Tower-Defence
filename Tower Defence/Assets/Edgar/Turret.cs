@@ -115,7 +115,7 @@ public class Turret : MonoBehaviour
         }
     }
 
-    public void StatRefresh()
+    public virtual void StatRefresh()
     {
         if (turretLevel == 4)
         {

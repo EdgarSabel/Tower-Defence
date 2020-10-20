@@ -851,6 +851,10 @@ MonoBehaviour:
   animBot: {fileID: 6022332976921973304}
   lvlUpParticle: {fileID: 8013191330049962954}
   invSprite: {fileID: 21300000, guid: 838ddae382a235145990b18c846b2d46, type: 3}
+  topMR: {fileID: 5556265852593276121}
+  botMR: {fileID: 5055659727591177308}
+  maxLvlBot: {fileID: 2100000, guid: e4c8c9034407d6548ad20228921d8f9d, type: 2}
+  maxLvlTop: {fileID: 2100000, guid: 05c773a16c532ff4aa45295c1d6b4059, type: 2}
   boostParticle: {fileID: 7095787463081426454}
   zap: {fileID: 3871314488751388847, guid: 7c1425b6f157d9f439eb4ea305162e52, type: 3}
   currentZap: {fileID: 0}
@@ -1120,14 +1124,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
---- !u!4 &2076071093941714869 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
-  m_PrefabInstance: {fileID: 8069517526029973171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &7095787463081426454 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 974433889981122725, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
+  m_PrefabInstance: {fileID: 8069517526029973171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2076071093941714869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8300979391212816646, guid: cf29a9688a3925d48b67084f38a4086b, type: 3}
   m_PrefabInstance: {fileID: 8069517526029973171}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8947106865534033373
@@ -1199,5 +1203,10 @@ Transform:
 --- !u!1 &8136856205739974796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ec1f19ab3b820c4582a4cac19950367, type: 3}
+  m_PrefabInstance: {fileID: 8947106865534033373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5556265852593276121 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3544702413831788804, guid: 2ec1f19ab3b820c4582a4cac19950367, type: 3}
   m_PrefabInstance: {fileID: 8947106865534033373}
   m_PrefabAsset: {fileID: 0}
