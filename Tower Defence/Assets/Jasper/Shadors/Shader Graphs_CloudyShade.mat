@@ -20,9 +20,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_439B722E: 0.2
-    - Vector1_46ADA130: 20
-    - Vector1_F232E9CC: 0.117
+    - Vector1_439B722E: 0.15
+    - Vector1_46ADA130: 42
+    - Vector1_F232E9CC: 0.12
     m_Colors:
-    - Color_FA42BE8D: {r: 0.03773582, g: 0.03257385, b: 0.03257385, a: 0}
+    - Color_FA42BE8D: {r: 0.018912425, g: 0.06662279, b: 0.16037738, a: 1}
   m_BuildTextureStacks: []

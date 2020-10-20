@@ -1082,7 +1082,7 @@ MonoBehaviour:
   walkingSpeed: 4
   EnemyHealth: 100
   EnemyDmg: 5
-  moneyDropAmount: 40
+  moneyDropAmount: 50
   burnDmg: 0
   distTravel: 0
   timeAlive: 0
@@ -1090,6 +1090,8 @@ MonoBehaviour:
   mesh: {fileID: 5793997011081408699}
   freezeParticlesParent: {fileID: 722087154135108768}
   burnRate: 0
+  zapTimer: 0
+  zapDur: 0
   burnTimer: 0
   duration: 0
   isBurning: 0
@@ -1099,6 +1101,7 @@ MonoBehaviour:
   anim: {fileID: 6676868217319158927}
   enemyCollider: {fileID: 3495267949674463230}
   burn: {fileID: 71918257367661475}
+  burnIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
