@@ -31040,6 +31040,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.71
       objectReference: {fileID: 0}
+    - target: {fileID: 7221666481265441451, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666481265441451, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9.72
+      objectReference: {fileID: 0}
     - target: {fileID: 7221666481265441454, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -31060,17 +31068,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7221666481974660546, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666481974660546, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7221666481979957120, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.11
+      value: 18.7
       objectReference: {fileID: 0}
     - target: {fileID: 7221666481979957121, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7221666481979957122, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482192022008, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482192022008, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482192022008, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.15867022
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482192022008, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.73787856
+      objectReference: {fileID: 0}
     - target: {fileID: 7221666482192022014, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.61
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7221666482192022015, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_IsActive
@@ -31082,7 +31118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7221666482211716616, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.897112
+      value: -22.9
       objectReference: {fileID: 0}
     - target: {fileID: 7221666482211716616, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31128,6 +31164,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7221666482566031172, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482566031172, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9.72
+      objectReference: {fileID: 0}
     - target: {fileID: 7221666482566031175, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
@@ -31138,11 +31182,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7221666482898384228, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.33
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: 7221666482898384229, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221666482898384230, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
+      propertyPath: startDelay.scalar
+      value: 3.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbb57b194ca23404c9ebf3e3eba25b79, type: 3}
