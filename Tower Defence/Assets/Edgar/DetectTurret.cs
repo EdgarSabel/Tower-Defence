@@ -79,25 +79,16 @@ public class DetectTurret : MonoBehaviour
         upgradePrice = turret.GetComponentInChildren<Turret>().cost;
         if (turret != null && turret.GetComponentInChildren<Turret>().levelUpReady == true && turret.GetComponentInChildren<Turret>().turretLevel < turret.GetComponentInChildren<Turret>().levelStats.stats.Length - 1)
         {
-            if (moneyManager.moneyNumber >= upgradePrice)
+            if (turret.GetComponentInChildren<Turret>().turretLevel < turret.GetComponentInChildren<Turret>().levelStats.stats.Length - 1 || newTurret.GetComponent<Turret>().turretType != turret.GetComponent<Turret>().turretType)
             {
-            turret.GetComponentInChildren<Turret>().LevelUp(newTurret);
-            settingManager.Back();
-                moneyManager.GetMoney(-upgradePrice);
-                xpSlider.value = 0;
+                if (moneyManager.moneyNumber >= upgradePrice)
+                {
+                    turret.GetComponentInChildren<Turret>().LevelUp(newTurret);
+                    settingManager.Back();
+                    moneyManager.GetMoney(-upgradePrice);
+                    xpSlider.value = 0;
+                }
             }
-            else
-            {
-                //not enough money pop up
-            }
-        }
-        else if(turret.GetComponentInChildren<Turret>().turretLevel < turret.GetComponentInChildren<Turret>().levelStats.stats.Length - 1)
-        {
-            //not enough XP pop up
-        }
-        else
-        {
-            //max level pop up
         }
     }
 }
