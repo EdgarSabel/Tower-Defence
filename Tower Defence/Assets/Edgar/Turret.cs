@@ -36,6 +36,8 @@ public class Turret : MonoBehaviour
     public Animator animTop,animBot;
     public ParticleSystem lvlUpParticle;
     public Sprite invSprite;
+    public SkinnedMeshRenderer topMR, botMR;
+    public Material maxLvlBot, maxLvlTop;
     public virtual void Start()
     {
         StatRefresh();
@@ -89,8 +91,8 @@ public class Turret : MonoBehaviour
     public void ShootSound()
     {
         sounds.shootSound.volume = Random.Range(sounds.shootSoundVolume - .05f, sounds.shootSoundVolume + .05f);
-                sounds.shootSound.pitch = Random.Range(sounds.shootSoundPitch - .1f, sounds.shootSoundPitch + .1f);
-                sounds.shootSound.Play();
+        sounds.shootSound.pitch = Random.Range(sounds.shootSoundPitch - .1f, sounds.shootSoundPitch + .1f);
+        sounds.shootSound.Play();
     }
     public virtual void WipeTarget()
     {
@@ -115,6 +117,12 @@ public class Turret : MonoBehaviour
 
     public void StatRefresh()
     {
+        if (turretLevel == 4)
+        {
+            topMR.material = maxLvlTop;
+            botMR.material = maxLvlBot;
+        }
+
         xp = 0;
         cost = levelStats.stats[turretLevel].cost;
         damage = levelStats.stats[turretLevel].damage;
