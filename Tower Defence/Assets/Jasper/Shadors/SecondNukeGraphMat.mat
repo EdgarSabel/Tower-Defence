@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_NukeShade
-  m_Shader: {fileID: -6465566751694194690, guid: c4ba52201bd502f4285321823693eb28, type: 3}
+  m_Name: SecondNukeGraphMat
+  m_Shader: {fileID: -6465566751694194690, guid: e1b60992e2c406843854b7cf5033da6d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,14 +20,9 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_3674D089: 0.7
-    - Vector1_4BF7760C: 1
-    - Vector1_595A1156: 1.1
-    - Vector1_5A6738F9: 1
-    - Vector1_C6FC0508: 120
-    - Vector1_D4057528: 3
+    - Vector1_991A146B: 116.4
     m_Colors:
-    - Color_4AAE1CAE: {r: 12.996038, g: 2.4365568, b: 0, a: 0.5333334}
-    - Vector2_6DD82A4D: {r: 0.05, g: 0, b: 0, a: 0}
-    - Vector2_DC968853: {r: 0.1, g: 0, b: 0, a: 0}
+    - Color_C8D8C60C: {r: 12.99604, g: 1.438108, b: 0, a: 0.5333334}
+    - Vector2_3D016867: {r: -0.06, g: 0, b: 0, a: 0}
+    - Vector2_5F696E03: {r: -0.05, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
