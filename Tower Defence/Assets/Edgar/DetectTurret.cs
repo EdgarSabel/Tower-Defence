@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class DetectTurret : MonoBehaviour
 {
     public GameObject turret;
+    public Inventory inventoryScript;
     public SettingsManeger settingManager;
     public MoneyManager moneyManager;
     public int upgradePrice;
@@ -90,5 +92,6 @@ public class DetectTurret : MonoBehaviour
                 }
             }
         }
+        inventoryScript.RefreshTurretLevel();
     }
 }
