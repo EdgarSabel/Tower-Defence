@@ -113,6 +113,16 @@ public class Inventory : MonoBehaviour
             {
                 PlaceTurret();
             }
+        if (Input.GetButtonDown("Fire2"))
+        {
+                turretPLText.SetActive(false);
+                currentTurret.SetActive(false);
+                rangeIndicator.Stop();
+                rangeIndicator.transform.gameObject.SetActive(false);
+                currentTurret = null;
+                turretSpawned = false;
+                isHovering = false;
+        }
         }
     }
     public void PlaceTurret()
