@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+    static bool isSetup;
     public AudioSource mainAudioSource;
     public GameObject[] musics;
     public GameObject musicParent;
@@ -14,10 +15,14 @@ public class MusicManager : MonoBehaviour
     bool checkIfSongStopped;
     IEnumerator coroutine;
 
-    private void Start()
+    private void Awake()
     {
-        DontDestroyOnLoad(this);
-        Setup();
+        if(isSetup == false)
+        {
+            isSetup = true;
+            DontDestroyOnLoad(this);
+            Setup();
+        }
     }
     private void Update()
     {
