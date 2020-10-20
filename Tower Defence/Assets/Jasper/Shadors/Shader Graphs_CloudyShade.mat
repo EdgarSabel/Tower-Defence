@@ -24,5 +24,5 @@ Material:
     - Vector1_46ADA130: 42
     - Vector1_F232E9CC: 0.12
     m_Colors:
-    - Color_FA42BE8D: {r: 0.018912425, g: 0.06662279, b: 0.16037738, a: 1}
+    - Color_FA42BE8D: {r: 0.019607844, g: 0.027086694, b: 0.16078432, a: 1}
   m_BuildTextureStacks: []
