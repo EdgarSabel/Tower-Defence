@@ -13,11 +13,16 @@ public class OptionsManeger : MonoBehaviour
 
     private void Awake()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
     void Start()
     {
-        if(sensitivityStatic == 0)
+        masterSliderValue = PlayerPrefs.GetFloat("Master");
+        musicSliderValue = PlayerPrefs.GetFloat("Music");
+        soundSliderValue = PlayerPrefs.GetFloat("Sound");
+        sensitivityStatic = PlayerPrefs.GetFloat("Sens");
+        
+        if (sensitivityStatic == 0)
         {
             sensitivityStatic = 7;
         }
@@ -36,9 +41,9 @@ public class OptionsManeger : MonoBehaviour
         {
             soundSliderValue = 1;
         }
-        masterVolumeSlider.value = OptionsManeger.masterSliderValue;
-        musicVolumeSlider.value = OptionsManeger.musicSliderValue;
-        soundVolumeSlider.value = OptionsManeger.soundSliderValue;
+        masterVolumeSlider.value = masterSliderValue;
+        musicVolumeSlider.value = musicSliderValue;
+        soundVolumeSlider.value = soundSliderValue;
     }
 
     public void SetMasterVol(float sliderValue)

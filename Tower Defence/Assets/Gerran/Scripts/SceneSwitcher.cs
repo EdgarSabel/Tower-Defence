@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class SceneSwitcher : MonoBehaviour
 {
     public GameObject loadingScreen;
+    //public OptionsManeger optionManager;
     public Slider slider;
     public TextMeshProUGUI text;
 
@@ -36,6 +37,10 @@ public class SceneSwitcher : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.SetFloat("Master", OptionsManeger.masterSliderValue);
+        PlayerPrefs.SetFloat("Music", OptionsManeger.musicSliderValue);
+        PlayerPrefs.SetFloat("Sound", OptionsManeger.soundSliderValue);
+        PlayerPrefs.SetFloat("Sens", OptionsManeger.sensitivityStatic);
         Application.Quit();
         print("quit");
     }

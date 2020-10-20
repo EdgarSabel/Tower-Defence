@@ -8,11 +8,6 @@ using UnityEngine.UI;
 
 public class SettingsManeger : MonoBehaviour
 {
-    private const string MASTER_VOLUME_PREF = "master-volume" ;
-    private const string MUSIC_VOLUME_PREF = "music-volume";
-    private const string SOUND_VOLUME_PREF = "sound-volume";
-    private const string SENSETIVETY_PREF = "Sensetivety";
-
     public AudioMixer mixer;
     public Slider volumeSliderSound;
     public Slider volumeSliderMusic;
@@ -27,11 +22,6 @@ public class SettingsManeger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //volumeSliderMaster.value = PlayerPrefs.GetFloat(MASTER_VOLUME_PREF, 1);
-        //volumeSliderMusic.value = PlayerPrefs.GetFloat(MUSIC_VOLUME_PREF, 1);
-        //volumeSliderSound.value = PlayerPrefs.GetFloat(SOUND_VOLUME_PREF, 1);
-        //sensetivetySlider.value = PlayerPrefs.GetFloat(SENSETIVETY_PREF, 1);
-
         cam.GetComponent<CamLook>().sensetivity = OptionsManeger.sensitivityStatic;
         inputBoxText.text = OptionsManeger.sensitivityStatic.ToString();
         sensetivetySlider.value = OptionsManeger.sensitivityStatic;
@@ -40,12 +30,6 @@ public class SettingsManeger : MonoBehaviour
         volumeSliderMusic.value = OptionsManeger.musicSliderValue;
         volumeSliderSound.value = OptionsManeger.soundSliderValue;
     }
-
-    public void Update()
-    {
-
-    }
-
     public void Resume()
     {
         menuPanel.SetActive(false);
