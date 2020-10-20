@@ -4824,8 +4824,8 @@ GameObject:
   - component: {fileID: 3771755598123833509}
   - component: {fileID: 1419479348944301167}
   - component: {fileID: 320482709497903762}
-  - component: {fileID: 627122409509244324}
   - component: {fileID: 627122409509244347}
+  - component: {fileID: -8746859405134533694}
   m_Layer: 0
   m_Name: ShopBomb
   m_TagString: Untagged
@@ -4841,7 +4841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627122409509244346}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 40.15298, y: 32.12, z: 75.18281}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.10861301, y: 0.20451164, z: 0.10861301}
   m_Children:
   - {fileID: 320482710872518925}
@@ -4913,20 +4913,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &627122409509244324
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627122409509244346}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.7535381
-  m_Height: 7.6945524
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.5089803, z: -0.00000047683713}
 --- !u!136 &627122409509244347
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4935,9 +4921,24 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627122409509244346}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 2.7535381
-  m_Height: 7.6945524
+  m_Height: 294.45486
   m_Direction: 1
-  m_Center: {x: 0, y: 2.5089803, z: -0.00000047683713}
+  m_Center: {x: 0, y: 145.88914, z: -0.00000054878}
+--- !u!114 &-8746859405134533694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627122409509244346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25b153127ec4084ca5175cf0db7a650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionDuration: 10
+  waitForDmg: 2
+  explosionSound: {fileID: 0}

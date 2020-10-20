@@ -13,6 +13,7 @@ public class Ability : MonoBehaviour
     public float fireRateTimesNumber, fireRateIncreaseTime;
     public int freezeTime;
     public int explosionDmg;
+    public GameObject nukeSpawnLoc, nukePrefab;
 
     public GameObject enemyHolder, towerHolder, cooldownRF, cooldownNuke, cooldownFreeze;
 
@@ -91,10 +92,13 @@ public class Ability : MonoBehaviour
     }
     void NukeAllEnemies()
     {
-        sounds.freezeSound.Play();
+        Instantiate(nukePrefab, nukeSpawnLoc.transform);
+    }
+    public void Boem()
+    {
         foreach (Transform child in enemyHolder.transform)
         {
-            child.GetComponent<Enemy>().EnemyHealth -= explosionDmg;
+            child.GetComponent<Enemy>().GetDamage(explosionDmg, false);
         }
     }
 }
