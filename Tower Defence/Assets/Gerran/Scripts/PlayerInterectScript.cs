@@ -108,6 +108,8 @@ public class PlayerInterectScript : MonoBehaviour
 
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                print(Cursor.lockState);
+                print(Cursor.visible);
             }
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
             {

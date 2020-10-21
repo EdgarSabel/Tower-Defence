@@ -13,6 +13,7 @@ public class HealthManager : MonoBehaviour
 
     public GameObject[] bgImages;
     public GameObject deathMenu;
+    public bool dead;
 
     IEnumerator coroutine;
 
@@ -59,8 +60,12 @@ public class HealthManager : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = !enabled;
             Cursor.visible = true;
 
-            bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
-            deathMenu.SetActive(true);
+            if(dead == false)
+            {
+                dead = true;
+                bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
+                deathMenu.SetActive(true);
+            }
         }
     }
     void UpdateDecreaseNumber()

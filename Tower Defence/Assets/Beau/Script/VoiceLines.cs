@@ -1,24 +1,14 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class VoiceLines : MonoBehaviour
 {
-    public List<AudioSource> audios = new List<AudioSource>();
+    public AudioSource beginRound, endRound, nuke, freeze, death;
     public GameObject parentAudios;
     public AudioSource mainAudioSource;
-    public int currentAudio;
-    private void Start()
+    
+    public void StartAudioSource(AudioSource audio)
     {
-        foreach(Transform child in parentAudios.transform)
-        {
-            audios.Add(child.GetComponent<AudioSource>());
-        }
-        StartAudioSource();
-    }
-    public void StartAudioSource()
-    {
-        mainAudioSource.clip = audios[currentAudio].clip;
+        mainAudioSource.clip = audio.clip;
         mainAudioSource.Play();
-        currentAudio++;
     }
 }   
