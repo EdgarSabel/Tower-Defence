@@ -7307,6 +7307,7 @@ MonoBehaviour:
   burn: {fileID: 3811716437497529918}
   lightning: {fileID: 4386235952379770923}
   burnIsAlreadyOn: 0
+  zapIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
@@ -7520,7 +7521,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f1a88ee2d3baa341b81cacabc94e2cc, type: 2}
+  - {fileID: 2100000, guid: 667501b1208de65498ac3bd25e35b8b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
