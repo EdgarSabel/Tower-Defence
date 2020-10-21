@@ -57,11 +57,17 @@ public class Enemy : MonoBehaviour
                 lightning.Stop();
                 agent.speed = walkingSpeed;
                 zapTimer = 0;
+                zapIsAlreadyOn = false;
                 isZapped = false;
             }
             else
             {
-                lightning.Play();
+                if(zapIsAlreadyOn == false)
+                {
+                    zapIsAlreadyOn = true;
+                    lightning.gameObject.SetActive(true);
+                    lightning.Play();
+                }
                 agent.speed = 0;
             }
         }

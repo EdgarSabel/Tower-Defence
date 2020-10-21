@@ -118,7 +118,7 @@ MonoBehaviour:
   currentEnemy: {fileID: 0}
   lastEnemy: {fileID: 0}
   veryLastEnemy: {fileID: 0}
-  lightningPrefab: {fileID: 4961704554049215849, guid: 9f1b745ef918643469f9fe6504a0c87c, type: 3}
+  lightningPrefab: {fileID: 0}
   myLightning: {fileID: 0}
 --- !u!1001 &3785724094769285080
 PrefabInstance:
