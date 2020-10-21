@@ -1120,19 +1120,19 @@ MonoBehaviour:
       xp: 0
       nextLvlXp: 50
     - damage: 9
-      cost: 1600
+      cost: 2500
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 100
     - damage: 13
-      cost: 2100
+      cost: 4000
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 200
     - damage: 17
-      cost: 4000
+      cost: 6000
       fireRate: 8
       radius: 7
       xp: 0
