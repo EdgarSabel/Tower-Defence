@@ -19,7 +19,7 @@ public class SettingsManeger : MonoBehaviour
     public GameObject menuPanel, upgradePanel, hudPanel, cam, player;
     public GameObject[] panels;
 
-    public GameObject mainCam, shopCam;
+    public GameObject mainCam, shopCam, turretColBox;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +50,8 @@ public class SettingsManeger : MonoBehaviour
         upgradePanel.GetComponent<DetectTurret>().turret = null;
         cam.GetComponent<CamLook>().enabled = enabled;
         cam.GetComponent<CamLook>().canMove = true;
+        turretColBox.GetComponent<LookBoxPlayer>().currentTurret = null;
+        turretColBox.GetComponent<LookBoxPlayer>().gameObject.SetActive(false);
     }
     public void ShopBack()
     { 

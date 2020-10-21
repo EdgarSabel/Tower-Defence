@@ -115,12 +115,10 @@ public class ShopScript : MonoBehaviour
         }
         if (shopCam.activeSelf == false && shopPanel.activeSelf == true)
         {
-            print("set false");
             shopPanel.SetActive(false);
         }
         if (shopCam.activeSelf == true && shopPanel.activeSelf == false)
         {
-            print("set true");
             shopPanel.SetActive(true);
         }
     }
