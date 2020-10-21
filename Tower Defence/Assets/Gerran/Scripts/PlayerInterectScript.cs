@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerInterectScript : MonoBehaviour
 {
-
-    public GameObject upgradePanel, hudPanel, cam, player, turret;
+    public GameObject upgradePanel, hudPanel, cam, player, turret, turretColBox;
     public RaycastHit hit;
     public GameObject menuPanel, shopIntText, turretPUText, turretUGText, optionsPanel;
     public int range = 5;
@@ -31,6 +30,9 @@ public class PlayerInterectScript : MonoBehaviour
                 {
                     upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
                     upgradePanel.SetActive(true);
+
+                    turretColBox.SetActive(true);
+                    turretColBox.GetComponent<LookBoxPlayer>().currentTurret = hit.transform.gameObject;
 
                     menuPanel.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
@@ -116,6 +118,8 @@ public class PlayerInterectScript : MonoBehaviour
                 Cursor.visible = false;
                 upgradePanel.SetActive(false);
                 upgradePanel.GetComponent<DetectTurret>().turret = null;
+                turretColBox.GetComponent<LookBoxPlayer>().currentTurret = null;
+                turretColBox.GetComponent<LookBoxPlayer>().gameObject.SetActive(false);
                 StartCoroutine(CursorLock());
             }
             else if (menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == true)

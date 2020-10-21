@@ -3032,6 +3032,7 @@ MonoBehaviour:
   cam: {fileID: 379489474}
   player: {fileID: 1834545573}
   turret: {fileID: 0}
+  turretColBox: {fileID: 1324463553}
   menuPanel: {fileID: 813119920}
   shopIntText: {fileID: 1727018967}
   turretPUText: {fileID: 939505184}
@@ -3074,6 +3075,7 @@ MonoBehaviour:
   - {fileID: 1813661106}
   mainCam: {fileID: 379489474}
   shopCam: {fileID: 804568766}
+  turretColBox: {fileID: 1324463553}
 --- !u!1 &156810907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,7 +3963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756449, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4049,6 +4051,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4724261387949495262, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859428591801985710, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881722212392429299, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
@@ -4150,6 +4156,14 @@ PrefabInstance:
     - target: {fileID: 6266174535859803883, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266174535859803883, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266174535859803883, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6326245986451381973, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
@@ -4326,6 +4340,14 @@ PrefabInstance:
     - target: {fileID: 8876871591270472747, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090483495069581489, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Size.y
+      value: 5.838267
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090483495069581489, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: m_Size.x
+      value: 2.367822
       objectReference: {fileID: 0}
     - target: {fileID: 9119749970988517550, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
@@ -31187,6 +31209,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1324463553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4859428591801985710, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+  m_PrefabInstance: {fileID: 220567643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1324965332
 GameObject:
   m_ObjectHideFlags: 0
@@ -32561,7 +32588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1185588423}
-  cooldownTimeMinPerSec: 5
+  cooldownTimeMinPerSec: 1
 --- !u!1 &1409927297
 GameObject:
   m_ObjectHideFlags: 0
@@ -48366,6 +48393,7 @@ MonoBehaviour:
     shopOpenedSound: {fileID: 1004218884}
     startRoundSound: {fileID: 1004218884}
   voiceLinesScript: {fileID: 1708649429}
+  nukeCooldown: {fileID: 1408631401}
 --- !u!4 &2119677664
 Transform:
   m_ObjectHideFlags: 0
@@ -48796,6 +48824,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: turretLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
+      propertyPath: xp
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

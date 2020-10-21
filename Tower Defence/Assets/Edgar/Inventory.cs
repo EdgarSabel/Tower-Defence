@@ -151,9 +151,13 @@ public class Inventory : MonoBehaviour
         int turretLevel;
         for (int f = 0; f < turrets.Length; f++)
         {
+            int slot = turretHolder.transform.GetChild(f).GetComponentInChildren<Turret>().slot;
             turretLevel = turretHolder.transform.GetChild(f).GetComponentInChildren<Turret>().turretLevel;
+
             turretLevel += 1;
-            turretLevels[f].text = "Lv " + turretLevel.ToString();
+            turretLevels[slot].text = "Lv " + turretLevel.ToString();
+            //turretLevel += 1;
+            //turretLevels[f].text = "Lv " + turretLevel.ToString();
         }
     }
 }
