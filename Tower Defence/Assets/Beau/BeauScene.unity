@@ -2991,6 +2991,7 @@ MonoBehaviour:
   shopIntText: {fileID: 1727018967}
   turretPUText: {fileID: 939505184}
   turretUGText: {fileID: 530555099}
+  optionsPanel: {fileID: 518573777}
   range: 5
   mainCam: {fileID: 379489474}
   shopCam: {fileID: 804568766}
@@ -30382,7 +30383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 4
-  itemInfo: '*Abiliy*
+  itemInfo: '*Ability*
 
     Damages all enemies on map on use'
   itemCost: 1500
@@ -47975,7 +47976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: turretLevel
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}

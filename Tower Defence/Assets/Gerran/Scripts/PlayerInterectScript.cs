@@ -9,7 +9,7 @@ public class PlayerInterectScript : MonoBehaviour
 
     public GameObject upgradePanel, hudPanel, cam, player, turret;
     public RaycastHit hit;
-    public GameObject menuPanel, shopIntText, turretPUText, turretUGText;
+    public GameObject menuPanel, shopIntText, turretPUText, turretUGText, optionsPanel;
     public int range = 5;
 
     public GameObject mainCam, shopCam, waitForNextRoundObj, skipObj;
@@ -71,8 +71,9 @@ public class PlayerInterectScript : MonoBehaviour
         }
         if (Input.GetButtonDown("Cancel"))
         {
-            if (menuPanel.activeSelf == false && shopCam.activeSelf == false)
+            if (menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == false)
             {
+                //Menu on
                 hudPanel.SetActive(false);
                 menuPanel.SetActive(true);
                 player.GetComponent<PlayerMovement>().enabled = !enabled;
@@ -82,8 +83,9 @@ public class PlayerInterectScript : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-            else if(shopCam.activeSelf == true)
+            else if(menuPanel.activeSelf == false && shopCam.activeSelf == true && upgradePanel.activeSelf == false && optionsPanel.activeSelf == false)
             {
+                //Shop off
                 shopCam.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = enabled;
                 cam.GetComponent<CamLook>().enabled = enabled;
@@ -95,8 +97,9 @@ public class PlayerInterectScript : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
-            else if (menuPanel.activeSelf == true)
+            else if (menuPanel.activeSelf == true && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == false)
             {
+                //Menu off
                 hudPanel.SetActive(true);
                 menuPanel.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = enabled;
@@ -105,6 +108,22 @@ public class PlayerInterectScript : MonoBehaviour
 
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+            }
+            else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
+            {
+                //Upgrade off
+                upgradePanel.SetActive(false);
+                upgradePanel.GetComponent<DetectTurret>().turret = null;
+                cam.GetComponent<CamLook>().enabled = enabled;
+                cam.GetComponent<CamLook>().canMove = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else if (menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == true)
+            {
+                //Options back
+                menuPanel.SetActive(true);
+                optionsPanel.SetActive(false);
             }
         }
     }
