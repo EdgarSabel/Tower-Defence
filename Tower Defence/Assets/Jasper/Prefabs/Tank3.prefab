@@ -7286,7 +7286,7 @@ MonoBehaviour:
   walkingSpeed: 2
   EnemyHealth: 600
   EnemyDmg: 10
-  moneyDropAmount: 150
+  moneyDropAmount: 200
   burnDmg: 0
   distTravel: 0
   timeAlive: 0
