@@ -35087,6 +35087,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopItemsFloaty
       objectReference: {fileID: 0}
+    - target: {fileID: 686095276565880910, guid: b34234da1b3b35f4a94b34dc0b55e07f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa9de758bc93c244babc40dfdb1be954, type: 2}
+    - target: {fileID: 4525106597026415572, guid: b34234da1b3b35f4a94b34dc0b55e07f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4d758a399fe3134f86c1f43bdc31070, type: 2}
     - target: {fileID: 8812452984818369286, guid: b34234da1b3b35f4a94b34dc0b55e07f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00312
