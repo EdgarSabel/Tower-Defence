@@ -10,7 +10,7 @@ public class OptionsManeger : MonoBehaviour
     public static float sensitivityStatic, masterSliderValue, musicSliderValue, soundSliderValue;
     public AudioMixer mixer;
     public GameObject playercam;
-
+    public GameObject[] panels;
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -45,7 +45,6 @@ public class OptionsManeger : MonoBehaviour
         musicVolumeSlider.value = musicSliderValue;
         soundVolumeSlider.value = soundSliderValue;
     }
-
     public void SetMasterVol(float sliderValue)
     {
         masterSliderValue = sliderValue;

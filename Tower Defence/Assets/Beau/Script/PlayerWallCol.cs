@@ -11,12 +11,18 @@ public class PlayerWallCol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.isTrigger == false)
-        transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
+        if(other.gameObject.tag != "Enemy")
+        {
+            if(other.isTrigger == false)
+            transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.isTrigger == false)
-            transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
+        if(other.gameObject.tag != "Enemy")
+        {
+            if (other.isTrigger == false)
+                transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
+        }
     }
 }

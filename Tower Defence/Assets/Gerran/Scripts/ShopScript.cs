@@ -6,34 +6,81 @@ using TMPro;
 public class ShopScript : MonoBehaviour
 {
 
-    public int numFirerate,numFreeze,numNuke,prizeHP, prizeFirerate, prizeFreeze, prizeNuke, prizeTurretRepairSpeed, healthPlus;
-    public GameObject money, turret, shopPanel, hudPanel, player, cam;
-    public int maxRange;
-    public TextMeshProUGUI iGFirerateNumText, iGFreezeNumText, iGNukeNumText;
+    public int numFirerate,numFreeze,numNuke, healthPlus;
+    public GameObject money, turret;
     public float decreaseNum, min;
-    public TextMeshProUGUI costHealth, costFirerate, costFreeze, costNuke, costRepair;
+    public TextMeshProUGUI itemInfo, cost;
     public AudioSource buySound, notEnoughMoneySound;
-    // Start is called before the first frame update
-    void Start()
-    {
-        costHealth.text = "Cost: " + prizeHP.ToString();
-        costFirerate.text = "Cost: " + prizeFirerate.ToString();
-        costFreeze.text = "Cost: " + prizeFreeze.ToString();
-        costNuke.text = "Cost: " + prizeNuke.ToString();
-        costRepair.text = "Cost: " + prizeTurretRepairSpeed.ToString();
-    }
-
-    // Update is called once per frame
+    public RaycastHit hit;
+    public GameObject shopCam;
     void Update()
     {
-        iGFirerateNumText.text = numFirerate.ToString();
-        iGFreezeNumText.text = numFreeze.ToString();
-        iGNukeNumText.text = numNuke.ToString();
+        Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
+        if(shopCam.activeSelf == true)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, -5, QueryTriggerInteraction.Ignore))
+            {
+                if (hit.collider.gameObject.tag == "ShopItem")
+                {
+                    int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
+                    if (itemId == 0)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                    else if (itemId == 1)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                    else if (itemId == 2)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                    else if (itemId == 3)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                    else if (itemId == 4)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                }
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if(hit.collider.gameObject.tag == "ShopItem")
+                    {
+                        int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
+                        if(itemId == 0)
+                        {
+                            BuyHP(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if(itemId == 1)
+                        {
+                            BuyFirerate(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if (itemId == 2)
+                        {
+                            BuyFreeze(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if (itemId == 3)
+                        {
+                            BuyNuke(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if (itemId == 4)
+                        {
+                            BuyTurretRepairSpeed(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                    }
+                }
+            }
     }
 
-    public void BuyHP()
+    public void BuyHP(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeHP)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
             if (money.GetComponent<HealthManager>().health < 120)
             {
@@ -45,7 +92,7 @@ public class ShopScript : MonoBehaviour
                     money.GetComponent<HealthManager>().health = 120;
                 }
                 money.GetComponent<HealthManager>().UpdateHealthNumber();
-                money.GetComponent<MoneyManager>().GetMoney(-prizeHP);
+                money.GetComponent<MoneyManager>().GetMoney(-prize);
             }
         }
         else
@@ -54,13 +101,13 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    public void BuyFirerate()
+    public void BuyFirerate(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeFirerate)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
             numFirerate += 1;
             buySound.Play();
-            money.GetComponent<MoneyManager>().GetMoney(-prizeFirerate);
+            money.GetComponent<MoneyManager>().GetMoney(-prize);
         }
         else
         {
@@ -68,13 +115,13 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    public void BuyFreeze()
+    public void BuyFreeze(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeFreeze)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
             numFreeze += 1;
             buySound.Play();
-            money.GetComponent<MoneyManager>().GetMoney(-prizeFreeze);
+            money.GetComponent<MoneyManager>().GetMoney(-prize);
         }
         else
         {
@@ -82,13 +129,13 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    public void BuyNuke()
+    public void BuyNuke(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeNuke)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
             numNuke += 1;
             buySound.Play();
-            money.GetComponent<MoneyManager>().GetMoney(-prizeNuke);
+            money.GetComponent<MoneyManager>().GetMoney(-prize);
         }
         else
         {
@@ -96,15 +143,15 @@ public class ShopScript : MonoBehaviour
         }
     }
 
-    public void BuySpike()
+    public void BuyTurretRepairSpeed(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prizeTurretRepairSpeed)
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
             //decrease turret repair speed
             buySound.Play();
             min = 5 / decreaseNum;
             turret.GetComponent<TurretRepair>().decreaseNumber -= min;
-            money.GetComponent<MoneyManager>().GetMoney(-prizeTurretRepairSpeed);
+            money.GetComponent<MoneyManager>().GetMoney(-prize);
         }
         else
         {

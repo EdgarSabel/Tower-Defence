@@ -9,6 +9,8 @@ public class PlayerInterectScript : MonoBehaviour
     public RaycastHit hit;
     public GameObject menuPanel, shopIntText, turretPUText, turretUGText;
     public int range = 5;
+
+    public GameObject mainCam, shopCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,14 +45,15 @@ public class PlayerInterectScript : MonoBehaviour
                 shopIntText.SetActive(true);
                 if (Input.GetButtonDown("Fire2"))
                 {
-                    shopPanel.SetActive(true);
-                    hudPanel.SetActive(false);
+                    shopCam.SetActive(true);
+                    player.GetComponent<PlayerMovement>().enabled = !enabled;
+                    cam.GetComponent<CamLook>().enabled = !enabled;
+
                     upgradePanel.SetActive(false);
                     menuPanel.SetActive(false);
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     cam.GetComponent<CamLook>().canMove = false;
-                    //player.GetComponent<CamLook>().canMove = false;
                 }
             }
             else if (shopIntText.activeSelf == true || turretPUText.activeSelf == true || turretUGText.activeSelf == true)
@@ -66,17 +69,35 @@ public class PlayerInterectScript : MonoBehaviour
             turretPUText.SetActive(false);
             turretUGText.SetActive(false);
         }
-
         if (Input.GetButtonDown("Cancel"))
         {
-            cam.GetComponent<CamLook>().enabled = !enabled;
-            player.GetComponent<PlayerMovement>().enabled = !enabled;
-            menuPanel.SetActive(true);
-            upgradePanel.SetActive(false);
-            shopPanel.SetActive(false);
-            hudPanel.SetActive(false);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if(menuPanel.activeSelf == false)
+            {
+                cam.GetComponent<CamLook>().enabled = !enabled;
+                player.GetComponent<PlayerMovement>().enabled = !enabled;
+                menuPanel.SetActive(true);
+                upgradePanel.SetActive(false);
+                shopPanel.SetActive(false);
+                hudPanel.SetActive(false);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else if (menuPanel.activeSelf == true)
+            {
+                if(shopPanel.activeSelf == true)
+                {
+                    shopCam.SetActive(false);
+                    player.GetComponent<PlayerMovement>().enabled = enabled;
+                    cam.GetComponent<CamLook>().enabled = enabled;
+                }
+                cam.GetComponent<CamLook>().enabled = enabled;
+                player.GetComponent<PlayerMovement>().enabled = enabled;
+                menuPanel.SetActive(false);
+                hudPanel.SetActive(true);
+                cam.GetComponent<CamLook>().canMove = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = true;
+            }
         }
     }
 }

@@ -17,7 +17,9 @@ public class SettingsManeger : MonoBehaviour
     public Slider sensetivetySlider;
 
     public GameObject menuPanel, upgradePanel, shopPanel, hudPanel, cam, player;
+    public GameObject[] panels;
 
+    public GameObject mainCam, shopCam;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +49,11 @@ public class SettingsManeger : MonoBehaviour
         upgradePanel.GetComponent<DetectTurret>().turret = null;
     }
     public void ShopBack()
-    {
+    { 
+        shopCam.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = enabled;
+        cam.GetComponent<CamLook>().enabled = enabled;
+
         shopPanel.SetActive(false);
         hudPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
