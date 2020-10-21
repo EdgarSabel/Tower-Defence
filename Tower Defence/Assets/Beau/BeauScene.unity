@@ -48001,10 +48001,10 @@ MonoBehaviour:
       rate: 0.2
     moneyToGet: 100
   - enemies:
-    - enemyType: 2
+    - enemyType: 5
       amount: 11
       rate: 0.2
-    - enemyType: 1
+    - enemyType: 4
       amount: 3
       rate: 0.5
     moneyToGet: 100
@@ -48015,7 +48015,7 @@ MonoBehaviour:
     - enemyType: 3
       amount: 5
       rate: 0.1
-    - enemyType: 1
+    - enemyType: 4
       amount: 4
       rate: 0.2
     - enemyType: 3
@@ -48026,15 +48026,15 @@ MonoBehaviour:
       rate: 0.1
     moneyToGet: 100
   - enemies:
-    - enemyType: 1
+    - enemyType: 4
       amount: 10
       rate: 1
-    - enemyType: 1
+    - enemyType: 4
       amount: 5
       rate: 0.2
     moneyToGet: 100
   - enemies:
-    - enemyType: 2
+    - enemyType: 5
       amount: 25
       rate: 0.3
     moneyToGet: 150
@@ -48042,49 +48042,49 @@ MonoBehaviour:
     - enemyType: 3
       amount: 10
       rate: 0.5
-    - enemyType: 1
+    - enemyType: 4
       amount: 10
       rate: 0.5
-    - enemyType: 2
+    - enemyType: 5
       amount: 10
       rate: 0.5
     moneyToGet: 150
   - enemies:
-    - enemyType: 2
+    - enemyType: 5
       amount: 5
       rate: 1
-    - enemyType: 1
+    - enemyType: 4
       amount: 5
       rate: 1
     - enemyType: 3
       amount: 5
       rate: 1
-    - enemyType: 1
+    - enemyType: 4
       amount: 5
       rate: 1
-    - enemyType: 2
+    - enemyType: 5
       amount: 5
       rate: 1
     moneyToGet: 150
   - enemies:
-    - enemyType: 1
+    - enemyType: 4
       amount: 25
       rate: 0.5
     moneyToGet: 150
   - enemies:
-    - enemyType: 1
+    - enemyType: 4
       amount: 10
       rate: 0.5
-    - enemyType: 2
+    - enemyType: 5
       amount: 20
       rate: 0.5
-    - enemyType: 1
+    - enemyType: 4
       amount: 10
       rate: 0.5
-    - enemyType: 2
+    - enemyType: 5
       amount: 20
       rate: 0.5
-    - enemyType: 1
+    - enemyType: 4
       amount: 15
       rate: 0.5
     moneyToGet: 150
@@ -48092,318 +48092,28 @@ MonoBehaviour:
     - enemyType: 6
       amount: 5
       rate: 0.1
-    - enemyType: 1
+    - enemyType: 7
       amount: 5
       rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
+    - enemyType: 8
       amount: 5
       rate: 0.1
     - enemyType: 6
       amount: 5
       rate: 0.1
-    - enemyType: 1
+    - enemyType: 7
       amount: 5
       rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
+    - enemyType: 8
       amount: 5
       rate: 0.1
     - enemyType: 6
       amount: 5
       rate: 0.1
-    - enemyType: 1
+    - enemyType: 7
       amount: 5
       rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    moneyToGet: 200
-  - enemies:
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
-      amount: 5
-      rate: 0.1
-    - enemyType: 6
-      amount: 5
-      rate: 0.1
-    - enemyType: 1
-      amount: 5
-      rate: 0.1
-    - enemyType: 2
+    - enemyType: 8
       amount: 5
       rate: 0.1
     moneyToGet: 200
