@@ -80,8 +80,8 @@ public class PlayerInterectScript : MonoBehaviour
                 cam.GetComponent<CamLook>().enabled = !enabled;
                 cam.GetComponent<CamLook>().canMove = false;
 
-                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == true && upgradePanel.activeSelf == false && optionsPanel.activeSelf == false)
             {
@@ -94,8 +94,8 @@ public class PlayerInterectScript : MonoBehaviour
                 waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
                 skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
 
-                Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else if (menuPanel.activeSelf == true && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == false)
             {
@@ -106,20 +106,17 @@ public class PlayerInterectScript : MonoBehaviour
                 cam.GetComponent<CamLook>().enabled = enabled;
                 cam.GetComponent<CamLook>().canMove = true;
 
-                Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-                print(Cursor.lockState);
-                print(Cursor.visible);
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
             {
                 //Upgrade off
-                upgradePanel.SetActive(false);
-                upgradePanel.GetComponent<DetectTurret>().turret = null;
-                cam.GetComponent<CamLook>().enabled = enabled;
-                cam.GetComponent<CamLook>().canMove = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                upgradePanel.SetActive(false);
+                upgradePanel.GetComponent<DetectTurret>().turret = null;
+                StartCoroutine(CursorLock());
             }
             else if (menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == true)
             {
@@ -128,5 +125,11 @@ public class PlayerInterectScript : MonoBehaviour
                 optionsPanel.SetActive(false);
             }
         }
+    }
+    IEnumerator CursorLock()
+    {
+        yield return new WaitForEndOfFrame();
+        cam.GetComponent<CamLook>().enabled = enabled;
+        cam.GetComponent<CamLook>().canMove = true;
     }
 }
