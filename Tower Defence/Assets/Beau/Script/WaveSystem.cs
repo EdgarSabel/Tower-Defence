@@ -34,6 +34,7 @@ public class WaveSystem : MonoBehaviour
     public Wave[] waves;
     public Sounds sounds;
     public VoiceLines voiceLinesScript;
+    public AbilityCooldown nukeCooldown;
 
     float timer;
     GameObject wantedSpawnPoint;
@@ -98,6 +99,7 @@ public class WaveSystem : MonoBehaviour
     {
         timerObj.SetActive(false);
         roundNumber++;
+        nukeCooldown.ResetAbilCover();
         DoVoiceLine(0);
         sounds.startRoundSound.Play();
         UpdateRoundNumber();

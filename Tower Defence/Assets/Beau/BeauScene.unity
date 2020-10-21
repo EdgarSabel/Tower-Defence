@@ -32584,7 +32584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1185588423}
-  cooldownTimeMinPerSec: 5
+  cooldownTimeMinPerSec: 1
 --- !u!1 &1409927297
 GameObject:
   m_ObjectHideFlags: 0
@@ -48389,6 +48389,7 @@ MonoBehaviour:
     shopOpenedSound: {fileID: 1004218884}
     startRoundSound: {fileID: 1004218884}
   voiceLinesScript: {fileID: 1708649429}
+  nukeCooldown: {fileID: 1408631401}
 --- !u!4 &2119677664
 Transform:
   m_ObjectHideFlags: 0
