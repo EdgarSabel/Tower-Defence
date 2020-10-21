@@ -41664,11 +41664,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0c2e36019f915469a559a5bc48d688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beginRound: {fileID: 1978205578}
-  endRound: {fileID: 776517599}
-  nuke: {fileID: 475568072}
-  freeze: {fileID: 394059262}
-  death: {fileID: 1758904183}
+  audios:
+    beginRound2: {fileID: 1978205578}
+    endRound5: {fileID: 776517599}
+    nuke: {fileID: 475568072}
+    freeze: {fileID: 394059262}
+    death: {fileID: 1758904183}
   parentAudios: {fileID: 718152959}
   mainAudioSource: {fileID: 493382604}
 --- !u!4 &1708649430
@@ -48234,6 +48235,7 @@ MonoBehaviour:
   sounds:
     shopOpenedSound: {fileID: 1004218884}
     startRoundSound: {fileID: 1004218884}
+  voiceLinesScript: {fileID: 0}
 --- !u!4 &2119677664
 Transform:
   m_ObjectHideFlags: 0

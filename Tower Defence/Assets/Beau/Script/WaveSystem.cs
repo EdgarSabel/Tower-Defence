@@ -33,6 +33,7 @@ public class WaveSystem : MonoBehaviour
     public int infEnemieIncrease;
     public Wave[] waves;
     public Sounds sounds;
+    public VoiceLines voiceLinesScript;
 
     float timer;
     GameObject wantedSpawnPoint;
@@ -87,6 +88,7 @@ public class WaveSystem : MonoBehaviour
     }
     void EndRound()
     {
+        DoVoiceLine(1);
         playerManager.GetComponent<MoneyManager>().GetMoney(moneyNumber);
         allEnemiesAreSpawned = false;
         WaitForNextRound();
@@ -96,6 +98,7 @@ public class WaveSystem : MonoBehaviour
     {
         timerObj.SetActive(false);
         roundNumber++;
+        DoVoiceLine(0);
         sounds.startRoundSound.Play();
         UpdateRoundNumber();
         if (roundNumber < waves.Length)
@@ -129,5 +132,22 @@ public class WaveSystem : MonoBehaviour
             }
         }
         allEnemiesAreSpawned = true;
+    }
+    public void DoVoiceLine(int beginOrEndRound)
+    {
+        if(beginOrEndRound == 0)
+        {
+            if (roundNumber == 2)
+            {
+                voiceLinesScript.SelectAudio(0);
+            }
+        }
+        else if(beginOrEndRound == 1)
+        { 
+            if(roundNumber == 5)
+            {
+                voiceLinesScript.SelectAudio(1);
+            }
+        }
     }
 }
