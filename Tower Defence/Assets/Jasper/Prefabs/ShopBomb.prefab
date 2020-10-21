@@ -4940,6 +4940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25b153127ec4084ca5175cf0db7a650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  nuke: {fileID: 2100000, guid: 75d1a73310dfa8f4fa1b8c8a8de22568, type: 2}
   explosionDuration: 11
   waitForInvis: 2
   explosionSound: {fileID: 4785264371539279546}

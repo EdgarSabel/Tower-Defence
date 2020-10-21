@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class NukeScript : MonoBehaviour
 {
+    public Material normal, nuke; //skyboxes
     GameObject explosion, armsPlayer, nukeCam, volume, faceCube;
     Ability abilScript;
     public float explosionDuration, waitForInvis;
     public AudioSource explosionSound;
     private void Start()
     {
+        normal = RenderSettings.skybox;
         explosion = GameObject.Find("Explosion");
         abilScript = GameObject.Find("Player").GetComponent<Ability>();
         volume = GameObject.Find("NukeShit").transform.GetChild(0).gameObject;
@@ -35,6 +37,7 @@ public class NukeScript : MonoBehaviour
         yield return new WaitForSeconds(waitForInvis);
         abilScript.Boem();
         this.GetComponent<MeshRenderer>().enabled = !enabled;
+        RenderSettings.skybox = nuke;
     }
     IEnumerator End()
     {
@@ -42,6 +45,7 @@ public class NukeScript : MonoBehaviour
         volume.GetComponent<CapsuleCollider>().radius = 0;
         volume.SetActive(false);
         faceCube.SetActive(false);
+        RenderSettings.skybox = normal;
         Destroy(this.gameObject);
     }
 }
