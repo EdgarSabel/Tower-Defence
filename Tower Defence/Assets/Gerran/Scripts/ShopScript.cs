@@ -13,21 +13,21 @@ public class ShopScript : MonoBehaviour
     public AudioSource buySound, notEnoughMoneySound;
     public RaycastHit hit;
     public GameObject shopCam;
+
+    public GameObject player, cam, upgradePanel, menuPanel, waitForNextRoundObj, skipObj;
+    public Color normalColor;
     void Update()
     {
-        Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
-        if(shopCam.activeSelf == true)
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, -5, QueryTriggerInteraction.Ignore))
+        Ray ray = shopCam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        if (shopCam.activeSelf == true)
+        {
+            if (Physics.Raycast(ray, out hit, 1000, -5, QueryTriggerInteraction.Ignore))
             {
                 if (hit.collider.gameObject.tag == "ShopItem")
                 {
                     int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
-                    if (itemId == 0)
-                    {
-                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
-                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
-                    }
-                    else if (itemId == 1)
+                    if (itemId == 1)
                     {
                         itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
                         cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
@@ -47,35 +47,60 @@ public class ShopScript : MonoBehaviour
                         itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
                         cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
                     }
+                    else if (itemId == 5)
+                    {
+                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                    }
+                }
+                else
+                {
+                    itemInfo.text = "";
+                    cost.text = "";
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    if(hit.collider.gameObject.tag == "ShopItem")
+                    if (hit.collider.gameObject.tag == "ShopItem")
                     {
                         int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
-                        if(itemId == 0)
+                        if (itemId == 1)
                         {
+                            print("try to buy health");
                             BuyHP(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
-                        }
-                        else if(itemId == 1)
-                        {
-                            BuyFirerate(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                         }
                         else if (itemId == 2)
                         {
-                            BuyFreeze(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                            BuyFirerate(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                         }
                         else if (itemId == 3)
                         {
-                            BuyNuke(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                            BuyFreeze(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                         }
                         else if (itemId == 4)
                         {
+                            BuyNuke(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if (itemId == 5)
+                        {
                             BuyTurretRepairSpeed(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                        }
+                        else if (itemId == 6)
+                        {
+                            shopCam.SetActive(false);
+                            player.GetComponent<PlayerMovement>().enabled = enabled;
+                            cam.GetComponent<CamLook>().enabled = enabled;
+                            cam.GetComponent<CamLook>().canMove = true;
+
+                            waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+                            skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+
+                            Cursor.lockState = CursorLockMode.Locked;
+                            Cursor.visible = true;
                         }
                     }
                 }
             }
+        }
     }
 
     public void BuyHP(int prize)

@@ -16,7 +16,7 @@ public class SettingsManeger : MonoBehaviour
     public TMP_InputField inputBoxText;
     public Slider sensetivetySlider;
 
-    public GameObject menuPanel, upgradePanel, shopPanel, hudPanel, cam, player;
+    public GameObject menuPanel, upgradePanel, hudPanel, cam, player;
     public GameObject[] panels;
 
     public GameObject mainCam, shopCam;
@@ -54,7 +54,6 @@ public class SettingsManeger : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = enabled;
         cam.GetComponent<CamLook>().enabled = enabled;
 
-        shopPanel.SetActive(false);
         hudPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

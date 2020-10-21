@@ -20,6 +20,5 @@ public class MoneyManager : MonoBehaviour
     void UpdateMoneyNumber()
     {
         moneyText.text = moneyNumber.ToString();
-        shopText.text = moneyNumber.ToString();
     }
 }
