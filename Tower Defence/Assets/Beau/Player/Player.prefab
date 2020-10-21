@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed34885f36efd2459ebee442b9fc7e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDmg: 10
+  playerDmg: 2
   repairNumber: 20
   playerWeaponRange: 5
   playerWeaponDelay: 0.6
