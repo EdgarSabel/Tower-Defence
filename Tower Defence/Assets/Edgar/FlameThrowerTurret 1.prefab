@@ -1115,31 +1115,31 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 4
+    - damage: 5
       cost: 1300
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 50
-    - damage: 9
+    - damage: 10
       cost: 2500
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 100
-    - damage: 13
+    - damage: 14
       cost: 4000
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 200
-    - damage: 17
+    - damage: 18
       cost: 6000
       fireRate: 8
       radius: 7
       xp: 0
       nextLvlXp: 500
-    - damage: 31
+    - damage: 32
       cost: 0
       fireRate: 8
       radius: 8

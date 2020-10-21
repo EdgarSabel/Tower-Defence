@@ -18,8 +18,8 @@ public class Enemy : MonoBehaviour
     public bool isFlying, isFalling, isZapped;
     public Animator anim;
     public Collider enemyCollider;
-    public ParticleSystem burn;
-    public bool burnIsAlreadyOn;
+    public ParticleSystem burn, lightning;
+    public bool burnIsAlreadyOn, zapIsAlreadyOn;
     [System.Serializable]
         public class Sounds
         {
@@ -54,13 +54,15 @@ public class Enemy : MonoBehaviour
             zapTimer += Time.deltaTime;
             if (zapTimer >= zapDur)
             {
+                lightning.Stop();
                 agent.speed = walkingSpeed;
                 zapTimer = 0;
                 isZapped = false;
             }
             else
             {
-                agent.speed = walkingSpeed / 2;
+                lightning.Play();
+                agent.speed = 0;
             }
         }
 

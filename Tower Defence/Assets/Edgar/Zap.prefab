@@ -112,6 +112,7 @@ MonoBehaviour:
   origin: {x: 0, y: 0, z: 0}
   speed: 0
   range: 10
+  zapDur: 0
   damage: 0
   closestEnemy: {fileID: 0}
   currentEnemy: {fileID: 0}
@@ -126,6 +127,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2978043769826006583}
     m_Modifications:
+    - target: {fileID: 7093783545043472093, guid: fda1484ffa76b964c89391e071ac7814, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46be24a1b8fab324db89a1a5995a9bba, type: 2}
     - target: {fileID: 8230612337016190386, guid: fda1484ffa76b964c89391e071ac7814, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

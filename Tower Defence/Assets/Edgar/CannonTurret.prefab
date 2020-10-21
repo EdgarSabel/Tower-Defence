@@ -549,31 +549,31 @@ MonoBehaviour:
     shootSoundPitch: 0
   levelStats:
     stats:
-    - damage: 50
+    - damage: 40
       cost: 1300
       fireRate: 1.7
       radius: 10
       xp: 0
       nextLvlXp: 50
-    - damage: 70
+    - damage: 60
       cost: 2100
       fireRate: 2
       radius: 10
       xp: 0
       nextLvlXp: 100
-    - damage: 80
+    - damage: 70
       cost: 3000
       fireRate: 2.3
       radius: 10
       xp: 0
       nextLvlXp: 200
-    - damage: 90
+    - damage: 80
       cost: 6000
       fireRate: 3
       radius: 10
       xp: 0
       nextLvlXp: 500
-    - damage: 300
+    - damage: 280
       cost: 0
       fireRate: 3
       radius: 10
@@ -591,7 +591,7 @@ MonoBehaviour:
   projectile: {fileID: 3723275381280755473, guid: 478c4da4d58627f409e4fbc4c0623c7d, type: 3}
   currentProjectile: {fileID: 0}
   spawnPos: {fileID: 123358351246746964}
-  projectileSpeed: 0.22
+  projectileSpeed: 0.17
 --- !u!1 &3128347978045668607
 GameObject:
   m_ObjectHideFlags: 0

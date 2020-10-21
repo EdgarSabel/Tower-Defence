@@ -127,6 +127,7 @@ MonoBehaviour:
   anim: {fileID: 869423555365255250}
   enemyCollider: {fileID: 6933432315886908195}
   burn: {fileID: 5784399954365904766}
+  lightning: {fileID: 3980563141339399009}
   burnIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
@@ -2174,14 +2175,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
---- !u!1 &6538257072198828157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4742149978415007796, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
-  m_PrefabInstance: {fileID: 1977940525773572169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6739033213258850729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5113509091528878560, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
+  m_PrefabInstance: {fileID: 1977940525773572169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6538257072198828157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742149978415007796, guid: 12de93d01feeb50428b02504c3ef8f17, type: 3}
   m_PrefabInstance: {fileID: 1977940525773572169}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8351442920606527727
@@ -2300,5 +2301,10 @@ PrefabInstance:
 --- !u!4 &3980563141451410823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4961704554049215848, guid: 9f1b745ef918643469f9fe6504a0c87c, type: 3}
+  m_PrefabInstance: {fileID: 8351442920606527727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3980563141339399009 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4961704553926865806, guid: 9f1b745ef918643469f9fe6504a0c87c, type: 3}
   m_PrefabInstance: {fileID: 8351442920606527727}
   m_PrefabAsset: {fileID: 0}

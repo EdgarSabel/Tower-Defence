@@ -1101,6 +1101,7 @@ MonoBehaviour:
   anim: {fileID: 6676868217319158927}
   enemyCollider: {fileID: 3495267949674463230}
   burn: {fileID: 71918257367661475}
+  lightning: {fileID: 7459119099047317436}
   burnIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
@@ -2126,6 +2127,11 @@ PrefabInstance:
 --- !u!4 &7459119099209654618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4961704554049215848, guid: 9f1b745ef918643469f9fe6504a0c87c, type: 3}
+  m_PrefabInstance: {fileID: 2548924465898830898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7459119099047317436 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4961704553926865806, guid: 9f1b745ef918643469f9fe6504a0c87c, type: 3}
   m_PrefabInstance: {fileID: 2548924465898830898}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5461421826348745876
