@@ -5,7 +5,7 @@ public class NukeScript : MonoBehaviour
 {
     GameObject explosion, armsPlayer, nukeCam, volume, faceCube;
     Ability abilScript;
-    public float explosionDuration, waitForDmg;
+    public float explosionDuration, waitForInvis;
     public AudioSource explosionSound;
     private void Start()
     {
@@ -26,10 +26,15 @@ public class NukeScript : MonoBehaviour
             child.gameObject.SetActive(true);
             child.GetComponent<ParticleSystem>().Play();
         }
-        this.GetComponent<MeshRenderer>().enabled = !enabled;
-        abilScript.Boem();
+        StartCoroutine(WaitForInvis());
         volume.SetActive(true);
         StartCoroutine(End());
+    }
+    IEnumerator WaitForInvis()
+    {
+        yield return new WaitForSeconds(waitForInvis);
+        abilScript.Boem();
+        this.GetComponent<MeshRenderer>().enabled = !enabled;
     }
     IEnumerator End()
     {

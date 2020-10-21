@@ -20,7 +20,6 @@ public class PlayerWallCol : MonoBehaviour
         {
             return;
         }
-        print(other.gameObject.tag);
         if (other.isTrigger == false)
             transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
     }
@@ -34,7 +33,6 @@ public class PlayerWallCol : MonoBehaviour
         {
             return;
         }
-        print(other.gameObject.tag);
         if (other.isTrigger == false)
             transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
     }

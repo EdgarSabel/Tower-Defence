@@ -4941,7 +4941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionDuration: 11
-  waitForDmg: 0
+  waitForInvis: 2
   explosionSound: {fileID: 4785264371539279546}
 --- !u!1 &3312519876051743036
 GameObject:

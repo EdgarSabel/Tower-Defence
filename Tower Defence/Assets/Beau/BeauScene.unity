@@ -2553,7 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1914498151}
-  cooldownTimeMinPerSec: 50
+  cooldownTimeMinPerSec: 20
 --- !u!1 &126886876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,7 +3195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 912587673}
-  cooldownTimeMinPerSec: 50
+  cooldownTimeMinPerSec: 20
 --- !u!1001 &167787994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31947,7 +31947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1185588423}
-  cooldownTimeMinPerSec: 50
+  cooldownTimeMinPerSec: 5
 --- !u!1 &1409927297
 GameObject:
   m_ObjectHideFlags: 0
@@ -33915,7 +33915,7 @@ MonoBehaviour:
     Increases fire rate when used
 
     Does not stack'
-  itemCost: 1000
+  itemCost: 800
 --- !u!65 &1548751683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44961,8 +44961,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numFirerate: 0
   numFreeze: 0
-  numNuke: 0
+  numNuke: 5
   healthPlus: 20
+  numFireRateText: {fileID: 384216389}
+  numFreezeText: {fileID: 1975387476}
+  numNukeText: {fileID: 565854612}
   money: {fileID: 148163699}
   turret: {fileID: 7718558902587799626}
   decreaseNum: 20

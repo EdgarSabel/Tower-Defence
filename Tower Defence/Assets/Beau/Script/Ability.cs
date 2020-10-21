@@ -34,6 +34,7 @@ public class Ability : MonoBehaviour
                         shopScript.numFirerate--;
                         StartCoroutine(IncreaseFireRate());
                         cooldownRF.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                        shopScript.UpdateNumbers();
 
                     }
                 }
@@ -47,6 +48,7 @@ public class Ability : MonoBehaviour
                         shopScript.numFreeze--;
                         FreezeEnemies();
                         cooldownFreeze.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                        shopScript.UpdateNumbers();
 
                     }
                 }
@@ -60,7 +62,7 @@ public class Ability : MonoBehaviour
                         shopScript.numNuke--;
                         NukeAllEnemies();
                         cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
-
+                        shopScript.UpdateNumbers();
                     }
                 }
             }

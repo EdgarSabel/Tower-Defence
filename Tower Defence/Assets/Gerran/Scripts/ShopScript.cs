@@ -7,6 +7,7 @@ public class ShopScript : MonoBehaviour
 {
 
     public int numFirerate,numFreeze,numNuke, healthPlus;
+    public TextMeshProUGUI numFireRateText, numFreezeText, numNukeText;
     public GameObject money, turret;
     public float decreaseNum, min;
     public TextMeshProUGUI itemInfo, cost;
@@ -16,6 +17,10 @@ public class ShopScript : MonoBehaviour
 
     public GameObject player, cam, upgradePanel, menuPanel, waitForNextRoundObj, skipObj;
     public Color normalColor;
+    private void Start()
+    {
+        UpdateNumbers();
+    }
     void Update()
     {
         Ray ray = shopCam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
@@ -132,6 +137,7 @@ public class ShopScript : MonoBehaviour
             numFirerate += 1;
             buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prize);
+            UpdateNumbers();
         }
         else
         {
@@ -146,6 +152,7 @@ public class ShopScript : MonoBehaviour
             numFreeze += 1;
             buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prize);
+            UpdateNumbers();
         }
         else
         {
@@ -160,6 +167,7 @@ public class ShopScript : MonoBehaviour
             numNuke += 1;
             buySound.Play();
             money.GetComponent<MoneyManager>().GetMoney(-prize);
+            UpdateNumbers();
         }
         else
         {
@@ -176,10 +184,17 @@ public class ShopScript : MonoBehaviour
             min = 5 / decreaseNum;
             turret.GetComponent<TurretRepair>().decreaseNumber -= min;
             money.GetComponent<MoneyManager>().GetMoney(-prize);
+            UpdateNumbers();
         }
         else
         {
             notEnoughMoneySound.Play();
         }
+    }
+    public void UpdateNumbers()
+    {
+        numFireRateText.text = numFirerate.ToString();
+        numFreezeText.text = numFreeze.ToString();
+        numNukeText.text = numNuke.ToString();
     }
 }
