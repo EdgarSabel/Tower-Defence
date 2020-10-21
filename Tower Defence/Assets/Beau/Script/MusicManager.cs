@@ -23,6 +23,10 @@ public class MusicManager : MonoBehaviour
             DontDestroyOnLoad(this);
             Setup();
         }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
     private void Update()
     {
