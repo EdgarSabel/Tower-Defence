@@ -55,6 +55,8 @@ public class DetectTurret : MonoBehaviour
                     "<br><br>Dmg: " + "Maxed" +
                     "<br>Fire Rate: " + "Maxed" +
                     "<br>Radius: " + "Maxed";
+
+                costText.text = "";
             }
         }
         else

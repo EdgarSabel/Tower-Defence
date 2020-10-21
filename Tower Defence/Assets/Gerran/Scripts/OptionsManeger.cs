@@ -24,22 +24,22 @@ public class OptionsManeger : MonoBehaviour
         
         if (sensitivityStatic == 0)
         {
-            sensitivityStatic = 7;
+            sensitivityStatic = 4;
         }
         inputBoxText.text = sensitivityStatic.ToString();
         sensitivitySlider.value = sensitivityStatic;
 
         if(masterSliderValue == 0)
         {
-            masterSliderValue = 1;
+            masterSliderValue = .5f;
         }
         if(musicSliderValue == 0)
         {
-            musicSliderValue = 1;
+            musicSliderValue = .5f;
         }
         if(soundSliderValue == 0)
         {
-            soundSliderValue = 1;
+            soundSliderValue = .5f;
         }
         masterVolumeSlider.value = masterSliderValue;
         musicVolumeSlider.value = musicSliderValue;
