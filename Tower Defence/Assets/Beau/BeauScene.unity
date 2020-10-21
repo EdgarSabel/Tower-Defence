@@ -46032,6 +46032,7 @@ MonoBehaviour:
   buySound: {fileID: 1528326637}
   notEnoughMoneySound: {fileID: 305063439}
   shopCam: {fileID: 804568766}
+  shopPanel: {fileID: 859049333}
   player: {fileID: 1834545573}
   cam: {fileID: 379489474}
   upgradePanel: {fileID: 1813661106}

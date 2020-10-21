@@ -5,7 +5,6 @@ using TMPro;
 
 public class ShopScript : MonoBehaviour
 {
-
     public int numFirerate,numFreeze,numNuke, healthPlus, numTurretRepairMax;
     int turretRepairNum;
     public float decreaseNum;
@@ -14,7 +13,7 @@ public class ShopScript : MonoBehaviour
     public TextMeshProUGUI itemInfo, cost;
     public AudioSource buySound, notEnoughMoneySound;
     public RaycastHit hit;
-    public GameObject shopCam;
+    public GameObject shopCam, shopPanel;
 
     public GameObject player, cam, upgradePanel, menuPanel, waitForNextRoundObj, skipObj;
     public Color normalColor;
@@ -113,6 +112,16 @@ public class ShopScript : MonoBehaviour
                     }
                 }
             }
+        }
+        if (shopCam.activeSelf == false && shopPanel.activeSelf == true)
+        {
+            print("set false");
+            shopPanel.SetActive(false);
+        }
+        if (shopCam.activeSelf == true && shopPanel.activeSelf == false)
+        {
+            print("set true");
+            shopPanel.SetActive(true);
         }
     }
 
