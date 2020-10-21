@@ -1320,6 +1320,8 @@ MonoBehaviour:
     placeTurretVolume: 0
     placeTurretPitch: 0
   rangeIndicator: {fileID: 6162178902360393946}
+  turretHolder: {fileID: 0}
+  turretLevels: []
 --- !u!114 &4051323380791500736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1476,7 +1478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4738552e7ca6e224b9d4df1ff2725b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopPanel: {fileID: 0}
   turretPanel: {fileID: 0}
   hudPanel: {fileID: 0}
   cam: {fileID: 0}

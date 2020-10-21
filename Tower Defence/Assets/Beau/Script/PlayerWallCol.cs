@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting;
 using UnityEngine;
 
 public class PlayerWallCol : MonoBehaviour
@@ -11,18 +12,30 @@ public class PlayerWallCol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Enemy")
+        if(other.gameObject.tag == "Enemy")
         {
-            if(other.isTrigger == false)
-            transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
+            return;
         }
+        else if (other.gameObject.tag == "Turret")
+        {
+            return;
+        }
+        print(other.gameObject.tag);
+        if (other.isTrigger == false)
+            transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag != "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
-            if (other.isTrigger == false)
-                transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
+            return;
         }
+        else if (other.gameObject.tag == "Turret")
+        {
+            return;
+        }
+        print(other.gameObject.tag);
+        if (other.isTrigger == false)
+            transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
     }
 }

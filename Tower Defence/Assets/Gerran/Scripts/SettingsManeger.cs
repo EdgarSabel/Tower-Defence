@@ -37,8 +37,9 @@ public class SettingsManeger : MonoBehaviour
         menuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cam.GetComponent<CamLook>().enabled = enabled;
         player.GetComponent<PlayerMovement>().enabled = enabled;
+        cam.GetComponent<CamLook>().enabled = enabled;
+        cam.GetComponent<CamLook>().canMove = true;
     }
 
     public void Back()
@@ -47,6 +48,8 @@ public class SettingsManeger : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         upgradePanel.GetComponent<DetectTurret>().turret = null;
+        cam.GetComponent<CamLook>().enabled = enabled;
+        cam.GetComponent<CamLook>().canMove = true;
     }
     public void ShopBack()
     { 
