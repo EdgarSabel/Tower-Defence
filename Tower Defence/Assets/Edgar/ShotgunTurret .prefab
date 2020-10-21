@@ -874,11 +874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Shotgun
-  turretInfo: Shoots 3 bullets with spread
+  turretInfo: Shoots 3 projectiles with spread. (Ground)
   levelUpReady: 0
   damage: 10
   slot: 2
-  cost: 1000
+  cost: 1100
   fireRate: 5
   radius: 5
   levelSpeed: 5
@@ -899,7 +899,7 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 12
-      cost: 1050
+      cost: 1100
       fireRate: 2.2
       radius: 7
       xp: 0

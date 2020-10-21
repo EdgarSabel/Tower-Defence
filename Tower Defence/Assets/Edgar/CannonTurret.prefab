@@ -525,11 +525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Cannon
-  turretInfo: Shoot big bullets with high damage
+  turretInfo: Shoots big cannonballs with high damage. (Ground)
   levelUpReady: 0
   damage: 50
   slot: 0
-  cost: 1000
+  cost: 1300
   fireRate: 1
   radius: 10
   levelSpeed: 50
@@ -550,7 +550,7 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 50
-      cost: 1100
+      cost: 1300
       fireRate: 1.7
       radius: 10
       xp: 0

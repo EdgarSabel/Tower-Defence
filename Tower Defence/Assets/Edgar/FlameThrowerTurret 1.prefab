@@ -1090,11 +1090,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Flame
-  turretInfo: Puts enemies on fire
+  turretInfo: Flamethrower dealing damage in an area and applying a burn effect.
+    (Ground/Air)
   levelUpReady: 0
   damage: 5
   slot: 1
-  cost: 1000
+  cost: 1300
   fireRate: 8
   radius: 7
   levelSpeed: 5
@@ -1115,7 +1116,7 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 4
-      cost: 1100
+      cost: 1300
       fireRate: 8
       radius: 7
       xp: 0

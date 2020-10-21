@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Standard
-  turretInfo: Shoots one bullet that always hits
+  turretInfo: Shoots one projectile. Cannot miss. (Ground/Air)
   levelUpReady: 0
   damage: 0
   slot: 0

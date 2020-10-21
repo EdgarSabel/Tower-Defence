@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: ElecTurret
-  turretInfo: Stuns 3 enemies in a row
+  turretInfo: Shoots shock projectile that stuns up to 3 enemies. (Ground/Air)
   levelUpReady: 0
   damage: 7
   slot: 0
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   levelStats:
     stats:
     - damage: 7
-      cost: 1100
+      cost: 1500
       fireRate: 1.8
       radius: 8
       xp: 0
