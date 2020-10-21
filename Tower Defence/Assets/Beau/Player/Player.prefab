@@ -1337,7 +1337,7 @@ MonoBehaviour:
   fireRateTimesNumber: 1.5
   fireRateIncreaseTime: 15
   freezeTime: 10
-  explosionDmg: 100
+  explosionDmg: 150
   nukeSpawnLoc: {fileID: 0}
   nukePrefab: {fileID: 0}
   enemyHolder: {fileID: 0}

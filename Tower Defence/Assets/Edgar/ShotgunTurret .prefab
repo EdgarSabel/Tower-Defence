@@ -874,6 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Shotgun
+  turretInfo: Shoots 3 bullets with spread
   levelUpReady: 0
   damage: 10
   slot: 2

@@ -1090,6 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Flame
+  turretInfo: Puts enemies on fire
   levelUpReady: 0
   damage: 5
   slot: 1

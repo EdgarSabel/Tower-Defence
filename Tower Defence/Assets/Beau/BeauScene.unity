@@ -3904,10 +3904,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4561107986965756450, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
-      propertyPath: walkingSpeed
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.6
@@ -47077,12 +47073,12 @@ MonoBehaviour:
     - enemyType: 0
       amount: 5
       rate: 1.5
-    moneyToGet: 40
+    moneyToGet: 70
   - enemies:
     - enemyType: 0
       amount: 7
       rate: 1.2
-    moneyToGet: 50
+    moneyToGet: 80
   - enemies:
     - enemyType: 0
       amount: 10

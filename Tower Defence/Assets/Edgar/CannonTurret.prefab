@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: Cannon
-  turretInfo: Big yeeter
+  turretInfo: Shoot big bullets with high damage
   levelUpReady: 0
   damage: 50
   slot: 0

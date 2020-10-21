@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretType: ElecTurret
+  turretInfo: Stuns 3 enemies in a row
   levelUpReady: 0
   damage: 7
   slot: 0
