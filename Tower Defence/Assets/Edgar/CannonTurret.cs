@@ -45,7 +45,9 @@ public class CannonTurret : Turret
         animTop.SetTrigger("Shoot");
         cannonSmoke.Play();
         currentProjectile = Instantiate(projectile, spawnPos.transform.position, transform.rotation);
-        currentProjectile.GetComponent<Projectile>().speed = projectileSpeed;
-        currentProjectile.GetComponent<Projectile>().damage = damage;
+        currentProjectile.GetComponent<CBall>().speed = projectileSpeed;
+        currentProjectile.GetComponent<CBall>().damage = damage;
+        currentProjectile.GetComponent<CBall>().target = target;
+
     }
 }

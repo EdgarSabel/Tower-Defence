@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class CBall : MonoBehaviour
 {
     public int damage;
     public float speed;
     private float timer;
-
-    // Update is called once per frame
+    public GameObject target;
     void Update()
     {
         timer += Time.deltaTime;
@@ -16,7 +15,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.Translate(0,0, speed);
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.Find("HitLoc").transform.position, speed);
     }
     private void OnCollisionEnter(Collision collision)
     {

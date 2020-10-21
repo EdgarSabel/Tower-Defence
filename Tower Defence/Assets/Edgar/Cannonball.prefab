@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3723275381280755477}
   - component: {fileID: 3723275381280755474}
   - component: {fileID: 3723275381280755475}
-  - component: {fileID: 3723275381280755472}
+  - component: {fileID: 2753230342255549691}
   m_Layer: 0
   m_Name: Cannonball
   m_TagString: Untagged
@@ -96,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3723275381280755472
+--- !u!114 &2753230342255549691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3723275381280755473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b374699294a9ab4ebafe56a91cefa5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 951de1d7bcdf766498b7007dc014e1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
