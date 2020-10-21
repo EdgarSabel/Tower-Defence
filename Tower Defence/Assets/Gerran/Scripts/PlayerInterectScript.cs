@@ -84,7 +84,6 @@ public class PlayerInterectScript : MonoBehaviour
             }
             else if(shopCam.activeSelf == true)
             {
-                print("exit shop");
                 shopCam.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = enabled;
                 cam.GetComponent<CamLook>().enabled = enabled;

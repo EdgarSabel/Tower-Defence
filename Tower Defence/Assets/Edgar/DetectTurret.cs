@@ -17,7 +17,7 @@ public class DetectTurret : MonoBehaviour
     public int upgradePrice;
     public Slider xpSlider;
     public GameObject infoPanel;
-    public TextMeshProUGUI infoText, costText, lvText;
+    public TextMeshProUGUI infoText, costText, lvText, infoTypeTurret;
     private void Update()
     {
         for (int i = 0; i < turret.GetComponent<TurretRepair>().turretScript.levelStats.stats.Length; i++)
@@ -69,6 +69,8 @@ public class DetectTurret : MonoBehaviour
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].fireRate.ToString() +
                 "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
                 " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString();
+
+            infoTypeTurret.text = buttonTurret.GetComponentInChildren<Turret>().turretInfo;
 
             costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
         }

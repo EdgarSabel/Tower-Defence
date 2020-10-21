@@ -22,6 +22,8 @@ public class Turret : MonoBehaviour
         [HideInInspector] public float shootSoundVolume, shootSoundPitch;
     }
     public string turretType;
+    [TextArea]
+    public string turretInfo;
     public bool levelUpReady;
     public int damage, slot, cost;
     public float fireRate, radius, levelSpeed, nextLvlXp;

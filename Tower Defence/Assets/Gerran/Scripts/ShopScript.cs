@@ -65,7 +65,6 @@ public class ShopScript : MonoBehaviour
                         int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
                         if (itemId == 1)
                         {
-                            print("try to buy health");
                             BuyHP(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                         }
                         else if (itemId == 2)
