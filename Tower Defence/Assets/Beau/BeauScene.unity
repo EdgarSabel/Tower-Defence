@@ -2967,7 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9451c9ef9349942bba835f706c3f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyNumber: 0
+  moneyNumber: 10
   moneyText: {fileID: 85688644}
   shopText: {fileID: 0}
 --- !u!114 &148163704
@@ -31202,8 +31202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 5
-  itemInfo: '?'
-  itemCost: 666
+  itemInfo: 'Decreases time before turret needs to be repaired
+
+    Max 3 times'
+  itemCost: 1000
 --- !u!65 &1351876997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44962,15 +44964,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numFirerate: 0
   numFreeze: 0
-  numNuke: 5
+  numNuke: 0
   healthPlus: 20
+  numTurretRepairMax: 3
+  decreaseNum: 0.3
   numFireRateText: {fileID: 384216389}
   numFreezeText: {fileID: 1975387476}
   numNukeText: {fileID: 565854612}
   money: {fileID: 148163699}
   turret: {fileID: 7718558902587799626}
-  decreaseNum: 20
-  min: 0
   itemInfo: {fileID: 1785882541}
   cost: {fileID: 1078946158}
   buySound: {fileID: 1528326637}
@@ -47954,6 +47956,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2614646073365519782, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
+      propertyPath: decreaseNumber
+      value: 1.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3387488039761741594, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -47976,7 +47982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716407875689998843, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
       propertyPath: turretLevel
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
