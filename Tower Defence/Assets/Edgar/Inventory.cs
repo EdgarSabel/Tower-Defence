@@ -88,6 +88,14 @@ public class Inventory : MonoBehaviour
             turretPUText.SetActive(false);
             if (hit.transform.gameObject.tag == "Ground")
             {
+            if (turretSpawned == false)
+            {
+                currentTurret.SetActive(true);
+                currentTurret.GetComponent<BoxCollider>().enabled = !enabled;
+                currentTurret.GetComponentInChildren<Turret>().enabled = !enabled;
+                currentTurret.GetComponentInChildren<TurretRepair>().enabled = !enabled;
+                turretSpawned = true;
+            }
                 if (Physics.Raycast(cam.transform.position, cam.transform.forward, range, 1 << 9))
                 {
                     lookAtPath = true;
@@ -101,15 +109,7 @@ public class Inventory : MonoBehaviour
                     currentTurret.transform.position = hit.point;
                 }
             }
-            if (turretSpawned == false)
-            {
-                currentTurret.SetActive(true);
-                currentTurret.GetComponent<BoxCollider>().enabled = !enabled;
-                currentTurret.GetComponentInChildren<Turret>().enabled = !enabled;
-                currentTurret.GetComponentInChildren<TurretRepair>().enabled = !enabled;
-                turretSpawned = true;
-            }
-            if (Input.GetButtonDown("Fire1") && lookAtPath == false)
+            if (Input.GetButtonDown("Fire1") && lookAtPath == false && currentTurret.activeSelf == true)
             {
                 PlaceTurret();
             }
