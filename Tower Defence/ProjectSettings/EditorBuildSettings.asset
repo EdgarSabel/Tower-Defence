@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jasper/MapScene.unity
     guid: 8519ce1de519b4e42bb9606ed49b8e20
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}

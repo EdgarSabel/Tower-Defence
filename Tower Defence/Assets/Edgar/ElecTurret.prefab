@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588db26ef5669c847a761d53b971fe38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decreaseNumber: 1
+  decreaseNumber: 1.9
   healthTurret: 100
   turretScript: {fileID: 6442334547526659460}
   anim: {fileID: 6022332976921973304}

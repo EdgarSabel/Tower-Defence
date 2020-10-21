@@ -6,10 +6,11 @@ using TMPro;
 public class ShopScript : MonoBehaviour
 {
 
-    public int numFirerate,numFreeze,numNuke, healthPlus;
+    public int numFirerate,numFreeze,numNuke, healthPlus, numTurretRepairMax;
+    int turretRepairNum;
+    public float decreaseNum;
     public TextMeshProUGUI numFireRateText, numFreezeText, numNukeText;
     public GameObject money, turret;
-    public float decreaseNum, min;
     public TextMeshProUGUI itemInfo, cost;
     public AudioSource buySound, notEnoughMoneySound;
     public RaycastHit hit;
@@ -54,8 +55,16 @@ public class ShopScript : MonoBehaviour
                     }
                     else if (itemId == 5)
                     {
-                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
-                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                        if (turretRepairNum < numTurretRepairMax)
+                        {
+                            itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                            cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                        }
+                        else
+                        {
+                            itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                            cost.text = "Maxed";
+                        }
                     }
                 }
                 else
@@ -177,18 +186,20 @@ public class ShopScript : MonoBehaviour
 
     public void BuyTurretRepairSpeed(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
+        if(turretRepairNum < numTurretRepairMax)
         {
-            //decrease turret repair speed
-            buySound.Play();
-            min = 5 / decreaseNum;
-            turret.GetComponent<TurretRepair>().decreaseNumber -= min;
-            money.GetComponent<MoneyManager>().GetMoney(-prize);
-            UpdateNumbers();
-        }
-        else
-        {
-            notEnoughMoneySound.Play();
+            if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
+            {
+                buySound.Play();
+                turretRepairNum++;
+                turret.GetComponent<TurretRepair>().decreaseNumber -= decreaseNum;
+                money.GetComponent<MoneyManager>().GetMoney(-prize);
+                UpdateNumbers();
+            }
+            else
+            {
+                notEnoughMoneySound.Play();
+            }
         }
     }
     public void UpdateNumbers()
