@@ -47917,11 +47917,11 @@ MonoBehaviour:
   - {fileID: 8048579865226252510, guid: 807e95e1da4f4dc44802045429c46be7, type: 3}
   - {fileID: 977684963852204110, guid: 036b92d679402574dbf8edeed694031b, type: 3}
   - {fileID: 228713759818464373, guid: 5e96ae388a556b44aa8c5c82571e1e70, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8048579865226252510, guid: a7afdb4bf9bb5b344a6b18ae4a60b0a9, type: 3}
+  - {fileID: 977684963852204110, guid: 3c387cb659fed1f40bdcea49c50de558, type: 3}
   - {fileID: 59032572242361446, guid: e2faf137f5865434785fbecc7b0e25b9, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8048579865226252510, guid: f12ed475e305edd4d98106aeeea36725, type: 3}
+  - {fileID: 977684963852204110, guid: a843937031e1b68498975231a06b81dd, type: 3}
   roundNumberText: {fileID: 875784774}
   nextRoundInText: {fileID: 1010047231}
   timerObj: {fileID: 525106923}
