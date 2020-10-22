@@ -19,7 +19,8 @@ public class SettingsManeger : MonoBehaviour
     public GameObject menuPanel, upgradePanel, hudPanel, cam, player;
     public GameObject[] panels;
 
-    public GameObject mainCam, shopCam, turretColBox;
+    public GameObject mainCam, shopCam, turretColBox, waitForNextRoundObj, skipObj, interactObj;
+    public Color normalColor;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,10 @@ public class SettingsManeger : MonoBehaviour
         cam.GetComponent<CamLook>().canMove = true;
         turretColBox.GetComponent<LookBoxPlayer>().currentTurret = null;
         turretColBox.GetComponent<LookBoxPlayer>().gameObject.SetActive(false);
+
+        waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = Color.white;
+        skipObj.GetComponent<TextMeshProUGUI>().color = Color.white;
+        interactObj.SetActive(true);
     }
     public void ShopBack()
     { 
@@ -60,10 +65,13 @@ public class SettingsManeger : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = enabled;
         cam.GetComponent<CamLook>().enabled = enabled;
 
+        waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+        skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
         hudPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cam.GetComponent<CamLook>().canMove = true;
+        interactObj.SetActive(true);
         //player.GetComponent<CamLook>().canMove = true;
     }
 

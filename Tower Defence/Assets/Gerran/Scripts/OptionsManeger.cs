@@ -17,7 +17,6 @@ public class OptionsManeger : MonoBehaviour
         musicSliderValue = PlayerPrefs.GetFloat("Music");
         soundSliderValue = PlayerPrefs.GetFloat("Sound");
         sensitivityStatic = PlayerPrefs.GetFloat("Sens");
-        print(masterSliderValue);
         if (sensitivityStatic == 0)
         {
             sensitivityStatic = 4;
