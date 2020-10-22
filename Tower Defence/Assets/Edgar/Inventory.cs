@@ -37,6 +37,7 @@ public class Inventory : MonoBehaviour
         {
             turrets[i] = Instantiate(loadout[i], transform.position, Quaternion.identity, turretHolder.transform);
             turrets[i].GetComponentInChildren<Turret>().slot = i;
+            turrets[i].gameObject.SetActive(false);
         }
         for (int i = 0; i < slots.Length; i++)
         {
