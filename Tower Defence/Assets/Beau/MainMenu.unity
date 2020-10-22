@@ -5642,6 +5642,7 @@ MonoBehaviour:
   inputBoxText: {fileID: 67898251}
   mixer: {fileID: 24100000, guid: 2560623996ca6494eaa72a0cff8f94e0, type: 2}
   playercam: {fileID: 1688388578}
+  panels: []
 --- !u!4 &1083762431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6994548815393656636, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
@@ -7866,6 +7867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645322140}
   - component: {fileID: 1645322139}
+  - component: {fileID: 1645322141}
   m_Layer: 0
   m_Name: SceneManeger
   m_TagString: Untagged
@@ -7904,6 +7906,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645322141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645322138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673d41e8372da7a4eb3dd9a40dbf758d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1654302708
 GameObject:
   m_ObjectHideFlags: 0
