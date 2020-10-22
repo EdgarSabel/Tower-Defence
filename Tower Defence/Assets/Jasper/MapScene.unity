@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1977986913}
-  m_IndirectSpecularColor: {r: 0.66695607, g: 0.99599135, b: 0.78939164, a: 1}
+  m_IndirectSpecularColor: {r: 0.66643834, g: 0.9954761, b: 0.78887343, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -264,6 +264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.418594
@@ -1728,6 +1732,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -123.9214
@@ -1847,7 +1855,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -2060,9 +2068,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5f5e83a4e9b583c48a570f7fb0b3ffa5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
       propertyPath: m_Name
       value: BridgePart (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
@@ -2193,7 +2209,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &121513306
 Transform:
@@ -2203,7 +2219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121513305}
   m_LocalRotation: {x: -0, y: 0.75126415, z: -0, w: 0.66000164}
-  m_LocalPosition: {x: -0.2905943, y: 0.6961197, z: 0.0508636}
+  m_LocalPosition: {x: 0.013, y: 0.433, z: 0.153}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 671422097}
@@ -2222,12 +2238,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.20784314, g: 0.62133, b: 0.83137256, a: 1}
   m_Intensity: 2000
-  m_Range: 23.12
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2260,7 +2276,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2939,6 +2955,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999547250}
     m_Modifications:
+    - target: {fileID: 222242703155512213, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222242703155512299, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 333031019491999215, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.246384
@@ -2986,6 +3010,14 @@ PrefabInstance:
     - target: {fileID: 1140810788738557781, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
       propertyPath: m_Name
       value: PortalPrefabStart1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140810788738557781, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500830271151163008, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
@@ -3242,8 +3274,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
+  turretloadout: {fileID: 0}
+  menu: {fileID: 0}
+  levelSelect: {fileID: 0}
   slider: {fileID: 0}
   text: {fileID: 0}
+  val: 0
+  lvl2: 0
   clickButton: {fileID: 1241816299}
   hoverButton: {fileID: 1103719911}
 --- !u!4 &254389638
@@ -3327,9 +3364,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5f5e83a4e9b583c48a570f7fb0b3ffa5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
       propertyPath: m_Name
       value: BridgePart
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
@@ -9716,7 +9761,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -10422,7 +10467,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -11021,6 +11066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.488594
@@ -12305,7 +12354,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &640477318
 Transform:
@@ -12334,12 +12383,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.20784314, g: 0.62133, b: 0.83137256, a: 1}
   m_Intensity: 2000
-  m_Range: 23.12
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -12372,7 +12421,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -12739,7 +12788,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &656869526
 Transform:
@@ -12749,7 +12798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656869525}
   m_LocalRotation: {x: -0, y: -0.97572607, z: -0, w: 0.21899481}
-  m_LocalPosition: {x: 0.21, y: 1.01, z: -0.25}
+  m_LocalPosition: {x: -0.193, y: 0.272, z: -0.06}
   m_LocalScale: {x: 0.19999993, y: 0.2, z: 0.19999993}
   m_Children: []
   m_Father: {fileID: 1027400961}
@@ -12768,12 +12817,12 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.33962265, b: 0, a: 1}
   m_Intensity: 2000
-  m_Range: 23.12
+  m_Range: 200
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -12806,7 +12855,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13079,6 +13128,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999547250}
     m_Modifications:
+    - target: {fileID: 222242703155512213, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 222242703155512299, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 333031019491999215, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 62.511444
@@ -13126,6 +13183,14 @@ PrefabInstance:
     - target: {fileID: 1140810788738557781, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
       propertyPath: m_Name
       value: PortalPrefabStart1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140810788738557781, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500830271151163008, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f61aa27e424b01d4494de6fadcd2872f, type: 3}
@@ -18835,6 +18900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999547250}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.44638
@@ -24790,9 +24859,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5f5e83a4e9b583c48a570f7fb0b3ffa5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
       propertyPath: m_Name
       value: BridgePart (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
@@ -25632,6 +25709,7 @@ MonoBehaviour:
   - {fileID: 1153966121}
   - {fileID: 1901562486}
   waitTimeForNextRound: 20
+  lvlNum: 0
   playerManager: {fileID: 1298377287}
   infEnemieIncrease: 3
   waves:
@@ -26743,6 +26821,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -129.06544
@@ -27140,6 +27222,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -120.12188
@@ -28300,9 +28386,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7393530065363628344, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393530065363628358, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7663562761130694022, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
       propertyPath: m_Name
       value: PortalPrefabEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663562761130694022, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167996774753301587, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd266122a246684c8131d5f97d4031b, type: 3}
@@ -28368,7 +28470,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -30101,6 +30203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -124.7114
@@ -30298,7 +30404,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -32328,7 +32434,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -32583,9 +32689,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5f5e83a4e9b583c48a570f7fb0b3ffa5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
       propertyPath: m_Name
       value: BridgePart (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d289758f855c5148a4b5d8f9c073fba, type: 3}
@@ -32619,6 +32733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999547250}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -101.57361
@@ -34234,6 +34352,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.578598
@@ -34738,7 +34860,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -36709,7 +36831,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.0256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
@@ -39654,6 +39776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1715051806}
     m_Modifications:
+    - target: {fileID: 4958095193049346643, guid: dea293d52aebdb4409190c80430e903a, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6090447328799934780, guid: dea293d52aebdb4409190c80430e903a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -101.62141
@@ -45023,7 +45149,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -46924,7 +47050,7 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.256
+  m_ScaleInLightmap: 0.06
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
