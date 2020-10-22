@@ -17,12 +17,7 @@ public class OptionsManeger : MonoBehaviour
         musicSliderValue = PlayerPrefs.GetFloat("Music");
         soundSliderValue = PlayerPrefs.GetFloat("Sound");
         sensitivityStatic = PlayerPrefs.GetFloat("Sens");
-        masterVolumeSlider.value = masterSliderValue;
-        musicVolumeSlider.value = musicSliderValue;
-        soundVolumeSlider.value = soundSliderValue;
-        inputBoxText.text = sensitivityStatic.ToString();
-        sensitivitySlider.value = sensitivityStatic;
-        print(sensitivityStatic);
+        print(masterSliderValue);
         if (sensitivityStatic == 0)
         {
             sensitivityStatic = 4;
@@ -40,21 +35,30 @@ public class OptionsManeger : MonoBehaviour
         {
             soundSliderValue = .5f;
         }
+        print(sensitivityStatic);
+        SetMasterVol(masterSliderValue);
+        SetMusicVol(musicSliderValue);
+        SetSoundVol(soundSliderValue);
+        SetSensitivity(sensitivityStatic);
+        SetSensitivityFromNumber(sensitivityStatic.ToString());
         gameObject.SetActive(false);
     }
     public void SetMasterVol(float sliderValue)
     {
         masterSliderValue = sliderValue;
+        masterVolumeSlider.value = sliderValue;
         mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetMusicVol(float sliderValue)
     {
         musicSliderValue = sliderValue;
+        musicVolumeSlider.value = sliderValue;
         mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetSoundVol(float sliderValue)
     {
         soundSliderValue = sliderValue;
+        soundVolumeSlider.value = sliderValue;
         mixer.SetFloat("SoundVol", Mathf.Log10(sliderValue) * 20);
     }
     public void SetSensitivityFromNumber(string boxValue)
