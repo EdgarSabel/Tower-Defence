@@ -11,23 +11,22 @@ public class OptionsManeger : MonoBehaviour
     public AudioMixer mixer;
     public GameObject playercam;
     public GameObject[] panels;
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
     void Start()
     {
         masterSliderValue = PlayerPrefs.GetFloat("Master");
         musicSliderValue = PlayerPrefs.GetFloat("Music");
         soundSliderValue = PlayerPrefs.GetFloat("Sound");
         sensitivityStatic = PlayerPrefs.GetFloat("Sens");
-        
+        masterVolumeSlider.value = masterSliderValue;
+        musicVolumeSlider.value = musicSliderValue;
+        soundVolumeSlider.value = soundSliderValue;
+        inputBoxText.text = sensitivityStatic.ToString();
+        sensitivitySlider.value = sensitivityStatic;
+        print(sensitivityStatic);
         if (sensitivityStatic == 0)
         {
             sensitivityStatic = 4;
         }
-        inputBoxText.text = sensitivityStatic.ToString();
-        sensitivitySlider.value = sensitivityStatic;
 
         if(masterSliderValue == 0)
         {
@@ -41,9 +40,7 @@ public class OptionsManeger : MonoBehaviour
         {
             soundSliderValue = .5f;
         }
-        masterVolumeSlider.value = masterSliderValue;
-        musicVolumeSlider.value = musicSliderValue;
-        soundVolumeSlider.value = soundSliderValue;
+        gameObject.SetActive(false);
     }
     public void SetMasterVol(float sliderValue)
     {
