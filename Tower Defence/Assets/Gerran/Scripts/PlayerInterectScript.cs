@@ -28,6 +28,7 @@ public class PlayerInterectScript : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Fire2"))
                 {
+                    hudPanel.SetActive(false);
                     upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
                     upgradePanel.SetActive(true);
 
@@ -35,8 +36,8 @@ public class PlayerInterectScript : MonoBehaviour
                     turretColBox.GetComponent<LookBoxPlayer>().currentTurret = hit.transform.gameObject;
 
                     menuPanel.SetActive(false);
-                    //Cursor.lockState = CursorLockMode.Locked;
-                    //Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             else if (hit.transform.tag == ("Shop"))
@@ -117,6 +118,7 @@ public class PlayerInterectScript : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 upgradePanel.SetActive(false);
+                hudPanel.SetActive(true);
                 upgradePanel.GetComponent<DetectTurret>().turret = null;
                 turretColBox.GetComponent<LookBoxPlayer>().currentTurret = null;
                 turretColBox.GetComponent<LookBoxPlayer>().gameObject.SetActive(false);

@@ -45,6 +45,7 @@ public class SettingsManeger : MonoBehaviour
     public void Back()
     {
         upgradePanel.SetActive(false);
+        hudPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         upgradePanel.GetComponent<DetectTurret>().turret = null;
