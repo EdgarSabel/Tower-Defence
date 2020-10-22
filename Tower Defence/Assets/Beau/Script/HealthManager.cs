@@ -64,7 +64,10 @@ public class HealthManager : MonoBehaviour
             if(dead == false)
             {
                 dead = true;
+                if (waveSystem.roundNumber > PlayerPrefs.GetFloat("HighScore"))
+                {
                 PlayerPrefs.SetFloat("HighScore", waveSystem.roundNumber);
+                }
                 bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
                 deathMenu.SetActive(true);
             }
