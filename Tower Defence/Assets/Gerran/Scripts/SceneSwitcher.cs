@@ -18,10 +18,6 @@ public class SceneSwitcher : MonoBehaviour
     {
         StartCoroutine(LoadSceneEnumerator());
     }
-    void Update()
-    {
-        val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
-    }
     public void Level1Plus()
     {
         if (val == true)
@@ -51,6 +47,7 @@ public class SceneSwitcher : MonoBehaviour
     }
     public void start()
     {
+        val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
         if (lvl2 == true)
         {
             SceneManager.LoadScene("MapScene");
