@@ -927,7 +927,7 @@ MonoBehaviour:
       fireRate: 4.4
       radius: 7
       xp: 0
-      nextLvlXp: 0
+      nextLvlXp: 500
   animTop: {fileID: 3455508636236121725}
   animBot: {fileID: 3455508635474265297}
   lvlUpParticle: {fileID: 5545155889060119072}

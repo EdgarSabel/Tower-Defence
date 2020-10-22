@@ -532,7 +532,7 @@ MonoBehaviour:
   cost: 1300
   fireRate: 1
   radius: 10
-  levelSpeed: 50
+  levelSpeed: 5
   nextLvlXp: 0
   rangeCollider: {fileID: 1947981455517082441}
   target: {fileID: 0}
@@ -578,7 +578,7 @@ MonoBehaviour:
       fireRate: 3
       radius: 10
       xp: 0
-      nextLvlXp: 0
+      nextLvlXp: 500
   animTop: {fileID: 3993490123921880083}
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
