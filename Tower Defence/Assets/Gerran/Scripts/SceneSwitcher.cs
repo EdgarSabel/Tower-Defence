@@ -8,12 +8,22 @@ using UnityEngine.UI;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    public GameObject loadingScreen, turretloadout, menu, levelSelect;
+    public GameObject loadingScreen, turretloadout, menu, fuckOff;
     //public OptionsManeger optionManager;
     public Slider slider;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI text, turretText;
     public bool val, lvl2;
     public AudioSource clickButton, hoverButton;
+    public Color color;
+
+    private void Start()
+    {
+        val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
+        if(val == true)
+        {
+            turretText.color = color;
+        }
+    }
     public void Level1()
     {
         StartCoroutine(LoadSceneEnumerator());
@@ -22,15 +32,19 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (val == true)
         {
-            lvl2 = false;
             turretloadout.SetActive(true);
             menu.SetActive(false);
-            levelSelect.SetActive(false);
         }
         else
         {
-            StartCoroutine(LoadSceneEnumerator());
+            StartCoroutine(ShowFuckOff());
         }
+    }
+    IEnumerator ShowFuckOff()
+    {
+        fuckOff.SetActive(true);
+        yield return new WaitForSeconds(3);
+        fuckOff.SetActive(false);
     }
 
     IEnumerator LoadSceneEnumerator()
@@ -45,33 +59,10 @@ public class SceneSwitcher : MonoBehaviour
             yield return null;
         }
     }
-    public void start()
-    {
-        val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
-        if (lvl2 == true)
-        {
-            SceneManager.LoadScene("MapScene");
-        }
-        else if(lvl2 == false)
-        {
-            StartCoroutine(LoadSceneEnumerator());
-        }
+    public void level2()
+    {   
+        SceneManager.LoadScene("MapScene");
     }
-
-    public void Level2Plus()
-    {
-        if (val == true)
-        {
-            lvl2 = true;
-            turretloadout.SetActive(true);
-            levelSelect.SetActive(false);
-        }
-        else
-        {
-            SceneManager.LoadScene("MapScene");
-        }
-    }
-
     public void QuitGame()
     {
         PlayerPrefs.SetFloat("Master", OptionsManeger.masterSliderValue);
