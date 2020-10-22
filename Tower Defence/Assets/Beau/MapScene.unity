@@ -25003,7 +25003,7 @@ MonoBehaviour:
   playerObj: {fileID: 2101106588}
   spawnLoc: {fileID: 1399968404}
   hpManagerScript: {fileID: 1298377291}
-  dmgOnFall: 100
+  dmgOnFall: 20
 --- !u!1 &781630084
 GameObject:
   m_ObjectHideFlags: 0
