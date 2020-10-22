@@ -41792,8 +41792,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
+  turretloadout: {fileID: 0}
+  menu: {fileID: 0}
   slider: {fileID: 0}
   text: {fileID: 0}
+  val: 0
   clickButton: {fileID: 1314208915}
   hoverButton: {fileID: 346538090}
 --- !u!4 &1678742142
@@ -48380,6 +48383,7 @@ MonoBehaviour:
   - {fileID: 1787427607}
   - {fileID: 1442177581}
   waitTimeForNextRound: 20
+  lvlNum: 15
   playerManager: {fileID: 148163699}
   infEnemieIncrease: 3
   waves:

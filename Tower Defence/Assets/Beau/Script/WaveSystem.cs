@@ -28,7 +28,7 @@ public class WaveSystem : MonoBehaviour
     public GameObject timerObj;
     public GameObject enemyObj;
     public GameObject[] spawnPoints;
-    public int waitTimeForNextRound;
+    public int waitTimeForNextRound, lvlNum;
     public GameObject playerManager;
     public int infEnemieIncrease;
     public Wave[] waves;
@@ -103,6 +103,14 @@ public class WaveSystem : MonoBehaviour
         DoVoiceLine(0);
         sounds.startRoundSound.Play();
         UpdateRoundNumber();
+
+        if(roundNumber == lvlNum)
+        {
+            bool val = true;
+            PlayerPrefs.SetInt("PropName", val ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+
         if (roundNumber < waves.Length)
         {
             for (int i = 0; i < waves[roundNumber].enemies.Length; i++)
