@@ -25872,6 +25872,8 @@ MonoBehaviour:
     startRoundSound: {fileID: 135760090}
   voiceLinesScript: {fileID: 665778397}
   nukeCooldown: {fileID: 1732297739}
+  roundNumber: -1
+  moneyNumber: 0
 --- !u!4 &867578521
 Transform:
   m_ObjectHideFlags: 0
@@ -31144,6 +31146,7 @@ MonoBehaviour:
   decreaseHealthObj: {fileID: 1110961924}
   cam: {fileID: 38556521}
   player: {fileID: 2101106588}
+  waveSystem: {fileID: 0}
   bgImages:
   - {fileID: 266955304}
   - {fileID: 633013718}
@@ -37690,7 +37693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Canon Turret
+  m_text: Cannon Turret
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}
   m_sharedMaterial: {fileID: 1891475500601897464, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}

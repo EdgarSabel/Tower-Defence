@@ -3056,6 +3056,7 @@ MonoBehaviour:
   decreaseHealthObj: {fileID: 1604354433}
   cam: {fileID: 379489474}
   player: {fileID: 1834545573}
+  waveSystem: {fileID: 0}
   bgImages:
   - {fileID: 402780821}
   - {fileID: 1487196051}
@@ -9727,8 +9728,8 @@ Transform:
   - {fileID: 581920763}
   - {fileID: 951004952}
   - {fileID: 1538240088}
-  - {fileID: 167787995}
   - {fileID: 748319716}
+  - {fileID: 167787995}
   m_Father: {fileID: 1190707464}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22394,7 +22395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Canon Turret
+  m_text: Cannon Turret
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}
   m_sharedMaterial: {fileID: 1891475500601897464, guid: 7c1df714dc9369547ad2427fe486ca15, type: 2}
@@ -30588,7 +30589,7 @@ GameObject:
   - component: {fileID: 1244043150}
   - component: {fileID: 1244043153}
   m_Layer: 5
-  m_Name: canon
+  m_Name: cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41794,9 +41795,11 @@ MonoBehaviour:
   loadingScreen: {fileID: 0}
   turretloadout: {fileID: 0}
   menu: {fileID: 0}
+  levelSelect: {fileID: 0}
   slider: {fileID: 0}
   text: {fileID: 0}
   val: 0
+  lvl2: 0
   clickButton: {fileID: 1314208915}
   hoverButton: {fileID: 346538090}
 --- !u!4 &1678742142
@@ -48576,6 +48579,8 @@ MonoBehaviour:
     startRoundSound: {fileID: 1004218884}
   voiceLinesScript: {fileID: 1708649429}
   nukeCooldown: {fileID: 1408631401}
+  roundNumber: -1
+  moneyNumber: 0
 --- !u!4 &2119677664
 Transform:
   m_ObjectHideFlags: 0
