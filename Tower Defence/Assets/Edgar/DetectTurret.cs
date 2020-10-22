@@ -16,8 +16,10 @@ public class DetectTurret : MonoBehaviour
     public MoneyManager moneyManager;
     public int upgradePrice;
     public Slider xpSlider;
+    public Image fillArea;
     public GameObject infoPanel;
     public TextMeshProUGUI infoText, costText, lvText, infoTypeTurret;
+    public Color normalSlider, maxedSlider;
     private void Update()
     {
         for (int i = 0; i < turret.GetComponent<TurretRepair>().turretScript.levelStats.stats.Length; i++)
@@ -25,6 +27,14 @@ public class DetectTurret : MonoBehaviour
             if (turret.GetComponent<TurretRepair>().turretScript.damage == turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].damage)
             {
                 xpSlider.value = turret.GetComponent<TurretRepair>().turretScript.xp / turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[i].nextLvlXp;
+            }
+            if(turret.GetComponentInChildren<Turret>().xp >= turret.GetComponentInChildren<Turret>().nextLvlXp)
+            {
+                fillArea.color = maxedSlider;
+            }
+            else
+            {
+                fillArea.color = normalSlider;
             }
         }
         lvText.text = "Lv: " + (turret.GetComponent<TurretRepair>().turretScript.turretLevel + 1);
@@ -93,6 +103,7 @@ public class DetectTurret : MonoBehaviour
                     settingManager.Back();
                     moneyManager.GetMoney(-upgradePrice);
                     xpSlider.value = 0;
+                    fillArea.color = normalSlider;
                 }
             }
         }

@@ -113,8 +113,9 @@ public class PlayerInterectScript : MonoBehaviour
                 cam.GetComponent<CamLook>().enabled = enabled;
                 cam.GetComponent<CamLook>().canMove = true;
 
-                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
             {

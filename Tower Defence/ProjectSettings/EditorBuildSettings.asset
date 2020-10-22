@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Beau/BeauScene.unity
     guid: d14f0ed8e410104488e7fcb01d89f2ee
   - enabled: 1
-    path: Assets/Jasper/MapScene.unity
+    path: Assets/Beau/MapScene.unity
     guid: 8519ce1de519b4e42bb9606ed49b8e20
   m_configObjects: {}

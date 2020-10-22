@@ -1140,7 +1140,7 @@ MonoBehaviour:
       xp: 0
       nextLvlXp: 500
     - damage: 32
-      cost: 0
+      cost: 6000
       fireRate: 8
       radius: 8
       xp: 0

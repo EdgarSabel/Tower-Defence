@@ -12,28 +12,16 @@ public class PlayerWallCol : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Bounds")
         {
-            return;
-        }
-        else if (other.gameObject.tag == "Turret")
-        {
-            return;
-        }
-        if (other.isTrigger == false)
             transform.parent.GetComponent<PlayerMovement>().walkingSpeed = 6;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Bounds")
         {
-            return;
-        }
-        else if (other.gameObject.tag == "Turret")
-        {
-            return;
-        }
-        if (other.isTrigger == false)
             transform.parent.GetComponent<PlayerMovement>().walkingSpeed = normalWalkingSpeed;
+        }
     }
 }
