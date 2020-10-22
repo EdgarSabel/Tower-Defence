@@ -5,10 +5,10 @@ using TMPro;
 
 public class HighScore : MonoBehaviour
 {
-    public TextMeshPro highscoreText;
+    public TextMeshProUGUI highscoreText;
     // Start is called before the first frame update
     void Start()
     {
-        highscoreText.text = "High score: " + PlayerPrefs.GetFloat("HighScore").ToString(); ;
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetFloat("HighScore").ToString(); ;
     }
 }
