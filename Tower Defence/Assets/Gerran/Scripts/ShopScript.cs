@@ -9,7 +9,7 @@ public class ShopScript : MonoBehaviour
     int turretRepairNum, healthNum;
     public float decreaseNum;
     public TextMeshProUGUI numFireRateText, numFreezeText, numNukeText;
-    public GameObject money, turret;
+    public GameObject money, turret, amountText, turretHolder;
     public TextMeshProUGUI itemInfo, cost;
     public AudioSource buySound, notEnoughMoneySound;
     public RaycastHit hit;
@@ -31,11 +31,21 @@ public class ShopScript : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "ShopItem")
                 {
+                    amountText.SetActive(false);
                     int itemId = hit.collider.gameObject.GetComponent<ItemInShop>().itemId;
                     if (itemId == 1)
                     {
-                        itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
-                        cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                        if (healthNum < maxHealthBuys) {
+                            amountText.SetActive(true);
+                            amountText.GetComponent<TextMeshProUGUI>().text = healthNum.ToString() + " / " + maxHealthBuys;
+                            itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                            cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                        }
+                        else
+                        {
+                            itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                            cost.text = "Cant buy more";
+                        }
                     }
                     else if (itemId == 2)
                     {
@@ -56,6 +66,8 @@ public class ShopScript : MonoBehaviour
                     {
                         if (turretRepairNum < numTurretRepairMax)
                         {
+                            amountText.SetActive(true);
+                            amountText.GetComponent<TextMeshProUGUI>().text = turretRepairNum.ToString() + " / " + numTurretRepairMax;
                             itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
                             cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
                         }
@@ -70,6 +82,7 @@ public class ShopScript : MonoBehaviour
                 {
                     itemInfo.text = "";
                     cost.text = "";
+                    amountText.SetActive(false);
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
@@ -111,6 +124,7 @@ public class ShopScript : MonoBehaviour
                             Cursor.visible = true;
                         }
                     }
+                    amountText.SetActive(false);
                 }
             }
         }
@@ -126,13 +140,14 @@ public class ShopScript : MonoBehaviour
 
     public void BuyHP(int prize)
     {
-        if (healthNum <= maxHealthBuys)
+        if (healthNum < maxHealthBuys)
         {
             if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
             {
                 if (money.GetComponent<HealthManager>().health < 120)
                 {
                     //give health max health= 120
+                    healthNum++;
                     buySound.Play();
                     money.GetComponent<HealthManager>().health += healthPlus;
                     if (money.GetComponent<HealthManager>().health >= 120)
@@ -203,7 +218,10 @@ public class ShopScript : MonoBehaviour
             {
                 buySound.Play();
                 turretRepairNum++;
-                turret.GetComponent<TurretRepair>().decreaseNumber -= decreaseNum;
+                foreach(Transform child in turretHolder.transform)
+                {
+                    child.GetComponent<TurretRepair>().decreaseNumber -= decreaseNum;
+                }
                 money.GetComponent<MoneyManager>().GetMoney(-prize);
                 UpdateNumbers();
             }
