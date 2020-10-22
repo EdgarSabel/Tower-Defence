@@ -46197,6 +46197,7 @@ MonoBehaviour:
   numNuke: 0
   healthPlus: 20
   numTurretRepairMax: 3
+  maxHealthBuys: 10
   decreaseNum: 0.3
   numFireRateText: {fileID: 384216389}
   numFreezeText: {fileID: 1975387476}

@@ -5,8 +5,8 @@ using TMPro;
 
 public class ShopScript : MonoBehaviour
 {
-    public int numFirerate,numFreeze,numNuke, healthPlus, numTurretRepairMax;
-    int turretRepairNum;
+    public int numFirerate,numFreeze,numNuke, healthPlus, numTurretRepairMax, maxHealthBuys;
+    int turretRepairNum, healthNum;
     public float decreaseNum;
     public TextMeshProUGUI numFireRateText, numFreezeText, numNukeText;
     public GameObject money, turret;
@@ -125,24 +125,27 @@ public class ShopScript : MonoBehaviour
 
     public void BuyHP(int prize)
     {
-        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
+        if (healthNum <= maxHealthBuys)
         {
-            if (money.GetComponent<HealthManager>().health < 120)
+            if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
             {
-                //give health max health= 120
-                buySound.Play();
-                money.GetComponent<HealthManager>().health += healthPlus;
-                if(money.GetComponent<HealthManager>().health >= 120)
+                if (money.GetComponent<HealthManager>().health < 120)
                 {
-                    money.GetComponent<HealthManager>().health = 120;
+                    //give health max health= 120
+                    buySound.Play();
+                    money.GetComponent<HealthManager>().health += healthPlus;
+                    if (money.GetComponent<HealthManager>().health >= 120)
+                    {
+                        money.GetComponent<HealthManager>().health = 120;
+                    }
+                    money.GetComponent<HealthManager>().UpdateHealthNumber();
+                    money.GetComponent<MoneyManager>().GetMoney(-prize);
                 }
-                money.GetComponent<HealthManager>().UpdateHealthNumber();
-                money.GetComponent<MoneyManager>().GetMoney(-prize);
             }
-        }
-        else
-        {
-            notEnoughMoneySound.Play();
+            else
+            {
+                notEnoughMoneySound.Play();
+            }
         }
     }
 

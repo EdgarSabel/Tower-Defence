@@ -1344,10 +1344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a45ad681557d4888d247003225df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRateTimesNumber: 1.5
+  fireRateTimesNumber: 2
   fireRateIncreaseTime: 15
   freezeTime: 10
-  explosionDmg: 150
+  explosionDmg: 900
   nukeSpawnLoc: {fileID: 0}
   nukePrefab: {fileID: 0}
   enemyHolder: {fileID: 0}
