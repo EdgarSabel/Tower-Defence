@@ -13,7 +13,7 @@ public class ShopScript : MonoBehaviour
     public TextMeshProUGUI itemInfo, cost;
     public AudioSource buySound, notEnoughMoneySound;
     public RaycastHit hit;
-    public GameObject shopCam, shopPanel;
+    public GameObject shopCam, shopPanel, interactObj;
 
     public GameObject player, cam, upgradePanel, menuPanel, waitForNextRoundObj, skipObj;
     public Color normalColor;
@@ -105,6 +105,7 @@ public class ShopScript : MonoBehaviour
 
                             waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
                             skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+                            interactObj.SetActive(true);
 
                             Cursor.lockState = CursorLockMode.Locked;
                             Cursor.visible = true;

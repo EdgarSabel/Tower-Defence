@@ -3120,6 +3120,7 @@ MonoBehaviour:
   shopCam: {fileID: 804568766}
   waitForNextRoundObj: {fileID: 1010047229}
   skipObj: {fileID: 2025802629}
+  interactObj: {fileID: 392871349}
   color: {r: 1, g: 1, b: 1, a: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &148163705
@@ -3153,6 +3154,10 @@ MonoBehaviour:
   mainCam: {fileID: 379489474}
   shopCam: {fileID: 804568766}
   turretColBox: {fileID: 1324463553}
+  waitForNextRoundObj: {fileID: 1010047229}
+  skipObj: {fileID: 2025802629}
+  interactObj: {fileID: 392871349}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &156810907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,10 +4487,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 1}
+    m_PressedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 0.78431374}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4541,7 +4546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -41795,13 +41800,15 @@ MonoBehaviour:
   loadingScreen: {fileID: 0}
   turretloadout: {fileID: 0}
   menu: {fileID: 0}
-  levelSelect: {fileID: 0}
+  fuckOff: {fileID: 0}
   slider: {fileID: 0}
   text: {fileID: 0}
+  turretText: {fileID: 0}
   val: 0
   lvl2: 0
   clickButton: {fileID: 1314208915}
   hoverButton: {fileID: 346538090}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1678742142
 Transform:
   m_ObjectHideFlags: 0
@@ -42126,7 +42133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -46248,6 +46255,7 @@ MonoBehaviour:
   notEnoughMoneySound: {fileID: 305063439}
   shopCam: {fileID: 804568766}
   shopPanel: {fileID: 859049333}
+  interactObj: {fileID: 392871349}
   player: {fileID: 1834545573}
   cam: {fileID: 379489474}
   upgradePanel: {fileID: 1813661106}
@@ -46487,10 +46495,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 1}
+    m_PressedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 0.78431374}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -46505,7 +46513,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2034709821}
+  m_TargetGraphic: {fileID: 1203742143}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -46558,7 +46566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

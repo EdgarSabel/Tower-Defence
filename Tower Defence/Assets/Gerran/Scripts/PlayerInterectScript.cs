@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,9 +12,8 @@ public class PlayerInterectScript : MonoBehaviour
     public GameObject menuPanel, shopIntText, turretPUText, turretUGText, optionsPanel;
     public int range = 5;
 
-    public GameObject mainCam, shopCam, waitForNextRoundObj, skipObj;
+    public GameObject mainCam, shopCam, waitForNextRoundObj, skipObj, interactObj;
     public Color color, normalColor;
-    // Update is called once per frame
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,7 +28,9 @@ public class PlayerInterectScript : MonoBehaviour
                 }
                 if (Input.GetButtonDown("Fire2"))
                 {
-                    hudPanel.SetActive(false);
+                    waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = color;
+                    skipObj.GetComponent<TextMeshProUGUI>().color = color;
+                    interactObj.SetActive(false);
                     upgradePanel.GetComponent<DetectTurret>().turret = hit.transform.gameObject;
                     upgradePanel.SetActive(true);
 
@@ -51,6 +53,7 @@ public class PlayerInterectScript : MonoBehaviour
 
                     waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = color;
                     skipObj.GetComponent<TextMeshProUGUI>().color = color;
+                    interactObj.SetActive(false);
 
                     upgradePanel.SetActive(false);
                     menuPanel.SetActive(false);
@@ -96,6 +99,7 @@ public class PlayerInterectScript : MonoBehaviour
 
                 waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
                 skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+                interactObj.SetActive(true);
 
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -115,6 +119,9 @@ public class PlayerInterectScript : MonoBehaviour
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
             {
                 //Upgrade off
+                waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+                skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
+                interactObj.SetActive(true);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 upgradePanel.SetActive(false);

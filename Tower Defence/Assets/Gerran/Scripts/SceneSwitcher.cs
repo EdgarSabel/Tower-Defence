@@ -18,10 +18,14 @@ public class SceneSwitcher : MonoBehaviour
 
     private void Start()
     {
-        val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
-        if(val == true)
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            turretText.color = color;
+            print("in main scene");
+            val = PlayerPrefs.GetInt("PropName") == 1 ? true : false;
+            if(val == true)
+            {
+                turretText.color = color;
+            }
         }
     }
     public void Level1()

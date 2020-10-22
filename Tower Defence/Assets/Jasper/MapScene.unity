@@ -876,6 +876,7 @@ MonoBehaviour:
   notEnoughMoneySound: {fileID: 1758057610}
   shopCam: {fileID: 1184494224}
   shopPanel: {fileID: 1693238494}
+  interactObj: {fileID: 127748498}
   player: {fileID: 2101106588}
   cam: {fileID: 38556521}
   upgradePanel: {fileID: 946879157}
@@ -24868,7 +24869,7 @@ MonoBehaviour:
   playerObj: {fileID: 2101106588}
   spawnLoc: {fileID: 1399968404}
   hpManagerScript: {fileID: 1298377291}
-  dmgOnFall: 20
+  dmgOnFall: 100
 --- !u!1 &781630084
 GameObject:
   m_ObjectHideFlags: 0
@@ -31671,6 +31672,10 @@ MonoBehaviour:
   mainCam: {fileID: 38556521}
   shopCam: {fileID: 1184494224}
   turretColBox: {fileID: 225479231}
+  waitForNextRoundObj: {fileID: 0}
+  skipObj: {fileID: 0}
+  interactObj: {fileID: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1298377289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31714,6 +31719,7 @@ MonoBehaviour:
   shopCam: {fileID: 1184494224}
   waitForNextRoundObj: {fileID: 966389665}
   skipObj: {fileID: 7767204}
+  interactObj: {fileID: 0}
   color: {r: 1, g: 1, b: 1, a: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1298377291
@@ -40323,10 +40329,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 1}
+    m_PressedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 0.78431374}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -40341,7 +40347,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1903712893}
+  m_TargetGraphic: {fileID: 290058211}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -40394,7 +40400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -46594,10 +46600,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 1}
+    m_PressedColor: {r: 0.78039217, g: 0.78039217, b: 0.78039217, a: 0.78431374}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -46612,7 +46618,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2011691611}
+  m_TargetGraphic: {fileID: 608100731}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -46653,7 +46659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

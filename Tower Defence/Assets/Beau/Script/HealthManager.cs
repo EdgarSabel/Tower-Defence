@@ -20,6 +20,7 @@ public class HealthManager : MonoBehaviour
     private void Start()
     {
         UpdateHealthNumber();
+        waveSystem = GameObject.Find("WaveManager").GetComponent<WaveSystem>();
     }
     void Update()
     {
