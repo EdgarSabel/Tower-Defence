@@ -20397,13 +20397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyObj: {fileID: 1605544025}
-  turrets: 000000000000000000000000
-  prefabs:
-  - {fileID: 2614646073365519776, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
-  - {fileID: 3455508635474265296, guid: e9d74cebff32db840ae579fefc6da620, type: 3}
-  - {fileID: 1930914037360754464, guid: dedaaaa19d8fa154f8251fdcfd7ea335, type: 3}
-  - {fileID: 6022332976921973287, guid: 175dd86f95df1bb449eb44fcf3414500, type: 3}
-  - {fileID: 3128347978045668607, guid: f6f2d360915752743abcff2c2815f876, type: 3}
 --- !u!4 &1605544027
 Transform:
   m_ObjectHideFlags: 0

@@ -1297,6 +1297,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  loadout:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  prefabs:
+  - {fileID: 2614646073365519776, guid: 112cf7d1155dc064286e1da76a21fd6f, type: 3}
+  - {fileID: 3455508635474265296, guid: e9d74cebff32db840ae579fefc6da620, type: 3}
+  - {fileID: 1930914037360754464, guid: dedaaaa19d8fa154f8251fdcfd7ea335, type: 3}
+  - {fileID: 6022332976921973287, guid: 175dd86f95df1bb449eb44fcf3414500, type: 3}
+  - {fileID: 3128347978045668607, guid: f6f2d360915752743abcff2c2815f876, type: 3}
   slots:
   - {fileID: 0}
   - {fileID: 0}
@@ -1481,6 +1491,7 @@ MonoBehaviour:
   turretPanel: {fileID: 0}
   hudPanel: {fileID: 0}
   cam: {fileID: 0}
+  currentTurret: {fileID: 0}
 --- !u!1 &4881722212392429299
 GameObject:
   m_ObjectHideFlags: 0

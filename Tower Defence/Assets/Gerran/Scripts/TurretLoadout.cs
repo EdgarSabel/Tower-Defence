@@ -5,8 +5,7 @@ using UnityEngine;
 public class TurretLoadout : MonoBehaviour
 {
     public GameObject emptyObj;
-    public int[] turrets;
-    public GameObject[] prefabs; 
+    static public int[] turrets = new int[3]; 
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +17,5 @@ public class TurretLoadout : MonoBehaviour
     void Update()
     {
         DontDestroyOnLoad(emptyObj);
-
-        Camera.main.GetComponentInParent<Inventory>().turrets[0] = prefabs[turrets[0]];
-        Camera.main.GetComponentInParent<Inventory>().turrets[1] = prefabs[turrets[1]];
-        Camera.main.GetComponentInParent<Inventory>().turrets[2] = prefabs[turrets[2]];
     }
 }

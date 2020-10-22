@@ -23,7 +23,7 @@ public class TurretPick : MonoBehaviour
 
     public void SelectNormal()
     {
-        turrets.GetComponent<TurretLoadout>().turrets[slotNum] = 0;
+        TurretLoadout.turrets[slotNum] = 0;
         slots[slotNum].sprite = normal;
         if(slotNum == 2)
         {
@@ -38,7 +38,7 @@ public class TurretPick : MonoBehaviour
 
     public void SelectShotgun()
     {
-        turrets.GetComponent<TurretLoadout>().turrets[slotNum] = 1;
+        TurretLoadout.turrets[slotNum] = 1;
         slots[slotNum].sprite = shotgun;
         if (slotNum == 2)
         {
@@ -52,7 +52,7 @@ public class TurretPick : MonoBehaviour
     }
     public void SelectFlame()
     {
-        turrets.GetComponent<TurretLoadout>().turrets[slotNum] = 2;
+        TurretLoadout.turrets[slotNum] = 2;
         slots[slotNum].sprite = flame;
         if (slotNum == 2)
         {
@@ -67,7 +67,7 @@ public class TurretPick : MonoBehaviour
 
     public void SelectElectic()
     {
-        turrets.GetComponent<TurretLoadout>().turrets[slotNum] = 3;
+        TurretLoadout.turrets[slotNum] = 3;
         slots[slotNum].sprite = electric;
         if (slotNum == 2)
         {
@@ -81,7 +81,7 @@ public class TurretPick : MonoBehaviour
     }
     public void SelectCanon()
     {
-        turrets.GetComponent<TurretLoadout>().turrets[slotNum] = 4;
+        TurretLoadout.turrets[slotNum] = 4;
         slots[slotNum].sprite = canon;
         if (slotNum == 2)
         {

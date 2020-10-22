@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
         [HideInInspector] public float placeTurretVolume, placeTurretPitch;
     }
 
-    public GameObject[] turrets;
+    public GameObject[] turrets, loadout, prefabs;
     public Image[] slots;
     public GameObject cam, turretPLText, turretPUText;
     public Color turretBlackout;
@@ -29,6 +29,15 @@ public class Inventory : MonoBehaviour
     public ParticleSystem rangeIndicator;
     private void Start()
     {
+        for (int i = 0; i < loadout.Length; i++)
+        {
+            loadout[i] = prefabs[TurretLoadout.turrets[i]];
+        }
+        for (int i = 0; i < turrets.Length; i++)
+        {
+            turrets[i] = Instantiate(loadout[i], transform.position, Quaternion.identity, turretHolder.transform);
+            turrets[i].GetComponentInChildren<Turret>().slot = i;
+        }
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].sprite = turrets[i].GetComponentInChildren<Turret>().invSprite;
