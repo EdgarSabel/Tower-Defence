@@ -35,8 +35,8 @@ public class PlayerInterectScript : MonoBehaviour
                     turretColBox.GetComponent<LookBoxPlayer>().currentTurret = hit.transform.gameObject;
 
                     menuPanel.SetActive(false);
-                    //Cursor.lockState = CursorLockMode.Locked;
-                    //Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             else if (hit.transform.tag == ("Shop"))
