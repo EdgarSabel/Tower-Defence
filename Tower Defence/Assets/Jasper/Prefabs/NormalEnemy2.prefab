@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 4
-  EnemyHealth: 160
+  EnemyHealth: 150
   EnemyDmg: 5
   moneyDropAmount: 100
   burnDmg: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   burn: {fileID: 6033527316680030061}
   lightning: {fileID: 3801312046131938162}
   burnIsAlreadyOn: 0
+  zapIsAlreadyOn: 0
   sounds:
     walkingSound: {fileID: 0}
     getHitSound: {fileID: 0}
