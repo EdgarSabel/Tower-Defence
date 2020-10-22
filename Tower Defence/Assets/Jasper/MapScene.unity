@@ -35088,7 +35088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561754844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 81.5, z: -33.2}
+  m_LocalPosition: {x: 30, y: 79.8, z: -33.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1836085489}
@@ -37347,7 +37347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1602977911}
-  cooldownTimeMinPerSec: 1
+  cooldownTimeMinPerSec: 0.5
 --- !u!114 &1732297740
 MonoBehaviour:
   m_ObjectHideFlags: 0

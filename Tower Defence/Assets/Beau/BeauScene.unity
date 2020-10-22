@@ -32625,7 +32625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImageCover: {fileID: 1185588423}
-  cooldownTimeMinPerSec: 1
+  cooldownTimeMinPerSec: 0.5
 --- !u!1 &1409927297
 GameObject:
   m_ObjectHideFlags: 0

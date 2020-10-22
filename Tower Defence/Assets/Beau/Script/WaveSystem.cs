@@ -100,7 +100,7 @@ public class WaveSystem : MonoBehaviour
     {
         timerObj.SetActive(false);
         roundNumber++;
-        nukeCooldown.ResetAbilCover();
+        //nukeCooldown.ResetAbilCover();
         DoVoiceLine(0);
         sounds.startRoundSound.Play();
         UpdateRoundNumber();

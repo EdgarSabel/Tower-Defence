@@ -11,11 +11,11 @@ public class AbilityCooldown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResetAbilCover();
+        abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 0);
     }
     public void ResetAbilCover()
     {
-        abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 0);
+        abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
     }
     // Update is called once per frame
     void Update()

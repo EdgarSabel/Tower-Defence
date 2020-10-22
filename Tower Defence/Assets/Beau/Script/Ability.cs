@@ -61,7 +61,7 @@ public class Ability : MonoBehaviour
                     {
                         shopScript.numNuke--;
                         NukeAllEnemies();
-                        cooldownNuke.GetComponent<AbilityCooldown>().abilityImageCover.rectTransform.sizeDelta = new Vector2(0, 100);
+                        cooldownNuke.GetComponent<AbilityCooldown>().ResetAbilCover();
                         shopScript.UpdateNumbers();
                     }
                 }
