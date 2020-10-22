@@ -37,9 +37,10 @@ public class WaveSystem : MonoBehaviour
     public AbilityCooldown nukeCooldown;
 
     float timer;
-    GameObject wantedSpawnPoint;
-    int roundNumber = -1, moneyNumber;
     bool allEnemiesAreSpawned, canSkip;
+    GameObject wantedSpawnPoint;
+    [HideInInspector]
+    public int roundNumber = -1, moneyNumber;
 
     IEnumerator coroutine;
 

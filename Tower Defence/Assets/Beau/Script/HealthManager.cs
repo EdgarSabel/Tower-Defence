@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
     int decreaseHealthNumber;
     public TextMeshProUGUI healthText, decreaseHealthText;
     public GameObject decreaseHealthObj, cam, player;
-
+    public WaveSystem waveSystem;
     public GameObject[] bgImages;
     public GameObject deathMenu;
     public bool dead;
@@ -63,6 +63,7 @@ public class HealthManager : MonoBehaviour
             if(dead == false)
             {
                 dead = true;
+                PlayerPrefs.SetFloat("HighScore", waveSystem.roundNumber);
                 bgImages[Random.Range(0, bgImages.Length)].SetActive(true);
                 deathMenu.SetActive(true);
             }
