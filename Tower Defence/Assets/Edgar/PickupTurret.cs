@@ -16,6 +16,7 @@ public class PickupTurret : MonoBehaviour
     public float range;
     public Inventory inventory;
     private GameObject turret;
+    public GameObject upgradePanel;
     public Animator anim;
     public Sounds sounds;
     public bool[] isfull;
@@ -49,6 +50,10 @@ public class PickupTurret : MonoBehaviour
                         sounds.pickUpTurret.Play();
                         slots[turret.GetComponentInChildren<Turret>().slot].sprite = turret.GetComponentInChildren<Turret>().invSprite;
                         slots[turret.GetComponentInChildren<Turret>().slot].color = Color.white;
+                        if (upgradePanel.activeSelf == true)
+                        {
+                            GameObject.Find("PlayerManager").GetComponent<SettingsManeger>().Back();
+                        }
                     }
                 }
             }

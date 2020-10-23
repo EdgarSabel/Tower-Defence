@@ -119,18 +119,8 @@ public class PlayerInterectScript : MonoBehaviour
             }
             else if(menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == true && optionsPanel.activeSelf == false)
             {
-                //Upgrade off
-                waitForNextRoundObj.GetComponent<TextMeshProUGUI>().color = normalColor;
-                skipObj.GetComponent<TextMeshProUGUI>().color = normalColor;
-                interactObj.SetActive(true);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                upgradePanel.SetActive(false);
-                hudPanel.SetActive(true);
-                upgradePanel.GetComponent<DetectTurret>().turret = null;
-                turretColBox.GetComponent<LookBoxPlayer>().currentTurret = null;
-                turretColBox.GetComponent<LookBoxPlayer>().gameObject.SetActive(false);
-                StartCoroutine(CursorLock());
+                //Upgrade off                {
+                GameObject.Find("PlayerManager").GetComponent<SettingsManeger>().Back();
             }
             else if (menuPanel.activeSelf == false && shopCam.activeSelf == false && upgradePanel.activeSelf == false && optionsPanel.activeSelf == true)
             {

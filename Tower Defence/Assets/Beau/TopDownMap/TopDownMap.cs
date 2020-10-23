@@ -2,7 +2,7 @@
 
 public class TopDownMap : MonoBehaviour
 {
-    public GameObject map, mapImage, player, playerSprite;
+    public GameObject map;
     public float speedMove;
 
 
@@ -12,16 +12,10 @@ public class TopDownMap : MonoBehaviour
         {
             if (map.activeSelf == false)
             {
-                playerSprite.transform.localPosition = new Vector3(player.transform.position.x * speedMove, player.transform.position.z * speedMove);
-
-                player.GetComponent<PlayerMovement>().canMove = false;
-                player.GetComponentInChildren<CamLook>().canMove = false;
                 map.SetActive(true);
             }
             else if(map.activeSelf == true)
             {
-                player.GetComponent<PlayerMovement>().canMove = true;
-                player.GetComponentInChildren<CamLook>().canMove = true;
                 map.SetActive(false);
             }
         }

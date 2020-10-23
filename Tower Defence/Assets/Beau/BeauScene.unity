@@ -4444,13 +4444,17 @@ PrefabInstance:
       propertyPath: slots.Array.data[2]
       value: 
       objectReference: {fileID: 477041418}
+    - target: {fileID: 4561107985669078877, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: upgradePanel
+      value: 
+      objectReference: {fileID: 1813661106}
     - target: {fileID: 4561107985726773304, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756449, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4561107986965756451, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48576,6 +48580,7 @@ GameObject:
   - component: {fileID: 1813661109}
   - component: {fileID: 1813661108}
   - component: {fileID: 1813661111}
+  - component: {fileID: 1813661112}
   m_Layer: 5
   m_Name: TurretUpgradePanel
   m_TagString: Untagged
@@ -48685,6 +48690,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGameMenuPanel: {fileID: 1813661106}
+--- !u!114 &1813661112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813661106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d44b7baeacc2745a9955b1a6cca90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1816007875
 GameObject:
   m_ObjectHideFlags: 0
