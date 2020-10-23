@@ -11294,6 +11294,7 @@ Transform:
   m_Children:
   - {fileID: 83391552}
   - {fileID: 1860516138}
+  - {fileID: 1268070809}
   - {fileID: 1380896081}
   - {fileID: 1111870795}
   - {fileID: 1968540285}
@@ -33219,7 +33220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 639161206}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1119720327 stripped
 Transform:
@@ -35097,6 +35098,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
   m_PrefabInstance: {fileID: 1265498946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1268070808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268070809}
+  m_Layer: 0
+  m_Name: ParticleSystems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1268070809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268070808}
+  m_LocalRotation: {x: -0, y: 0.052612856, z: -0, w: -0.998615}
+  m_LocalPosition: {x: 0.0031899926, y: -0.0028800033, z: 0.00002000248}
+  m_LocalScale: {x: 307.6159, y: 307.61594, z: 307.61584}
+  m_Children: []
+  m_Father: {fileID: 639161206}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273272998
 GameObject:
   m_ObjectHideFlags: 0
@@ -37247,7 +37278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 639161206}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1386194373
 PrefabInstance:
@@ -52121,7 +52152,7 @@ Transform:
   - {fileID: 1341268884}
   - {fileID: 2064046506}
   m_Father: {fileID: 639161206}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975387474
 GameObject:
@@ -52901,6 +52932,8 @@ MonoBehaviour:
   bulletObj: {fileID: 2064046505}
   freezeObj: {fileID: 45280368}
   nukeObj: {fileID: 1341268882}
+  bad: {fileID: 0}
+  good: {fileID: 0}
 --- !u!1 &2030408328
 GameObject:
   m_ObjectHideFlags: 0

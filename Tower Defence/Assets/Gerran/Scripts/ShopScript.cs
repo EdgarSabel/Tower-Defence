@@ -22,6 +22,7 @@ public class ShopScript : MonoBehaviour
     public bool moveDice, canBuyDice = true;
     public float chanceBullet, chanceFreeze, chanceNuke, speedMove;
     public GameObject instObjHolder, bulletObj, freezeObj, nukeObj;
+    public ParticleSystem bad, good;
     private void Start()
     {
         UpdateNumbers();
@@ -40,20 +41,23 @@ public class ShopScript : MonoBehaviour
                 {
                     BuyFirerate(0);
                     Instantiate(bulletObj, instObjHolder.transform);
+                    good.Play();
                 }
                 else if(randomNumber > chanceBullet && randomNumber <= chanceFreeze)
                 {
                     BuyFreeze(0);
                     Instantiate(freezeObj, instObjHolder.transform);
+                    good.Play();
                 }
                 else if(randomNumber > chanceFreeze && randomNumber <= chanceNuke)
                 {
                     BuyNuke(0);
                     Instantiate(nukeObj, instObjHolder.transform);
+                    good.Play();
                 }
                 else
                 {
-
+                    bad.Play();
                 }
                 StartCoroutine(WaitToDestroyShownItem());
             }
@@ -172,7 +176,7 @@ public class ShopScript : MonoBehaviour
                             if(canBuyDice == true)
                             {
                                 StartCoroutine(WaitForDice());
-                                BuyDice(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                                BuyDice(/*hit.collider.gameObject.GetComponent<ItemInShop>().itemCost*/ 0);
                             }
                         }
                     }
