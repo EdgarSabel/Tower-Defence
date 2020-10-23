@@ -175,7 +175,6 @@ public class ShopScript : MonoBehaviour
                         {
                             if(canBuyDice == true)
                             {
-                                StartCoroutine(WaitForDice());
                                 BuyDice(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                             }
                         }
@@ -291,6 +290,7 @@ public class ShopScript : MonoBehaviour
     {
         if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
         {
+            StartCoroutine(WaitForDice());
             buySound.Play();
             itemInfo.text = "";
             cost.text = "";
