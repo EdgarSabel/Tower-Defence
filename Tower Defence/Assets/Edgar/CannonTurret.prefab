@@ -578,7 +578,13 @@ MonoBehaviour:
       fireRate: 3
       radius: 10
       xp: 0
-      nextLvlXp: 500
+      nextLvlXp: 750
+    - damage: 550
+      cost: 15000
+      fireRate: 3.5
+      radius: 10
+      xp: 0
+      nextLvlXp: 750
   animTop: {fileID: 3993490123921880083}
   animBot: {fileID: 4288009047468951981}
   lvlUpParticle: {fileID: 3412804779636673859}
