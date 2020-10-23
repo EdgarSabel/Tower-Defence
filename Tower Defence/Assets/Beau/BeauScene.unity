@@ -603,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceCube: {fileID: 179592702}
   extendNumber: 5.5
+  maxNumber: 26.6
   col: {fileID: 22088854}
 --- !u!1001 &29836878
 PrefabInstance:

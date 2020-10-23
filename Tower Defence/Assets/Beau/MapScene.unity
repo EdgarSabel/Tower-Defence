@@ -44599,7 +44599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faceCube: {fileID: 1477193873}
-  extendNumber: 100
+  extendNumber: 10
+  maxNumber: 54
   col: {fileID: 1836085492}
 --- !u!114 &1836085491
 MonoBehaviour:
@@ -44629,7 +44630,7 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0
-  m_Height: 56.135067
+  m_Height: 105.902435
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1841210066

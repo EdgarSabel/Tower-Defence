@@ -5,7 +5,7 @@ using UnityEngine;
 public class Volume : MonoBehaviour
 {
     public GameObject faceCube;
-    public float extendNumber;
+    public float extendNumber, maxNumber;
     public CapsuleCollider col;
     private void Start()
     {
@@ -13,7 +13,7 @@ public class Volume : MonoBehaviour
     }
     private void Update()
     {
-        if(col.radius < 25.49)
+        if(col.radius < maxNumber)
         {
             col.radius += extendNumber * Time.deltaTime;
         }
