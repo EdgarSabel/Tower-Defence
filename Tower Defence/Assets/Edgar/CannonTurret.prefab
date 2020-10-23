@@ -453,7 +453,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   cost: 1300
   fireRate: 1
   radius: 10
-  levelSpeed: 5
+  levelSpeed: 3
   nextLvlXp: 0
   rangeCollider: {fileID: 1947981455517082441}
   target: {fileID: 0}

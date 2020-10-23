@@ -1476,6 +1476,10 @@ PrefabInstance:
       propertyPath: shopPanel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2281655637389345543, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
+      propertyPath: interactObj
+      value: 
+      objectReference: {fileID: 127748498}
     - target: {fileID: 2503707064313422426, guid: 9c09e0a3b59011742a1569e1d2533c80, type: 3}
       propertyPath: m_Layer
       value: 0

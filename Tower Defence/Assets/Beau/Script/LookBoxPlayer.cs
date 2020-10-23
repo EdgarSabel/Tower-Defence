@@ -2,7 +2,7 @@
 
 public class LookBoxPlayer : MonoBehaviour
 {
-    public GameObject turretPanel, hudPanel, cam;
+    public GameObject turretPanel, hudPanel, cam, interactObj;
     [HideInInspector]public GameObject currentTurret;
     private void OnTriggerExit(Collider other)
     {
@@ -14,6 +14,7 @@ public class LookBoxPlayer : MonoBehaviour
             Cursor.visible = false;
             cam.GetComponent<CamLook>().canMove = true;
             currentTurret = null;
+            interactObj.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }

@@ -881,7 +881,7 @@ MonoBehaviour:
   cost: 1100
   fireRate: 5
   radius: 5
-  levelSpeed: 5
+  levelSpeed: 2
   nextLvlXp: 50
   rangeCollider: {fileID: 3455508635474265303}
   target: {fileID: 0}
