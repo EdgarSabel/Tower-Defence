@@ -923,13 +923,13 @@ MonoBehaviour:
       xp: 0
       nextLvlXp: 500
     - damage: 49
-      cost: 5000
+      cost: 15000
       fireRate: 4.4
       radius: 7
       xp: 0
       nextLvlXp: 750
     - damage: 71
-      cost: 13000
+      cost: 15000
       fireRate: 5.5
       radius: 7
       xp: 0
