@@ -17,12 +17,48 @@ public class ShopScript : MonoBehaviour
 
     public GameObject player, cam, upgradePanel, menuPanel, waitForNextRoundObj, skipObj;
     public Color normalColor;
+
+    public GameObject diceSpawnLoc, currentDice, dicePrefab, diceLoc;
+    public bool moveDice, canBuyDice = true;
+    public float chanceBullet, chanceFreeze, chanceNuke, speedMove;
+    public GameObject instObjHolder, bulletObj, freezeObj, nukeObj;
     private void Start()
     {
         UpdateNumbers();
     }
     void Update()
     {
+        if(moveDice == true)
+        {
+            currentDice.transform.position = Vector3.MoveTowards(currentDice.transform.position, diceLoc.transform.position, speedMove);
+            if(currentDice.transform.position == diceLoc.transform.position)
+            {
+                moveDice = false;
+                Destroy(currentDice);
+                float randomNumber = Random.Range(0, 100);
+                if(randomNumber <= chanceBullet)
+                {
+                    BuyFirerate(0);
+                    Instantiate(bulletObj, instObjHolder.transform);
+                }
+                else if(randomNumber > chanceBullet && randomNumber <= chanceFreeze)
+                {
+                    BuyFreeze(0);
+                    Instantiate(freezeObj, instObjHolder.transform);
+                }
+                else if(randomNumber > chanceFreeze && randomNumber <= chanceNuke)
+                {
+                    BuyNuke(0);
+                    Instantiate(nukeObj, instObjHolder.transform);
+                }
+                else
+                {
+
+                }
+                StartCoroutine(WaitToDestroyShownItem());
+            }
+        }
+
         Ray ray = shopCam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
         if (shopCam.activeSelf == true)
@@ -77,6 +113,14 @@ public class ShopScript : MonoBehaviour
                             cost.text = "Maxed";
                         }
                     }
+                    else if (itemId == 7)
+                    {
+                        if(canBuyDice == true)
+                        {
+                            itemInfo.text = hit.collider.gameObject.GetComponent<ItemInShop>().itemInfo;
+                            cost.text = "Cost: " + hit.collider.gameObject.GetComponent<ItemInShop>().itemCost.ToString();
+                        }
+                    }
                 }
                 else
                 {
@@ -122,6 +166,14 @@ public class ShopScript : MonoBehaviour
 
                             Cursor.lockState = CursorLockMode.Locked;
                             Cursor.visible = true;
+                        }
+                        else if (itemId == 7)
+                        {
+                            if(canBuyDice == true)
+                            {
+                                StartCoroutine(WaitForDice());
+                                BuyDice(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
+                            }
                         }
                     }
                     amountText.SetActive(false);
@@ -231,10 +283,42 @@ public class ShopScript : MonoBehaviour
             }
         }
     }
+    void BuyDice(int prize)
+    {
+        if (money.GetComponent<MoneyManager>().moneyNumber >= prize)
+        {
+            buySound.Play();
+            itemInfo.text = "";
+            cost.text = "";
+            Instantiate(dicePrefab, diceSpawnLoc.transform);
+            currentDice = diceSpawnLoc.transform.GetChild(0).gameObject;
+            currentDice.GetComponent<Animator>().SetTrigger("Roll");
+            moveDice = true;
+            money.GetComponent<MoneyManager>().GetMoney(-prize);
+        }
+        else
+        {
+            notEnoughMoneySound.Play();
+        }
+    }
     public void UpdateNumbers()
     {
         numFireRateText.text = numFirerate.ToString();
         numFreezeText.text = numFreeze.ToString();
         numNukeText.text = numNuke.ToString();
+    }
+    IEnumerator WaitForDice()
+    {
+        canBuyDice = false;
+        yield return new WaitForSeconds(5);
+        canBuyDice = true;
+    }
+    IEnumerator WaitToDestroyShownItem()
+    {
+        yield return new WaitForSeconds(2);
+        foreach(Transform child in instObjHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
