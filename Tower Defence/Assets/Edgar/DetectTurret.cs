@@ -56,6 +56,8 @@ public class DetectTurret : MonoBehaviour
                     "<br>Radius: " + turret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].radius.ToString() +
                     " -> " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow + 1].radius.ToString();
 
+                infoTypeTurret.text = buttonTurret.GetComponentInChildren<Turret>().turretInfo;
+
                 costText.text = "Cost: " + buttonTurret.GetComponent<TurretRepair>().turretScript.levelStats.stats[levelNow].cost.ToString();
             }
             else
@@ -65,6 +67,8 @@ public class DetectTurret : MonoBehaviour
                     "<br><br>Dmg: " + "Maxed" +
                     "<br>Fire Rate: " + "Maxed" +
                     "<br>Radius: " + "Maxed";
+
+                infoTypeTurret.text = "";
 
                 costText.text = "";
             }
