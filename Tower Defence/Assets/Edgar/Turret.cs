@@ -119,7 +119,7 @@ public class Turret : MonoBehaviour
 
     public virtual void StatRefresh()
     {
-        if (turretLevel == 4)
+        if (turretLevel == levelStats.stats.Length - 1)
         {
             topMR.material = maxLvlTop;
             botMR.material = maxLvlBot;
