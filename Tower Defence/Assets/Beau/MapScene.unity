@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 899f98a2d68b87e418a93b264a179ec8, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 891c73f782af5894f83439d1fb9a8356, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1001 &16184746
@@ -586,6 +590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &35286213
@@ -739,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1001 &46423362
@@ -811,6 +823,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -2410,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &101429908
@@ -3590,6 +3610,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
@@ -4807,6 +4831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1 &333033846
@@ -4915,6 +4943,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -5182,6 +5214,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -5760,6 +5796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1 &416230241
@@ -5880,6 +5920,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -12233,6 +12277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &518607650
@@ -14768,6 +14816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1 &656869525
@@ -14932,6 +14984,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -15534,6 +15590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1001 &697629675
@@ -15680,6 +15740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1001 &699592572
@@ -15752,6 +15816,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -15826,6 +15894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1001 &701842376
@@ -15898,6 +15970,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -16080,6 +16156,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
       propertyPath: m_Name
       value: bloem zijkant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
@@ -21559,6 +21639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
 --- !u!1001 &726939523
@@ -26704,6 +26788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1 &759442457
@@ -27220,6 +27308,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -28347,6 +28439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1 &847718171
@@ -28596,6 +28692,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
@@ -29700,6 +29800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
 --- !u!1001 &892913735
@@ -29772,6 +29876,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -30019,6 +30127,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -32377,6 +32489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &1103719910
@@ -33669,6 +33785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!4 &1213218308 stripped
@@ -33982,6 +34102,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
@@ -34491,6 +34615,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -36531,6 +36659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1001 &1393930041
@@ -36603,6 +36735,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
@@ -37150,6 +37286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1 &1434049951
@@ -37575,6 +37715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1001 &1469921059
@@ -37648,6 +37792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1001 &1473239093
@@ -37720,6 +37868,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -37798,6 +37950,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -38081,6 +38237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &1506026188
@@ -38304,6 +38464,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
@@ -38943,6 +39107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &1554371755
@@ -39333,6 +39501,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27a112d7a29a1342b1cff25a958f710, type: 3}
@@ -40829,6 +41001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &1668803165
@@ -41796,6 +41972,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
       propertyPath: m_Name
       value: Paddenstoel 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
@@ -43631,6 +43811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1 &1819556795
@@ -44572,6 +44756,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
       propertyPath: m_Name
       value: bloem zijkant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
@@ -45565,6 +45753,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -51628,6 +51820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem bovenkant (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
 --- !u!1 &2007942611
@@ -53021,6 +53217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddenstoel 1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f22b64f997152774480c4d00dea65494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f22b64f997152774480c4d00dea65494, type: 3}
 --- !u!1 &2101106588 stripped
@@ -53110,6 +53310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bloem zijkant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c50b3b4832e41648b1573a0da308af8, type: 3}
 --- !u!1001 &2108759129
@@ -53182,6 +53386,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
@@ -53722,6 +53930,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
       propertyPath: m_Name
       value: bloem bovenkant (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66acdb761c1d0fd4f8c889d5ab165e8f, type: 3}
