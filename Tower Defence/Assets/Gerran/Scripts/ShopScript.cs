@@ -176,7 +176,7 @@ public class ShopScript : MonoBehaviour
                             if(canBuyDice == true)
                             {
                                 StartCoroutine(WaitForDice());
-                                BuyDice(/*hit.collider.gameObject.GetComponent<ItemInShop>().itemCost*/ 0);
+                                BuyDice(hit.collider.gameObject.GetComponent<ItemInShop>().itemCost);
                             }
                         }
                     }
