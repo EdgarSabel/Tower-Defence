@@ -142,7 +142,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: ea2f2cc8f7f7c51419e00e4b3ab9e62b, type: 3}
+  - {fileID: 2100000, guid: 4fe5900531169ab48b18debb0e1b91fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 5072361803611841865}
   - component: {fileID: 6858265285518377209}
   m_Layer: 0
-  m_Name: D6anims
+  m_Name: ShopDobbel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
