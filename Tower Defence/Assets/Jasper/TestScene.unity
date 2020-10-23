@@ -10143,7 +10143,7 @@ Transform:
   m_LocalScale: {x: 12.2612505, y: 12.2612505, z: 12.2612505}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406123956
 GameObject:
@@ -61341,6 +61341,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc953c31047b56c4bb155c765414b18a, type: 3}
+--- !u!1001 &8334061321177292332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_RootOrder
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616855713514711384, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605654386824343490, guid: ff43adf949b6546448be9edb7357733f, type: 3}
+      propertyPath: m_Name
+      value: DobbelWin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff43adf949b6546448be9edb7357733f, type: 3}
 --- !u!1001 &8691985078171313334
 PrefabInstance:
   m_ObjectHideFlags: 0
