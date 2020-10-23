@@ -79,7 +79,7 @@ public class Ability : MonoBehaviour
         yield return new WaitForSeconds(fireRateIncreaseTime);
         foreach (Transform child in towerHolder.transform)
         {
-            child.GetComponent<TurretRepair>().turretScript.fireRate = child.GetComponent<TurretRepair>().turretScript.standardFireRate;
+            child.GetComponent<TurretRepair>().turretScript.fireRate = child.GetComponent<TurretRepair>().turretScript.fireRate;
             child.GetComponent<TurretRepair>().boostParticles.Stop();
         }
     }
