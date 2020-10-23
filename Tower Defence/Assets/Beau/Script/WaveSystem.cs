@@ -109,7 +109,9 @@ public class WaveSystem : MonoBehaviour
         {
             bool val = true;
             PlayerPrefs.SetInt("PropName", val ? 1 : 0);
+            print(val = PlayerPrefs.GetInt("PropName") == 1 ? true : false);  
             PlayerPrefs.Save();
+            print(val);
         }
 
         if (roundNumber < waves.Length)

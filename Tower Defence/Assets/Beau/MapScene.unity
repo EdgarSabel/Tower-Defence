@@ -29172,7 +29172,7 @@ MonoBehaviour:
   - {fileID: 1153966121}
   - {fileID: 1901562486}
   waitTimeForNextRound: 20
-  lvlNum: 0
+  lvlNum: 15
   playerManager: {fileID: 1298377287}
   infEnemieIncrease: 3
   waves:
